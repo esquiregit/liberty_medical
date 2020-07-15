@@ -1,0 +1,54 @@
+<?php
+    require_once 'conn.php';
+    require_once 'methods.php';
+    require_once 'charge.php';
+
+	class FBC_5P {
+
+        // create a fbc_5p record
+        public static function create_fbc_5p($patient_id, $wbc, $wbc_flag, $neu_hash, $neu_hash_flag, $lym_hash, $lym_hash_flag, $mon_hash, $mon_hash_flag, $eos_hash, $eos_hash_flag, $bas_hash, $bas_hash_flag, $neu_percent, $neu_percent_flag, $lym_percent, $lym_percent_flag, $mon_percent, $mon_percent_flag, $eos_percent, $eos_percent_flag, $bas_percent, $bas_percent_flag, $rbc, $rbc_flag, $hgb, $hgb_flag, $hct, $hct_flag, $mcv, $mcv_flag, $mch, $mch_flag, $mchc, $mchc_flag, $rdw_cv, $rdw_cv_flag, $rdw_sd, $rdw_sd_flag, $plt, $plt_flag, $mpv, $mpv_flag, $pdw, $pdw_flag, $pct, $pct_flag, $p_lcc, $p_lcc_flag, $p_lcr, $p_lcr_flag, $sickling_test, $bf_mps, $esr, $blood_film_comment, $added_by, $conn){
+            $invoice_id = Methods::get_invoice_id('FBC 5P', $conn);
+            $amount     = Charge::read_charge('33', $conn);
+            try{
+                $query = $conn->prepare('INSERT INTO fbc_5p(invoice_id, patient_id, wbc, wbc_flag, neu_hash, neu_hash_flag, lym_hash, lym_hash_flag, mon_hash, mon_hash_flag, eos_hash, eos_hash_flag, bas_hash, bas_hash_flag, neu_percent, neu_percent_flag, lym_percent, lym_percent_flag, mon_percent, mon_percent_flag, eos_percent, eos_percent_flag, bas_percent, bas_percent_flag, rbc, rbc_flag, hgb, hgb_flag, hct, hct_flag, mcv, mcv_flag, mch, mch_flag, mchc, mchc_flag, rdw_cv, rdw_cv_flag, rdw_sd, rdw_sd_flag, plt, plt_flag, mpv, mpv_flag, pdw, pdw_flag, pct, pct_flag, p_lcc, p_lcc_flag, p_lcr, p_lcr_flag, sickling_test, bf_mps, esr, blood_film_comment, added_by)  VALUES(:invoice_id, :patient_id, :wbc, :wbc_flag, :neu_hash, :neu_hash_flag, :lym_hash, :lym_hash_flag, :mon_hash, :mon_hash_flag, :eos_hash, :eos_hash_flag, :bas_hash, :bas_hash_flag, :neu_percent, :neu_percent_flag, :lym_percent, :lym_percent_flag, :mon_percent, :mon_percent_flag, :eos_percent, :eos_percent_flag, :bas_percent, :bas_percent_flag, :rbc, :rbc_flag, :hgb, :hgb_flag, :hct, :hct_flag, :mcv, :mcv_flag, :mch, :mch_flag, :mchc, :mchc_flag, :rdw_cv, :rdw_cv_flag, :rdw_sd, :rdw_sd_flag, :plt, :plt_flag, :mpv, :mpv_flag, :pdw, :pdw_flag, :pct, :pct_flag, :p_lcc, :p_lcc_flag, :p_lcr, :p_lcr_flag, :sickling_test, :bf_mps, :esr, :blood_film_comment, :added_by)');
+                $query->execute([':invoice_id' => $invoice_id, ':patient_id' => $patient_id, ':wbc' => $wbc, ':wbc_flag' => $wbc_flag, ':neu_hash' => $neu_hash, ':neu_hash_flag' => $neu_hash_flag, ':lym_hash' => $lym_hash, ':lym_hash_flag' => $lym_hash_flag, ':mon_hash' => $mon_hash, ':mon_hash_flag' => $mon_hash_flag, ':eos_hash' => $eos_hash, ':eos_hash_flag' => $eos_hash_flag, ':bas_hash' => $bas_hash, ':bas_hash_flag' => $bas_hash_flag, ':neu_percent' => $neu_percent, ':neu_percent_flag' => $neu_percent_flag, ':lym_percent' => $lym_percent, ':lym_percent_flag' => $lym_percent_flag, ':mon_percent' => $mon_percent, ':mon_percent_flag' => $mon_percent_flag, ':eos_percent' => $eos_percent, ':eos_percent_flag' => $eos_percent_flag, ':bas_percent' => $bas_percent, ':bas_percent_flag' => $bas_percent_flag, ':rbc' => $rbc, ':rbc_flag' => $rbc_flag, ':hgb' => $hgb, ':hgb_flag' => $hgb_flag, ':hct' => $hct, ':hct_flag' => $hct_flag, ':mcv' => $mcv, ':mcv_flag' => $mcv_flag, ':mch' => $mch, ':mch_flag' => $mch_flag, ':mchc' => $mchc, ':mchc_flag' => $mchc_flag, ':rdw_cv' => $rdw_cv, ':rdw_cv_flag' => $rdw_cv_flag, ':rdw_sd' => $rdw_sd, ':rdw_sd_flag' => $rdw_sd_flag, ':plt' => $plt, ':plt_flag' => $plt_flag, ':mpv' => $mpv, ':mpv_flag' => $mpv_flag, ':pdw' => $pdw, ':pdw_flag' => $pdw_flag, ':pct' => $pct, ':pct_flag' => $pct_flag, ':p_lcc' => $p_lcc, ':p_lcc_flag' => $p_lcc_flag, ':p_lcr' => $p_lcr, ':p_lcr_flag' => $p_lcr_flag, ':sickling_test' => $sickling_test, ':bf_mps' => $bf_mps, ':esr' => $esr, ':blood_film_comment' => $blood_film_comment, ':added_by' => $added_by]);
+
+                return true;
+            }catch(PDOException $ex){
+            	return false;
+            }
+        }
+
+        // fetch all fbc_5p records
+        public static function read_fbc_5ps($conn){
+            try{
+                $query = $conn->prepare('SELECT fbc.id, fbc.invoice_id, fbc.patient_id, fbc.wbc, fbc.wbc_flag, fbc.neu_hash, fbc.neu_hash_flag, fbc.lym_hash, fbc.lym_hash_flag, fbc.mon_hash, fbc.mon_hash_flag, fbc.eos_hash, fbc.eos_hash_flag, fbc.bas_hash, fbc.bas_hash_flag, fbc.neu_percent, fbc.neu_percent_flag, fbc.lym_percent, fbc.lym_percent_flag, fbc.mon_percent, fbc.mon_percent_flag, fbc.eos_percent, fbc.eos_percent_flag, fbc.bas_percent, fbc.bas_percent_flag, fbc.rbc, fbc.rbc_flag, fbc.hgb, fbc.hgb_flag, fbc.hct, fbc.hct_flag, fbc.mcv, fbc.mcv_flag, fbc.mch, fbc.mch_flag, fbc.mchc, fbc.mchc_flag, fbc.rdw_cv, fbc.rdw_cv_flag, fbc.rdw_sd, fbc.rdw_sd_flag, fbc.plt, fbc.plt_flag, fbc.mpv, fbc.mpv_flag, fbc.pdw, fbc.pdw_flag, fbc.pct, fbc.pct_flag, fbc.p_lcc, fbc.p_lcc_flag, fbc.p_lcr, fbc.p_lcr_flag, fbc.sickling_test, fbc.bf_mps, fbc.esr, fbc.blood_film_comment, fbc.added_by, fbc.date_added, p.date_of_birth, p.gender, p.first_name as pfirst_name, p.middle_name as pmiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM fbc_5p fbc INNER JOIN patients p ON fbc.patient_id = p.patient_id INNER JOIN users u ON fbc.added_by = u.staff_id');
+                $query->execute();
+
+                return $query->fetchAll(PDO::FETCH_OBJ);
+            }catch(PDOException $ex){}
+        }
+
+        // fetch a fbc_5p record
+        public static function read_fbc_5p($id, $conn){
+            try{
+                $query = $conn->prepare('SELECT fbc.id, fbc.invoice_id, fbc.patient_id, fbc.wbc, fbc.wbc_flag, fbc.neu_hash, fbc.neu_hash_flag, fbc.lym_hash, fbc.lym_hash_flag, fbc.mon_hash, fbc.mon_hash_flag, fbc.eos_hash, fbc.eos_hash_flag, fbc.bas_hash, fbc.bas_hash_flag, fbc.neu_percent, fbc.neu_percent_flag, fbc.lym_percent, fbc.lym_percent_flag, fbc.mon_percent, fbc.mon_percent_flag, fbc.eos_percent, fbc.eos_percent_flag, fbc.bas_percent, fbc.bas_percent_flag, fbc.rbc, fbc.rbc_flag, fbc.hgb, fbc.hgb_flag, fbc.hct, fbc.hct_flag, fbc.mcv, fbc.mcv_flag, fbc.mch, fbc.mch_flag, fbc.mchc, fbc.mchc_flag, fbc.rdw_cv, fbc.rdw_cv_flag, fbc.rdw_sd, fbc.rdw_sd_flag, fbc.plt, fbc.plt_flag, fbc.mpv, fbc.mpv_flag, fbc.pdw, fbc.pdw_flag, fbc.pct, fbc.pct_flag, fbc.p_lcc, fbc.p_lcc_flag, fbc.p_lcr, fbc.p_lcr_flag, fbc.sickling_test, fbc.bf_mps, fbc.esr, fbc.blood_film_comment, fbc.added_by, fbc.date_added, p.date_of_birth, p.gender, p.first_name as pfirst_name, p.middle_name as pmiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM fbc_5p fbc INNER JOIN patients p ON fbc.patient_id = p.patient_id INNER JOIN users u ON fbc.added_by = u.staff_id WHERE fbc.id = :id');
+                $query->execute([':id' => $id]);
+
+                return $query->fetch(PDO::FETCH_OBJ);
+            }catch(PDOException $ex){}
+        }
+
+        // update a fbc_5p record
+        public static function update_fbc_5p($id, $patient_id, $wbc, $wbc_flag, $neu_hash, $neu_hash_flag, $lym_hash, $lym_hash_flag, $mon_hash, $mon_hash_flag, $eos_hash, $eos_hash_flag, $bas_hash, $bas_hash_flag, $neu_percent, $neu_percent_flag, $lym_percent, $lym_percent_flag, $mon_percent, $mon_percent_flag, $eos_percent, $eos_percent_flag, $bas_percent, $bas_percent_flag, $rbc, $rbc_flag, $hgb, $hgb_flag, $hct, $hct_flag, $mcv, $mcv_flag, $mch, $mch_flag, $mchc, $mchc_flag, $rdw_cv, $rdw_cv_flag, $rdw_sd, $rdw_sd_flag, $plt, $plt_flag, $mpv, $mpv_flag, $pdw, $pdw_flag, $pct, $pct_flag, $p_lcc, $p_lcc_flag, $p_lcr, $p_lcr_flag, $sickling_test, $bf_mps, $esr, $blood_film_comment, $conn) {
+            try{
+                $query = $conn->prepare('UPDATE fbc_5p SET patient_id = :patient_id, wbc = :wbc, wbc_flag = :wbc_flag, neu_hash = :neu_hash, neu_hash_flag = :neu_hash_flag, lym_hash = :lym_hash, lym_hash_flag = :lym_hash_flag, mon_hash = :mon_hash, mon_hash_flag = :mon_hash_flag, eos_hash = :eos_hash, eos_hash_flag = :eos_hash_flag, bas_hash = :bas_hash, bas_hash_flag = :bas_hash_flag, neu_percent = :neu_percent, neu_percent_flag = :neu_percent_flag, lym_percent = :lym_percent, lym_percent_flag = :lym_percent_flag, mon_percent = :mon_percent, mon_percent_flag = :mon_percent_flag, eos_percent = :eos_percent, eos_percent_flag = :eos_percent_flag, bas_percent = :bas_percent, bas_percent_flag = :bas_percent_flag, rbc = :rbc, rbc_flag = :rbc_flag, hgb = :hgb, hgb_flag = :hgb_flag, hct = :hct, hct_flag = :hct_flag, mcv = :mcv, mcv_flag = :mcv_flag, mch = :mch, mch_flag = :mch_flag, mchc = :mchc, mchc_flag = :mchc_flag, rdw_cv = :rdw_cv, rdw_cv_flag = :rdw_cv_flag, rdw_sd = :rdw_sd, rdw_sd_flag = :rdw_sd_flag, plt = :plt, plt_flag = :plt_flag, mpv = :mpv, mpv_flag = :mpv_flag, pdw = :pdw, pdw_flag = :pdw_flag, pct = :pct, pct_flag = :pct_flag, p_lcc = :p_lcc, p_lcc_flag = :p_lcc_flag, p_lcr = :p_lcr, p_lcr_flag = :p_lcr_flag, sickling_test = :sickling_test, bf_mps = :bf_mps, esr = :esr, blood_film_comment = :blood_film_comment WHERE id = :id AND patient_id = :patient_id');
+                $query->execute([':wbc' => $wbc, ':wbc_flag' => $wbc_flag, ':neu_hash' => $neu_hash, ':neu_hash_flag' => $neu_hash_flag, ':lym_hash' => $lym_hash, ':lym_hash_flag' => $lym_hash_flag, ':mon_hash' => $mon_hash, ':mon_hash_flag' => $mon_hash_flag, ':eos_hash' => $eos_hash, ':eos_hash_flag' => $eos_hash_flag, ':bas_hash' => $bas_hash, ':bas_hash_flag' => $bas_hash_flag, ':neu_percent' => $neu_percent, ':neu_percent_flag' => $neu_percent_flag, ':lym_percent' => $lym_percent, ':lym_percent_flag' => $lym_percent_flag, ':mon_percent' => $mon_percent, ':mon_percent_flag' => $mon_percent_flag, ':eos_percent' => $eos_percent, ':eos_percent_flag' => $eos_percent_flag, ':bas_percent' => $bas_percent, ':bas_percent_flag' => $bas_percent_flag, ':rbc' => $rbc, ':rbc_flag' => $rbc_flag, ':hgb' => $hgb, ':hgb_flag' => $hgb_flag, ':hct' => $hct, ':hct_flag' => $hct_flag, ':mcv' => $mcv, ':mcv_flag' => $mcv_flag, ':mch' => $mch, ':mch_flag' => $mch_flag, ':mchc' => $mchc, ':mchc_flag' => $mchc_flag, ':rdw_cv' => $rdw_cv, ':rdw_cv_flag' => $rdw_cv_flag, ':rdw_sd' => $rdw_sd, ':rdw_sd_flag' => $rdw_sd_flag, ':plt' => $plt, ':plt_flag' => $plt_flag, ':mpv' => $mpv, ':mpv_flag' => $mpv_flag, ':pdw' => $pdw, ':pdw_flag' => $pdw_flag, ':pct' => $pct, ':pct_flag' => $pct_flag, ':p_lcc' => $p_lcc, ':p_lcc_flag' => $p_lcc_flag, ':p_lcr' => $p_lcr, ':p_lcr_flag' => $p_lcr_flag, ':sickling_test' => $sickling_test, ':bf_mps' => $bf_mps, ':esr' => $esr, ':blood_film_comment' => $blood_film_comment, ':patient_id' => $patient_id, ':id' => $id]);
+
+                return true;
+            }catch(PDOException $ex){
+                return false;
+            }
+        }
+
+	}

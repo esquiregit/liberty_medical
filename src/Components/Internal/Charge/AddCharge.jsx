@@ -34,7 +34,6 @@ function AddCharge({ closeModal, closeExpandable }) {
 
     const initialValues = {
         staff  : staff.staff_id,
-        id     : '',
         type   : '',
         amount : ''
     };

@@ -48,7 +48,7 @@ const BacteriologyTab = ({ patient }) => {
     const closeModal = modal => {
         if(modal.toLowerCase() === 'asciticfluidcs') {
             setAsciticFluid(false);
-        } else if(modal.toLowerCase() === 'AddAspirateCS') {
+        } else if(modal.toLowerCase() === 'aspiratefluidcs') {
             setAspirateCS(false);
         } else if(modal.toLowerCase() === 'bloodcs') {
             setBloodCS(false);

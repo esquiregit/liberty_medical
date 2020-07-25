@@ -1040,22 +1040,18 @@ export const getPrefilledRequestValues = requests => {
         }
     ];
 }
-
 export const get_months_short = () => {
     return ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 }
-
 export const get_months_full = () => {
     return ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 }
-
 export const getTodaysDate = () => {
     const months = get_months_short();
 	const date   = new Date();
     // return months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
     return date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
 }
-
 export const get_todays_date_full = () => {
     const months  = get_months_full();
     const date    = new Date();
@@ -1066,109 +1062,287 @@ export const get_todays_date_full = () => {
     return day + ' ' + months[date.getMonth()] + ' ' + date.getFullYear() + ' - ' + hours + ':' + minutes + ':' + seconds;
     // return months[date.getMonth()] + ' ' + day + ', ' + date.getFullYear() + ' - ' + hours + ':' + minutes + ':' + seconds;
 }
-
 export const get_current_year = () => {
 	const date = new Date();
     return date.getFullYear().toString();
 }
-
 export const get_roles_options = () => {
     return ["Administrator", "Front Desk", "Lab Technician"];
 }
-
-export const get_gender_options = () => {
-    return ['Male', 'Female', 'Transgender'];
+export const getBloodGroups = () => {
+    return [
+        { label: 'A', value: 'A' },
+        { label: 'AB', value: 'AB' },
+        { label: 'B', value: 'B' },
+        { label: 'O', value: 'O' },
+    ];
 }
-
-export const get_title_options = () => {
-    return ['Mr', 'Mrs', 'Ms', 'Prof', 'Dr'];
-}
-
-export const get_blood_group_options = () => {
-    return ['A', 'B', 'O', 'AB'];
-}
-
 export const get_rhesus_options = () => {
-    return ['Positive', 'Negative'];
+    return [
+        { label: 'Positive', value: 'Positive' },
+        { label: 'Negative', value: 'Negative' },
+    ];
 }
-
-export const get_retro_screen_options = () => {
-    return ['Reactive', 'Non-Reactive'];
+export const getRetroScreens = () => {
+    return [
+        { label: 'Reactive', value: 'Reactive' },
+        { label: 'Non-Reactive', value: 'Non-Reactive' },
+    ];
 }
-
-export const get_gram_stain_options = () => {
-    return ['No Organism Seen', 'GNID Present', 'No GNID Seen',
-        'Gram +ve Cocci Seen', 'Gram -ve Cocci Seen',
-        'Gram +ve Bacilli Seen', 'Gram -ve Bacilli Seen'];
+export const getGramStains = () => {
+    return [
+        { label: 'GNID Present', value: 'GNID Present' },
+        { label: 'Gram +ve Bacilli Seen', value: 'Gram +ve Bacilli Seen' },
+        { label: 'Gram -ve Bacilli Seen', value: 'Gram -ve Bacilli Seen' },
+        { label: 'Gram +ve Cocci Seen', value: 'Gram +ve Cocci Seen' },
+        { label: 'Gram -ve Cocci Seen', value: 'Gram -ve Cocci Seen' },
+        { label: 'No GNID Seen', value: 'No GNID Seen' },
+        { label: 'No Organism Seen', value: 'No Organism Seen' },
+    ];
 }
-
-export const get_gram_reaction_options = () => {
-    return ['Gram +ve Cocci Seen', 'Gram -ve Cocci Seen',
-        'Gram +ve Bacilli Seen', 'Gram -ve Bacilli Seen', 'Gram +ve Diplococci'];
+export const getGramReactions = () => {
+    return [
+        { label: 'Gram +ve Bacilli Seen', value: 'Gram +ve Bacilli Seen' },
+        { label: 'Gram -ve Bacilli Seen', value: 'Gram -ve Bacilli Seen' },
+        { label: 'Gram +ve Cocci Seen', value: 'Gram +ve Cocci Seen' },
+        { label: 'Gram -ve Cocci Seen', value: 'Gram -ve Cocci Seen' },
+        { label: 'Gram +ve Diplococci', value: 'Gram +ve Diplococci' },
+    ];
 }
-
-export const get_t_vaginalis_options = () => {
-    return ['Not Seen', 'Present(+)', 'Present(2+)', 'Present(3+)', 'Nil', 'Present'];
+export const getTVaginalis = () => {
+    return [
+        { label: 'Nil', value: 'Nil' },
+        { label: 'Not Seen', value: 'Not Seen' },
+        { label: 'Present', value: 'Present' },
+        { label: 'Present(+)', value: 'Present(+)' },
+        { label: 'Present(+2)', value: 'Present(+2)' },
+        { label: 'Present(+3)', value: 'Present(+3)' },
+    ];
 }
-
-export const get_crystals_options = () => {
-    return ['Not Seen', 'Present(+)', 'Present(2+)', 'Present(3+)', 'Nil', 'Present', 'Calcium Oxalate'];
+export const getCrystals = () => {
+    return [
+        { label: 'Calcium Oxalate', value: 'Calcium Oxalate' },
+        { label: 'Nil', value: 'Nil' },
+        { label: 'Not Seen', value: 'Not Seen' },
+        { label: 'Present', value: 'Present' },
+        { label: 'Present(+)', value: 'Present(+)' },
+        { label: 'Present(+2)', value: 'Present(+2)' },
+        { label: 'Present(+3)', value: 'Present(+3)' },
+    ];
 }
-
-export const get_cast_options = () => {
-    return ['Not Seen', 'Present(+)', 'Present(2+)', 'Present(3+)', 'Nil', 'Present', 'Cellular Cast(+)', 'Cellular Cast(++)', 'Granullar Cast(++)'];
+export const getCasts = () => {
+    return [
+        { label: 'Cellular Cast(+)', value: 'Cellular Cast(+)' },
+        { label: 'Cellular Cast(++)', value: 'Cellular Cast(++)' },
+        { label: 'Granullar Cast(++)', value: 'Granullar Cast(++)' },
+        { label: 'Nil', value: 'Nil' },
+        { label: 'Not Seen', value: 'Not Seen' },
+        { label: 'Present', value: 'Present' },
+        { label: 'Present(+)', value: 'Present(+)' },
+        { label: 'Present(+2)', value: 'Present(+2)' },
+        { label: 'Present(+3)', value: 'Present(+3)' },
+    ];
 }
-
-export const get_zn_stain_options = () => {
-    return ['AFB Present', 'No AFB Present'];
+export const getZNStains = () => {
+    return [
+        { label: 'AFB Present', value: 'AFB Present' },
+        { label: 'No AFB Present', value: 'No AFB Present' }
+    ];
 }
-
-export const get_fungal_element_stain_options = () => {
-    return ['No Fungal Element Seen', 'Fungal Element Present',
-        'Yeast-Like Cells Present', 'No Yeast-Like Cells Seen',
-        'Yeast-Like Cells Present (+)', 'Yeast-Like Cells Present (2+)',
-        'Yeast-Like Cells Present (3+)', 'Yeast-Like Cells Present (4+)'];
+export const getFungalElements = () => {
+    return [
+        { label: 'Fungal Element Present', value: 'Fungal Element Present' },
+        { label: 'No Fungal Element Seen', value: 'No Fungal Element Seen' },
+        { label: 'No Yeast-Like Cells Seen', value: 'No Yeast-Like Cells Seen' },
+        { label: 'Yeast-Like Cells Present', value: 'Yeast-Like Cells Present' },
+        { label: 'Yeast-Like Cells Present (+)', value: 'Yeast-Like Cells Present (+)' },
+        { label: 'Yeast-Like Cells Present (+2)', value: 'Yeast-Like Cells Present (+2)' },
+        { label: 'Yeast-Like Cells Present (+3)', value: 'Yeast-Like Cells Present (+3)' },
+        { label: 'Yeast-Like Cells Present (+4)', value: 'Yeast-Like Cells Present (+4)' },
+    ];
 }
-
-export const get_colour_options = () => {
-    return ['Clear', 'Colourless', 'Normal Clear'];
+export const getColours = () => {
+    return [
+        { label: 'Clear', value: 'Clear' },
+        { label: 'Colourless', value: 'Colourless' },
+        { label: 'Normal Clear', value: 'Normal Clear' },
+    ];
 }
-
-export const get_colour_two_options = () => {
-    return ['Amber', 'Coffee Ground', 'Colourless', 'Deep Amber', 'Deep Yellow', 'Light Amber', 'Others', 'Pot Wine', 'Straw', 'Yellow'];
+export const getColoursTwo = () => {
+    return [
+        { label: 'Amber', value: 'Amber' },
+        { label: 'Coffee Ground', value: 'Coffee Ground' },
+        { label: 'Colourless', value: 'Colourless' },
+        { label: 'Deep Amber', value: 'Deep Amber' },
+        { label: 'Deep Yellow', value: 'Deep Yellow' },
+        { label: 'Light Amber', value: 'Light Amber' },
+        { label: 'Others', value: 'Others' },
+        { label: 'Pot Wine', value: 'Pot Wine' },
+        { label: 'Straw', value: 'Straw' },
+        { label: 'Yellow', value: 'Yellow' },
+    ];
 }
-
-export const get_culture_options = () => {
-    return ['No Bacterial Growth', 'No Significant Growth',
-        'Normal Flora Only', 'Bacterial Colonisation',
-        'Heavily Mixed Growth, Please Repeat', 'Strept/ (Other than group A)',
-        'No Salmonella or Shigella Isolated', 'Commensals Only',
-        'Normal Flora/Commensals Only', 'Preliminary Report: No Bacteria Growth after 48hrs',
-        'Final Report: No Bacteria Growth after 7days', 'No Bacteria Growth after 14days', 'Candida SPP Isolated', 'Bacillus SPP', 'No Bacteria Growth after 21days', 'Bactec incubation. No Bacteria Growth after 5days'];
+export const getCultures = () => {
+    return [
+        { label: 'No Bacterial Growth', value: 'No Bacterial Growth' },
+        { label: 'No Significant Growth', value: 'No Significant Growth' },
+        { label: 'Normal Flora Only', value: 'Normal Flora Only' },
+        { label: 'Bacterial Colonisation', value: 'Bacterial Colonisation' },
+        { label: 'Heavily Mixed Growth, Please Repeat', value: 'Heavily Mixed Growth, Please Repeat' },
+        { label: 'Strept/ (Other than group A)', value: 'Strept/ (Other than group A)' },
+        { label: 'No Salmonella or Shigella Isolated', value: 'No Salmonella or Shigella Isolated' },
+        { label: 'Commensals Only', value: 'Commensals Only' },
+        { label: 'Normal Flora/Commensals Only', value: 'Normal Flora/Commensals Only' },
+        { label: 'Preliminary Report: No Bacteria Growth after 48hrs', value: 'Preliminary Report: No Bacteria Growth after 48hrs' },
+        { label: 'Final Report: No Bacteria Growth after 7days', value: 'Final Report: No Bacteria Growth after 7days' },
+        { label: 'No Bacteria Growth after 14days', value: 'No Bacteria Growth after 14days' },
+        { label: 'Candida SPP Isolated', value: 'Candida SPP Isolated' },
+        { label: 'Bacillus SPP', value: 'Bacillus SPP' },
+        { label: 'No Bacteria Growth after 21days', value: 'No Bacteria Growth after 21days' },
+        { label: 'Bactec incubation. No Bacteria Growth after 5days', value: 'Bactec incubation. No Bacteria Growth after 5days' },
+    ];
 }
-
-export const get_culture_options_two = () => {
-    return ['Beta Haemolitic Strept Isolated', 'No Beta Haemolitic Strept Isolated', 'No Bacterial Growth', 'No Significant Growth',
-        'Normal Flora Only', 'Bacterial Colonisation',
-        'Heavily Mixed Growth, Please Repeat', 'Strept/ (Other than group A)',
-        'No Salmonella or Shigella Isolated', 'Commensals Only',
-        'Normal Flora/Commensals Only', 'Preliminary Report: No Bacteria Growth after 48hrs',
-        'Final Report: No Bacteria Growth after 7days', 'No Bacteria Growth after 14days', 'Candida SPP Isolated', 'Bacillus SPP', 'No Bacteria Growth after 21days', 'Bactec incubation. No Bacteria Growth after 5days'];
+export const getCulturesTwo = () => {
+    return [
+        { label: 'Beta Haemolitic Strept Isolated', value: 'Beta Haemolitic Strept Isolated' },
+        { label: 'No Beta Haemolitic Strept Isolated', value: 'No Beta Haemolitic Strept Isolated' },
+        { label: 'No Bacterial Growth', value: 'No Bacterial Growth' },
+        { label: 'No Significant Growth', value: 'No Significant Growth' },
+        { label: 'Normal Flora Only', value: 'Normal Flora Only' },
+        { label: 'Bacterial Colonisation', value: 'Bacterial Colonisation' },
+        { label: 'Heavily Mixed Growth, Please Repeat', value: 'Heavily Mixed Growth, Please Repeat' },
+        { label: 'Strept/ (Other than group A)', value: 'Strept/ (Other than group A)' },
+        { label: 'No Salmonella or Shigella Isolated', value: 'No Salmonella or Shigella Isolated' },
+        { label: 'Commensals Only', value: 'Commensals Only' },
+        { label: 'Normal Flora/Commensals Only', value: 'Normal Flora/Commensals Only' },
+        { label: 'Preliminary Report: No Bacteria Growth after 48hrs', value: 'Preliminary Report: No Bacteria Growth after 48hrs' },
+        { label: 'Final Report: No Bacteria Growth after 7days', value: 'Final Report: No Bacteria Growth after 7days' },
+        { label: 'No Bacteria Growth after 14days', value: 'No Bacteria Growth after 14days' },
+        { label: 'Candida SPP Isolated', value: 'Candida SPP Isolated' },
+        { label: 'Bacillus SPP', value: 'Bacillus SPP' },
+        { label: 'No Bacteria Growth after 21days', value: 'No Bacteria Growth after 21days' },
+        { label: 'Bactec incubation. No Bacteria Growth after 5days', value: 'Bactec incubation. No Bacteria Growth after 5days' },
+    ];
 }
-
-export const get_bacteria_options = () => {
-    return ['Acinetobacter SPP', 'Alcaligenes', 'Alpha Haem. Strept', 'Anaerobic Strept', 'Aspergillus', 'Bacillus SPP', 'Bacteriodes SPP', 'Beta Haem. STrept', 'Brucella SPP', 'C. Diphtheriae', 'C. Perfringes',
-        'Campylobacter SPP', 'Candida SPP', 'Citrobacter Diversus', 'Citrobacter Freundii', 'Citrbacter SPP', 'Coliform', 'Cryptococcus Cells', 'E. Coli', 'Enterobacter SPP', 'Enterobacteria', 'Enterobacteria SPP', 'Enterococcus SPP',
-        'Enterococcus Faecalis', 'F. Meningosepticum', 'Fungal Elements', 'Ganella Morbillorum', 'H. Influenzae', 'K. Pneumoniae', 'Klebsiella Oxytoca', 'Klebsiella SPP', 'Lactobacilli', 'Listeria SPP', 'M. Catarrhalis', 'M. Tuberculosis',
-        'Morganella SPP', 'N. Gonorrhoea', 'N. Meningitides', 'Non Haem. Strept', 'P. Aeruginosa', 'Pantoea SPP', 'Pasteurella SPP', 'Protea Mirabilis', 'Proteus SPP', 'Proteus Vulgaris', 'Providencia Rettgeri', 'Providentia SPP', 'Pseudomonas SPP', 'Salmonella Enteridis', 'Salmonella Paratyphi {A}', 'Salmonella Paratyphi {B}', 'Salmonella Paratyphi {C}', 'Salmonella SPP', 'Salmonella Typhi', 'Salmonella Typhimurium', 'Serratia', 'Shigella Boydi', 'Shigella Dysentry', 'Shigella Flexneri', 'Shigella Sonnei', 'Shigella SPP', 'Staph Aureus', 'Staph Epidermis', 'Srept Faecalis', 'Srept Faecium', 'Srept Pneumoniae', 'Srept Pyogenes', 'Srept Viridans', 'Srept. Agalactiae', 'Srept. Faecalis', 'Srept. Pyogenes', 'Vincents Organism', 'Yeast-like Cells', 'Yersinia Pestis'];
+export const getBacterias = () => {
+    return [
+        { label: 'Acinetobacter SPP', value: 'Acinetobacter SPP' },
+        { label: 'Alcaligenes', value: 'Alcaligenes' },
+        { label: 'Alpha Haem. Strept', value: 'Alpha Haem. Strept' },
+        { label: 'Anaerobic Strept', value: 'Anaerobic Strept' },
+        { label: 'Aspergillus', value: 'Aspergillus' },
+        { label: 'Bacillus SPP', value: 'Bacillus SPP' },
+        { label: 'Bacteriodes SPP', value: 'Bacteriodes SPP' },
+        { label: 'Beta Haem. STrept', value: 'Beta Haem. STrept' },
+        { label: 'Brucella SPP', value: 'Brucella SPP' },
+        { label: 'C. Diphtheriae', value: 'C. Diphtheriae' },
+        { label: 'C. Perfringes', value: 'C. Perfringes' },
+        { label: 'Campylobacter SPP', value: 'Campylobacter SPP' },
+        { label: 'Candida SPP', value: 'Candida SPP' },
+        { label: 'Citrobacter Diversus', value: 'Citrobacter Diversus' },
+        { label: 'Citrobacter Freundii', value: 'Citrobacter Freundii' },
+        { label: 'Citrbacter SPP', value: 'Citrbacter SPP' },
+        { label: 'Coliform', value: 'Coliform' },
+        { label: 'Cryptococcus Cells', value: 'Cryptococcus Cells' },
+        { label: 'E. Coli', value: 'E. Coli' },
+        { label: 'Enterobacter SPP', value: 'Enterobacter SPP' },
+        { label: 'Enterobacteria', value: 'Enterobacteria' },
+        { label: 'Enterobacteria SPP', value: 'Enterobacteria SPP' },
+        { label: 'Enterococcus SPP', value: 'Enterococcus SPP' },
+        { label: 'Enterococcus Faecalis', value: 'Enterococcus Faecalis' },
+        { label: 'F. Meningosepticum', value: 'F. Meningosepticum' },
+        { label: 'Fungal Elements', value: 'Fungal Elements' },
+        { label: 'Ganella Morbillorum', value: 'Ganella Morbillorum' },
+        { label: 'H. Influenzae', value: 'H. Influenzae' },
+        { label: 'K. Pneumoniae', value: 'K. Pneumoniae' },
+        { label: 'Klebsiella Oxytoca', value: 'Klebsiella Oxytoca' },
+        { label: 'Klebsiella SPP', value: 'Klebsiella SPP' },
+        { label: 'Lactobacilli', value: 'Lactobacilli' },
+        { label: 'Listeria SPP', value: 'Listeria SPP' },
+        { label: 'M. Catarrhalis', value: 'M. Catarrhalis' },
+        { label: 'M. Tuberculosis', value: 'M. Tuberculosis' },
+        { label: 'Morganella SPP', value: 'Morganella SPP' },
+        { label: 'N. Gonorrhoea', value: 'N. Gonorrhoea' },
+        { label: 'N. Meningitides', value: 'N. Meningitides' },
+        { label: 'Non Haem. Strept', value: 'Non Haem. Strept' },
+        { label: 'P. Aeruginosa', value: 'P. Aeruginosa' },
+        { label: 'Pantoea SPP', value: 'Pantoea SPP' },
+        { label: 'Pasteurella SPP', value: 'Pasteurella SPP' },
+        { label: 'Protea Mirabilis', value: 'Protea Mirabilis' },
+        { label: 'Proteus SPP', value: 'Proteus SPP' },
+        { label: 'Proteus Vulgaris', value: 'Proteus Vulgaris' },
+        { label: 'Providencia Rettgeri', value: 'Providencia Rettgeri' },
+        { label: 'Providentia SPP', value: 'Providentia SPP' },
+        { label: 'Pseudomonas SPP', value: 'Pseudomonas SPP' },
+        { label: 'Salmonella Enteridis', value: 'Salmonella Enteridis' },
+        { label: 'Salmonella Paratyphi {A}', value: 'Salmonella Paratyphi {A}' },
+        { label: 'Salmonella Paratyphi {B}', value: 'Salmonella Paratyphi {B}' },
+        { label: 'Salmonella Paratyphi {C}', value: 'Salmonella Paratyphi {C}' },
+        { label: 'Salmonella SPP', value: 'Salmonella SPP' },
+        { label: 'Salmonella Typhi', value: 'Salmonella Typhi' },
+        { label: 'Salmonella Typhimurium', value: 'Salmonella Typhimurium' },
+        { label: 'Serratia', value: 'Serratia' },
+        { label: 'Shigella Boydi', value: 'Shigella Boydi' },
+        { label: 'Shigella Dysentry', value: 'Shigella Dysentry' },
+        { label: 'Shigella Flexneri', value: 'Shigella Flexneri' },
+        { label: 'Shigella Sonnei', value: 'Shigella Sonnei' },
+        { label: 'Shigella SPP', value: 'Shigella SPP' },
+        { label: 'Staph Aureus', value: 'Staph Aureus' },
+        { label: 'Staph Epidermis', value: 'Staph Epidermis' },
+        { label: 'Strept Faecalis', value: 'Strept Faecalis' },
+        { label: 'Strept Faecium', value: 'Strept Faecium' },
+        { label: 'Strept Pneumoniae', value: 'Strept Pneumoniae' },
+        { label: 'Strept Pyogenes', value: 'Strept Pyogenes' },
+        { label: 'Strept Viridans', value: 'Strept Viridans' },
+        { label: 'Strept. Agalactiae', value: 'Strept. Agalactiae' },
+        { label: 'Strept. Faecalis', value: 'Strept. Faecalis' },
+        { label: 'Strept. Pyogenes', value: 'Strept. Pyogenes' },
+        { label: 'Vincents Organism', value: 'Vincents Organism' },
+        { label: 'Yeast-like Cells', value: 'Yeast-like Cells' },
+        { label: 'Yersinia Pestis', value: 'Yersinia Pestis' },
+    ];
 }
-
-export const get_antibiotics_options = () => {
-    return ['Amikacin', 'Ampicillin', 'Amoxiclav', 'Amoxicillin', 'Aztrenem', 'Cefepim', 'Cefixim', 'Cefotaxime', 'Cefoxitin', 'Cefpirom', 'Ceftazidime', 'Ceftriaxone', 'Cefuroxime', 'Cephalothin',
-        'Chloramphenicol', 'Ciprofloxacin', 'Cloxacillin', 'Cotrimoxazol', 'Erythromycin', 'Flucloxacillin', 'Fosfomycin', 'Gentamicin', 'Levoflxacillin',  'Imipenem', 'Iperracillin', 'Isepamicin', 'Meropenem', 'Nalidixic Acid', 'Netilmicin', 'Nitrofuratoin', 'Norfloxacin', 'Pefloxacin', 'Penincillin', 'Tetracycline',
-        'Ticarcillin', 'Tobramycin', 'Urotractin'];
+export const getAntibiotics = () => {
+    return [
+        { label: 'Amikacin', value: 'Amikacin' },
+        { label: 'Ampicillin', value: 'Ampicillin' },
+        { label: 'Amoxiclav', value: 'Amoxiclav' },
+        { label: 'Amoxicillin', value: 'Amoxicillin' },
+        { label: 'Aztrenem', value: 'Aztrenem' },
+        { label: 'Cefepim', value: 'Cefepim' },
+        { label: 'Cefixim', value: 'Cefixim' },
+        { label: 'Cefotaxime', value: 'Cefotaxime' },
+        { label: 'Cefoxitin', value: 'Cefoxitin' },
+        { label: 'Cefpirom', value: 'Cefpirom' },
+        { label: 'Ceftazidime', value: 'Ceftazidime' },
+        { label: 'Ceftriaxone', value: 'Ceftriaxone' },
+        { label: 'Cefuroxime', value: 'Cefuroxime' },
+        { label: 'Cephalothin', value: 'Cephalothin' },
+        { label: 'Chloramphenicol', value: 'Chloramphenicol' },
+        { label: 'Ciprofloxacin', value: 'Ciprofloxacin' },
+        { label: 'Cloxacillin', value: 'Cloxacillin' },
+        { label: 'Cotrimoxazol', value: 'Cotrimoxazol' },
+        { label: 'Erythromycin', value: 'Erythromycin' },
+        { label: 'Flucloxacillin', value: 'Flucloxacillin' },
+        { label: 'Fosfomycin', value: 'Fosfomycin' },
+        { label: 'Gentamicin', value: 'Gentamicin' },
+        { label: 'Levoflxacillin', value: 'Levoflxacillin' },
+        { label: 'Imipenem', value: 'Imipenem' },
+        { label: 'Iperracillin', value: 'Iperracillin' },
+        { label: 'Isepamicin', value: 'Isepamicin' },
+        { label: 'Meropenem', value: 'Meropenem' },
+        { label: 'Nalidixic Acid', value: 'Nalidixic Acid' },
+        { label: 'Netilmicin', value: 'Netilmicin' },
+        { label: 'Nitrofuratoin', value: 'Nitrofuratoin' },
+        { label: 'Norfloxacin', value: 'Norfloxacin' },
+        { label: 'Pefloxacin', value: 'Pefloxacin' },
+        { label: 'Penincillin', value: 'Penincillin' },
+        { label: 'Tetracycline', value: 'Tetracycline' },
+        { label: 'Ticarcillin', value: 'Ticarcillin' },
+        { label: 'Tobramycin', value: 'Tobramycin' },
+        { label: 'Urotractin', value: 'Urotractin' },
+    ];
 }
-
 export const getAppearances = () => {
     return [
         { label: "Blood Stain", value: "Blood Stain" },
@@ -1182,44 +1356,106 @@ export const getAppearances = () => {
         { label: "Xanthochromic", value: "Xanthochromic" }
     ];
 }
-
-export const get_appearances_two = () => {
-    return ["Blood Stained", "Mucopurulent", "Purulent", "Salivary"];
+export const getAppearancesTwo = () => {
+    return [
+        { label: "Blood Stained", value: "Blood Stained" },
+        { label: "Mucopurulent", value: "Mucopurulent" },
+        { label: "Purulent", value: "Purulent" },
+        { label: "Salivary", value: "Salivary" },
+    ];
 }
-
-export const get_ph_options = () => {
-    return ["5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0", "8.5", "9.0"];
+export const getPhs = () => {
+    return [
+        { label: '5.0', value: '5.0' },
+        { label: '5.5', value: '5.5' },
+        { label: '6.0', value: '6.0' },
+        { label: '6.5', value: '6.5' },
+        { label: '7.0', value: '7.0' },
+        { label: '7.5', value: '7.5' },
+        { label: '8.0', value: '8.0' },
+        { label: '8.5', value: '8.5' },
+        { label: '9.0', value: '9.0' },
+        { label: '9.5', value: '9.5' },
+    ];
 }
-
-export const get_consistency_options = () => {
-    return ["Normal", "Incomplete Liquefaction", "Complete Liquefaction"];
+export const getConsistencys = () => {
+    return [
+        { label: 'Normal', value: 'Normal' },
+        { label: 'Incomplete Liquefaction', value: 'Incomplete Liquefaction' },
+        { label: 'Complete Liquefaction', value: 'Complete Liquefaction' },
+    ];
 }
-
-export const get_widal_options = () => {
+export const getWidals = () => {
     // return ["Less Than 1/20", "1/20", "1/40", "1/60", "1/80", "1/160", "1/320", "More Than 1/320"];
-    return ["<1/20", "1/20", "1/40", "1/60", "1/80", "1/160", "1/320", ">1/320"];
+    return [
+        { label: '<1/20', value: '<1/20' },
+        { label: '1/20', value: '1/20' },
+        { label: '1/40', value: '1/40' },
+        { label: '1/60', value: '1/60' },
+        { label: '1/80', value: '1/80' },
+        { label: '1/160', value: '1/160' },
+        { label: '1/320', value: '1/320' },
+        { label: '>1/320', value: '>1/320' },
+    ];
 }
-
-export const get_semen_ph_options = () => {
-    return ["5.0", "5.5", "6.0", "6.5", "7.0",
-        "7.5", "8.0", "8.5", "9.0", "9.5", "10.0", "10.5",
-        "11.0", "11.5", "12.0"];
+export const getSemenPhs = () => {
+    return [
+        { label: '5.0', value: '5.0' },
+        { label: '5.5', value: '5.5' },
+        { label: '6.0', value: '6.0' },
+        { label: '6.5', value: '6.5' },
+        { label: '7.0', value: '7.0' },
+        { label: '7.5', value: '7.5' },
+        { label: '8.0', value: '8.0' },
+        { label: '8.5', value: '8.5' },
+        { label: '9.0', value: '9.0' },
+        { label: '9.5', value: '9.5' },
+        { label: '10.0', value: '10.0' },
+        { label: '10.5', value: '10.5' },
+        { label: '11.0', value: '11.0' },
+        { label: '11.5', value: '11.5' },
+        { label: '12.0', value: '12.0' },
+    ];
 }
-
-export const get_semen_colour = () => {
-    return ["Blood Stain", "Bloody", "Cream", "Gray", "White"];
+export const getSemenColours = () => {
+    return [
+        { label: 'Blood Stain', value: 'Blood Stain' },
+        { label: 'Bloody', value: 'Bloody' },
+        { label: 'Cream', value: 'Cream' },
+        { label: 'Gray', value: 'Gray' },
+        { label: 'White', value: 'White' },
+    ];
 }
-export const get_specific_gravity_options = () => {
-    return ["1.0000", "1.0005", "1.00010", "1.0015", "1.0020", "1.0025", "1.0030"];
+export const getSpecificGravityOptions = () => {
+    return [
+        { label: '1.0000', value: '1.0000' },
+        { label: '1.0005', value: '1.0005' },
+        { label: '1.00010', value: '1.00010' },
+        { label: '1.00015', value: '1.00015' },
+        { label: '1.00020', value: '1.00020' },
+        { label: '1.00025', value: '1.00025' },
+        { label: '1.00030', value: '1.00030' },
+    ];
 }
-export const get_protein = () => {
-    return ["Negative", "Present(+)", "Present(2+)", "Present(3+)", "Present(4+)", "Trace"];
+export const getProtein = () => {
+    return [
+        { label: "Negative", value: "Negative" },
+        { label: "Present(+)", value: "Present(+)" },
+        { label: "Present(+2)", value: "Present(+2)" },
+        { label: "Present(+3)", value: "Present(+3)" },
+        { label: "Present(+4)", value: "Present(+4)" },
+        { label: "Trace", value: "Trace" }
+    ];
 }
-
-export const get_urobilinogen_options = () => {
-    return ["Increased (+)", "Increased (2+)", "Increased (3+)", "Increased (4+)", "Normal"];
+export const getUrobilinogens = () => {
+    return [
+        { label: "Increased (+)", value: "Increased (+)" },
+        { label: "Increased (+2)", value: "Increased (+2)" },
+        { label: "Increased (+3)", value: "Increased (+3)" },
+        { label: "Increased (+4)", value: "Increased (+4)" },
+        { label: "Normal", value: "Normal" }
+    ];
 }
-
 export const getGlobulins = () => {
     return [
         { label: "Negative", value: "Negative" },
@@ -1230,53 +1466,118 @@ export const getGlobulins = () => {
         { label: "Trace", value: "Trace" }
     ];
 }
-
 export const get_pus_cells_options = () => {
-    return ["No Pus Cells Seen", "Present(+)", "Present(+2)", "Present(+3)"];
-}
-
-export const get_larvae_options = () => {
-    return ["Not Seen", "Strongyloides Sterocoralis Present"];
-}
-
-export const get_vegetative_form_options = () => {
-    return ["Intestinal Flagellates Present", "Giardia Lamblia Present", "Entamoeba Histolytica Present", "Yeast-Like Cells Present", "Yeast-Like Cells Present(+)", "Yeast-Like Cells Present(2+)", "Yeast-Like Cells Present(3+)", "Yeast-Like Cells Present(4+)", "Not Seen"];
-}
-
-export const get_cyst_options = () => {
-    return ["Endolimax Nana", "Entamoeba Coli", "Giardia Lamblia", "Entamoeba Histolytica", "Entamoeba Hominis", "Retortamonas Intestinalis", "Not Seen"];
-}
-
-export const get_abo_grouping_options = () => {
-    return ["A Positive", "A Negative",
-    "B Positive", "B Negative",
-    "AB Positive", "AB Negative",
-    "O Positive", "O Negative",];
-}
-
-export const get_g6pd_options = () => {
-    return ["Normal", "Partial Defect", "Full Defect"];
-}
-
-export const get_hgb_genetype_options = () => {
-    return ["AA", "AC", "AF", "AS", "CC", "SC", "SF", "SS", "SS&F", "SS/SD"];
-}
-
-export const get_stool_re_first_row_first_column_options = () => {
-    return ["Formed Specimen", "Semi-Formed Specimen", "Loose Specimen", "Mucoid Specimen", "WaterySpecimen", "Blood Stained Specimen", "Bloody Specimen"];
-}
-
-export const get_stool_re_second_row_first_column_options = () => {
-    return ["Not Seen", "Ascaris Lumbricoides Present", "Clonorchis Sinesis Present", "Diphyllobothrium Latum Present", "Fasciola Hepatica Present", "Hookworm Present",
-        "Hymenolepis Diminuta Present", "Hymenolepis Nana Present", "Metagonimus Yokogawa Present", "Paragonimus Westermani Present", "Schistosoma Japonicum Present", "Schistosoma Mansoni Present", "Taenia SPP Present", "Ternidens Deminutus Present",
-        "Trichostrongyle Present", "Trichuris Trichiura Present"
+    return [
+        { label: 'No Pus Cells Seen', value: 'No Pus Cells Seen' },
+        { label: 'Present(+)', value: 'Present(+)' },
+        { label: 'Present(+2)', value: 'Present(+2)' },
+        { label: 'Present(+3)', value: 'Present(+3)' },
     ];
 }
-
-export const get_stool_re_all_fourth_column_options = () => {
-    return ["Not Seen", "Present(+)", "Present(+2)", "Present(+3)", "Present(+4)", "Pigment"];
+export const get_larvae_options = () => {
+    return [
+        { label: 'Not Seen', value: 'Not Seen' },
+        { label: 'Strongyloides Sterocoralis Present', value: 'Strongyloides Sterocoralis Present' },
+    ];
 }
-
+export const get_vegetative_form_options = () => {
+    return [
+        { label: 'Intestinal Flagellates Present', value: 'Intestinal Flagellates Present' },
+        { label: 'Giardia Lamblia Present', value: 'Giardia Lamblia Present' },
+        { label: 'Entamoeba Histolytica Present', value: 'Entamoeba Histolytica Present' },
+        { label: 'Not Seen', value: 'Not Seen' },
+        { label: 'Yeast-Like Cells Present', value: 'Yeast-Like Cells Present' },
+        { label: 'Yeast-Like Cells Present(+)', value: 'Yeast-Like Cells Present(+)' },
+        { label: 'Yeast-Like Cells Present(+2)', value: 'Yeast-Like Cells Present(+2)' },
+        { label: 'Yeast-Like Cells Present(+3)', value: 'Yeast-Like Cells Present(+3)' },
+        { label: 'Yeast-Like Cells Present(+4)', value: 'Yeast-Like Cells Present(+4)' },
+    ];
+}
+export const get_cyst_options = () => {
+    return [
+        { label: 'Endolimax Nana', value: 'Endolimax Nana' },
+        { label: 'Entamoeba Coli', value: 'Entamoeba Coli' },
+        { label: 'Giardia Lamblia', value: 'Giardia Lamblia' },
+        { label: 'Entamoeba Histolytica', value: 'Entamoeba Histolytica' },
+        { label: 'Entamoeba Hominis', value: 'Entamoeba Hominis' },
+        { label: 'Retortamonas Intestinalis', value: 'Retortamonas Intestinalis' },
+        { label: 'Not Seen', value: 'Not Seen' },
+    ];
+}
+export const get_abo_grouping_options = () => {
+    return [
+        { label: 'A Positive', value: 'A Positive' },
+        { label: 'A Negative', value: 'A Negative' },
+        { label: 'AB Positive', value: 'AB Positive' },
+        { label: 'AB Negative', value: 'AB Negative' },
+        { label: 'B Positive', value: 'B Positive' },
+        { label: 'B Negative', value: 'B Negative' },
+        { label: 'O Positive', value: 'O Positive' },
+        { label: 'O Negative', value: 'O Negative' },
+    ];
+}
+export const get_g6pd_options = () => {
+    return [
+        { label: 'Normal', value: 'Normal' },
+        { label: 'Partial Defect', value: 'Partial Defect' },
+        { label: 'Full Defect', value: 'Full Defect' },
+    ];
+}
+export const get_hgb_genetype_options = () => {
+    return [
+        { label: 'AA', value: 'AA' },
+        { label: 'AC', value: 'AC' },
+        { label: 'AF', value: 'AF' },
+        { label: 'AS', value: 'AS' },
+        { label: 'CC', value: 'CC' },
+        { label: 'SC', value: 'SC' },
+        { label: 'SF', value: 'SF' },
+        { label: 'SS', value: 'SS' },
+        { label: 'SS&F', value: 'SS&F' },
+        { label: 'SS/SD', value: 'SS/SD' },
+    ];
+}
+export const get_stool_re_first_row_first_column_options = () => {
+    return [
+        { label: 'Blood Stained Specimen', value: 'Blood Stained Specimen' },
+        { label: 'Bloody Specimen', value: 'Bloody Specimen' },
+        { label: 'Formed Specimen', value: 'Formed Specimen' },
+        { label: 'Loose Specimen', value: 'Loose Specimen' },
+        { label: 'Mucoid Specimen', value: 'Mucoid Specimen' },
+        { label: 'Semi-Formed Specimen', value: 'Semi-Formed Specimen' },
+        { label: 'Watery Specimen', value: 'Watery Specimen' },
+    ];
+}
+export const get_stool_re_second_row_first_column_options = () => {
+    return [
+        { label: 'Not Seen', value: 'Not Seen' },
+        { label: 'Ascaris Lumbricoides Present', value: 'Ascaris Lumbricoides Present' },
+        { label: 'Clonorchis Sinesis Present', value: 'Clonorchis Sinesis Present' },
+        { label: 'Diphyllobothrium Latum Present', value: 'Diphyllobothrium Latum Present' },
+        { label: 'Fasciola Hepatica Present', value: 'Fasciola Hepatica Present' },
+        { label: 'Hookworm Present', value: 'Hookworm Present' },
+        { label: 'Hymenolepis Diminuta Present', value: 'Hymenolepis Diminuta Present' },
+        { label: 'Hymenolepis Nana Present', value: 'Hymenolepis Nana Present' },
+        { label: 'Metagonimus Yokogawa Present', value: 'Metagonimus Yokogawa Present' },
+        { label: 'Paragonimus Westermani Present', value: 'Paragonimus Westermani Present' },
+        { label: 'Schistosoma Japonicum Present', value: 'Schistosoma Japonicum Present' },
+        { label: 'Schistosoma Mansoni Present', value: 'Schistosoma Mansoni Present' },
+        { label: 'Taenia SPP Present', value: 'Taenia SPP Present' },
+        { label: 'Ternidens Deminutus Present', value: 'Ternidens Deminutus Present' },
+        { label: 'Trichostrongyle Present', value: 'Trichostrongyle Present' },
+        { label: 'Trichuris Trichiura Present', value: 'Trichuris Trichiura Present' },
+    ];
+}
+export const getStoolReAllFourthColumns = () => {
+    return [
+        { label: "Not Seen", value: "Not Seen" },
+        { label: "Present(+)", value: "Present(+)" },
+        { label: "Present(+2)", value: "Present()" },
+        { label: "Present(+3)", value: "Present(+3)" },
+        { label: "Present(+4)", value: "Present(+4)" },
+        { label: "Pigment", value: "Pigment" }
+    ];
+}
 export const get_lab_types = () => {
     return ["Alpha Feto Protein", "Antenatal Screening", "Ascitic Fluid C/S", "Aspirate C/S", "BUE + Creatinine"
     , "BUE Creatinine + eGFR", "BUE + LFT", "BUE + Lipids", "Blood Film Comment", "Blood C/S", "Blood Sugar", "C-Reactive Protein"
@@ -1290,19 +1591,15 @@ export const get_lab_types = () => {
     , "Semen C/S", "Serum HCG", "Serum Lipase", "Skin Snip", "Specials", "Sputum AFB", "Sputum C/S", "Stool C/S", "Stool R/E", "TFT"
     , "Throat Swab C/S", "Troponin", "Urethral C/S", "Urine", "Urine ACR", "Urine C/S", "Urine R/E", "Widal", "Wound C/S"];
 }
-
 export const get_address = () => {
     return '<p>P.O Box A.N 12143</p><p>Accra North, Ghana</p><p>Tel.: 050 012 5098 / 054 012 5099 / 055 663 3514 / 024 345 0808</p><p>Email: libertymedicallab@gmail.com / amoatengkweku@gmail.com</p><p><strong>Loc:</strong> Opp. Korle Bu Admin Block, Opp. Korle Bu Police Station<p></p>Opp. Amasaman Hospital near World Vision Int\'l Off Methodist Church<p></p>Agyirigano Health Link Clinic, East Legon</p>';
 }
-
 export const get_address_linear = () => {
     return '<p>P.O Box A.N 12143, Accra North, Ghana. Tel.: 050 012 5098 / 054 012 5099 / 055 663 3514 / 024 345 0808</p><p><strong>Email:</strong> libertymedicallab@gmail.com / amoatengkweku@gmail.com</p><p><strong>Loc:</strong> Opp. Korle Bu Admin Block, Opp. Korle Bu Police Station; Opp. Amasaman Hospital near World Vision Int\'l Off Methodist Church; Agyirigano Health Link Clinic, East Legon</p>';
 }
-
 export const get_front_desk_roles = () => {
     return "Can View Charges List,Can Create Charge,Can Edit Charge, Can View Consultations List,Can View Consultation,Can Create Patient, Can Edit Patient, Can View Patient, Can View Sales List, Can Create Reports,Can View Sale";
 }
-
 export const get_lab_technician_roles = () => {
     return "Can View Charges List,Can Create Charge,Can Edit Charge, Can View Categories List, Can Create Category, Can Edit Category, Can View Category, Can View Sales List, Can Create Reports, Can Create Sale, Can Edit Sale,Can View Sale, Can View Stock List, Can Create Stock, Can Edit Stock, Can View Stock";
 }

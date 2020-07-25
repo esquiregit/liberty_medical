@@ -78,17 +78,6 @@ function AddUrineACR({ patient, closeModal }) {
     const [showDialogue, setShowDialogue] = useState(false);
 
     const handleClose  = () => { setOpen(false); closeModal('UrineACR'); };
-    const handleChange = event => {
-        const val = event.target.value;
-        console.log('val: ', val);values.mg_g_indicates = 'NORMAL';
-        if (val < 30) {
-            values.mg_g_indicates = 'NORMAL';
-        } else if(val > 30 && val < 301) {
-            values.mg_g_indicates = 'MICRO ALBUMINURIA';
-        } else if(val > 301) {
-            values.mg_g_indicates = 'CLINICAL ALBUMINURIA';
-        }
-    };
     const closeConfirm = result => {
         setShowDialogue(false);
         result.toLowerCase() === 'yes' && onSubmit();
@@ -101,7 +90,7 @@ function AddUrineACR({ patient, closeModal }) {
         const abortController = new AbortController();
         const signal          = abortController.signal;
 
-        Axios.post(getBaseURL()+'add_serum_lipase', values, { signal: signal })
+        Axios.post(getBaseURL()+'add_urine_acr', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
                     setSuccess(true);
@@ -145,7 +134,7 @@ function AddUrineACR({ patient, closeModal }) {
                     initialValues={initialValues}
                     validationSchema={validationSchema}
                     onSubmit={onConfirm}>
-                    {({ isValid, dirty, resetForm }) => (
+                    {({ isValid, dirty, resetForm, setFieldValue }) => (
                         <Form>
                             <DialogTitle className="dialogue dialogue-title" id="customized-dialog-title" onClose={handleClose}>
                                 URINE ALBUMIN CREATININE RATIO
@@ -281,7 +270,16 @@ function AddUrineACR({ patient, closeModal }) {
                                             <td>The UACR</td>
                                             <td>
                                                 <FormikTextField
-                                                    onChange={handleChange}
+                                                    onChange={event => {
+                                                        const val = event.target.value;
+                                                        if (val < 30) {
+                                                            setFieldValue('mg_g_indicates', 'NORMAL');
+                                                        } else if(val > 30 && val < 301) {
+                                                            setFieldValue('mg_g_indicates', 'MICRO ALBUMINURIA');
+                                                        } else if(val > 301) {
+                                                            setFieldValue('mg_g_indicates', 'CLINICAL ALBUMINURIA');
+                                                        }
+                                                    }}
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth

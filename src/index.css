@@ -410,6 +410,10 @@ input:disabled { color: #012; }
 }
 /* END OF DIALOGUE */
 
+div#key { background-color: #ddd;padding: 5px }
+div#key p span { font-weight: 700; }
+div#key p:first-child { border-bottom: 1px solid #000; }
+
 /* TABLE */
 @media print {
     .MUIDataTableFilterList-root-41, .MuiChip-root { display: none !important; }

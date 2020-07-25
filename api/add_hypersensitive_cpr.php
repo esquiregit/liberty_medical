@@ -7,7 +7,7 @@
 	$request     = json_decode($data);
 	$patient_id  = Methods::validate_string($request->patient_id);
 	$patient     = Methods::validate_string($request->patient);
-	$results     = Methods::strtocapital(Methods::validate_string($request->results));
+	$results     = Methods::validate_string($request->results);
 	$comments    = Methods::strtocapital(Methods::validate_string($request->comments));
 	$added_by    = Methods::validate_string($request->entered_by);
 	$response    = array();

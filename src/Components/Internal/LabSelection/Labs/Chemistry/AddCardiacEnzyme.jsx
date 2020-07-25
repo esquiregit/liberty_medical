@@ -132,7 +132,7 @@ function AddCardiacEnzyme({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle className="dialogue dialogue-title" id="customized-dialog-title" onClose={handleClose}>
-                                Add Cardiac Enzyme
+                                Cardiac Enzyme
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

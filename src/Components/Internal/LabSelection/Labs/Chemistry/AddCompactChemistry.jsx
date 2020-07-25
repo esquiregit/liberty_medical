@@ -303,7 +303,7 @@ function AddCompactChemistry({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle className="dialogue dialogue-title" id="customized-dialog-title" onClose={handleClose}>
-                                Add Compact Chemistry
+                                Compact Chemistry
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

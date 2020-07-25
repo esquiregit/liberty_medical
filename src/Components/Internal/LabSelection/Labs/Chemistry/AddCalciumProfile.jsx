@@ -145,7 +145,7 @@ function AddCalciumProfile({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add Calcium Profile
+                                Calcium Profile
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

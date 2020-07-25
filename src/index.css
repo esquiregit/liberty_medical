@@ -384,6 +384,9 @@ main {
     z-index: -1;
 }
 input:disabled { color: #012; }
+.MuiDialogTitle-root h6.MuiTypography-root {
+    text-transform: uppercase;
+}
 .dialogue {
     position: -webkit-sticky !important;
     position: sticky !important;
@@ -395,10 +398,11 @@ input:disabled { color: #012; }
     top: 0px;
     border-bottom: 1px solid #eee;
     padding: 12px;
+    text-transform: uppercase !important;
 }
-.dialogue-title .MuiSvgIcon-root {
-    margin-top: -5px !important;
-}
+/* .dialogue-title .MuiSvgIcon-root {
+    margin-top: 0px !important;
+} */
 .dialogue-actions {
     bottom: 0px;
     border-top: 1px solid #eee;

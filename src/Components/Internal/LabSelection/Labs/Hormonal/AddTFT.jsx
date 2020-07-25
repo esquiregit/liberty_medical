@@ -131,7 +131,7 @@ function AddTFT({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add TFT
+                                TFT
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

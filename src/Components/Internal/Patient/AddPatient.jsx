@@ -197,7 +197,7 @@ function AddPatient({ closeAddPatientModal, closeExpandable }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add Patient
+                                Patient
                             </DialogTitle>
                             <DialogContent dividers>
                                 <Grid container spacing={3}>

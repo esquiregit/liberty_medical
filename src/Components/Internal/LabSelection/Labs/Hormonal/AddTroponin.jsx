@@ -112,7 +112,7 @@ function AddTroponin({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add Troponin
+                                Troponin
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

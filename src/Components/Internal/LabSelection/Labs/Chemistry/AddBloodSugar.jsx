@@ -117,7 +117,7 @@ function AddBloodSugar({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add Blood Sugar
+                                Blood Sugar
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

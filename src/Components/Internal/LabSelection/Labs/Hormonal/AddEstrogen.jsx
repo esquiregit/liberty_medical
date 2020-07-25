@@ -132,7 +132,7 @@ function AddEstrogen({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add Estrogen
+                                Estrogen
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

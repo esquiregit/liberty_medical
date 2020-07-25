@@ -104,7 +104,7 @@ function AddHormonalAssay({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add Hormonal Assay
+                                Hormonal Assay
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

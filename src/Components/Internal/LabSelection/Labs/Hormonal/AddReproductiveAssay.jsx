@@ -132,7 +132,7 @@ function AddReproductiveAssay({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add Reproductive Assay
+                                Reproductive Assay
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

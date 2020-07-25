@@ -112,7 +112,7 @@ function AddCortisol({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add Cortisol
+                                Cortisol
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

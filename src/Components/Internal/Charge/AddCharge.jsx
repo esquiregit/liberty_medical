@@ -110,7 +110,7 @@ function AddCharge({ closeModal, closeExpandable }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add Charge
+                                Charge
                             </DialogTitle>
                             <DialogContent dividers>
                                 <Grid container spacing={3}>

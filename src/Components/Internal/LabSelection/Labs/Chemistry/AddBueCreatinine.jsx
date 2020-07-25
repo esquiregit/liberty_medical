@@ -154,7 +154,7 @@ function AddBueCreatinine({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add Bue + Creatinine
+                                Bue + Creatinine
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

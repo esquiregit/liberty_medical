@@ -112,7 +112,7 @@ function AddFolateB12({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add Folate B12
+                                Folate B12
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

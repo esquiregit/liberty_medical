@@ -32,7 +32,7 @@ function AddPSA({ patient, closeModal }) {
 
     const initialValues = {
         patient_id : patient.patient_id,
-        patient    : patient,
+        patient    : patient.name,
         results    : '',
         comments   : '',
         entered_by : staff.staff_id,
@@ -107,7 +107,7 @@ function AddPSA({ patient, closeModal }) {
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
                             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                                Add PSA
+                                PSA
                             </DialogTitle>
                             <DialogContent dividers>
                                 <table id="lab-display-table">

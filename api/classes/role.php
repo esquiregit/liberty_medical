@@ -6,7 +6,7 @@
 
         // create a record
         public static function create_role($name, $permissions, $added_by, $conn) {
-            $permissions = implode(', ', $permissions);
+            // $permissions = implode(', ', $permissions);
 
             try{
                 $query = $conn->prepare('INSERT INTO roles(name, permissions, added_by) VALUES(:name, :permissions, :added_by)');
@@ -21,7 +21,7 @@
         // fetch all roles
         public static function read_roles($conn){
             try{
-                $query = $conn->prepare('SELECT * FROM roles WHERE status != :status ORDER BY name, id DESC');
+                $query = $conn->prepare('SELECT r.id, r.name, r.permissions, r.added_by, u.first_name, u.other_name, u.last_name FROM roles r INNER JOIN users u ON r.added_by = u.staff_id ORDER BY r.name, r.id');
                 $query->execute([':status' => 'Inactive']);
 
                 return $query->fetchAll(PDO::FETCH_OBJ);
@@ -52,7 +52,7 @@
                 $query = $conn->prepare('SELECT * FROM roles WHERE name = :name AND id != :id');
                 $query->execute([':name' => $name, ':id' => $id]);
 
-                return !$query->fetch(PDO::FETCH_OBJ);
+                return $query->fetch(PDO::FETCH_OBJ);
             }catch(PDOException $ex){}
         }
 
@@ -70,7 +70,7 @@
 
         // update a record
         public static function update_role($id, $name, $permissions, $conn) {
-            $permissions = implode(', ', $permissions);
+            // $permissions = implode(', ', $permissions);
 
             try{
                 $query = $conn->prepare('UPDATE roles SET name = :name, permissions = :permissions WHERE id = :id');
@@ -90,6 +90,10 @@
 
                 return $query->fetchAll(PDO::FETCH_OBJ);
             }catch(PDOException $ex){}
+        }
+
+        public static function get_all_permissions() {
+            return "Can Create Lab,Can Edit Lab,Can View Lab, Can Pay Lab, Can View Lab List, Can Create Charge, Can Edit Charge, Can View Charges List, Can Create Patient, Can Edit Patient, Can View Patient, Can View Patients List, Can Create Reports, Can Create Staff, Can Edit Staff, Can View Staff, Can View Staff List, Can Block Staff, Can Unblock Staff";
         }
 
 	}

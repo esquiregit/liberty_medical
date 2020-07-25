@@ -5,6 +5,7 @@
 	$conn            = $pdo->open();
 	$data 	         = file_get_contents("php://input");
 	$request         = json_decode($data);
+
 	$patient_id      = Methods::validate_string($request->patient_id);
 	$patient         = Methods::validate_string($request->patient);
 	$sodium          = Methods::strtocapital(Methods::validate_string($request->sodium));
@@ -20,6 +21,7 @@
 	$egfr            = Methods::strtocapital(Methods::validate_string($request->egfr));
 	$comments        = Methods::strtocapital(Methods::validate_string($request->comments));
 	$added_by        = Methods::validate_string($request->entered_by);
+	
 	$response        = array();
 
 	if($request) {

@@ -159,13 +159,22 @@ export const labTechMenuItems   = [
         key : 1
     },
     {
+        label: 'Patients',
+        icon : <WcOutlinedIcon />,
+        url  : '/patients/'
+    },
+    {
+        type: 'divider',
+        key : 2
+    },
+    {
         label: 'Requests',
         icon : <ListAltOutlinedIcon />,
         url  : '/requests/'
     },
     {
         type: 'divider',
-        key : 2
+        key : 3
     },
     {
         label: 'History',
@@ -174,7 +183,7 @@ export const labTechMenuItems   = [
     },
     {
         type: 'divider',
-        key : 3
+        key : 4
     },
     {
         label: 'Report',
@@ -183,6 +192,6 @@ export const labTechMenuItems   = [
     },
     {
         type: 'divider',
-        key : 4
+        key : 5
     }
 ];

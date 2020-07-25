@@ -9,10 +9,10 @@
         public static function create_sputum_afb($patient_id, $appearance, $gram_stain, $pus_cells, $zn_stain, $comments, $added_by, $conn){
             $invoice_id = Methods::get_invoice_id('Sputum AFB', $conn);
             $amount     = Charge::read_charge('71', $conn);
-            $appearance = implode(', ', $appearance);
-            $gram_stain = implode(', ', $gram_stain);
-            $pus_cells  = implode(', ', $pus_cells);
-            $zn_stain   = implode(', ', $zn_stain);
+            $appearance = is_array($appearance) ? implode(', ', $appearance) : $appearance;
+            $gram_stain = is_array($gram_stain) ? implode(', ', $gram_stain) : $gram_stain;
+            $pus_cells  = is_array($pus_cells) ? implode(', ', $pus_cells) : $pus_cells;
+            $zn_stain   = is_array($zn_stain) ? implode(', ', $zn_stain) : $zn_stain;
 
             try{
                 $query = $conn->prepare('INSERT INTO sputum_afb(invoice_id, patient_id, appearance, gram_stain, pus_cells, zn_stain, comments, added_by)  VALUES(:invoice_id, :patient_id, :appearance, :gram_stain, :pus_cells, :zn_stain, :comments, :added_by)');
@@ -46,10 +46,10 @@
 
         // update a sputum_afb record
         public static function update_sputum_afb($id, $patient_id, $appearance, $gram_stain, $pus_cells, $zn_stain, $comments, $conn) {
-            $appearance = implode(', ', $appearance);
-            $gram_stain = implode(', ', $gram_stain);
-            $pus_cells  = implode(', ', $pus_cells);
-            $zn_stain   = implode(', ', $zn_stain);
+            $appearance = is_array($appearance) ? implode(', ', $appearance) : $appearance;
+            $gram_stain = is_array($gram_stain) ? implode(', ', $gram_stain) : $gram_stain;
+            $pus_cells  = is_array($pus_cells) ? implode(', ', $pus_cells) : $pus_cells;
+            $zn_stain   = is_array($zn_stain) ? implode(', ', $zn_stain) : $zn_stain;
 
             try{
                 $query = $conn->prepare('UPDATE sputum_afb SET patient_id = :patient_id, appearance = :appearance, gram_stain = :gram_stain, pus_cells = :pus_cells, zn_stain = :zn_stain, comments = :comments WHERE id = :id AND patient_id = :patient_id');

@@ -5,7 +5,7 @@ import Axios from 'axios';
 import Chart from './Chart';
 import Footer from '../Layout/Footer';
 import Header from '../Layout/Header';
-import Loader from '../../Extras/Loadrr';
+import DashboardLoadrr from '../../Extras/DashboardLoadrr';
 import styles from '../../Extras/styles';
 import Sidebar from '../Layout/Sidebar/Sidebar';
 import { getBaseURL } from '../../Extras/server';
@@ -46,7 +46,7 @@ function Dashboard({ history }) {
                     [classes.contentWide]: !visible,
                 })}>
                 {
-                    loading ? <Loader /> :
+                    loading ? <DashboardLoadrr /> :
                     <>
                         <Grid container spacing={3} className="mt-48">
                             <Grid item sm={12}>

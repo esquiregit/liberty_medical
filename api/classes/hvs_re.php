@@ -9,10 +9,10 @@
         public static function create_hvs_re($patient_id, $pus_cells_per_hps, $epitheleal_cells_per_hpf, $red_blood_cells, $yeast_like_cells, $t_vaginalis, $gnid, $comments, $added_by, $conn){
             $invoice_id       = Methods::get_invoice_id('HVS R/E', $conn);
             $amount           = Charge::read_charge('46', $conn);
-            $red_blood_cells  = implode(', ', $red_blood_cells);
-            $yeast_like_cells = implode(', ', $yeast_like_cells);
-            $t_vaginalis      = implode(', ', $t_vaginalis);
-            $gnid             = implode(', ', $gnid);
+            $red_blood_cells  = is_array($red_blood_cells) ? implode(', ', $red_blood_cells) : $red_blood_cells;
+            $yeast_like_cells = is_array($yeast_like_cells) ? implode(', ', $yeast_like_cells) : $yeast_like_cells;
+            $t_vaginalis      = is_array($t_vaginalis) ? implode(', ', $t_vaginalis) : $t_vaginalis;
+            $gnid             = is_array($gnid) ? implode(', ', $gnid) : $gnid;
 
             try{
                 $query = $conn->prepare('INSERT INTO hvs_re(invoice_id, patient_id, pus_cells_per_hps, epitheleal_cells_per_hpf, red_blood_cells, yeast_like_cells, t_vaginalis, gnid, comments, added_by)  VALUES(:invoice_id, :patient_id, :pus_cells_per_hps, :epitheleal_cells_per_hpf, :red_blood_cells, :yeast_like_cells, :t_vaginalis, :gnid, :comments, :added_by)');
@@ -46,10 +46,10 @@
 
         // update a hvs_re record
         public static function update_hvs_re($id, $patient_id, $pus_cells_per_hps, $epitheleal_cells_per_hpf, $red_blood_cells, $yeast_like_cells, $t_vaginalis, $gnid, $comments, $conn) {
-            $red_blood_cells  = implode(', ', $red_blood_cells);
-            $yeast_like_cells = implode(', ', $yeast_like_cells);
-            $t_vaginalis      = implode(', ', $t_vaginalis);
-            $gnid             = implode(', ', $gnid);
+            $red_blood_cells  = is_array($red_blood_cells) ? implode(', ', $red_blood_cells) : $red_blood_cells;
+            $yeast_like_cells = is_array($yeast_like_cells) ? implode(', ', $yeast_like_cells) : $yeast_like_cells;
+            $t_vaginalis      = is_array($t_vaginalis) ? implode(', ', $t_vaginalis) : $t_vaginalis;
+            $gnid             = is_array($gnid) ? implode(', ', $gnid) : $gnid;
             
             try{
                 $query = $conn->prepare('UPDATE hvs_re SET patient_id = :patient_id, pus_cells_per_hps = :pus_cells_per_hps, epitheleal_cells_per_hpf = :epitheleal_cells_per_hpf, red_blood_cells = :red_blood_cells, yeast_like_cells = :yeast_like_cells, t_vaginalis = :t_vaginalis, gnid = :gnid, comments = :comments WHERE id = :id AND patient_id = :patient_id');

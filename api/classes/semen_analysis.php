@@ -9,9 +9,9 @@
         public static function create_semen_analysis($patient_id, $volume, $motility, $unknown_one, $unknown_two, $consistency, $agglutination, $ph, $colour, $count, $viability, $morphology, $testicular_cells, $pus_cells, $epithelial, $red_blood_cells, $comments, $added_by, $conn){
             $invoice_id  = Methods::get_invoice_id('Semen Analysis', $conn);
             $amount      = Charge::read_charge('65', $conn);
-            $consistency = implode(', ', $consistency);
-            $ph          = implode(', ', $ph);
-            $colour      = implode(', ', $colour);
+            $consistency = is_array($consistency) ? implode(', ', $consistency) : $consistency;
+            $ph          = is_array($ph) ? implode(', ', $ph) : $ph;
+            $colour      = is_array($colour) ? implode(', ', $colour) : $colour;
 
             try{
                 $query = $conn->prepare('INSERT INTO semen_analysis(invoice_id, patient_id, volume, motility, unknown_one, unknown_two, consistency, agglutination, ph, colour, count, viability, morphology, testicular_cells, pus_cells, epithelial, red_blood_cells, comments, added_by)  VALUES(:invoice_id, :patient_id, :volume, :motility, :unknown_one, :unknown_two, :consistency, :agglutination, :ph, :colour, :count, :viability, :morphology, :testicular_cells, :pus_cells, :epithelial, :red_blood_cells, :comments, :added_by)');
@@ -45,9 +45,9 @@
 
         // update a semen_analysis record
         public static function update_semen_analysis($id, $patient_id, $volume, $motility, $unknown_one, $unknown_two, $consistency, $agglutination, $ph, $colour, $count, $viability, $morphology, $testicular_cells, $pus_cells, $epithelial, $red_blood_cells, $comments, $conn) {
-            $consistency = implode(', ', $consistency);
-            $ph          = implode(', ', $ph);
-            $colour      = implode(', ', $colour);
+            $consistency = is_array($consistency) ? implode(', ', $consistency) : $consistency;
+            $ph          = is_array($ph) ? implode(', ', $ph) : $ph;
+            $colour      = is_array($colour) ? implode(', ', $colour) : $colour;
 
             try{
                 $query = $conn->prepare('UPDATE semen_analysis SET patient_id = :patient_id, volume = :volume, motility = :motility, unknown_one = :unknown_one, unknown_two = :unknown_two, consistency = :consistency, agglutination = :agglutination, ph = :ph, colour = :colour, count = :count, viability = :viability, morphology = :morphology, testicular_cells = :testicular_cells, pus_cells = :pus_cells, epithelial = :epithelial, red_blood_cells = :red_blood_cells, comments = :comments WHERE id = :id AND patient_id = :patient_id');

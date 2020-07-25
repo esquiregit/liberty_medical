@@ -1,28 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Tippy from '@tippy.js/react';
-import PatientPDF from './PatientPDF';
+import AddRequest from '../Request/AddRequest';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import PatientPDF from './PatientPDF';
 import EditPatient from './EditPatient';
 import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
+import ListAltOutlinedIcon from '@material-ui/icons/ListAltOutlined';
+import LocalHospitalOutlinedIcon from '@material-ui/icons/LocalHospitalOutlined';
 import { BlobProvider } from "@react-pdf/renderer";
 import { TableRow, TableCell, IconButton } from '@material-ui/core';
 import 'tippy.js/dist/tippy.css';
 
-function ViewPatient({ length, patient, closeExpandable, permissions }) {
+function ViewPatient({ history, length, patient, closeExpandable, permissions, staff_id }) {
     const filename        = patient.name+".pdf";
+    const labTooltip      = "Perform Lab For "+patient.first_name;
     const editTooltip     = "Update "+patient.first_name+"'s Details";
+    const requestTooltip  = "Add Request For "+patient.first_name;
     const downloadTooltip = "Download "+patient.first_name+"'s Details";
-    const [showModal, setShowModal] = React.useState(false);
 
-    const closeEditModal = () => { setShowModal(false) };
+    const [showEditModal, setShowEditModal]             = useState(false);
+    const [showAddRequestModal, setShowAddRequestModal] = useState(false);
+
+    const closeEditModal       = () => { setShowEditModal(false) };
+    const closeAddRequestModal = () => { setShowAddRequestModal(false) };
+    const goToLab              = () => { history.push(`/lab-selection/${patient.patient_id}`); }
 
     return (
         <>
             <TableRow>
                 <TableCell colSpan={length + 1}>
                     <div className="detail-div">
-                        { showModal && <EditPatient patient={patient} closeEditModal={closeEditModal} closeExpandable={closeExpandable} /> }
+                        { showEditModal       && <EditPatient patient={patient} closeEditModal={closeEditModal} closeExpandable={closeExpandable} /> }
+                        { showAddRequestModal && <AddRequest  patient={patient} closeAddRequestModal={closeAddRequestModal} closeExpandable={closeExpandable} staff_id={staff_id} /> }
                         <table id="detail-table">
                             <tbody>
                                 <tr>
@@ -94,10 +104,25 @@ function ViewPatient({ length, patient, closeExpandable, permissions }) {
                                 {
                                     permissions.includes("Can Edit Patient") &&
                                     <Tippy content={editTooltip}>
-                                        <IconButton onClick={() => setShowModal(true)}>
+                                        <IconButton onClick={() => setShowEditModal(true)}>
                                             <EditOutlinedIcon color="primary" />
                                         </IconButton>
                                     </Tippy>
+                                }
+                                {
+                                    permissions.includes("Can Create Lab") &&
+                                    <>
+                                        <Tippy content={labTooltip}>
+                                            <IconButton onClick={goToLab}>
+                                                <LocalHospitalOutlinedIcon className="colour-success" />
+                                            </IconButton>
+                                        </Tippy>
+                                        <Tippy content={requestTooltip}>
+                                            <IconButton onClick={() => setShowAddRequestModal(true)}>
+                                                <ListAltOutlinedIcon className="dark" />
+                                            </IconButton>
+                                        </Tippy>
+                                    </>
                                 }
                             </Grid>
                         </Grid>

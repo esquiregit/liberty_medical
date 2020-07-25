@@ -9,8 +9,8 @@
         public static function create_pleural_fluid($patient_id, $colour, $appearance, $appearance_dropdown, $gram_stain, $acid_fast_bacilli, $ph, $glucose, $total_protein, $pleural_fluid_albumin, $ldh, $total_wbc_one, $total_wbc_two, $lymphocytes_one, $lymphocytes_two, $monocytes_one, $monocytes_two, $granulocytes_one, $granulocytes_two, $comments, $added_by, $conn){
             $invoice_id          = Methods::get_invoice_id('Pleural Fluid', $conn);
             $amount              = Charge::read_charge('58', $conn);
-            $appearance_dropdown = implode(', ', $appearance_dropdown);
-            $gram_stain          = implode(', ', $gram_stain);
+            $appearance_dropdown = is_array($appearance_dropdown) ? implode(', ', $appearance_dropdown) : $appearance_dropdown;
+            $gram_stain          = is_array($gram_stain) ? implode(', ', $gram_stain) : $gram_stain;
 
             try{
                 $query = $conn->prepare('INSERT INTO pleural_fluid(invoice_id, patient_id, colour, appearance, appearance_dropdown, gram_stain, acid_fast_bacilli, ph, glucose, total_protein, pleural_fluid_albumin, ldh, total_wbc_one, total_wbc_two, lymphocytes_one, lymphocytes_two, monocytes_one, monocytes_two, granulocytes_one, granulocytes_two, comments, added_by)  VALUES(:invoice_id, :patient_id, :colour, :appearance, :appearance_dropdown, :gram_stain, :acid_fast_bacilli, :ph, :glucose, :total_protein, :pleural_fluid_albumin, :ldh, :total_wbc_one, :total_wbc_two, :lymphocytes_one, :lymphocytes_two, :monocytes_one, :monocytes_two, :granulocytes_one, :granulocytes_two, :comments, :added_by)');
@@ -44,8 +44,8 @@
 
         // update a pleural_fluid record
         public static function update_pleural_fluid($id, $patient_id, $colour, $appearance, $appearance_dropdown, $gram_stain, $acid_fast_bacilli, $ph, $glucose, $total_protein, $pleural_fluid_albumin, $ldh, $total_wbc_one, $total_wbc_two, $lymphocytes_one, $lymphocytes_two, $monocytes_one, $monocytes_two, $granulocytes_one, $granulocytes_two, $comments, $conn) {
-            $appearance_dropdown = implode(', ', $appearance_dropdown);
-            $gram_stain          = implode(', ', $gram_stain);
+            $appearance_dropdown = is_array($appearance_dropdown) ? implode(', ', $appearance_dropdown) : $appearance_dropdown;
+            $gram_stain          = is_array($gram_stain) ? implode(', ', $gram_stain) : $gram_stain;
             
             try{
                 $query = $conn->prepare('UPDATE pleural_fluid SET patient_id = :patient_id, colour = :colour, appearance = :appearance, appearance_dropdown = :appearance_dropdown, gram_stain = :gram_stain, acid_fast_bacilli = :acid_fast_bacilli, ph = :ph, glucose = :glucose, total_protein = :total_protein, pleural_fluid_albumin = :pleural_fluid_albumin, ldh = :ldh, total_wbc_one = :total_wbc_one, total_wbc_two = :total_wbc_two, lymphocytes_one = :lymphocytes_one, lymphocytes_two = :lymphocytes_two, monocytes_one = :monocytes_one, monocytes_two = :monocytes_two, granulocytes_one = :granulocytes_one, granulocytes_two = :granulocytes_two, comments = :comments WHERE id = :id AND patient_id = :patient_id');

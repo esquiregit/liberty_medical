@@ -36,10 +36,10 @@ export default function AlertDialogSlide({ message, closeConfirm }) {
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={() => handleClose('No')} color="primary">
+                    <Button onClick={() => handleClose('No')} color="secondary">
                         No
                     </Button>
-                    <Button onClick={() => handleClose('Yes')} color="secondary">
+                    <Button autoFocus onClick={() => handleClose('Yes')} color="primary">
                         Yes
                     </Button>
                 </DialogActions>

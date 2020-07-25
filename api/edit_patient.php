@@ -1,6 +1,5 @@
 <?php
 	header('Content-Type: application/json');
-	require "classes/audit_trail.php";
 	require "classes/patient.php";
 
 	$conn               = $pdo->open();
@@ -25,7 +24,7 @@
 	$response           = array();
 	$todays_date 	    = date("Y-m-d", strtotime(Date("Y-m-d")));
 	
-	if(!empty($staff_id) || !empty($id) || !empty($patient_id) || !empty($title) || !empty($first_name) || !empty($last_name) || !empty($date_of_birth) || !empty($gender) || !empty($mobile_phone) || !empty($next_of_kin_name) || !empty($next_of_kin_number)) {
+	if(!empty($staff_id) && !empty($id) && !empty($patient_id) && !empty($title) && !empty($first_name) && !empty($last_name) && !empty($date_of_birth) && !empty($gender) && !empty($mobile_phone) && !empty($next_of_kin_name) && !empty($next_of_kin_number)) {
 		if(empty($title)) {
 			array_push($response, array(
 				"status"  => "Warning",

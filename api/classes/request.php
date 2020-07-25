@@ -1,7 +1,7 @@
 <?php
-    require_once 'conn.php';
-    require_once 'methods.php';
-    require_once 'charge.php';
+    require 'conn.php';
+    require 'methods.php';
+    require 'charge.php';
 
     class Request {
 
@@ -18,10 +18,15 @@
         }
 
         // fetch all request records
-        public static function read_requests($conn, $branch){
+        public static function read_requests($role, $branch, $conn) {
             try{
-                $query = $conn->prepare('SELECT r.id, r.patient_id, r.request_id, r.requests, r.added_by, r.date_added, r.status, r.date_done, r.done_by, r.discount, r.total_cost, r.discounted_cost, r.amount_paid, r.payment_type, r.payment_status, p.gender, p.first_name as pfirst_name, p.middle_name as pmiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name, u.first_name as dfirst_name, u.other_name as dother_name, u.last_name as dlast_name FROM requests r INNER JOIN patients p ON r.patient_id = p.patient_id INNER JOIN users u ON r.added_by = u.staff_id WHERE r.branch = :branch ORDER BY r.id DESC');
-                $query->execute([':branch' => $branch]);
+                if(strtolower($role) === 'administrator') {
+                    $query = $conn->prepare('SELECT r.id, r.patient_id, r.request_id, r.requests, r.added_by, r.date_added, r.status, r.date_done, r.done_by, r.discount, r.total_cost, r.discounted_cost, r.amount_paid, r.payment_type, r.payment_status, p.branch, p.gender, p.first_name as pfirst_name, p.middle_name as pmiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name, u.first_name as dfirst_name, u.other_name as dother_name, u.last_name as dlast_name FROM requests r INNER JOIN patients p ON r.patient_id = p.patient_id INNER JOIN users u ON r.added_by = u.staff_id ORDER BY p.branch, p.first_name, r.id DESC');
+                    $query->execute();
+                } else {
+                    $query = $conn->prepare('SELECT r.id, r.patient_id, r.request_id, r.requests, r.added_by, r.date_added, r.status, r.date_done, r.done_by, r.discount, r.total_cost, r.discounted_cost, r.amount_paid, r.payment_type, r.payment_status, p.branch, p.gender, p.first_name as pfirst_name, p.middle_name as pmiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name, u.first_name as dfirst_name, u.other_name as dother_name, u.last_name as dlast_name FROM requests r INNER JOIN patients p ON r.patient_id = p.patient_id INNER JOIN users u ON r.added_by = u.staff_id WHERE p.branch = :branch ORDER BY p.branch, p.first_name, r.id DESC');
+                    $query->execute([':branch' => $branch]);
+                }
 
                 return $query->fetchAll(PDO::FETCH_OBJ);
             }catch(PDOException $ex){}
@@ -34,6 +39,16 @@
                 $query->execute([':request_id' => $request_id]);
 
                 return $query->fetch(PDO::FETCH_OBJ);
+            }catch(PDOException $ex){}
+        }
+
+        // fetch a request record
+        public static function read_payment_type($request_id, $conn){
+            try{
+                $query = $conn->prepare('SELECT payment_type FROM requests WHERE request_id = :request_id');
+                $query->execute([':request_id' => $request_id]);
+
+                return $query->fetch(PDO::FETCH_OBJ)->payment_type;
             }catch(PDOException $ex){}
         }
 
@@ -76,7 +91,7 @@
                 }
 
                 $query = $conn->prepare('UPDATE requests SET requests = :requests, discounted_cost = :discounted_cost, total_cost = :total_cost WHERE id = :id AND request_id = :request_id');
-                $query->execute([':requests' => $requests, ':discounted_cost' => $discounted_cost, ':total_cost' => $new_cost, ':id' => $id, ':request_id' => $request_id]);
+                $query->execute([':requests' => implode(', ', $requests), ':discounted_cost' => $discounted_cost, ':total_cost' => $new_cost, ':id' => $id, ':request_id' => $request_id]);
 
                 return true;
             }catch(PDOException $ex){
@@ -88,7 +103,7 @@
             $total_cost = self::get_request_cost($request_id, $conn);
 
             try{
-                if($source === 'add-request') {
+                if($source === 'new-request') {
                     $query = $conn->prepare('UPDATE requests SET discount = :discount, discounted_cost = :discounted_cost, amount_paid = :amount_paid, payment_type = :payment_type WHERE request_id = :request_id');
                     $query->execute([':discount' => $discount, ':discounted_cost' => $discounted_cost, ':amount_paid' => $amount_paid, ':payment_type' => $payment_type, ':request_id' => $request_id]);
 
@@ -146,14 +161,13 @@
 
         // fetch a charge
         public static function get_charge($type, $conn){
+
             try{
                 $query = $conn->prepare('SELECT amount FROM charges WHERE type = :type');
                 $query->execute([':type' => $type]);
-                // $result = $query->fetch(PDO::FETCH_OBJ);
 
-                // return $result ? $result->amount : 0.00;
                 return $query->fetch(PDO::FETCH_OBJ)->amount;
-            }catch(PDOException $ex){die($type);
+            }catch(PDOException $ex){
                 return 0;
             }
         }
@@ -212,14 +226,30 @@
 
         public static function get_total_charge($requests, $conn) {
             $total = 0;
+
             foreach($requests as $request) {
                 $total += self::get_charge($request, $conn);
             }
+
             return $total;
         }
 
         public static function get_discounted_cost($discount, $total_cost, $conn) {
             return ($total_cost - (($discount / 100) * $total_cost));
+        }
+
+        public static function get_requests_string($requests){
+            $string = '';
+
+            foreach($requests as $key => $value) {
+                if($value)
+                    $string .= $key.', ';
+            }
+
+            $ret_string = trim($string);
+            $length     = strlen($ret_string);
+
+            return substr($ret_string, 0, ($length - 1));
         }
 
     }

@@ -105,7 +105,7 @@ const validationSchema = Yup.object().shape({
         .test('invalid-prefix', 'Invalid Phone Number Prefix', value => value && isPrefixValid(value.substring(0, 3)))
 });
 
-function AddPatient({ closeModal, closeExpandable }) {
+function AddPatient({ closeAddPatientModal, closeExpandable }) {
     const classes       = styles();
     const staff         = useSelector(state => state.authReducer.staff);
     const genderOptions = getGenderOptions();
@@ -134,7 +134,7 @@ function AddPatient({ closeModal, closeExpandable }) {
     const [comError, setComError] = useState(false);
     const [showDialogue, setShowDialogue] = useState(false);
 
-    const handleClose  = () => { setOpen(false); closeModal(); };
+    const handleClose  = () => { setOpen(false); closeAddPatientModal(); };
     const closeConfirm = result => {
         setShowDialogue(false);
         result.toLowerCase() === 'yes' && onSubmit();
@@ -152,7 +152,7 @@ function AddPatient({ closeModal, closeExpandable }) {
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
                     setOpen(false);
-                    closeExpandable(response.data[0].message);
+                    closeExpandable(response.data[0].message, 'add patient', response.data[0].patient);
                 } else if(response.data[0].status.toLowerCase() === 'warning') {
                     setMessage(response.data[0].message);
                     setWarning(true);
@@ -178,7 +178,7 @@ function AddPatient({ closeModal, closeExpandable }) {
             { comError     && <Toastrr message={message} type="info"    /> }
             { showDialogue && <ConfirmDialogue message={'Are You Sure You Want To Add Patient?'} closeConfirm={closeConfirm} /> }
             <Backdrop className={classes.backdrop} open={backdrop}>
-                <CircularProgress color="inherit" /> <span className='ml-15'>Adding Patient....</span>
+                <CircularProgress color="inherit" /> <span className='ml-15'>Adding Patient. Please Wait....</span>
             </Backdrop>
             <Dialog
                 TransitionComponent={Transition}

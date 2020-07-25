@@ -1,6 +1,5 @@
 <?php
     require_once 'conn.php';
-    require_once 'audit_trail.php';
 	require_once 'methods.php';
 
 	class Login {

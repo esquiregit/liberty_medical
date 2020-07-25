@@ -5,9 +5,7 @@
 	class Patient {
 
         // create a patient record
-        public static function create_patient($title, $first_name, $middle_name, $last_name, $date_of_birth, $gender, $email_address, $home_phone, $mobile_phone, $work_phone, $next_of_kin_name, $next_of_kin_number, $branch, $entered_by, $conn){
-            $patient_id = self::get_patient_id($branch, $conn);
-
+        public static function create_patient($patient_id, $title, $first_name, $middle_name, $last_name, $date_of_birth, $gender, $email_address, $home_phone, $mobile_phone, $work_phone, $next_of_kin_name, $next_of_kin_number, $branch, $entered_by, $conn){
             try{
                 $query = $conn->prepare('INSERT INTO patients(patient_id, title, first_name, middle_name, last_name, date_of_birth, gender, email_address, home_phone, mobile_phone, work_phone, next_of_kin_name, next_of_kin_number, branch, entered_by)  VALUES(:patient_id, :title, :first_name, :middle_name, :last_name, :date_of_birth, :gender, :email_address, :home_phone, :mobile_phone, :work_phone, :next_of_kin_name, :next_of_kin_number, :branch, :entered_by)');
                 $query->execute([':patient_id' => $patient_id, ':title' => $title, ':first_name' => $first_name, ':middle_name' => $middle_name, ':last_name' => $last_name, ':date_of_birth' => $date_of_birth, ':gender' => $gender, ':email_address' => $email_address, ':home_phone' => $home_phone, ':mobile_phone' => $mobile_phone, ':work_phone' => $work_phone, ':next_of_kin_name' => $next_of_kin_name, ':next_of_kin_number' => $next_of_kin_number, ':branch' => $branch, ':entered_by' => $entered_by]);
@@ -19,20 +17,25 @@
         }
 
         // fetch all patient records
-        public static function read_patients($branch, $conn){
+        public static function read_patients($role, $branch, $conn){
             try{
-                $query = $conn->prepare('SELECT p.id, p.patient_id, p.title, p.first_name, p.middle_name, p.last_name, p.date_of_birth, p.gender, p.email_address, p.home_phone, p.mobile_phone, p.work_phone, p.next_of_kin_name, p.next_of_kin_number, p.branch, p.entered_by, p.date_added, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM patients p INNER JOIN users u ON p.entered_by = u.staff_id AND p.branch = :branch ORDER BY first_name, id');
-                $query->execute([':branch' => $branch]);
+                if(strtolower($role) === 'administrator') {
+                    $query = $conn->prepare('SELECT p.id, p.patient_id, p.title, p.first_name, p.middle_name, p.last_name, p.date_of_birth, p.gender, p.email_address, p.home_phone, p.mobile_phone, p.work_phone, p.next_of_kin_name, p.next_of_kin_number, p.branch, p.entered_by, p.date_added, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM patients p INNER JOIN users u ON p.entered_by = u.staff_id ORDER BY p.branch, p.first_name, p.id');
+                    $query->execute();
+                } else {
+                    $query = $conn->prepare('SELECT p.id, p.patient_id, p.title, p.first_name, p.middle_name, p.last_name, p.date_of_birth, p.gender, p.email_address, p.home_phone, p.mobile_phone, p.work_phone, p.next_of_kin_name, p.next_of_kin_number, p.branch, p.entered_by, p.date_added, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM patients p INNER JOIN users u ON p.entered_by = u.staff_id AND p.branch = :branch ORDER BY p.branch, p.first_name, p.id');
+                    $query->execute([':branch' => $branch]);
+                }
 
                 return $query->fetchAll(PDO::FETCH_OBJ);
             }catch(PDOException $ex){}
         }
 
         // fetch all category records
-        public static function read_dropdown_patients($branch, $conn){
+        public static function read_dropdown_patients($conn){
             try{
-                $query = $conn->prepare('SELECT patient_id, first_name, middle_name, last_name FROM patients WHERE branch = :branch ORDER BY first_name');
-                $query->execute([':branch' => $branch]);
+                $query = $conn->prepare('SELECT patient_id, first_name, middle_name, last_name FROM patients ORDER BY first_name');
+                $query->execute();
 
                 return $query->fetchAll(PDO::FETCH_OBJ);
             }catch(PDOException $ex){}
@@ -44,7 +47,7 @@
                 $query = $conn->prepare('SELECT * FROM patients WHERE patient_id = :patient_id');
                 $query->execute([':patient_id' => $patient_id]);
 
-                return $query->fetchAll(PDO::FETCH_OBJ);
+                return $query->fetch(PDO::FETCH_OBJ);
             }catch(PDOException $ex){}
         }
 

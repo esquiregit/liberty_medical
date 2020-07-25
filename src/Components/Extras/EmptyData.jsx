@@ -20,7 +20,11 @@ function EmptyData({ error, single, plural }) {
                     <span>
                         <strong>No {plural} Found!</strong>
                         &nbsp;
-                        { plural === 'Activity Logs' ? null : <span>click the "add {single}" button below to add one</span> }
+                        {
+                            plural === 'Report' &&
+                            <span>Change Search Parameters And Try Again</span>
+                        }
+                        { plural === 'Activity Logs' || plural === 'Report' ? null : <span>click the "add {single}" button below to add one</span> }
                     </span>
                 </>
             }

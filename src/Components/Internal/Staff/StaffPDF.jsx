@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
 function StaffPDF({ staff }) {
     return (
         <Document>
-            <Page style={styles.page}>
+            <Page style={styles.page} size="A4" wrap>
                 <View style={styles.container}>
                     <View>
                         <View>

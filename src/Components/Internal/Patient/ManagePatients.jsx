@@ -9,39 +9,54 @@ import styles from '../../Extras/styles';
 import Toastrr from '../../Extras/Toastrr';
 import Sidebar from '../Layout/Sidebar/Sidebar';
 import EmptyData from '../../Extras/EmptyData';
-import Breadcrumb from '../Layout/Breadcrumb';
 import AddPatient from './AddPatient';
+import Breadcrumb from '../Layout/Breadcrumb';
+import PayRequest from '../Request/PayRequest';
 import ViewPatient from './ViewPatient';
 import MUIDataTable from "mui-datatables";
 import AddOutlinedIcon from '@material-ui/icons/AddOutlined';
 import { getBaseURL } from '../../Extras/server';
-import { useSelector } from 'react-redux';
+import { storePatient } from '../../../Store/Actions/PatientActions';
+import { useDispatch, useSelector } from 'react-redux';
 
 function ManagePatients({ history }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const visible     = useSelector(state => state.sidebarReducer.visible);
     const permissions = useSelector(state => state.authReducer.permissions);
-
-    const [loading, setLoading]     = useState(true);
-    const [message, setMessage]     = useState('');
-    const [success, setSuccess]     = useState(false);
-    const [comError, setComError]   = useState(false);
-    const [patients, setPatients]   = useState([]);
-    const [showModal, setShowModal] = useState(false);
-
-    const closeModal      = () => {
+    const dispatch    = useDispatch();
+    
+    const [loading, setLoading]   = useState(true);
+    const [message, setMessage]   = useState('');
+    const [request, setRequest]   = useState([]);
+    const [success, setSuccess]   = useState(false);
+    const [comError, setComError] = useState(false);
+    const [patients, setPatients] = useState([]);
+    
+    const [showPayModal, setShowPayModal]               = useState(false);
+    const [showAddPatientModal, setShowAddPatientModal] = useState(false);
+    
+    const closeAddPatientModal   = () => {
         setSuccess(false);
-        setShowModal(false);
-    }
-    const closeExpandable = message => {
-        closeModal();
+        setShowAddPatientModal(false);
+    };
+    const closePayModal          = () => { setShowPayModal(false); };
+    const closeExpandable        = (message, action, patient, request) => {
         setLoading(true);
         setMessage(message);
         setSuccess(true);
         setTimeout(() => { setLoading(false); }, 2000);
-    };
-
+        
+        if(action && action.toLowerCase() === 'add patient') {
+            closeAddPatientModal();
+            dispatch(storePatient(patient));
+        }
+        if(request) {
+            request && setRequest(request);
+            setShowPayModal(true);
+        }
+    };    
+    
     React.useEffect(()    => {
         document.title        = 'Patients | Liberty Medical Labs';
         const abortController = new AbortController();
@@ -49,7 +64,7 @@ function ManagePatients({ history }) {
         
         if(staff) {
             if(permissions && permissions.includes("Can View Patients List")) {
-                Axios.post(getBaseURL()+'get_patients', { branch: staff.branch }, { signal: signal })
+                Axios.post(getBaseURL()+'get_patients', { role: staff.role_name, branch: staff.branch }, { signal: signal })
                     .then(response => {
                         setPatients(response.data);
                         setLoading(false);
@@ -132,10 +147,12 @@ function ManagePatients({ history }) {
         resizableColumns: false,
         expandableRows: permissions && permissions.includes("Can View Patient") ? true : false,
         renderExpandableRow: (rowData, rowMeta) => <ViewPatient
+                                                        history={history}
                                                         length={rowData.length}
                                                         patient={patients[rowMeta.dataIndex]}
                                                         closeExpandable={closeExpandable}
-                                                        permissions={permissions} />,
+                                                        permissions={permissions}
+                                                        staff_id={staff.staff_id} />,
         downloadOptions: { filename: 'Patients.csv', separator: ', ' },
         page: 0,
         selectableRows: 'none',
@@ -154,9 +171,10 @@ function ManagePatients({ history }) {
     
     return (
         <>
-            { success   && <Toastrr message={message} type="success" /> }
-            { comError  && <Toastrr message={message} type="info"    /> }
-            { showModal && <AddPatient closeModal={closeModal} closeExpandable={closeExpandable} /> }
+            { success             && <Toastrr message={message} type="success" /> }
+            { comError            && <Toastrr message={message} type="info"    /> }
+            { showAddPatientModal && <AddPatient closeAddPatientModal={closeAddPatientModal} closeExpandable={closeExpandable} /> }
+            { showPayModal        && <PayRequest request={request} closePayModal={closePayModal} closeExpandable={closeExpandable} source="new-request" /> }
             <Header staff={staff} />
             <Sidebar roleName={staff && staff.role_name} />
             <main
@@ -180,8 +198,8 @@ function ManagePatients({ history }) {
                         variant="extended"
                         size="medium"
                         aria-label="add"
-                        className="success"
-                        onClick={() => setShowModal(true)}>
+                        className="dark-btn"
+                        onClick={() => setShowAddPatientModal(true)}>
                         <AddOutlinedIcon className="white" />
                         <span className="ml-10">Add Patient</span>
                     </Fab>

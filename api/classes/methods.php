@@ -1,5 +1,5 @@
 <?php
-    // require "audit_trail.php";
+    require "audit_trail.php";
     // require "charge.php";
 
     class Methods {
@@ -60,27 +60,35 @@
             return (filter_var($value, FILTER_VALIDATE_EMAIL));
         }
 
-        // method to validate and sanitize string value
+        // method to validate and sanitize array
         static function validate_array($values){
-            $new_array = array();
-            foreach($values as $value){
-                array_push($new_array, filter_var(htmlspecialchars(stripslashes(strip_tags(trim($value)))), FILTER_SANITIZE_STRING));
+            if(is_array($values)) {
+                $new_array = array();
+                foreach($values as $value){
+                    array_push($new_array, self::validate_string($value));
+                }
+                
+                return $new_array;
             }
-            return $new_array;
+
+            return $values;
         }
 
-        // method to validate and sanitize string value
-        static function validate_array_two($values){
+        // method to validate and sanitize object
+        static function validate_object($values){
             $new_array = array();
-            foreach($values as $value){
-                array_push($new_array, filter_var(trim($value), FILTER_SANITIZE_STRING));
+            foreach($values as $key => $value){
+                $key   = self::validate_string($key);
+                $value = self::validate_string($value);
+
+                $new_array[$key] = $value;
             }
             return $new_array;
         }
 
         // method to validate and sanitize string value
         static function validate_string($value){
-            return filter_var(htmlspecialchars(stripslashes(strip_tags(trim($value)))), FILTER_SANITIZE_STRING);
+            return empty($value) ? $value : filter_var(htmlspecialchars(stripslashes(strip_tags(trim($value)))), FILTER_SANITIZE_STRING);
         }
         
         // method to check if url has valid format

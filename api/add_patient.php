@@ -1,6 +1,5 @@
 <?php
 	header('Content-Type: application/json');
-	require "classes/audit_trail.php";
 	require "classes/patient.php";
 
 	$conn               = $pdo->open();
@@ -23,7 +22,7 @@
 	$response 			= array();
 	$todays_date 	    = date("Y-m-d", strtotime(Date("Y-m-d")));
 
-	if(!empty($title) || !empty($first_name) || !empty($last_name) || !empty($date_of_birth) || !empty($gender) || !empty($mobile_phone) || !empty($next_of_kin_name) || !empty($next_of_kin_number)) {
+	if(!empty($title) && !empty($first_name) && !empty($last_name) && !empty($date_of_birth) && !empty($gender) && !empty($mobile_phone) && !empty($next_of_kin_name) && !empty($next_of_kin_number)) {
 		if(empty($title)) {
 			array_push($response, array(
 				"status"  => "Warning",
@@ -155,11 +154,14 @@
 				"message" => "Invalid Next Of Kin's Phone Number Prefix...."
 			));
 		} else {
-			$branch = Methods::get_branch($entered_by, $conn);
-			$result = Patient::create_patient($title, $first_name, $middle_name, $last_name, $date_of_birth, $gender, $email_address, $home_phone, $mobile_phone, $work_phone, $next_of_kin_name, $next_of_kin_number, $branch, $entered_by, $conn);
+			$branch     = Methods::get_branch($entered_by, $conn);
+            $patient_id = Patient::get_patient_id($branch, $conn);
+			$result     = Patient::create_patient($patient_id, $title, $first_name, $middle_name, $last_name, $date_of_birth, $gender, $email_address, $home_phone, $mobile_phone, $work_phone, $next_of_kin_name, $next_of_kin_number, $branch, $entered_by, $conn);
 
 			if($result) {
+            	$patient = Patient::read_patient($patient_id, $conn);//die('patient: '.print_r($patient));
 				array_push($response, array(
+					"patient" => $patient,
 					"status"  => "Success",
 					"message" => "Patient \"" . $name . "\" Added Successfully...."
 				));

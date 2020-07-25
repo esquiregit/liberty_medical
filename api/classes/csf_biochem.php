@@ -8,8 +8,8 @@
         // create a csf_biochem record
         public static function create_csf_biochem($patient_id, $appearance, $glucose, $protein, $globulin, $comments, $added_by, $conn){
             $invoice_id = Methods::get_invoice_id('CSF Biochem', $conn);
-            $appearance = implode(', ', $appearance);
-            $globulin   = implode(', ', $globulin);
+            $appearance = is_array($appearance) ? implode(', ', $appearance) : $appearance;
+            $globulin   = is_array($globulin) ? implode(', ', $globulin) : $globulin;
             $amount     = Charge::read_charge('20', $conn);
 
             try{
@@ -44,8 +44,9 @@
 
         // update a csf_biochem record
         public static function update_csf_biochem($id, $patient_id, $appearance, $glucose, $protein, $globulin, $comments, $conn) {
-            $appearance = implode(', ', $appearance);
-            $globulin = implode(', ', $globulin);
+            $appearance = is_array($appearance) ? implode(', ', $appearance) : $appearance;
+            $globulin   = is_array($globulin) ? implode(', ', $globulin) : $globulin;
+            
             try{
                 $query = $conn->prepare('UPDATE csf_biochem SET patient_id = :patient_id, appearance = :appearance, glucose = :glucose, protein = :protein, globulin = :globulin, comments = :comments WHERE id = :id AND patient_id = :patient_id');
                 $query->execute([':appearance' => $appearance, ':glucose' => $glucose, ':protein' => $protein, ':globulin' => $globulin, ':comments' => $comments, ':patient_id' => $patient_id, ':id' => $id]);

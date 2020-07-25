@@ -9,13 +9,13 @@
         public static function create_antenatal_screening($patient_id, $blood_group, $rhd, $antibody_screening, $hbsag, $vdrl, $hep_c, $retro_screen, $comments, $added_by, $conn){
             $invoice_id         = Methods::get_invoice_id('Antenatal Screening', $conn);
             $amount             = Charge::read_charge('2', $conn);
-            $blood_group        = implode(', ', $blood_group);
-            $rhd                = implode(', ', $rhd);
-            $antibody_screening = implode(', ', $antibody_screening);
-            $hbsag              = implode(', ', $hbsag);
-            $vdrl               = implode(', ', $vdrl);
-            $hep_c              = implode(', ', $hep_c);
-            $retro_screen       = implode(', ', $retro_screen);
+            $blood_group        = is_array($blood_group) ? implode(', ', $blood_group) : $blood_group;
+            $rhd                = is_array($rhd) ? implode(', ', $rhd) : $rhd;
+            $antibody_screening = is_array($antibody_screening) ? implode(', ', $antibody_screening) : $antibody_screening;
+            $hbsag              = is_array($hbsag) ? implode(', ', $hbsag) : $hbsag;
+            $vdrl               = is_array($vrdl) ? implode(', ', $vdrl) : $vrdl;
+            $hep_c              = is_array($hep_c) ? implode(', ', $hep_c) : $hep_c;
+            $retro_screen       = is_array($retro_screen) ? implode(', ', $retro_screen) : $retro_screen;
 
             try{
                 $query = $conn->prepare('INSERT INTO antenatal_screening(invoice_id, patient_id, blood_group, rhd, antibody_screening, hbsag, vdrl, hep_c, retro_screen, comments, added_by) VALUES(:invoice_id, :patient_id, :blood_group, :rhd, :antibody_screening, :hbsag, :vdrl, :hep_c, :retro_screen, :comments, :added_by)');
@@ -49,13 +49,13 @@
 
         // update a antenatal_screening record
         public static function update_antenatal_screening($id, $patient_id, $blood_group, $rhd, $antibody_screening, $hbsag, $vdrl, $hep_c, $retro_screen, $comments, $conn) {
-            $blood_group        = implode(', ', $blood_group);
-            $rhd                = implode(', ', $rhd);
-            $antibody_screening = implode(', ', $antibody_screening);
-            $hbsag              = implode(', ', $hbsag);
-            $vdrl               = implode(', ', $vdrl);
-            $hep_c              = implode(', ', $hep_c);
-            $retro_screen       = implode(', ', $retro_screen);
+            $blood_group        = is_array($blood_group) ? implode(', ', $blood_group) : $blood_group;
+            $rhd                = is_array($rhd) ? implode(', ', $rhd) : $rhd;
+            $antibody_screening = is_array($antibody_screening) ? implode(', ', $antibody_screening) : $antibody_screening;
+            $hbsag              = is_array($hbsag) ? implode(', ', $hbsag) : $hbsag;
+            $vdrl               = is_array($vrdl) ? implode(', ', $vdrl) : $vrdl;
+            $hep_c              = is_array($hep_c) ? implode(', ', $hep_c) : $hep_c;
+            $retro_screen       = is_array($retro_screen) ? implode(', ', $retro_screen) : $retro_screen;
 
             try{
                 $query = $conn->prepare('UPDATE antenatal_screening SET patient_id = :patient_id, blood_group = :blood_group, rhd = :rhd, antibody_screening = :antibody_screening, hbsag = :hbsag, vdrl = :vdrl, hep_c = :hep_c, retro_screen = :retro_screen, comments = :comments WHERE id = :id AND patient_id = :patient_id');

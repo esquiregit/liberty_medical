@@ -7,10 +7,10 @@
         public static function get_patient_report($patient_id, $start_date, $end_date, $conn) {
             try{
                 if($patient_id) {
-                    $query = $conn->prepare('SELECT r.id, r.patient_id, r.request_id, r.requests, r.date_added, r.added_by, r.status, r.date_done, r.done_by, r.discount, r.total_cost, r.discounted_cost, r.amount_paid, r.payment_status, r.payment_type, r.branch, p.first_name as pfirst_name, p.middle_name as pmiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM requests r INNER JOIN patients p ON r.patient_id = p.patient_id INNER JOIN users u ON r.added_by = u.staff_id WHERE r.patient_id = :patient_id AND r.date_added BETWEEN :start_date AND :end_date');
+                    $query = $conn->prepare('SELECT r.id, r.patient_id, r.request_id, r.requests, r.date_added, r.added_by, r.status, r.date_done, r.done_by, r.discount, r.total_cost, r.discounted_cost, r.amount_paid, r.payment_status, r.payment_type, r.branch, p.first_name as pfirst_name, p.middle_name as pmiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM requests r INNER JOIN patients p ON r.patient_id = p.patient_id INNER JOIN users u ON r.added_by = u.staff_id WHERE r.patient_id = :patient_id AND r.date_added BETWEEN :start_date AND :end_date ORDER BY r.date_added desc, p.first_name');
                     $query->execute([':patient_id' => $patient_id, ':start_date' => $start_date, ':end_date' => $end_date]);
                 } else {
-                    $query = $conn->prepare('SELECT r.id, r.patient_id, r.request_id, r.requests, r.date_added, r.added_by, r.status, r.date_done, r.done_by, r.discount, r.total_cost, r.discounted_cost, r.amount_paid, r.payment_status, r.payment_type, r.branch, p.first_name as pfirst_name, p.middle_name as pmiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM requests r INNER JOIN patients p ON r.patient_id = p.patient_id INNER JOIN users u ON r.added_by = u.staff_id WHERE r.date_added BETWEEN :start_date AND :end_date');
+                    $query = $conn->prepare('SELECT r.id, r.patient_id, r.request_id, r.requests, r.date_added, r.added_by, r.status, r.date_done, r.done_by, r.discount, r.total_cost, r.discounted_cost, r.amount_paid, r.payment_status, r.payment_type, r.branch, p.first_name as pfirst_name, p.middle_name as pmiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM requests r INNER JOIN patients p ON r.patient_id = p.patient_id INNER JOIN users u ON r.added_by = u.staff_id WHERE r.date_added BETWEEN :start_date AND :end_date ORDER BY r.date_added desc, p.first_name');
                     $query->execute([':start_date' => $start_date, ':end_date' => $end_date]);
                 }
 
@@ -1381,7 +1381,7 @@
             $total = 0.00;
 
             foreach($array as $row) {
-                $total += $row->total_cost;
+                $total += $row['total_cost_raw'];
             }
 
             return number_format($total, 2);
@@ -1391,7 +1391,17 @@
             $total = 0.00;
 
             foreach($array as $row) {
-                $total += $row->amount_paid;
+                $total += $row['amount_paid_raw'];
+            }
+
+            return number_format($total, 2);
+        }
+
+        public static function get_total_discount($array) {
+            $total = 0.00;
+
+            foreach($array as $row) {
+                $total += $row['discounted_cost_raw'];
             }
 
             return number_format($total, 2);

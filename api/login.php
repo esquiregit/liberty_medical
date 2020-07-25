@@ -60,7 +60,7 @@
 								"status"      => "Success",
 								"message"     => "Login Success. Redirecting....",
 								"user"        => $user,
-								"permissions" => explode(',', $result->permissions),
+								"permissions" => explode(', ', $result->permissions),
 							));
 					        Audit_Trail::create_log($result->staff_id, 'Logged In', $conn);
 						}

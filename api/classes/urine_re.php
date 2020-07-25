@@ -9,29 +9,29 @@
         public static function create_urine_re($patient_id, $appearance, $colour, $ph, $specific_gravity, $protein, $leucocytes, $glucose, $urobilinogen, $blood, $ketones, $bilirubin, $nitrites, $bile_pigment, $bile_salt, $urobilin, $pus_cells_per_hps, $yeast_like_cells, $epitheleal_cells_per_hpf, $s_haematobium, $rbcs_per_hpf, $bacteria, $spermatozoa, $crystals, $unknown_one, $cast, $unknown_two, $comments, $added_by, $conn){
             $invoice_id       = Methods::get_invoice_id('Urine R/E', $conn);
             $amount           = Charge::read_charge('82', $conn);
-            $appearance       = implode(', ', $appearance);
-            $ph               = implode(', ', $ph);
-            $protein          = implode(', ', $protein);
-            $glucose          = implode(', ', $glucose);
-            $blood            = implode(', ', $blood);
-            $bilirubin        = implode(', ', $bilirubin);
-            $bile_pigment     = implode(', ', $bile_pigment);
-            $urobilin         = implode(', ', $urobilin);
-            $colour           = implode(', ', $colour);
-            $specific_gravity = implode(', ', $specific_gravity);
-            $leucocytes       = implode(', ', $leucocytes);
-            $urobilinogen     = implode(', ', $urobilinogen);
-            $ketones          = implode(', ', $ketones);
-            $nitrites         = implode(', ', $nitrites);
-            $bile_salt        = implode(', ', $bile_salt);
-            $yeast_like_cells = implode(', ', $yeast_like_cells);
-            $s_haematobium    = implode(', ', $s_haematobium);
-            $bacteria         = implode(', ', $bacteria);
-            $spermatozoa      = implode(', ', $spermatozoa);
-            $crystals         = implode(', ', $crystals);
-            $unknown_one      = implode(', ', $unknown_one);
-            $cast             = implode(', ', $cast);
-            $unknown_two      = implode(', ', $unknown_two);
+            $appearance       = is_array($appearance) ? implode(', ', $appearance) : $appearance;
+            $ph               = is_array($ph) ? implode(', ', $ph) : $ph;
+            $protein          = is_array($protein) ? implode(', ', $protein) : $protein;
+            $glucose          = is_array($glucose) ? implode(', ', $glucose) : $glucose;
+            $blood            = is_array($blood) ? implode(', ', $blood) : $blood;
+            $bilirubin        = is_array($bilirubin) ? implode(', ', $bilirubin) : $bilirubin;
+            $bile_pigment     = is_array($bile_pigment) ? implode(', ', $bile_pigment) : $bile_pigment;
+            $urobilin         = is_array($urobilin) ? implode(', ', $urobilin) : $urobilin;
+            $colour           = is_array($colour) ? implode(', ', $colour) : $colour;
+            $specific_gravity = is_array($specific_gravity) ? implode(', ', $specific_gravity) : $specific_gravity;
+            $leucocytes       = is_array($leucocytes) ? implode(', ', $leucocytes) : $leucocytes;
+            $urobilinogen     = is_array($urobilinogen) ? implode(', ', $urobilinogen) : $urobilinogen;
+            $ketones          = is_array($ketones) ? implode(', ', $ketones) : $ketones;
+            $nitrites         = is_array($nitrites) ? implode(', ', $nitrites) : $nitrites;
+            $bile_salt        = is_array($bile_salt) ? implode(', ', $bile_salt) : $bile_salt;
+            $yeast_like_cells = is_array($yeast_like_cells) ? implode(', ', $yeast_like_cells) : $yeast_like_cells;
+            $s_haematobium    = is_array($s_haematobium) ? implode(', ', $s_haematobium) : $s_haematobium;
+            $bacteria         = is_array($bacteria) ? implode(', ', $bacteria) : $bacteria;
+            $spermatozoa      = is_array($spermatozoa) ? implode(', ', $spermatozoa) : $spermatozoa;
+            $crystals         = is_array($crystals) ? implode(', ', $crystals) : $crystals;
+            $unknown_one      = is_array($unknown_one) ? implode(', ', $unknown_one) : $unknown_one;
+            $cast             = is_array($cast) ? implode(', ', $cast) : $cast;
+            $unknown_two      = is_array($unknown_two) ? implode(', ', $unknown_two) : $unknown_two;
 
             try{
                 $query = $conn->prepare('INSERT INTO urine_re(invoice_id, patient_id, appearance, colour, ph, specific_gravity, protein, leucocytes, glucose, urobilinogen, blood, ketones, bilirubin, nitrites, bile_pigment, bile_salt, urobilin, pus_cells_per_hps, yeast_like_cells, epitheleal_cells_per_hpf, s_haematobium, rbcs_per_hpf, bacteria, spermatozoa, crystals, unknown_one, cast, unknown_two, comments, added_by)  VALUES(:invoice_id, :patient_id, :appearance, :colour, :ph, :specific_gravity, :protein, :leucocytes, :glucose, :urobilinogen, :blood, :ketones, :bilirubin, :nitrites, :bile_pigment, :bile_salt, :urobilin, :pus_cells_per_hps, :yeast_like_cells, :epitheleal_cells_per_hpf, :s_haematobium, :rbcs_per_hpf, :bacteria, :spermatozoa, :crystals, :unknown_one, :cast, :unknown_two, :comments, :added_by)');
@@ -65,29 +65,29 @@
 
         // update a urine_re record
         public static function update_urine_re($id, $patient_id, $appearance, $colour, $ph, $specific_gravity, $protein, $leucocytes, $glucose, $urobilinogen, $blood, $ketones, $bilirubin, $nitrites, $bile_pigment, $bile_salt, $urobilin, $pus_cells_per_hps, $yeast_like_cells, $epitheleal_cells_per_hpf, $s_haematobium, $rbcs_per_hpf, $bacteria, $spermatozoa, $crystals, $unknown_one, $cast, $unknown_two, $comments, $conn) {
-            $appearance       = implode(', ', $appearance);
-            $ph               = implode(', ', $ph);
-            $protein          = implode(', ', $protein);
-            $glucose          = implode(', ', $glucose);
-            $blood            = implode(', ', $blood);
-            $bilirubin        = implode(', ', $bilirubin);
-            $bile_pigment     = implode(', ', $bile_pigment);
-            $urobilin         = implode(', ', $urobilin);
-            $colour           = implode(', ', $colour);
-            $specific_gravity = implode(', ', $specific_gravity);
-            $leucocytes       = implode(', ', $leucocytes);
-            $urobilinogen     = implode(', ', $urobilinogen);
-            $ketones          = implode(', ', $ketones);
-            $nitrites         = implode(', ', $nitrites);
-            $bile_salt        = implode(', ', $bile_salt);
-            $yeast_like_cells = implode(', ', $yeast_like_cells);
-            $s_haematobium    = implode(', ', $s_haematobium);
-            $bacteria         = implode(', ', $bacteria);
-            $spermatozoa      = implode(', ', $spermatozoa);
-            $crystals         = implode(', ', $crystals);
-            $unknown_one      = implode(', ', $unknown_one);
-            $cast             = implode(', ', $cast);
-            $unknown_two      = implode(', ', $unknown_two);
+            $appearance       = is_array($appearance) ? implode(', ', $appearance) : $appearance;
+            $ph               = is_array($ph) ? implode(', ', $ph) : $ph;
+            $protein          = is_array($protein) ? implode(', ', $protein) : $protein;
+            $glucose          = is_array($glucose) ? implode(', ', $glucose) : $glucose;
+            $blood            = is_array($blood) ? implode(', ', $blood) : $blood;
+            $bilirubin        = is_array($bilirubin) ? implode(', ', $bilirubin) : $bilirubin;
+            $bile_pigment     = is_array($bile_pigment) ? implode(', ', $bile_pigment) : $bile_pigment;
+            $urobilin         = is_array($urobilin) ? implode(', ', $urobilin) : $urobilin;
+            $colour           = is_array($colour) ? implode(', ', $colour) : $colour;
+            $specific_gravity = is_array($specific_gravity) ? implode(', ', $specific_gravity) : $specific_gravity;
+            $leucocytes       = is_array($leucocytes) ? implode(', ', $leucocytes) : $leucocytes;
+            $urobilinogen     = is_array($urobilinogen) ? implode(', ', $urobilinogen) : $urobilinogen;
+            $ketones          = is_array($ketones) ? implode(', ', $ketones) : $ketones;
+            $nitrites         = is_array($nitrites) ? implode(', ', $nitrites) : $nitrites;
+            $bile_salt        = is_array($bile_salt) ? implode(', ', $bile_salt) : $bile_salt;
+            $yeast_like_cells = is_array($yeast_like_cells) ? implode(', ', $yeast_like_cells) : $yeast_like_cells;
+            $s_haematobium    = is_array($s_haematobium) ? implode(', ', $s_haematobium) : $s_haematobium;
+            $bacteria         = is_array($bacteria) ? implode(', ', $bacteria) : $bacteria;
+            $spermatozoa      = is_array($spermatozoa) ? implode(', ', $spermatozoa) : $spermatozoa;
+            $crystals         = is_array($crystals) ? implode(', ', $crystals) : $crystals;
+            $unknown_one      = is_array($unknown_one) ? implode(', ', $unknown_one) : $unknown_one;
+            $cast             = is_array($cast) ? implode(', ', $cast) : $cast;
+            $unknown_two      = is_array($unknown_two) ? implode(', ', $unknown_two) : $unknown_two;
 
             try{
                 $query = $conn->prepare('UPDATE urine_re SET patient_id = :patient_id, appearance = :appearance, colour = :colour, ph = :ph, specific_gravity = :specific_gravity, protein = :protein, leucocytes = :leucocytes, glucose = :glucose, urobilinogen = :urobilinogen, blood = :blood, ketones = :ketones, bilirubin = :bilirubin, nitrites = :nitrites, bile_pigment = :bile_pigment, bile_salt = :bile_salt, urobilin = :urobilin, pus_cells_per_hps = :pus_cells_per_hps, yeast_like_cells = :yeast_like_cells, epitheleal_cells_per_hpf = :epitheleal_cells_per_hpf, s_haematobium = :s_haematobium, rbcs_per_hpf = :rbcs_per_hpf, bacteria = :bacteria, spermatozoa = :spermatozoa, crystals = :crystals, unknown_one = :unknown_one, cast = :cast, unknown_two = :unknown_two, comments = :comments WHERE id = :id AND patient_id = :patient_id');

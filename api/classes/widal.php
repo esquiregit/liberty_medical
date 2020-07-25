@@ -9,14 +9,14 @@
         public static function create_widal($patient_id, $typhi_to, $typhi_th, $paratyphi_a_to, $paratyphi_a_th, $paratyphi_b_to, $paratyphi_b_th, $paratyphi_c_to, $paratyphi_c_th, $comments, $added_by, $conn){
             $invoice_id     = Methods::get_invoice_id('Widal', $conn);
             $amount         = Charge::read_charge('83', $conn);
-            $typhi_to       = implode(', ', $typhi_to);
-            $typhi_th       = implode(', ', $typhi_th);
-            $paratyphi_a_to = implode(', ', $paratyphi_a_to);
-            $paratyphi_a_th = implode(', ', $paratyphi_a_th);
-            $paratyphi_b_to = implode(', ', $paratyphi_b_to);
-            $paratyphi_b_th = implode(', ', $paratyphi_b_th);
-            $paratyphi_c_to = implode(', ', $paratyphi_c_to);
-            $paratyphi_c_th = implode(', ', $paratyphi_c_th);
+            $typhi_to       = is_array($typhi_to) ? implode(', ', $typhi_to) : $typhi_to;
+            $typhi_th       = is_array($typhi_th) ? implode(', ', $typhi_th) : $typhi_th;
+            $paratyphi_a_to = is_array($paratyphi_a_to) ? implode(', ', $paratyphi_a_to) : $paratyphi_a_to;
+            $paratyphi_a_th = is_array($paratyphi_a_th) ? implode(', ', $paratyphi_a_th) : $paratyphi_a_th;
+            $paratyphi_b_to = is_array($paratyphi_b_to) ? implode(', ', $paratyphi_b_to) : $paratyphi_b_to;
+            $paratyphi_b_th = is_array($paratyphi_b_th) ? implode(', ', $paratyphi_b_th) : $paratyphi_b_th;
+            $paratyphi_c_to = is_array($paratyphi_c_to) ? implode(', ', $paratyphi_c_to) : $paratyphi_c_to;
+            $paratyphi_c_th = is_array($paratyphi_c_th) ? implode(', ', $paratyphi_c_th) : $paratyphi_c_th;
 
             try{
                 $query = $conn->prepare('INSERT INTO widal(invoice_id, patient_id, typhi_to, typhi_th, paratyphi_a_to, paratyphi_a_th, paratyphi_b_to, paratyphi_b_th, paratyphi_c_to, paratyphi_c_th, comments, added_by)  VALUES(:invoice_id, :patient_id, :typhi_to, :typhi_th, :paratyphi_a_to, :paratyphi_a_th, :paratyphi_b_to, :paratyphi_b_th, :paratyphi_c_to, :paratyphi_c_th, :comments, :added_by)');
@@ -50,14 +50,14 @@
 
         // update a widal record
         public static function update_widal($id, $patient_id, $typhi_to, $typhi_th, $paratyphi_a_to, $paratyphi_a_th, $paratyphi_b_to, $paratyphi_b_th, $paratyphi_c_to, $paratyphi_c_th, $comments, $conn) {
-            $typhi_to       = implode(', ', $typhi_to);
-            $typhi_th       = implode(', ', $typhi_th);
-            $paratyphi_a_to = implode(', ', $paratyphi_a_to);
-            $paratyphi_a_th = implode(', ', $paratyphi_a_th);
-            $paratyphi_b_to = implode(', ', $paratyphi_b_to);
-            $paratyphi_b_th = implode(', ', $paratyphi_b_th);
-            $paratyphi_c_to = implode(', ', $paratyphi_c_to);
-            $paratyphi_c_th = implode(', ', $paratyphi_c_th);
+            $typhi_to       = is_array($typhi_to) ? implode(', ', $typhi_to) : $typhi_to;
+            $typhi_th       = is_array($typhi_th) ? implode(', ', $typhi_th) : $typhi_th;
+            $paratyphi_a_to = is_array($paratyphi_a_to) ? implode(', ', $paratyphi_a_to) : $paratyphi_a_to;
+            $paratyphi_a_th = is_array($paratyphi_a_th) ? implode(', ', $paratyphi_a_th) : $paratyphi_a_th;
+            $paratyphi_b_to = is_array($paratyphi_b_to) ? implode(', ', $paratyphi_b_to) : $paratyphi_b_to;
+            $paratyphi_b_th = is_array($paratyphi_b_th) ? implode(', ', $paratyphi_b_th) : $paratyphi_b_th;
+            $paratyphi_c_to = is_array($paratyphi_c_to) ? implode(', ', $paratyphi_c_to) : $paratyphi_c_to;
+            $paratyphi_c_th = is_array($paratyphi_c_th) ? implode(', ', $paratyphi_c_th) : $paratyphi_c_th;
 
             try{
                 $query = $conn->prepare('UPDATE widal SET patient_id = :patient_id, typhi_to = :typhi_to, typhi_th = :typhi_th, paratyphi_a_to = :paratyphi_a_to, paratyphi_a_th = :paratyphi_a_th, paratyphi_b_to = :paratyphi_b_to, paratyphi_b_th = :paratyphi_b_th, paratyphi_c_to = :paratyphi_c_to, paratyphi_c_th = :paratyphi_c_th, comments = :comments WHERE id = :id AND patient_id = :patient_id');

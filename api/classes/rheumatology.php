@@ -9,7 +9,7 @@
         public static function create_rheumatology($patient_id, $le_cells, $ana_qualitative, $ana_quantitative, $ds_dna, $rheumatoid_factor, $comments, $added_by, $conn){
             $invoice_id = Methods::get_invoice_id('Rheumatology', $conn);
             $amount     = Charge::read_charge('63', $conn);
-            $le_cells   = implode(', ', $le_cells);
+            $le_cells   = is_array($le_cells) ? implode(', ', $le_cells) : $le_cells;
 
             try{
                 $query = $conn->prepare('INSERT INTO rheumatology(invoice_id, patient_id, le_cells, ana_qualitative, ana_quantitative, ds_dna, rheumatoid_factor, comments, added_by)  VALUES(:invoice_id, :patient_id, :le_cells, :ana_qualitative, :ana_quantitative, :ds_dna, :rheumatoid_factor, :comments, :added_by)');
@@ -43,7 +43,7 @@
 
         // update a rheumatology record
         public static function update_rheumatology($id, $patient_id, $le_cells, $ana_qualitative, $ana_quantitative, $ds_dna, $rheumatoid_factor, $comments, $conn) {
-            $le_cells = implode(', ', $le_cells);
+            $le_cells = is_array($le_cells) ? implode(', ', $le_cells) : $le_cells;
             
             try{
                 $query = $conn->prepare('UPDATE rheumatology SET patient_id = :patient_id, le_cells = :le_cells, ana_qualitative = :ana_qualitative, ana_quantitative = :ana_quantitative, ds_dna = :ds_dna, rheumatoid_factor = :rheumatoid_factor, comments = :comments WHERE id = :id AND patient_id = :patient_id');

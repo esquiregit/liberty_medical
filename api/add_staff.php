@@ -1,6 +1,5 @@
 <?php
 	header('Content-Type: application/json');
-	require "classes/audit_trail.php";
 	require "classes/staff.php";
 
 	$conn             = $pdo->open();

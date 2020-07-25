@@ -9,10 +9,10 @@
         public static function create_specials($patient_id, $abo_grouping, $g6pd, $hgb_genotype, $sickling, $added_by, $conn){
             $invoice_id   = Methods::get_invoice_id('Specials', $conn);
             $amount       = Charge::read_charge('70', $conn);
-            $abo_grouping = implode(', ', $abo_grouping);
-            $g6pd         = implode(', ', $g6pd);
-            $hgb_genotype = implode(', ', $hgb_genotype);
-            $sickling     = implode(', ', $sickling);
+            $abo_grouping = is_array($abo_grouping) ? implode(', ', $abo_grouping) : $abo_grouping;
+            $g6pd         = is_array($g6pd) ? implode(', ', $g6pd) : $g6pd;
+            $hgb_genotype = is_array($hgb_genotype) ? implode(', ', $hgb_genotype) : $hgb_genotype;
+            $sickling     = is_array($sickling) ? implode(', ', $sickling) : $sickling;
 
             try{
                 $query = $conn->prepare('INSERT INTO specials(invoice_id, patient_id, abo_grouping, g6pd, hgb_genotype, sickling, added_by)  VALUES(:invoice_id, :patient_id, :abo_grouping, :g6pd, :hgb_genotype, :sickling, :added_by)');
@@ -46,10 +46,10 @@
 
         // update a specials record
         public static function update_specials($id, $patient_id, $abo_grouping, $g6pd, $hgb_genotype, $sickling, $conn) {
-            $abo_grouping = implode(', ', $abo_grouping);
-            $g6pd         = implode(', ', $g6pd);
-            $hgb_genotype = implode(', ', $hgb_genotype);
-            $sickling     = implode(', ', $sickling);
+            $abo_grouping = is_array($abo_grouping) ? implode(', ', $abo_grouping) : $abo_grouping;
+            $g6pd         = is_array($g6pd) ? implode(', ', $g6pd) : $g6pd;
+            $hgb_genotype = is_array($hgb_genotype) ? implode(', ', $hgb_genotype) : $hgb_genotype;
+            $sickling     = is_array($sickling) ? implode(', ', $sickling) : $sickling;
 
             try{
                 $query = $conn->prepare('UPDATE specials SET patient_id = :patient_id, abo_grouping = :abo_grouping, g6pd = :g6pd, hgb_genotype = :hgb_genotype, sickling = :sickling WHERE id = :id AND patient_id = :patient_id');

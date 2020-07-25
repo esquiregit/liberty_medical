@@ -234,7 +234,7 @@ function ManageStaff({ history }) {
                         variant="extended"
                         size="medium"
                         aria-label="add"
-                        className="success"
+                        className="dark-btn"
                         onClick={() => setShowModal(true)}>
                         <AddOutlinedIcon className="white" />
                         <span className="ml-10">Add Staff</span>

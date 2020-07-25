@@ -1,9 +1,11 @@
 import authReducer from './AuthReducer';
+import patientReducer from './PatientReducer';
 import sidebarReducer from './SidebarReducer';
 import { combineReducers } from 'redux';
 
 const appReducer = combineReducers({
     authReducer,
+    patientReducer,
     sidebarReducer,
 });
 

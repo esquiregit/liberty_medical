@@ -9,29 +9,29 @@
         public static function create_sputum($patient_id, $appearance, $gram_stain, $pus_cells, $zn_stain, $culture, $bacteria_one, $bacteria_two, $antibiotics_one, $antibiotics_two, $antibiotics_three, $antibiotics_four, $antibiotics_five, $antibiotics_six, $antibiotics_seven, $antibiotics_eight, $antibiotics_nine, $antibiotics_ten, $antibiotics_eleven, $antibiotics_twelve, $antibiotics_thirteen, $antibiotics_fourteen, $antibiotics_fifteen, $antibiotics_sixteen, $sensitivity_one, $sensitivity_two, $sensitivity_three, $sensitivity_four, $sensitivity_five, $sensitivity_six, $sensitivity_seven, $sensitivity_eight, $sensitivity_nine, $sensitivity_ten, $sensitivity_eleven, $sensitivity_twelve, $sensitivity_thirteen, $sensitivity_fourteen, $sensitivity_fifteen, $sensitivity_sixteen, $comments, $added_by, $conn){
             $invoice_id           = Methods::get_invoice_id('Sputum C/S', $conn);
             $amount               = Charge::read_charge('72', $conn);
-            $appearance           = implode(', ', $appearance);
-            $gram_stain           = implode(', ', $gram_stain);
-            $pus_cells            = implode(', ', $pus_cells);
-            $zn_stain             = implode(', ', $zn_stain);
-            $culture              = implode(', ', $culture);
-            $bacteria_one         = implode(', ', $bacteria_one);
-            $bacteria_two         = implode(', ', $bacteria_two);
-            $antibiotics_one      = implode(', ', $antibiotics_one);
-            $antibiotics_two      = implode(', ', $antibiotics_two);
-            $antibiotics_three    = implode(', ', $antibiotics_three);
-            $antibiotics_four     = implode(', ', $antibiotics_four);
-            $antibiotics_five     = implode(', ', $antibiotics_five);
-            $antibiotics_six      = implode(', ', $antibiotics_six);
-            $antibiotics_seven    = implode(', ', $antibiotics_seven);
-            $antibiotics_eight    = implode(', ', $antibiotics_eight);
-            $antibiotics_nine     = implode(', ', $antibiotics_nine);
-            $antibiotics_ten      = implode(', ', $antibiotics_ten);
-            $antibiotics_eleven   = implode(', ', $antibiotics_eleven);
-            $antibiotics_twelve   = implode(', ', $antibiotics_twelve);
-            $antibiotics_thirteen = implode(', ', $antibiotics_thirteen);
-            $antibiotics_fourteen = implode(', ', $antibiotics_fourteen);
-            $antibiotics_fifteen  = implode(', ', $antibiotics_fifteen);
-            $antibiotics_sixteen  = implode(', ', $antibiotics_sixteen);
+            $appearance               = is_array($appearance) ? implode(', ', $appearance) : $appearance;
+            $gram_stain               = is_array($gram_stain) ? implode(', ', $gram_stain) : $gram_stain;
+            $pus_cells                = is_array($pus_cells) ? implode(', ', $pus_cells) : $pus_cells;
+            $zn_stain                 = is_array($zn_stain) ? implode(', ', $zn_stain) : $zn_stain;
+            $culture                  = is_array($culture) ? implode(', ', $culture) : $culture;
+            $bacteria_one             = is_array($bacteria_one) ? implode(', ', $bacteria_one) : $bacteria_one;
+            $bacteria_two             = is_array($bacteria_two) ? implode(', ', $bacteria_two) : $bacteria_two;
+            $antibiotics_one          = is_array($antibiotics_one) ? implode(', ', $antibiotics_one) : $antibiotics_one;
+            $antibiotics_two          = is_array($antibiotics_two) ? implode(', ', $antibiotics_two) : $antibiotics_two;
+            $antibiotics_three        = is_array($antibiotics_three) ? implode(', ', $antibiotics_three) : $antibiotics_three;
+            $antibiotics_four         = is_array($antibiotics_four) ? implode(', ', $antibiotics_four) : $antibiotics_four;
+            $antibiotics_five         = is_array($antibiotics_five) ? implode(', ', $antibiotics_five) : $antibiotics_five;
+            $antibiotics_six          = is_array($antibiotics_six) ? implode(', ', $antibiotics_six) : $antibiotics_six;
+            $antibiotics_seven        = is_array($antibiotics_seven) ? implode(', ', $antibiotics_seven) : $antibiotics_seven;
+            $antibiotics_eight        = is_array($antibiotics_eight) ? implode(', ', $antibiotics_eight) : $antibiotics_eight;
+            $antibiotics_nine         = is_array($antibiotics_nine) ? implode(', ', $antibiotics_nine) : $antibiotics_nine;
+            $antibiotics_ten          = is_array($antibiotics_ten) ? implode(', ', $antibiotics_ten) : $antibiotics_ten;
+            $antibiotics_eleven       = is_array($antibiotics_eleven) ? implode(', ', $antibiotics_eleven) : $antibiotics_eleven;
+            $antibiotics_twelve       = is_array($antibiotics_twelve) ? implode(', ', $antibiotics_twelve) : $antibiotics_twelve;
+            $antibiotics_thirteen     = is_array($antibiotics_thirteen) ? implode(', ', $antibiotics_thirteen) : $antibiotics_thirteen;
+            $antibiotics_fourteen     = is_array($antibiotics_fourteen) ? implode(', ', $antibiotics_fourteen) : $antibiotics_fourteen;
+            $antibiotics_fifteen      = is_array($antibiotics_fifteen) ? implode(', ', $antibiotics_fifteen) : $antibiotics_fifteen;
+            $antibiotics_sixteen      = is_array($antibiotics_sixteen) ? implode(', ', $antibiotics_sixteen) : $antibiotics_sixteen;
 
             try{
                 $query = $conn->prepare('INSERT INTO sputum(invoice_id, patient_id, appearance, gram_stain, pus_cells, zn_stain, culture, bacteria_one, bacteria_two, antibiotics_one, antibiotics_two, antibiotics_three, antibiotics_four, antibiotics_five, antibiotics_six, antibiotics_seven, antibiotics_eight, antibiotics_nine, antibiotics_ten, antibiotics_eleven, antibiotics_twelve, antibiotics_thirteen, antibiotics_fourteen, antibiotics_fifteen, antibiotics_sixteen, sensitivity_one, sensitivity_two, sensitivity_three, sensitivity_four, sensitivity_five, sensitivity_six, sensitivity_seven, sensitivity_eight, sensitivity_nine, sensitivity_ten, sensitivity_eleven, sensitivity_twelve, sensitivity_thirteen, sensitivity_fourteen, sensitivity_fifteen, sensitivity_sixteen, comments, added_by)  VALUES(:invoice_id, :patient_id, :appearance, :gram_stain, :pus_cells, :zn_stain, :culture, :bacteria_one, :bacteria_two, :antibiotics_one, :antibiotics_two, :antibiotics_three, :antibiotics_four, :antibiotics_five, :antibiotics_six, :antibiotics_seven, :antibiotics_eight, :antibiotics_nine, :antibiotics_ten, :antibiotics_eleven, :antibiotics_twelve, :antibiotics_thirteen, :antibiotics_fourteen, :antibiotics_fifteen, :antibiotics_sixteen, :sensitivity_one, :sensitivity_two, :sensitivity_three, :sensitivity_four, :sensitivity_five, :sensitivity_six, :sensitivity_seven, :sensitivity_eight, :sensitivity_nine, :sensitivity_ten, :sensitivity_eleven, :sensitivity_twelve, :sensitivity_thirteen, :sensitivity_fourteen, :sensitivity_fifteen, :sensitivity_sixteen, :comments, :added_by)');
@@ -65,29 +65,29 @@
 
         // update a sputum record
         public static function update_sputum($id, $patient_id, $appearance, $gram_stain, $pus_cells, $zn_stain, $culture, $bacteria_one, $bacteria_two, $antibiotics_one, $antibiotics_two, $antibiotics_three, $antibiotics_four, $antibiotics_five, $antibiotics_six, $antibiotics_seven, $antibiotics_eight, $antibiotics_nine, $antibiotics_ten, $antibiotics_eleven, $antibiotics_twelve, $antibiotics_thirteen, $antibiotics_fourteen, $antibiotics_fifteen, $antibiotics_sixteen, $sensitivity_one, $sensitivity_two, $sensitivity_three, $sensitivity_four, $sensitivity_five, $sensitivity_six, $sensitivity_seven, $sensitivity_eight, $sensitivity_nine, $sensitivity_ten, $sensitivity_eleven, $sensitivity_twelve, $sensitivity_thirteen, $sensitivity_fourteen, $sensitivity_fifteen, $sensitivity_sixteen, $comments, $conn) {
-            $appearance           = implode(', ', $appearance);
-            $gram_stain           = implode(', ', $gram_stain);
-            $pus_cells            = implode(', ', $pus_cells);
-            $zn_stain             = implode(', ', $zn_stain);
-            $culture              = implode(', ', $culture);
-            $bacteria_one         = implode(', ', $bacteria_one);
-            $bacteria_two         = implode(', ', $bacteria_two);
-            $antibiotics_one      = implode(', ', $antibiotics_one);
-            $antibiotics_two      = implode(', ', $antibiotics_two);
-            $antibiotics_three    = implode(', ', $antibiotics_three);
-            $antibiotics_four     = implode(', ', $antibiotics_four);
-            $antibiotics_five     = implode(', ', $antibiotics_five);
-            $antibiotics_six      = implode(', ', $antibiotics_six);
-            $antibiotics_seven    = implode(', ', $antibiotics_seven);
-            $antibiotics_eight    = implode(', ', $antibiotics_eight);
-            $antibiotics_nine     = implode(', ', $antibiotics_nine);
-            $antibiotics_ten      = implode(', ', $antibiotics_ten);
-            $antibiotics_eleven   = implode(', ', $antibiotics_eleven);
-            $antibiotics_twelve   = implode(', ', $antibiotics_twelve);
-            $antibiotics_thirteen = implode(', ', $antibiotics_thirteen);
-            $antibiotics_fourteen = implode(', ', $antibiotics_fourteen);
-            $antibiotics_fifteen  = implode(', ', $antibiotics_fifteen);
-            $antibiotics_sixteen  = implode(', ', $antibiotics_sixteen);
+            $appearance           = is_array($appearance) ? implode(', ', $appearance) : $appearance;
+            $gram_stain           = is_array($gram_stain) ? implode(', ', $gram_stain) : $gram_stain;
+            $pus_cells            = is_array($pus_cells) ? implode(', ', $pus_cells) : $pus_cells;
+            $zn_stain             = is_array($zn_stain) ? implode(', ', $zn_stain) : $zn_stain;
+            $culture              = is_array($culture) ? implode(', ', $culture) : $culture;
+            $bacteria_one         = is_array($bacteria_one) ? implode(', ', $bacteria_one) : $bacteria_one;
+            $bacteria_two         = is_array($bacteria_two) ? implode(', ', $bacteria_two) : $bacteria_two;
+            $antibiotics_one      = is_array($antibiotics_one) ? implode(', ', $antibiotics_one) : $antibiotics_one;
+            $antibiotics_two      = is_array($antibiotics_two) ? implode(', ', $antibiotics_two) : $antibiotics_two;
+            $antibiotics_three    = is_array($antibiotics_three) ? implode(', ', $antibiotics_three) : $antibiotics_three;
+            $antibiotics_four     = is_array($antibiotics_four) ? implode(', ', $antibiotics_four) : $antibiotics_four;
+            $antibiotics_five     = is_array($antibiotics_five) ? implode(', ', $antibiotics_five) : $antibiotics_five;
+            $antibiotics_six      = is_array($antibiotics_six) ? implode(', ', $antibiotics_six) : $antibiotics_six;
+            $antibiotics_seven    = is_array($antibiotics_seven) ? implode(', ', $antibiotics_seven) : $antibiotics_seven;
+            $antibiotics_eight    = is_array($antibiotics_eight) ? implode(', ', $antibiotics_eight) : $antibiotics_eight;
+            $antibiotics_nine     = is_array($antibiotics_nine) ? implode(', ', $antibiotics_nine) : $antibiotics_nine;
+            $antibiotics_ten      = is_array($antibiotics_ten) ? implode(', ', $antibiotics_ten) : $antibiotics_ten;
+            $antibiotics_eleven   = is_array($antibiotics_eleven) ? implode(', ', $antibiotics_eleven) : $antibiotics_eleven;
+            $antibiotics_twelve   = is_array($antibiotics_twelve) ? implode(', ', $antibiotics_twelve) : $antibiotics_twelve;
+            $antibiotics_thirteen = is_array($antibiotics_thirteen) ? implode(', ', $antibiotics_thirteen) : $antibiotics_thirteen;
+            $antibiotics_fourteen = is_array($antibiotics_fourteen) ? implode(', ', $antibiotics_fourteen) : $antibiotics_fourteen;
+            $antibiotics_fifteen  = is_array($antibiotics_fifteen) ? implode(', ', $antibiotics_fifteen) : $antibiotics_fifteen;
+            $antibiotics_sixteen  = is_array($antibiotics_sixteen) ? implode(', ', $antibiotics_sixteen) : $antibiotics_sixteen;
 
             try{
                 $query = $conn->prepare('UPDATE sputum SET patient_id = :patient_id, appearance = :appearance, gram_stain = :gram_stain, pus_cells = :pus_cells, zn_stain = :zn_stain, culture = :culture, bacteria_one = :bacteria_one, bacteria_two = :bacteria_two, antibiotics_one = :antibiotics_one, antibiotics_two = :antibiotics_two, antibiotics_three = :antibiotics_three, antibiotics_four = :antibiotics_four, antibiotics_five = :antibiotics_five, antibiotics_six = :antibiotics_six, antibiotics_seven = :antibiotics_seven, antibiotics_eight = :antibiotics_eight, antibiotics_nine = :antibiotics_nine, antibiotics_ten = :antibiotics_ten, antibiotics_eleven = :antibiotics_eleven, antibiotics_twelve = :antibiotics_twelve, antibiotics_thirteen = :antibiotics_thirteen, antibiotics_fourteen = :antibiotics_fourteen, antibiotics_fifteen = :antibiotics_fifteen, antibiotics_sixteen = :antibiotics_sixteen, sensitivity_one = :sensitivity_one, sensitivity_two = :sensitivity_two, sensitivity_three = :sensitivity_three, sensitivity_four = :sensitivity_four, sensitivity_five = :sensitivity_five, sensitivity_six = :sensitivity_six, sensitivity_seven = :sensitivity_seven, sensitivity_eight = :sensitivity_eight, sensitivity_nine = :sensitivity_nine, sensitivity_ten = :sensitivity_ten, sensitivity_eleven = :sensitivity_eleven, sensitivity_twelve = :sensitivity_twelve, sensitivity_thirteen = :sensitivity_thirteen, sensitivity_fourteen = :sensitivity_fourteen, sensitivity_fifteen = :sensitivity_fifteen, sensitivity_sixteen = :sensitivity_sixteen, comments = :comments WHERE id = :id AND patient_id = :patient_id');

@@ -91,7 +91,7 @@ function AddCharge({ closeModal, closeExpandable }) {
             { comError     && <Toastrr message={message} type="info"    /> }
             { showDialogue && <ConfirmDialogue message={'Are You Sure You Want To Add Charge?'} closeConfirm={closeConfirm} /> }
             <Backdrop className={classes.backdrop} open={backdrop}>
-                <CircularProgress color="inherit" /> <span className='ml-15'>Adding Charge....</span>
+                <CircularProgress color="inherit" /> <span className='ml-15'>Adding Charge. Please Wait....</span>
             </Backdrop>
             <Dialog
                 TransitionComponent={Transition}

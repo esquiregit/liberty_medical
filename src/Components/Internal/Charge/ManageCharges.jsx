@@ -30,6 +30,7 @@ function ManageCharges({ history }) {
     const [comError, setComError]   = useState(false);
     const [showModal, setShowModal] = useState(false);
 
+    const closeModal      = () => { setShowModal(false); }
     const closeExpandable = message => {
         setLoading(true);
         setMessage(message);
@@ -123,7 +124,7 @@ function ManageCharges({ history }) {
     return (
         <>
             { success   && <Toastrr message={message} type="success" /> }
-            { showModal && <AddCharge closeExpandable={closeExpandable} /> }
+            { showModal && <AddCharge closeModal={closeModal} closeExpandable={closeExpandable} /> }
             <Header staff={staff} />
             <Sidebar roleName={staff && staff.role_name} />
             <main
@@ -147,7 +148,7 @@ function ManageCharges({ history }) {
                         variant="extended"
                         size="medium"
                         aria-label="add"
-                        className="success"
+                        className="dark-btn"
                         onClick={() => setShowModal(true)}>
                         <AddOutlinedIcon className="white" />
                         <span className="ml-10">Add Charge</span>

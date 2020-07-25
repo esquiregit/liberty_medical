@@ -181,7 +181,7 @@ function EditPatient({ patient, closeEditModal, closeExpandable }) {
             { comError     && <Toastrr message={message} type="info"    /> }
             { showDialogue && <ConfirmDialogue message={'Are You Sure You Want To Update Patient?'} closeConfirm={closeConfirm} /> }
             <Backdrop className={classes.backdrop} open={backdrop}>
-                <CircularProgress color="inherit" /> <span className='ml-15'>Updating Patient....</span>
+                <CircularProgress color="inherit" /> <span className='ml-15'>Updating Patient Details. Please Wait....</span>
             </Backdrop>
             <Dialog
                 TransitionComponent={Transition}

@@ -1,6 +1,5 @@
 <?php
 	header('Content-Type: application/json');
-	require "classes/audit_trail.php";
 	require "classes/staff.php";
 
 	$conn             = $pdo->open();
@@ -20,7 +19,7 @@
 	$response 		  = array();
 	$name             = $other_name ? $first_name.' '.$other_name.' '.$last_name : $first_name.' '.$last_name;
 
-	if(!empty($staff) || !empty($id) || !empty($staff_id) || !empty($first_name) || !empty($last_name) || !empty($email_address) || !empty($gender) || !empty($phone_number) || !empty($role)) {
+	if(!empty($staff) && !empty($id) && !empty($staff_id) && !empty($first_name) && !empty($last_name) && !empty($email_address) && !empty($gender) && !empty($phone_number) && !empty($role)) {
 		if(empty($first_name)) {
 			array_push($response, array(
 				"status"  => "Warning",

@@ -7,7 +7,6 @@ const styles = makeStyles((theme) => ({
         position: 'relative',
         display: 'flex',
         height: '74.7vh',
-        // height: '100vh',
         width: '100wh',
         justifyContent: 'center',
         alignItems: 'center',

@@ -1,18 +1,17 @@
 <?php
 	header('Content-Type: application/json');
-	require "classes/audit_trail.php";
 	require "classes/charge.php";
 
-	$conn       = $pdo->open();
-	$data 	    = file_get_contents("php://input");
-	$request    = json_decode($data);//die(print_r($request));
-	$staff      = Methods::validate_string($request->staff);
-	$id         = Methods::validate_string($request->id);
-	$type       = Methods::validate_string($request->type);
-	$amount     = Methods::validate_string($request->amount);
-	$response   = array();
+	$conn     = $pdo->open();
+	$data 	  = file_get_contents("php://input");
+	$request  = json_decode($data);//die(print_r($request));
+	$staff    = Methods::validate_string($request->staff);
+	$id       = Methods::validate_string($request->id);
+	$type     = Methods::strtocapital(Methods::validate_string($request->type));
+	$amount   = Methods::validate_string($request->amount);
+	$response = array();
 
-	if(!empty($staff) || !empty($id) || !empty($type) || !empty($amount)) {
+	if(!empty($staff) && !empty($id) && !empty($type) && !empty($amount)) {
 		if(empty($type)) {
 			array_push($response, array(
 				"status"  => "Warning",

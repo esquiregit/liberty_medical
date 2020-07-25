@@ -163,7 +163,7 @@ function AddStaff({ history, closeModal, closeExpandable }) {
             { comError     && <Toastrr message={message} type="info"    /> }
             { showDialogue && <ConfirmDialogue message={'Are You Sure You Want To Add Staff?'} closeConfirm={closeConfirm} /> }
             <Backdrop className={classes.backdrop} open={backdrop}>
-                <CircularProgress color="inherit" /> <span className='ml-15'>Adding Staff....</span>
+                <CircularProgress color="inherit" /> <span className='ml-15'>Adding Staff. Please Wait....</span>
             </Backdrop>
             <Dialog
                 TransitionComponent={Transition}

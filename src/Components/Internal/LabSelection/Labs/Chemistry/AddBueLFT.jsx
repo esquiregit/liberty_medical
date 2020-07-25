@@ -506,9 +506,9 @@ function AddBueLFT({ patient, closeModal }) {
                                                 </FormikTextField>
                                             </td>
                                             <td width="%">U/L</td>
-                                            <td width="%">()</td>
-                                            <td width="%">()</td>
-                                            <td width="%">()</td>
+                                            <td width="%">(0.0 - 38)</td>
+                                            <td width="%">(0.0 - 31)</td>
+                                            <td width="%"></td>
                                         </tr>
                                         <tr>
                                             <td>GPT (ALT)</td>
@@ -540,7 +540,7 @@ function AddBueLFT({ patient, closeModal }) {
                                                 </FormikTextField>
                                             </td>
                                             <td>U/L</td>
-                                            <td>(0.0 - 3.8)</td>
+                                            <td>(0.0 - 41)</td>
                                             <td>(0.0 - 31)</td>
                                             <td></td>
                                         </tr>
@@ -574,8 +574,8 @@ function AddBueLFT({ patient, closeModal }) {
                                                 </FormikTextField>
                                             </td>
                                             <td>U/L</td>
-                                            <td>(0.0 - 41)</td>
-                                            <td>(0.0 - 31)</td>
+                                            <td>(0.0 - 270)</td>
+                                            <td>(0.0 - 240)</td>
                                             <td></td>
                                         </tr>
                                         <tr>

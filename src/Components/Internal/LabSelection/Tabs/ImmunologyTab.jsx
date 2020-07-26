@@ -40,13 +40,13 @@ const ImmunologyTab = ({ patient }) => {
             setCD4Count(false);
         } else if(modal.toLowerCase() === 'generalserology') {
             setGeneralSerology(false);
-        } else if(modal.toLowerCase() === 'hbvviralLoad') {
+        } else if(modal.toLowerCase() === 'hbvviralload') {
             setHBVViralLoad(false);
         } else if(modal.toLowerCase() === 'hepatitisbprofile') {
             setHepatitisBProfile(false);
         } else if(modal.toLowerCase() === 'hepatitismarkers') {
             setHepatitisMarkers(false);
-        } else if(modal.toLowerCase() === 'hivviralLoad') {
+        } else if(modal.toLowerCase() === 'hivviralload') {
             setHIVViralLoad(false);
         } else if(modal.toLowerCase() === 'hpyloriag') {
             setHPyloriAg(false);

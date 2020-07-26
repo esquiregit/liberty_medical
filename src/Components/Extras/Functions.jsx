@@ -1504,6 +1504,12 @@ export const get_cyst_options = () => {
         { label: 'Not Seen', value: 'Not Seen' },
     ];
 }
+export const getBileSalt = () => {
+    return [
+        { label: 'Present', value: 'Present' },
+        { label: 'Negative', value: 'Negative' },
+    ];
+}
 export const get_abo_grouping_options = () => {
     return [
         { label: 'A Positive', value: 'A Positive' },

@@ -13,7 +13,7 @@
             $rhd                = is_array($rhd) ? implode(', ', $rhd) : $rhd;
             $antibody_screening = is_array($antibody_screening) ? implode(', ', $antibody_screening) : $antibody_screening;
             $hbsag              = is_array($hbsag) ? implode(', ', $hbsag) : $hbsag;
-            $vdrl               = is_array($vrdl) ? implode(', ', $vdrl) : $vrdl;
+            $vdrl               = is_array($vdrl) ? implode(', ', $vdrl) : $vdrl;
             $hep_c              = is_array($hep_c) ? implode(', ', $hep_c) : $hep_c;
             $retro_screen       = is_array($retro_screen) ? implode(', ', $retro_screen) : $retro_screen;
 
@@ -53,7 +53,7 @@
             $rhd                = is_array($rhd) ? implode(', ', $rhd) : $rhd;
             $antibody_screening = is_array($antibody_screening) ? implode(', ', $antibody_screening) : $antibody_screening;
             $hbsag              = is_array($hbsag) ? implode(', ', $hbsag) : $hbsag;
-            $vdrl               = is_array($vrdl) ? implode(', ', $vdrl) : $vrdl;
+            $vdrl               = is_array($vdrl) ? implode(', ', $vdrl) : $vdrl;
             $hep_c              = is_array($hep_c) ? implode(', ', $hep_c) : $hep_c;
             $retro_screen       = is_array($retro_screen) ? implode(', ', $retro_screen) : $retro_screen;
 

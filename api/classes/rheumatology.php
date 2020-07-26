@@ -16,7 +16,7 @@
                 $query->execute([':invoice_id' => $invoice_id, ':patient_id' => $patient_id, ':le_cells' => $le_cells, ':ana_qualitative' => $ana_qualitative, ':ds_dna' => $ds_dna, ':ana_quantitative' => $ana_quantitative, ':rheumatoid_factor' => $rheumatoid_factor, ':comments' => $comments, ':added_by' => $added_by]);
 
                 return true;
-            }catch(PDOException $ex){
+            }catch(PDOException $ex){die($ex);
             	return false;
             }
         }

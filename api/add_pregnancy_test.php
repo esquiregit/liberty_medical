@@ -4,7 +4,7 @@
 	header('Content-Type: application/json');
 	$conn         = $pdo->open();
 	$data 	      = file_get_contents("php://input");
-	$request      = json_decode($data);
+	$request      = json_decode($data);//die(print_r($request));
 	$patient_id   = Methods::validate_string($request->patient_id);
 	$patient      = Methods::validate_string($request->patient);
 	$results      = Methods::strtocapital(Methods::validate_string($request->results));

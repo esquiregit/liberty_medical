@@ -1069,6 +1069,12 @@ export const get_current_year = () => {
 export const get_roles_options = () => {
     return ["Administrator", "Front Desk", "Lab Technician"];
 }
+export const getSpecimen = () => {
+    return [
+        { label: 'Blood', value: 'Blood' },
+        { label: 'Urine', value: 'Urine' },
+    ];
+}
 export const getBloodGroups = () => {
     return [
         { label: 'A', value: 'A' },

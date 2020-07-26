@@ -9,7 +9,6 @@
 	$patient                  = Methods::validate_string($request->patient);
 	$epitheleal_cells_per_hpf = Methods::strtocapital(Methods::validate_string($request->epitheleal_cells_per_hpf));
 	$pus_cells_per_hps        = Methods::strtocapital(Methods::validate_string($request->pus_cells_per_hps));
-	$comments                 = Methods::strtocapital(Methods::validate_string($request->comments));
 	$rbcs_per_hpf             = Methods::validate_string($request->rbcs_per_hpf);
 	$appearance               = Methods::validate_array($request->appearance);
 	$colour                   = Methods::validate_array($request->colour);
@@ -34,7 +33,7 @@
 	$unknown_one              = Methods::validate_array($request->unknown_one);
 	$cast                     = Methods::validate_array($request->cast);
 	$unknown_two              = Methods::validate_array($request->unknown_two);
-	$comments                 = Methods::validate_string($request->comments);
+	$comments                 = Methods::strtocapital(Methods::validate_string($request->comments));
 	$added_by                 = Methods::validate_string($request->entered_by);
 	$response                 = array();
 

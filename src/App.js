@@ -10,10 +10,10 @@ const Error404           = React.lazy(() => import('./Components/Extras/FourZero
 const Recovery           = React.lazy(() => import('./Components/External/Recovery'));
 const Dashboard          = React.lazy(() => import('./Components/Internal/Dashboard/Dashboard'));
 const AuditTrail         = React.lazy(() => import('./Components/Internal/AuditTrail'));
+const ManageRoles        = React.lazy(() => import('./Components/Internal/Roles/ManageRoles'));
 const ManageStaff        = React.lazy(() => import('./Components/Internal/Staff/ManageStaff'));
 const LabSelection       = React.lazy(() => import('./Components/Internal/LabSelection/LabSelection'));
 const ManageCharges      = React.lazy(() => import('./Components/Internal/Charge/ManageCharges'));
-const ManageRoles        = React.lazy(() => import('./Components/Internal/Roles/ManageRoles'));
 const ManagePatients     = React.lazy(() => import('./Components/Internal/Patient/ManagePatients'));
 const ManageRequests     = React.lazy(() => import('./Components/Internal/Request/ManageRequests'));
 const PasswordChange     = React.lazy(() => import('./Components/External/PasswordChange'));

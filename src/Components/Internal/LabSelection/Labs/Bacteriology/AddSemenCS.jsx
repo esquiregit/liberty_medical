@@ -21,88 +21,88 @@ import 'tippy.js/dist/tippy.css';
 const validationSchema = Yup.object().shape({
     culture: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     bacteria_one: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     bacteria_two: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     bacteria_three: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_one: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_two: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_three: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_four: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_five: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_six: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_seven: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_eight: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_nine: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_ten: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_eleven: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_twelve: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_thirteen: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_fourteen: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_fifteen: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_sixteen: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_seventeen: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_eighteen: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_nineteen: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_twenty: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_twenty_one: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_twenty_two: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_twenty_three: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     antibiotics_twenty_four: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     sensitivity_one: Yup
         .string()
         .required('Required')

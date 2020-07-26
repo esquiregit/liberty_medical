@@ -32,13 +32,13 @@ const validationSchema = Yup.object().shape({
         .required('Required'),
     t_vaginalis: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     yeast_like_cells: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     gnid: Yup
         .string()
-        .required('Please Select'),
+        .required('Required'),
     comments: Yup
         .string()
 });

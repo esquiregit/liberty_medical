@@ -70,15 +70,15 @@ const BacteriologyTab = ({ patient }) => {
             setSemenCS(false);
         } else if(modal.toLowerCase() === 'skinSnip') {
             setSkinSnip(false);
-        } else if(modal.toLowerCase() === 'sputumcs') {
-            setSputumAFB(false);
         } else if(modal.toLowerCase() === 'sputumafb') {
+            setSputumAFB(false);
+        } else if(modal.toLowerCase() === 'sputumcs') {
             setSputumCS(false);
         } else if(modal.toLowerCase() === 'stoolcs') {
             setStoolCS(false);
-        } else if(modal.toLowerCase() === 'throatswabcs') {
+        } else if(modal.toLowerCase() === 'stoolre') {
             setStoolRE(false);
-        } else if(modal.toLowerCase() === 'urethralcs') {
+        } else if(modal.toLowerCase() === 'throatswabcs') {
             setThroatSwabCS(false);
         } else if(modal.toLowerCase() === 'urethralcs') {
             setUrethralCS(false);

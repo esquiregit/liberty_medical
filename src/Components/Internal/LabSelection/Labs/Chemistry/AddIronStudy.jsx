@@ -22,21 +22,21 @@ const validationSchema = Yup.object().shape({
     iron: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     iron_flag: Yup
         .string()
         .required('Please Select Flag'),
     tibc: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     tibc_flag: Yup
         .string()
         .required('Please Select Flag'),
     transferrin_sat: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     transferrin_sat_flag: Yup
         .string()
         .required('Please Select Flag'),
@@ -46,7 +46,7 @@ const validationSchema = Yup.object().shape({
     ferritin: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     comments: Yup
         .string()
 });

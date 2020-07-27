@@ -21,27 +21,27 @@ const validationSchema = Yup.object().shape({
     follicular: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     mid_cycle: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     luteal: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     pm: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     amenorrhoea: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     mem: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     comments: Yup
         .string()
 });

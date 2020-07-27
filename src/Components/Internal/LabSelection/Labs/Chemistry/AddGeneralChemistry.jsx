@@ -21,51 +21,51 @@ const validationSchema = Yup.object().shape({
     amylase: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     ldh: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     creatinine: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     uric_acid: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     creatine_kinase: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     calcium: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     phosphorus: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     magnessium: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     fbs_glucose: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     globulin: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     bili_indirect: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     glyco_hbg: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     comments: Yup
         .string()
 });

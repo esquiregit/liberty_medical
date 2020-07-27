@@ -22,21 +22,21 @@ const validationSchema = Yup.object().shape({
     ft3: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     ft3_flag: Yup
         .string()
         .required('Please Select Flag'),
     ft4: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     ft4_flag: Yup
         .string()
         .required('Please Select Flag'),
     tsh: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     tsh_flag: Yup
         .string()
         .required('Please Select Flag'),

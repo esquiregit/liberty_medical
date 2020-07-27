@@ -25,11 +25,11 @@ const validationSchema = Yup.object().shape({
     glucose: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     protein: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     globulin: Yup
         .string()
         .required('Please Select Globulin'),

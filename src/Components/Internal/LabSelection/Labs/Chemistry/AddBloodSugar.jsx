@@ -21,15 +21,15 @@ const validationSchema = Yup.object().shape({
     fasting_blood_sugar: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     random_blood_sugar: Yup
         .string()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     two_hpp_blood_sugar: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     comments: Yup
         .string()
 });

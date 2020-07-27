@@ -21,11 +21,11 @@ import 'tippy.js/dist/tippy.css';
 const validationSchema = Yup.object().shape({
     hbv_dna: Yup
         .string()
-        .required('Please Fill In Result'),
+        .required('Required'),
     pcr_hbv_quantitative: Yup
         .number()
         .min(0, 'Results Must Be Greater Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     comments: Yup
         .string()
 });

@@ -22,49 +22,49 @@ const validationSchema = Yup.object().shape({
     total_protein: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     total_protein_flag: Yup
         .string()
         .required('Please Select Flag'),
     albumin: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     albumin_flag: Yup
         .string()
         .required('Please Select Flag'),
     alpha_1_globulin: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     alpha_1_globulin_flag: Yup
         .string()
         .required('Please Select Flag'),
     alpha_2_globulin: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     alpha_2_globulin_flag: Yup
         .string()
         .required('Please Select Flag'),
     beta_1_globulin: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     beta_1_globulin_flag: Yup
         .string()
         .required('Please Select Flag'),
     beta_2_globulin: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     beta_2_globulin_flag: Yup
         .string()
         .required('Please Select Flag'),
     gamma_globulin: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     gamma_globulin_flag: Yup
         .string()
         .required('Please Select Flag')

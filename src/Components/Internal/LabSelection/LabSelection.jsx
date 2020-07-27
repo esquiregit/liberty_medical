@@ -32,7 +32,7 @@ function LabSelection({ history, match }) {
     const [loading, setLoading]   = useState(true);
     const [message, setMessage]   = useState('');
     const [comError, setComError] = useState(false);
-    const [tabIndex, setTabIndex] = useState(4);
+    const [tabIndex, setTabIndex] = useState(2);
     
     React.useEffect(() => {
         document.title        = 'Lab Selection | Liberty Medical Labs';

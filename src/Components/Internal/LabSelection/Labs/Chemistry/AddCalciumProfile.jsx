@@ -22,35 +22,35 @@ const validationSchema = Yup.object().shape({
     s_calcium_total: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     s_calcium_total_flag: Yup
         .string()
         .required('Please Select Flag'),
     s_ionized_calcium_calc: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     s_ionized_calcium_calc_flag: Yup
         .string()
         .required('Please Select Flag'),
     s_albumin: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     s_albumin_flag: Yup
         .string()
         .required('Please Select Flag'),
     s_total_protein: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     s_total_protein_flag: Yup
         .string()
         .required('Please Select Flag'),
     corrected_calcium_calc: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     comments: Yup
         .string()
 });

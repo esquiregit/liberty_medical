@@ -30,9 +30,9 @@ const TumourMarkersTab = ({ patient }) => {
             setCKMB(false);
         } else if(modal.toLowerCase() === 'crp') {
             setCRP(false);
-        } else if(modal.toLowerCase() === 'setMAlb') {
+        } else if(modal.toLowerCase() === 'setmalb') {
             setMAlb(false);
-        } else if(modal.toLowerCase() === 'serumHCG') {
+        } else if(modal.toLowerCase() === 'serumhcg') {
             setSerumHCG(false);
         } else if(modal.toLowerCase() === 'crpultrasensitive') {
             setCRPUltraSensitive(false);
@@ -46,12 +46,20 @@ const TumourMarkersTab = ({ patient }) => {
             { cea && <AddCEA patient={patient} closeModal={closeModal} /> }
             { ckmb && <AddCKMB patient={patient} closeModal={closeModal} /> }
             { crp && <AddCRP patient={patient} closeModal={closeModal} /> }
-            { malb && <AddCRPUltraSensitive patient={patient} closeModal={closeModal} /> }
-            { serumHCG     && <AddMAlb     patient={patient} closeModal={closeModal} /> }
-            { crpUltraSensitive  && <AddSerumHCG  patient={patient} closeModal={closeModal} /> }
+            { malb && <AddMAlb patient={patient} closeModal={closeModal} /> }
+            { serumHCG     && <AddSerumHCG     patient={patient} closeModal={closeModal} /> }
+            { crpUltraSensitive  && <AddCRPUltraSensitive  patient={patient} closeModal={closeModal} /> }
             <table>
                 <tbody>
                     <tr>
+                        <td>
+                            <Button
+                                fullWidth
+                                onClick={() => setSerumHCG(true)}
+                                variant="outlined">
+                                B-HCG serum
+                            </Button>
+                        </td>
                         <td>
                             <Button
                                 fullWidth
@@ -60,6 +68,8 @@ const TumourMarkersTab = ({ patient }) => {
                                 CA 12.5
                             </Button>
                         </td>
+                    </tr>
+                    <tr>
                         <td>
                             <Button
                                 fullWidth
@@ -68,8 +78,6 @@ const TumourMarkersTab = ({ patient }) => {
                                 CA 15.3
                             </Button>
                         </td>
-                    </tr>
-                    <tr>
                         <td>
                             <Button
                                 fullWidth
@@ -78,6 +86,8 @@ const TumourMarkersTab = ({ patient }) => {
                                 CEA
                             </Button>
                         </td>
+                    </tr>
+                    <tr>
                         <td>
                             <Button
                                 fullWidth
@@ -86,8 +96,6 @@ const TumourMarkersTab = ({ patient }) => {
                                 CKMB
                             </Button>
                         </td>
-                    </tr>
-                    <tr>
                         <td>
                             <Button
                                 fullWidth
@@ -96,6 +104,8 @@ const TumourMarkersTab = ({ patient }) => {
                                 CRP
                             </Button>
                         </td>
+                    </tr>
+                    <tr>
                         <td>
                             <Button
                                 fullWidth
@@ -104,22 +114,12 @@ const TumourMarkersTab = ({ patient }) => {
                                 CRP UltraSensitive
                             </Button>
                         </td>
-                    </tr>
-                    <tr>
                         <td>
                             <Button
                                 fullWidth
                                 onClick={() => setMAlb(true)}
                                 variant="outlined">
                                 M-Alb
-                            </Button>
-                        </td>
-                        <td>
-                            <Button
-                                fullWidth
-                                onClick={() => setSerumHCG(true)}
-                                variant="outlined">
-                                serum HCG
                             </Button>
                         </td>
                     </tr>

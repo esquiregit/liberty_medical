@@ -21,7 +21,7 @@ import 'tippy.js/dist/tippy.css';
 const validationSchema = Yup.object().shape({
     h_pylori_ag: Yup
         .string()
-        .required('Please Fill In Result'),
+        .required('Required'),
     comments: Yup
         .string()
 });

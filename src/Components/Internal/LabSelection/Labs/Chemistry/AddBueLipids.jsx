@@ -22,74 +22,74 @@ const validationSchema = Yup.object().shape({
     sodium: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     sodium_flag: Yup
         .string()
         .required('Please Select Flag'),
     potassium: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     potassium_flag: Yup
         .string()
         .required('Please Select Flag'),
     chloride: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     chloride_flag: Yup
         .string()
         .required('Please Select Flag'),
     urea: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     urea_flag: Yup
         .string()
         .required('Please Select Flag'),
     creatinine: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     creatinine_flag: Yup
         .string()
         .required('Please Select Flag'),
     egfr: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     cholesterol_total: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     cholesterol_total_flag: Yup
         .string()
         .required('Please Select Flag'),
     triglycerides: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     triglycerides_flag: Yup
         .string()
         .required('Please Select Flag'),
     hdl: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     hdl_flag: Yup
         .string()
         .required('Please Select Flag'),
     ldl: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     ldl_flag: Yup
         .string()
         .required('Please Select Flag'),
     coronary_risk: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     coronary_risk_flag: Yup
         .string()
         .required('Please Select Flag'),

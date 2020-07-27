@@ -21,7 +21,7 @@ const validationSchema = Yup.object().shape({
     results: Yup
         .number()
         .min(0, 'Results Must Be Greater Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     comments: Yup
         .string()
 });

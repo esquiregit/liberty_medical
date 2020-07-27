@@ -22,28 +22,28 @@ const validationSchema = Yup.object().shape({
     urea_creatinine: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     urea_creatinine_flag: Yup
         .string()
         .required('Please Select Flag'),
     micro_albumin_urine: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     micro_albumin_urine_flag: Yup
         .string()
         .required('Please Select Flag'),
     uacr: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     uacr_flag: Yup
         .string()
         .required('Please Select Flag'),
     the_uacr: Yup
         .number()
         .min(0, 'Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     comments: Yup
         .string()
 });

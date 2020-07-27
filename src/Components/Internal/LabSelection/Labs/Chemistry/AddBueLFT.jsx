@@ -22,109 +22,109 @@ const validationSchema = Yup.object().shape({
     sodium: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     sodium_flag: Yup
         .string()
         .required('Please Select Flag'),
     potassium: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     potassium_flag: Yup
         .string()
         .required('Please Select Flag'),
     chloride: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     chloride_flag: Yup
         .string()
         .required('Please Select Flag'),
     urea: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     urea_flag: Yup
         .string()
         .required('Please Select Flag'),
     creatinine: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     creatinine_flag: Yup
         .string()
         .required('Please Select Flag'),
     egfr: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     got_ast: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     got_ast_flag: Yup
         .string()
         .required('Please Select Flag'),
     gpt_alt: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     gpt_alt_flag: Yup
         .string()
         .required('Please Select Flag'),
     alkaline_phos: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     alkaline_phos_flag: Yup
         .string()
         .required('Please Select Flag'),
     ggt: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     ggt_flag: Yup
         .string()
         .required('Please Select Flag'),
     bilirubin_total: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     bilirubin_total_flag: Yup
         .string()
         .required('Please Select Flag'),
     bili_indirect: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     bili_indirect_flag: Yup
         .string()
         .required('Please Select Flag'),
     bilirubin_direct: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     bilirubin_direct_flag: Yup
         .string()
         .required('Please Select Flag'),
     protein_total: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     protein_total_flag: Yup
         .string()
         .required('Please Select Flag'),
     albumin: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     albumin_flag: Yup
         .string()
         .required('Please Select Flag'),
     globulin: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
-        .required('Please Fill In Result'),
+        .required('Required'),
     globulin_flag: Yup
         .string()
         .required('Please Select Flag'),

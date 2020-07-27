@@ -224,7 +224,7 @@ function App() {
                     <Route path='/history/m-alb' component={ ListMAlb }     exact />
                     <Route path='/history/b-hcg-serum' component={ ListSerumHCG }     exact />
 
-                    <Route path='*'                           component={ Error404 } />
+                    <Route path='*' component={ Error404 } />
                 </Switch>
             </BrowserRouter>
         </React.Suspense>

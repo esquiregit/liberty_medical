@@ -20,7 +20,7 @@ const PasswordChange     = React.lazy(() => import('./Components/External/Passwo
 const ManageHistories    = React.lazy(() => import('./Components/Internal/History/ManageHistories'));
 const UnauthorizedAccess = React.lazy(() => import('./Components/Internal/UnauthorizedAccess'));
 
-// lab histories
+// Bacteriology Histories
 const ListAsciticFluidCS = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Bacteriology/ListAsciticFluidCS'));
 const ListAspirateCS = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Bacteriology/ListAspirateCS'));
 const ListBloodCS = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Bacteriology/ListBloodCS'));
@@ -43,6 +43,7 @@ const ListUrineCS = React.lazy(() => import('./Components/Internal/LabSelection/
 const ListUrineRE = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Bacteriology/ListUrineRE'));
 const ListWoundCS = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Bacteriology/ListWoundCS'));
 
+// Chemistry Histories
 const ListBloodSugar = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Chemistry/ListBloodSugar'));
 const ListBueCreatinine = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Chemistry/ListBueCreatinine'));
 const ListBueCreatinineEgfr = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Chemistry/ListBueCreatinineEgfr'));
@@ -67,6 +68,7 @@ const ListSerumLipase = React.lazy(() => import('./Components/Internal/LabSelect
 const ListUrine = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Chemistry/ListUrine'));
 const ListUrineACR = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Chemistry/ListUrineACR'));
 
+// Haematology Histories
 const ListBloodFIlmComment = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Haematology/ListBloodFIlmComment'));
 const ListClottingProfile = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Haematology/ListClottingProfile'));
 const ListDDimers = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Haematology/ListDDimers'));
@@ -77,6 +79,7 @@ const ListFBCChildren = React.lazy(() => import('./Components/Internal/LabSelect
 const ListNTCScreening = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Haematology/ListNTCScreening'));
 const ListSpecials = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Haematology/ListSpecials'));
 
+// Hormonal Histories
 const ListAlphaFetoProtein = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Hormonal/ListAlphaFetoProtein'));
 const ListCortisol = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Hormonal/ListCortisol'));
 const ListEstrogen = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Hormonal/ListEstrogen'));
@@ -87,6 +90,7 @@ const ListReproductiveAssay = React.lazy(() => import('./Components/Internal/Lab
 const ListTFT = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Hormonal/ListTFT'));
 const ListTroponin = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Hormonal/ListTroponin'));
 
+// Immunology Histories
 const ListAntenatalScreening = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Immunology/ListAntenatalScreening'));
 const ListCD4Count = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Immunology/ListCD4Count'));
 const ListGeneralSerology = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Immunology/ListGeneralSerology'));
@@ -103,6 +107,7 @@ const ListWidal = React.lazy(() => import('./Components/Internal/LabSelection/La
 const ListHepatitisBProfile = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Immunology/ListHepatitisBProfile'));
 const ListHepatitisMarkers = React.lazy(() => import('./Components/Internal/LabSelection/Labs/Immunology/ListHepatitisMarkers'));
 
+// TumourMarkers Histories
 const ListCA125 = React.lazy(() => import('./Components/Internal/LabSelection/Labs/TumourMarkers/ListCA125'));
 const ListCA153 = React.lazy(() => import('./Components/Internal/LabSelection/Labs/TumourMarkers/ListCA153'));
 const ListCEA = React.lazy(() => import('./Components/Internal/LabSelection/Labs/TumourMarkers/ListCEA'));
@@ -132,6 +137,93 @@ function App() {
                     <Route path='/unauthorized-access/'       component={ UnauthorizedAccess } exact />
                     <Route path='/lab-selection/:patient_id'  component={ LabSelection }       exact />
                     <Route path='/password-change/:id/:code/' component={ PasswordChange }     exact />
+
+                    <Route path='/history/ascitic-fluid' component={ ListAsciticFluidCS }     exact />
+                    <Route path='/history/aspirate-cs' component={ ListAspirateCS }     exact />
+                    <Route path='/history/' component={ ListBloodCS }     exact />
+                    <Route path='/history/' component={ ListEarSwabCS }     exact />
+                    <Route path='/history/' component={ ListEndocervicalSwab }     exact />
+                    <Route path='/history/' component={ ListEyeSwabCS }     exact />
+                    <Route path='/history/' component={ ListHVSCS }     exact />
+                    <Route path='/history/' component={ ListHVSRE }     exact />
+                    <Route path='/history/' component={ ListPleuralFluid }     exact />
+                    <Route path='/history/' component={ ListPusFluid }     exact />
+                    <Route path='/history/' component={ ListSemenCS }     exact />
+                    <Route path='/history/' component={ ListSkinSnip }     exact />
+                    <Route path='/history/' component={ ListSputumAFB }     exact />
+                    <Route path='/history/' component={ ListSputumCS }     exact />
+                    <Route path='/history/' component={ ListStoolCS }     exact />
+                    <Route path='/history/' component={ ListStoolRE }     exact />
+                    <Route path='/history/' component={ ListThroatSwabCS }     exact />
+                    <Route path='/history/' component={ ListUrethralCS }     exact />
+                    <Route path='/history/' component={ ListUrineCS }     exact />
+                    <Route path='/history/' component={ ListUrineRE }     exact />
+                    <Route path='/history/' component={ ListWoundCS }     exact />
+                    <Route path='/history/' component={ ListBloodSugar }     exact />
+                    <Route path='/history/' component={ ListBueCreatinine }     exact />
+                    <Route path='/history/' component={ ListBueCreatinineEgfr }     exact />
+                    <Route path='/history/' component={ ListBueLFT }     exact />
+                    <Route path='/history/' component={ ListBueLipids }     exact />
+                    <Route path='/history/' component={ ListCalciumProfile }     exact />
+                    <Route path='/history/' component={ ListCardiacEnzyme }     exact />
+                    <Route path='/history/' component={ ListCompactChemistry }     exact />
+                    <Route path='/history/' component={ ListCReactiveProtein }     exact />
+                    <Route path='/history/' component={ ListCSFBiochem }     exact />
+                    <Route path='/history/' component={ ListFolateB12 }     exact />
+                    <Route path='/history/' component={ ListGeneralChemistry }     exact />
+                    <Route path='/history/' component={ ListHBA1C }     exact />
+                    <Route path='/history/' component={ ListHypersensitiveCPR }     exact />
+                    <Route path='/history/' component={ ListIronStudy }     exact />
+                    <Route path='/history/' component={ ListISE }     exact />
+                    <Route path='/history/' component={ ListLFT }     exact />
+                    <Route path='/history/' component={ ListLipidProfile }     exact />
+                    <Route path='/history/' component={ ListProteinElectrophoresis }     exact />
+                    <Route path='/history/' component={ ListSC3SC4 }     exact />
+                    <Route path='/history/' component={ ListSerumLipase }     exact />
+                    <Route path='/history/' component={ ListUrine }     exact />
+                    <Route path='/history/' component={ ListUrineACR }     exact />
+                    <Route path='/history/' component={ ListBloodFIlmComment }     exact />
+                    <Route path='/history/' component={ ListClottingProfile }     exact />
+                    <Route path='/history/' component={ ListDDimers }     exact />
+                    <Route path='/history/' component={ ListESR }     exact />
+                    <Route path='/history/' component={ ListFBC3P }     exact />
+                    <Route path='/history/' component={ ListFBC5P }     exact />
+                    <Route path='/history/' component={ ListFBCChildren }     exact />
+                    <Route path='/history/' component={ ListNTCScreening }     exact />
+                    <Route path='/history/' component={ ListSpecials }     exact />
+                    <Route path='/history/' component={ ListAlphaFetoProtein }     exact />
+                    <Route path='/history/' component={ ListCortisol }     exact />
+                    <Route path='/history/' component={ ListEstrogen }     exact />
+                    <Route path='/history/' component={ ListHormonalAssay }     exact />
+                    <Route path='/history/' component={ ListPSA }     exact />
+                    <Route path='/history/' component={ ListPTH }     exact />
+                    <Route path='/history/' component={ ListReproductiveAssay }     exact />
+                    <Route path='/history/' component={ ListTFT }     exact />
+                    <Route path='/history/' component={ ListTroponin }     exact />
+                    <Route path='/history/' component={ ListAntenatalScreening }     exact />
+                    <Route path='/history/' component={ ListCD4Count }     exact />
+                    <Route path='/history/' component={ ListGeneralSerology }     exact />
+                    <Route path='/history/' component={ ListHBVViralLoad }     exact />
+                    <Route path='/history/' component={ ListHIVViralLoad }     exact />
+                    <Route path='/history/' component={ ListHPyloriAg }     exact />
+                    <Route path='/history/' component={ ListHPyloriAgBlood }     exact />
+                    <Route path='/history/' component={ ListHPyloriAgSOB }     exact />
+                    <Route path='/history/' component={ ListMantoux }     exact />
+                    <Route path='/history/' component={ ListPregnancyTest }     exact />
+                    <Route path='/history/' component={ ListRheumatology }     exact />
+                    <Route path='/history/' component={ ListSemenAnalysis }     exact />
+                    <Route path='/history/' component={ ListWidal }     exact />
+                    <Route path='/history/' component={ ListHepatitisBProfile }     exact />
+                    <Route path='/history/' component={ ListHepatitisMarkers }     exact />
+                    <Route path='/history/' component={ ListCA125 }     exact />
+                    <Route path='/history/' component={ ListCA153 }     exact />
+                    <Route path='/history/' component={ ListCEA }     exact />
+                    <Route path='/history/' component={ ListCKMB }     exact />
+                    <Route path='/history/' component={ ListCRP }     exact />
+                    <Route path='/history/' component={ ListCRPUltraSensitive }     exact />
+                    <Route path='/history/' component={ ListMAlb }     exact />
+                    <Route path='/history/' component={ ListSerumHCG }     exact />
+
                     <Route path='*'                           component={ Error404 } />
                 </Switch>
             </BrowserRouter>

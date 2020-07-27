@@ -33,8 +33,8 @@ function AddCKMB({ patient, closeModal }) {
     const initialValues = {
         patient_id : patient.patient_id,
         patient    : patient.name,
-        results    : '',
-        comments   : '',
+        results : '',
+        comments : '',
         entered_by : staff.staff_id,
     };
 

@@ -177,14 +177,14 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditCompactChemistry({ lab, patient, closeModal }) {
+function EditCompactChemistry({ lab, closeModal }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const flagOptions = getFlagOptions();
 
     const initialValues = {
-        patient_id : patient.patient_id,
-        patient    : patient.name,
+        patient_id : lab.patient_id,
+        patient    : lab.name,
         sodium : lab.sodium,
         sodium_flag : lab.sodium_flag,
         chloride : lab.chloride,
@@ -310,15 +310,15 @@ function EditCompactChemistry({ lab, patient, closeModal }) {
                                     <tbody>
                                         <tr>
                                             <th>Patient ID:</th>
-                                            <td>{patient.patient_id}</td>
+                                            <td>{lab.patient_id}</td>
                                             <th>Name: </th>
-                                            <td colSpan="3">{patient.name}</td>
+                                            <td colSpan="3">{lab.name}</td>
                                         </tr>
                                         <tr>
                                             <th>Date Of Birth:</th>
-                                            <td>{patient.date_of_birth}</td>
+                                            <td>{lab.date_of_birth}</td>
                                             <th>Gender:</th>
-                                            <td>{patient.gender}</td>
+                                            <td>{lab.gender}</td>
                                             <th>Date:</th>
                                             <td>{getTodaysDate()}</td>
                                         </tr>

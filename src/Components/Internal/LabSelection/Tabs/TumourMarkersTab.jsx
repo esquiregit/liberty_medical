@@ -10,14 +10,14 @@ import AddSerumHCG from '../Labs/TumourMarkers/AddSerumHCG';
 import AddCRPUltraSensitive from '../Labs/TumourMarkers/AddCRPUltraSensitive';
 
 const TumourMarkersTab = ({ patient }) => {
-    const [ca125, setCA125] = useState(false);
-    const [ca153, setCA153] = useState(false);
-    const [cea, setCEA] = useState(false);
-    const [ckmb, setCKMB] = useState(false);
-    const [crp, setCRP] = useState(false);
-    const [malb, setMAlb] = useState(false);
-    const [serumHCG, setSerumHCG]         = useState(false);
-    const [crpUltraSensitive, setCRPUltraSensitive]   = useState(false);
+    const [cea, setCEA]           = useState(false);
+    const [crp, setCRP]           = useState(false);
+    const [ckmb, setCKMB]         = useState(false);
+    const [malb, setMAlb]         = useState(false);
+    const [ca125, setCA125]       = useState(false);
+    const [ca153, setCA153]       = useState(false);
+    const [serumHCG, setSerumHCG] = useState(false);
+    const [crpUltraSensitive, setCRPUltraSensitive] = useState(false);
 
     const closeModal = modal => {
         if(modal.toLowerCase() === 'ca125') {
@@ -41,14 +41,14 @@ const TumourMarkersTab = ({ patient }) => {
 
     return (
         <>
-            { ca125 && <AddCA125 patient={patient} closeModal={closeModal} /> }
-            { ca153 && <AddCA153 patient={patient} closeModal={closeModal} /> }
-            { cea && <AddCEA patient={patient} closeModal={closeModal} /> }
-            { ckmb && <AddCKMB patient={patient} closeModal={closeModal} /> }
-            { crp && <AddCRP patient={patient} closeModal={closeModal} /> }
-            { malb && <AddMAlb patient={patient} closeModal={closeModal} /> }
-            { serumHCG     && <AddSerumHCG     patient={patient} closeModal={closeModal} /> }
-            { crpUltraSensitive  && <AddCRPUltraSensitive  patient={patient} closeModal={closeModal} /> }
+            { cea               && <AddCEA               patient={patient} closeModal={closeModal} /> }
+            { crp               && <AddCRP               patient={patient} closeModal={closeModal} /> }
+            { ckmb              && <AddCKMB              patient={patient} closeModal={closeModal} /> }
+            { malb              && <AddMAlb              patient={patient} closeModal={closeModal} /> }
+            { ca125             && <AddCA125             patient={patient} closeModal={closeModal} /> }
+            { ca153             && <AddCA153             patient={patient} closeModal={closeModal} /> }
+            { serumHCG          && <AddSerumHCG          patient={patient} closeModal={closeModal} /> }
+            { crpUltraSensitive && <AddCRPUltraSensitive patient={patient} closeModal={closeModal} /> }
             <table>
                 <tbody>
                     <tr>

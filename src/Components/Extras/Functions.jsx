@@ -1089,6 +1089,12 @@ export const get_rhesus_options = () => {
         { label: 'Negative', value: 'Negative' },
     ];
 }
+export const get_bf_mps = () => {
+    return [
+        { label: 'MPS Seen', value: 'MPS Seen' },
+        { label: 'No MPS Seen', value: 'No MPS Seen' },
+    ];
+}
 export const getRetroScreens = () => {
     return [
         { label: 'Reactive', value: 'Reactive' },

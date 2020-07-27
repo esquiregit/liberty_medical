@@ -11,15 +11,15 @@ import AddNTCScreening from '../Labs/Haematology/AddNTCScreening';
 import AddSpecials from '../Labs/Haematology/AddSpecials';
 
 const HaematologyTab = ({ patient }) => {
+    const [esr, setESR]                           = useState(false);
+    const [fBC3P, setFBC3P]                       = useState(false);
+    const [fBC5P, setFBC5P]                       = useState(false);
+    const [dDimers, setDDimers]                   = useState(false);
+    const [specials, setSpecials]                 = useState(false);
+    const [fBChildren, setFBCChildren]            = useState(false);
+    const [nTCScreening, setNTCScreening]         = useState(false);
+    const [clottingProfile, setClottingProfile]   = useState(false);
     const [bloodFilmComment, setBloodFilmComment] = useState(false);
-    const [clottingProfile, setClottingProfile] = useState(false);
-    const [dDimers, setDDimers] = useState(false);
-    const [esr, setESR] = useState(false);
-    const [fBC3P, setFBC3P] = useState(false);
-    const [fBC5P, setFBC5P] = useState(false);
-    const [fBChildren, setFBCChildren]         = useState(false);
-    const [nTCScreening, setNTCScreening]   = useState(false);
-    const [specials, setSpecials] = useState(false);
 
     const closeModal = modal => {
         if(modal.toLowerCase() === 'bloodfilmcomment') {
@@ -45,15 +45,15 @@ const HaematologyTab = ({ patient }) => {
 
     return (
         <>
+            { esr              && <AddESR              patient={patient} closeModal={closeModal} /> }
+            { fBC3P            && <AddFBC3P            patient={patient} closeModal={closeModal} /> }
+            { fBC5P            && <AddFBC5P            patient={patient} closeModal={closeModal} /> }
+            { dDimers          && <AddDDimers          patient={patient} closeModal={closeModal} /> }
+            { specials         && <AddSpecials         patient={patient} closeModal={closeModal} /> }
+            { fBChildren       && <AddFBCChildren      patient={patient} closeModal={closeModal} /> }
+            { nTCScreening     && <AddNTCScreening     patient={patient} closeModal={closeModal} /> }
+            { clottingProfile  && <AddClottingProfile  patient={patient} closeModal={closeModal} /> }
             { bloodFilmComment && <AddBloodFilmComment patient={patient} closeModal={closeModal} /> }
-            { clottingProfile && <AddClottingProfile patient={patient} closeModal={closeModal} /> }
-            { dDimers && <AddDDimers patient={patient} closeModal={closeModal} /> }
-            { esr && <AddESR patient={patient} closeModal={closeModal} /> }
-            { fBC3P && <AddFBC3P patient={patient} closeModal={closeModal} /> }
-            { fBC5P && <AddFBC5P patient={patient} closeModal={closeModal} /> }
-            { fBChildren     && <AddFBCChildren     patient={patient} closeModal={closeModal} /> }
-            { nTCScreening  && <AddNTCScreening  patient={patient} closeModal={closeModal} /> }
-            { specials && <AddSpecials patient={patient} closeModal={closeModal} /> }
             <table>
                 <tbody>
                     <tr>

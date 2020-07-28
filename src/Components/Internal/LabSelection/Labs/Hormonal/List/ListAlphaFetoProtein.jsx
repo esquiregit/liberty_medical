@@ -9,8 +9,8 @@ import Toastrr from '../../../../../Extras/Toastrr';
 import Sidebar from '../../../../Layout/Sidebar/Sidebar';
 import EmptyData from '../../../../../Extras/EmptyData';
 import Breadcrumb from '../../../../Layout/Breadcrumb';
-import ViewHistory from '../../../../History/ViewHistory';
 import MUIDataTable from "mui-datatables";
+import ViewAlphaFetoProtein from '../View/ViewAlphaFetoProtein';
 import { getBaseURL } from '../../../../../Extras/server';
 import { storePatient } from '../../../../../../Store/Actions/PatientActions';
 import { useDispatch, useSelector } from 'react-redux';
@@ -142,7 +142,7 @@ function ListAlphaFetoProtein({ history }) {
         rowsPerPageOptions: rowsPerPage,
         resizableColumns: false,
         expandableRows: permissions && (permissions.includes("Can View Lab List") || permissions.includes("Can Edit Lab")) ? true : false,
-        renderExpandableRow: (rowData, rowMeta) => <ViewHistory
+        renderExpandableRow: (rowData, rowMeta) => <ViewAlphaFetoProtein
                                                         history={history}
                                                         length={rowData.length}
                                                         patient={labs[rowMeta.dataIndex]}

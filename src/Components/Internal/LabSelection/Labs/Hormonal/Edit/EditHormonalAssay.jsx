@@ -61,9 +61,12 @@ function EditHormonalAssay({ lab, closeModal, closeExpandable }) {
         Axios.post(getBaseURL()+'edit_hormonal_assay', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('hormonalassay'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);
@@ -104,7 +107,7 @@ function EditHormonalAssay({ lab, closeModal, closeExpandable }) {
                     onSubmit={onConfirm} >
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
-                            <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+                            <DialogTitle className="dialogue dialogue-title" id="customized-dialog-title" onClose={handleClose}>
                                 Hormonal Assay
                             </DialogTitle>
                             <DialogContent dividers>
@@ -203,7 +206,7 @@ function EditHormonalAssay({ lab, closeModal, closeExpandable }) {
                                     </tbody>
                                 </table>
                             </DialogContent>
-                            <DialogActions>
+                            <DialogActions className="dialogue dialogue-actions">
                                 <Tippy content="Reset Form">
                                     <Button
                                         onClick={resetForm}

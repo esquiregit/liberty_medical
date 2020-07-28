@@ -74,7 +74,7 @@ function EditCortisol({ lab, closeModal, closeExpandable }) {
                     setTimeout(() => {
                         setOpen(false);
                         closeExpandable(response.data[0].message);
-                    }, 2000);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);

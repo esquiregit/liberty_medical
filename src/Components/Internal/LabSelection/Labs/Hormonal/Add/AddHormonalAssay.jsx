@@ -103,7 +103,7 @@ function AddHormonalAssay({ patient, closeModal }) {
                     onSubmit={onConfirm} >
                     {({ isValid, dirty, resetForm }) => (
                         <Form>
-                            <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+                            <DialogTitle className="dialogue dialogue-title" id="customized-dialog-title" onClose={handleClose}>
                                 Hormonal Assay
                             </DialogTitle>
                             <DialogContent dividers>
@@ -202,7 +202,7 @@ function AddHormonalAssay({ patient, closeModal }) {
                                     </tbody>
                                 </table>
                             </DialogContent>
-                            <DialogActions>
+                            <DialogActions className="dialogue dialogue-actions">
                                 <Tippy content="Reset Form">
                                     <Button
                                         onClick={resetForm}

@@ -30,7 +30,7 @@ function ListCortisol({ history }) {
         setTimeout(() => { setLoading(false); }, 2000);
     };    
     React.useEffect(()    => {
-        document.title        = 'labs | Liberty Medical Labs';
+        document.title        = 'Cortisol | Liberty Medical Labs';
         const abortController = new AbortController();
         const signal          = abortController.signal;
         

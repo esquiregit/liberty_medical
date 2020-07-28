@@ -30,7 +30,7 @@ function ListAlphaFetoProtein({ history }) {
         setTimeout(() => { setLoading(false); }, 2000);
     };    
     React.useEffect(()    => {
-        document.title        = 'labs | Liberty Medical Labs';
+        document.title        = 'Alpha Feto Protein | Liberty Medical Labs';
         const abortController = new AbortController();
         const signal          = abortController.signal;
         

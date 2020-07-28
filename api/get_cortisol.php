@@ -22,6 +22,7 @@
 			'name'     => $lab->pmiddle_name ? $lab->pfirst_name.' '.$lab->pmiddle_name.' '.$lab->plast_name : $lab->pfirst_name.' '.$lab->plast_name,
 			'staff'    => $lab->uother_name ? $lab->ufirst_name.' '.$lab->uother_name.' '.$lab->ulast_name : $lab->ufirst_name.' '.$lab->ulast_name,
 			"comments" => $lab->comments,
+			"results" => $lab->cortisol_top.' - '.$lab->cortisol_bottom,
 			"cortisol_bottom" => $lab->cortisol_bottom,
 			"cortisol_top" => $lab->cortisol_top,
 		));

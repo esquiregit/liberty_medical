@@ -27,7 +27,11 @@ function ManageHistories({ history }) {
 
     const handleChange = (event, newValue) => {
         setTabIndex(newValue);
-    };
+    }; 
+
+    React.useEffect(() => {
+        document.title = 'History | Liberty Medical Labs';
+    }, [history]);
     
     return (
         <>

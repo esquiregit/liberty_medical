@@ -4,7 +4,7 @@
 
 	$conn     = $pdo->open();
 	$data 	  = file_get_contents("php://input");
-	$request  = json_decode($data);
+	$request  = json_decode($data);//die(print_r($request));
 	$branch   = Methods::validate_string($request->branch);
 	$role     = Methods::validate_string($request->role);
 	$response = array();

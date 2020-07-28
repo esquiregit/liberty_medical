@@ -130,13 +130,11 @@ const styles = StyleSheet.create({
     },
     table_column_one: {
         fontSize: 12,
-        // padding: 10,
         flex: '1 1 35%',
         color: '#333',
     },
     table_column_two: {
         fontSize: 12,
-        // padding: 10,
         flex: '1 1 65%',
         color: '#012',
     },
@@ -184,12 +182,16 @@ function PDFLab({ lab }) {
                             <Text style={styles.info_two_column_left}>Date Added:</Text>
                             <Text style={styles.info_two_column_right}>{lab.date_added}</Text>
                         </View>
-                        <View style={[styles.table_column, {borderTop: 'transparent'}]}>
-                            <Text style={[styles.table_column_one, {color: '#333'}]}>Results</Text>
-                            <Text style={[styles.table_column_two, {color: '#333'}]}>Comments</Text>
+                        <View style={[styles.table_column, {borderTop: 'transparent', marginBottom: 5}]}>
+                            <Text style={[styles.table_column_one, {color: '#333', fontSize: 14}]}>Test</Text>
+                            <Text style={[styles.table_column_two, {color: '#333', fontSize: 14}]}>Results</Text>
                         </View>
-                        <View style={[styles.table_column, {marginTop: 5,marginBottom: 5,}]}>
-                            <Text style={styles.table_column_one}>{lab.results}</Text>
+                        <View style={[styles.table_column, {paddingTop: 5,paddingBottom: 5}]}>
+                            <Text style={styles.table_column_one}>{"Alpha Feto Protein (AFP)"}</Text>
+                            <Text style={styles.table_column_two}>{lab.results}</Text>
+                        </View>
+                        <View style={[styles.table_column, {backgroundColor: '#eee',paddingTop: 5,paddingBottom: 5,borderTop: 'transparent'}]}>
+                            <Text style={styles.table_column_one}>{"Comments"}</Text>
                             <Text style={styles.table_column_two}>{lab.comments}</Text>
                         </View>
                     </View>

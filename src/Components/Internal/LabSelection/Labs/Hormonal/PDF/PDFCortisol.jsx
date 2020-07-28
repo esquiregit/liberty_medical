@@ -184,12 +184,20 @@ function PDFLab({ lab }) {
                             <Text style={styles.info_two_column_left}>Date Added:</Text>
                             <Text style={styles.info_two_column_right}>{lab.date_added}</Text>
                         </View>
-                        <View style={[styles.table_column, {borderTop: 'transparent'}]}>
-                            <Text style={[styles.table_column_one, {color: '#333'}]}>Results</Text>
-                            <Text style={[styles.table_column_two, {color: '#333'}]}>Comments</Text>
+                        <View style={[styles.table_column, {borderTop: 'transparent', marginBottom: 5}]}>
+                            <Text style={[styles.table_column_one, {color: '#333', fontSize: 14}]}>Test</Text>
+                            <Text style={[styles.table_column_two, {color: '#333', fontSize: 14}]}>Results</Text>
                         </View>
-                        <View style={[styles.table_column, {marginTop: 5,marginBottom: 5,}]}>
-                            <Text style={styles.table_column_one}>{lab.cortisol_top} - {lab.cortisol_bottom}</Text>
+                        <View style={[styles.table_column, {paddingTop: 5,paddingBottom: 5}]}>
+                            <Text style={styles.table_column_one}>{"Cortisol"}</Text>
+                            <Text style={styles.table_column_two}>{lab.cortisol_top}</Text>
+                        </View>
+                        <View style={[styles.table_column, {backgroundColor: '#eee',borderTop: 'transparent',paddingTop: 5,paddingBottom: 5}]}>
+                            <Text style={styles.table_column_one}></Text>
+                            <Text style={styles.table_column_two}>{lab.cortisol_bottom}</Text>
+                        </View>
+                        <View style={[styles.table_column, {paddingTop: 5,paddingBottom: 5,borderTop: 'transparent'}]}>
+                            <Text style={styles.table_column_one}>{"Comments"}</Text>
                             <Text style={styles.table_column_two}>{lab.comments}</Text>
                         </View>
                     </View>

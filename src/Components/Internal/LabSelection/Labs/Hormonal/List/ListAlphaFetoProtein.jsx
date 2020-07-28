@@ -12,45 +12,25 @@ import Breadcrumb from '../../../../Layout/Breadcrumb';
 import MUIDataTable from "mui-datatables";
 import ViewAlphaFetoProtein from '../View/ViewAlphaFetoProtein';
 import { getBaseURL } from '../../../../../Extras/server';
-import { storePatient } from '../../../../../../Store/Actions/PatientActions';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 function ListAlphaFetoProtein({ history }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const visible     = useSelector(state => state.sidebarReducer.visible);
     const permissions = useSelector(state => state.authReducer.permissions);
-    const dispatch    = useDispatch();
     
     const [loading, setLoading]   = useState(true);
     const [message, setMessage]   = useState('');
-    const [request, setRequest]   = useState([]);
     const [success, setSuccess]   = useState(false);
     const [comError, setComError] = useState(false);
     const [labs, setlabs] = useState([]);
     
-    const [showPayModal, setShowPayModal]               = useState(false);
-    const [showAddPatientModal, setShowAddPatientModal] = useState(false);
-    
-    const closeAddPatientModal   = () => {
-        setSuccess(false);
-        setShowAddPatientModal(false);
-    };
-    const closePayModal          = () => { setShowPayModal(false); };
-    const closeExpandable        = (message, action, patient, request) => {
+    const closeExpandable        = message => {
         setLoading(true);
         setMessage(message);
         setSuccess(true);
         setTimeout(() => { setLoading(false); }, 2000);
-        
-        if(action && action.toLowerCase() === 'add patient') {
-            closeAddPatientModal();
-            dispatch(storePatient(patient));
-        }
-        if(request) {
-            request && setRequest(request);
-            setShowPayModal(true);
-        }
     };    
     
     React.useEffect(()    => {
@@ -145,7 +125,7 @@ function ListAlphaFetoProtein({ history }) {
         renderExpandableRow: (rowData, rowMeta) => <ViewAlphaFetoProtein
                                                         history={history}
                                                         length={rowData.length}
-                                                        patient={labs[rowMeta.dataIndex]}
+                                                        lab={labs[rowMeta.dataIndex]}
                                                         closeExpandable={closeExpandable}
                                                         permissions={permissions}
                                                         staff_id={staff.staff_id} />,

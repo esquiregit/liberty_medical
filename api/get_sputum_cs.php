@@ -1,10 +1,10 @@
 <?php
 	require "classes/conn.php";
-	require "classes/hvs_cs.php";
+	require "classes/sputum.php";
 
 	header('Content-Type: application/json');
 	$conn     = $pdo->open();
-	$labs = HVS_CS::read_hvs_cs($conn);
+	$labs = Sputum::read_sputum($conn);
 	$response = array();
 
 	foreach ($labs as $lab) {
@@ -37,14 +37,13 @@
 			"antibiotics_fourteen" => $lab->antibiotics_fourteen,
 			"antibiotics_fifteen" => $lab->antibiotics_fifteen,
 			"antibiotics_sixteen" => $lab->antibiotics_sixteen,
+			"appearance" => $lab->appearance,
 			"bacteria_one" => $lab->bacteria_one,
 			"bacteria_two" => $lab->bacteria_two,
 			"comments" => $lab->comments,
 			"culture" => $lab->culture,
-			"epitheleal_cells_per_hpf" => $lab->epitheleal_cells_per_hpf,
 			"gram_stain" => $lab->gram_stain,
-			"pus_cells_per_hps" => $lab->pus_cells_per_hps,
-			"rbcs_per_hpf" => $lab->rbcs_per_hpf,
+			"pus_cells" => $lab->pus_cells,
 			"sensitivity_one" => $lab->sensitivity_one,
 			"sensitivity_two" => $lab->sensitivity_two,
 			"sensitivity_three" => $lab->sensitivity_three,
@@ -61,8 +60,7 @@
 			"sensitivity_fourteen" => $lab->sensitivity_fourteen,
 			"sensitivity_fifteen" => $lab->sensitivity_fifteen,
 			"sensitivity_sixteen" => $lab->sensitivity_sixteen,
-			"t_vaginalis" => $lab->t_vaginalis,
-			"yeast_like_cells" => $lab->yeast_like_cells,
+			"zn_stain" => $lab->zn_stain,
 		));
 	}
 

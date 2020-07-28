@@ -63,7 +63,7 @@ function EditLipidProfile({ lab, closeModal }) {
 
     const initialValues = {
         patient_id : lab.patient_id,
-        patient    : lab.pfirst_name+' '+lab.pmiddle_name+' '+lab.plast_name,
+        patient    : lab.name,
         sodium : lab.sodium,
         cholesterol_total : lab.cholesterol_total,
         cholesterol_total_flag : lab.cholesterol_total_flag,
@@ -156,11 +156,11 @@ function EditLipidProfile({ lab, closeModal }) {
                                             <th>Patient ID:</th>
                                             <td>{lab.patient_id}</td>
                                             <th>Name: </th>
-                                            <td colSpan="3">{lab.pfirst_name} {lab.pmiddle_name} {lab.plast_name}</td>
+                                            <td colSpan="3">{lab.name}</td>
                                         </tr>
                                         <tr>
                                             <th>Date Of Birth:</th>
-                                            <td>{moment(lab.date_of_birth).format('Do MMMM YYYY')}</td>
+                                            <td>{lab.date_of_birth}</td>
                                             <th>Gender:</th>
                                             <td>{lab.gender}</td>
                                             <th>Date:</th>

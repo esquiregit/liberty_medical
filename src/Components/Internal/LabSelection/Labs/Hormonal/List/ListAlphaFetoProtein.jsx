@@ -60,7 +60,7 @@ function ListAlphaFetoProtein({ history }) {
         
         if(staff) {
             if(permissions && (permissions.includes("Can View Lab List") || permissions.includes("Can Edit Lab"))) {
-                Axios.post(getBaseURL()+'get_labs', { role: staff.role_name, branch: staff.branch }, { signal: signal })
+                Axios.post(getBaseURL()+'get_alpha_feto_protein', { role: staff.role_name, branch: staff.branch }, { signal: signal })
                     .then(response => {
                         setlabs(response.data);
                         setLoading(false);
@@ -97,29 +97,29 @@ function ListAlphaFetoProtein({ history }) {
             }
         },
         {
-            label: "Gender",
-            name: "gender",
+            label: "Results",
+            name: "results",
             options: {
                 filter: true,
             }
         },
         {
-            label: "Email Address",
-            name: "email_address",
+            label: "Comments",
+            name: "comments",
             options: {
                 filter: true,
             }
         },
         {
-            label: "Mobile Number",
-            name: "mobile_phone",
+            label: "Performed By",
+            name: "staff",
             options: {
                 filter: true,
             }
         },
         {
-            label: "Branch",
-            name: "branch",
+            label: "Date",
+            name: "date_added",
             options: {
                 filter: true,
             }

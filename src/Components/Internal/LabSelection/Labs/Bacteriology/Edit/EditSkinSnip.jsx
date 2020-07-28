@@ -290,7 +290,7 @@ function EditSkinSnip({ lab, closeModal }) {
 
     const initialValues = {
         patient_id : lab.patient_id,
-        patient    : lab.pfirst_name+' '+lab.pmiddle_name+' '+lab.plast_name,
+        patient    : lab.name,
         onchocerca_volvulus : lab.onchocerca_volvulus,
         m_streptocerca : lab.m_streptocerca,
         culture : lab.culture,
@@ -426,11 +426,11 @@ function EditSkinSnip({ lab, closeModal }) {
                                             <th>Patient ID:</th>
                                             <td>{lab.patient_id}</td>
                                             <th>Name: </th>
-                                            <td colSpan="3">{lab.pfirst_name} {lab.pmiddle_name} {lab.plast_name}</td>
+                                            <td colSpan="3">{lab.name}</td>
                                         </tr>
                                         <tr>
                                             <th>Date Of Birth:</th>
-                                            <td>{moment(lab.date_of_birth).format('Do MMMM YYYY')}</td>
+                                            <td>{lab.date_of_birth}</td>
                                             <th>Gender:</th>
                                             <td>{lab.gender}</td>
                                             <th>Date:</th>

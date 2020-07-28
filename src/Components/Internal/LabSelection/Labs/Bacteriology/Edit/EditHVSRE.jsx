@@ -53,7 +53,7 @@ function EditHVSRE({ lab, closeModal }) {
 
     const initialValues = {
         patient_id : lab.patient_id,
-        patient    : lab.pfirst_name+' '+lab.pmiddle_name+' '+lab.plast_name,
+        patient    : lab.name,
         pus_cells_per_hps : lab.pus_cells_per_hps,
         red_blood_cells : lab.red_blood_cells,
         epitheleal_cells_per_hpf : lab.epitheleal_cells_per_hpf,
@@ -142,11 +142,11 @@ function EditHVSRE({ lab, closeModal }) {
                                             <th>Patient ID:</th>
                                             <td>{lab.patient_id}</td>
                                             <th>Name: </th>
-                                            <td colSpan="3">{lab.pfirst_name} {lab.pmiddle_name} {lab.plast_name}</td>
+                                            <td colSpan="3">{lab.name}</td>
                                         </tr>
                                         <tr>
                                             <th>Date Of Birth:</th>
-                                            <td>{moment(lab.date_of_birth).format('Do MMMM YYYY')}</td>
+                                            <td>{lab.date_of_birth}</td>
                                             <th>Gender:</th>
                                             <td>{lab.gender}</td>
                                             <th>Date:</th>

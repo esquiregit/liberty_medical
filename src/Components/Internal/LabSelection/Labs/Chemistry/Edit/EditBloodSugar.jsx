@@ -40,7 +40,7 @@ function EditBloodSugar({ lab, closeModal }) {
 
     const initialValues = {
         patient_id : lab.patient_id,
-        patient    : lab.pfirst_name+' '+lab.pmiddle_name+' '+lab.plast_name,
+        patient    : lab.name,
         fasting_blood_sugar : lab.fasting_blood_sugar,
         random_blood_sugar : lab.random_blood_sugar,
         two_hpp_blood_sugar : lab.two_hpp_blood_sugar,
@@ -126,11 +126,11 @@ function EditBloodSugar({ lab, closeModal }) {
                                             <th>Patient ID:</th>
                                             <td>{lab.patient_id}</td>
                                             <th>Name: </th>
-                                            <td colSpan="3">{lab.pfirst_name} {lab.pmiddle_name} {lab.plast_name}</td>
+                                            <td colSpan="3">{lab.name}</td>
                                         </tr>
                                         <tr>
                                             <th>Date Of Birth:</th>
-                                            <td>{moment(lab.date_of_birth).format('Do MMMM YYYY')}</td>
+                                            <td>{lab.date_of_birth}</td>
                                             <th>Gender:</th>
                                             <td>{lab.gender}</td>
                                             <th>Date:</th>

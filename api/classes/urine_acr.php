@@ -22,7 +22,7 @@
         // fetch all urine_acr records
         public static function read_urine_acrs($conn){
             try{
-                $query = $conn->prepare('SELECT ur.id, ur.invoice_id, ur.patient_id, ur.urea_creatinine, ur.urea_creatinine_flag, ur.micro_albumin_urine, ur.micro_albumin_urine_flag, ur.uacr, ur.uacr_flag, ur.the_uacr, ur.mg_g_indicates, ur.comments, ur.added_by, ur.date_added, p.date_of_birth, p.gender, p.first_name as pfirst_name, p.middle_name as micro_albumin_urine_flagiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM urine_acr ur INNER JOIN patients p ON ur.patient_id = p.patient_id INNER JOIN users u ON ur.added_by = u.staff_id');
+                $query = $conn->prepare('SELECT ur.id, ur.invoice_id, ur.patient_id, ur.urea_creatinine, ur.urea_creatinine_flag, ur.micro_albumin_urine, ur.micro_albumin_urine_flag, ur.uacr, ur.uacr_flag, ur.the_uacr, ur.mg_g_indicates, ur.comments, ur.added_by, ur.date_added, p.date_of_birth, p.gender, p.first_name as pfirst_name, p.middle_name as pmiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM urine_acr ur INNER JOIN patients p ON ur.patient_id = p.patient_id INNER JOIN users u ON ur.added_by = u.staff_id');
                 $query->execute();
 
                 return $query->fetchAll(PDO::FETCH_OBJ);
@@ -32,7 +32,7 @@
         // fetch a urine_acr record
         public static function read_urine_acr($id, $conn){
             try{
-                $query = $conn->prepare('SELECT ur.id, ur.invoice_id, ur.patient_id, ur.urea_creatinine, ur.urea_creatinine_flag, ur.micro_albumin_urine, ur.micro_albumin_urine_flag, ur.uacr, ur.uacr_flag, ur.the_uacr, ur.mg_g_indicates, ur.comments, ur.added_by, ur.date_added, p.date_of_birth, p.gender, p.first_name as pfirst_name, p.middle_name as micro_albumin_urine_flagiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM urine_acr ur INNER JOIN patients p ON ur.patient_id = p.patient_id INNER JOIN users u ON ur.added_by = u.staff_id WHERE ur.id = :id');
+                $query = $conn->prepare('SELECT ur.id, ur.invoice_id, ur.patient_id, ur.urea_creatinine, ur.urea_creatinine_flag, ur.micro_albumin_urine, ur.micro_albumin_urine_flag, ur.uacr, ur.uacr_flag, ur.the_uacr, ur.mg_g_indicates, ur.comments, ur.added_by, ur.date_added, p.date_of_birth, p.gender, p.first_name as pfirst_name, p.middle_name as pmiddle_name, p.last_name as plast_name, u.first_name as ufirst_name, u.other_name as uother_name, u.last_name as ulast_name FROM urine_acr ur INNER JOIN patients p ON ur.patient_id = p.patient_id INNER JOIN users u ON ur.added_by = u.staff_id WHERE ur.id = :id');
                 $query->execute([':id' => $id]);
 
                 return $query->fetch(PDO::FETCH_OBJ);

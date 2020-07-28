@@ -9,7 +9,7 @@ const TumourMarkersTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/b-hcg-serum')}
+                            onClick={() => history.push('/history/b-hcg-serum/')}
                             variant="outlined">
                             B-HCG serum
                         </Button>
@@ -17,7 +17,7 @@ const TumourMarkersTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/ca-125')}
+                            onClick={() => history.push('/history/ca-125/')}
                             variant="outlined">
                             CA 12.5
                         </Button>
@@ -27,7 +27,7 @@ const TumourMarkersTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/ca-153')}
+                            onClick={() => history.push('/history/ca-153/')}
                             variant="outlined">
                             CA 15.3
                         </Button>
@@ -35,7 +35,7 @@ const TumourMarkersTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/cea')}
+                            onClick={() => history.push('/history/cea/')}
                             variant="outlined">
                             CEA
                         </Button>
@@ -45,7 +45,7 @@ const TumourMarkersTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/ckmb')}
+                            onClick={() => history.push('/history/ckmb/')}
                             variant="outlined">
                             CKMB
                         </Button>
@@ -53,7 +53,7 @@ const TumourMarkersTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/crp')}
+                            onClick={() => history.push('/history/crp/')}
                             variant="outlined">
                             CRP
                         </Button>
@@ -63,7 +63,7 @@ const TumourMarkersTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/crp-ultrasensitive')}
+                            onClick={() => history.push('/history/crp-ultrasensitive/')}
                             variant="outlined">
                             CRP UltraSensitive
                         </Button>
@@ -71,7 +71,7 @@ const TumourMarkersTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/m-alb')}
+                            onClick={() => history.push('/history/m-alb/')}
                             variant="outlined">
                             M-Alb
                         </Button>

@@ -9,7 +9,7 @@ const HaematologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/blood-film-comment')}
+                            onClick={() => history.push('/history/blood-film-comment/')}
                             variant="outlined">
                             blood film comment
                         </Button>
@@ -17,7 +17,7 @@ const HaematologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/clotting-profile')}
+                            onClick={() => history.push('/history/clotting-profile/')}
                             variant="outlined">
                             clotting profile
                         </Button>
@@ -27,7 +27,7 @@ const HaematologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/d-dimers')}
+                            onClick={() => history.push('/history/d-dimers/')}
                             variant="outlined">
                             d - dimers
                         </Button>
@@ -35,7 +35,7 @@ const HaematologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/esr')}
+                            onClick={() => history.push('/history/esr/')}
                             variant="outlined">
                             ESR
                         </Button>
@@ -45,7 +45,7 @@ const HaematologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/fbc-3p')}
+                            onClick={() => history.push('/history/fbc-3p/')}
                             variant="outlined">
                             FBC 3P
                         </Button>
@@ -53,7 +53,7 @@ const HaematologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/fbc-5p')}
+                            onClick={() => history.push('/history/fbc-5p/')}
                             variant="outlined">
                             FBC 5P
                         </Button>
@@ -63,7 +63,7 @@ const HaematologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/fbc-children')}
+                            onClick={() => history.push('/history/fbc-children/')}
                             variant="outlined">
                             FBC children
                         </Button>
@@ -71,7 +71,7 @@ const HaematologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/ntc-screening')}
+                            onClick={() => history.push('/history/ntc-screening/')}
                             variant="outlined">
                             NTC screening
                         </Button>
@@ -81,7 +81,7 @@ const HaematologyTab = ({ history }) => {
                     <td colSpan="2">
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/specials')}
+                            onClick={() => history.push('/history/specials/')}
                             variant="outlined">
                             specials
                         </Button>

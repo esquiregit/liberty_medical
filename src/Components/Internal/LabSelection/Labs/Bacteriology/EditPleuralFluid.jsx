@@ -87,7 +87,7 @@ function EditPleuralFluid({ lab, closeModal }) {
 
     const initialValues = {
         patient_id : lab.patient_id,
-        patient    : lab.name,
+        patient    : lab.pfirst_name+' '+lab.pmiddle_name+' '+lab.plast_name,
         colour : lab.colour,
         appearance : lab.appearance,
         appearance_dropdown : lab.appearance_dropdown,
@@ -188,11 +188,11 @@ function EditPleuralFluid({ lab, closeModal }) {
                                             <th>Patient ID:</th>
                                             <td>{lab.patient_id}</td>
                                             <th>Name: </th>
-                                            <td colSpan="3">{lab.name}</td>
+                                            <td colSpan="3">{lab.pfirst_name} {lab.pmiddle_name} {lab.plast_name}</td>
                                         </tr>
                                         <tr>
                                             <th>Date Of Birth:</th>
-                                            <td>{lab.date_of_birth}</td>
+                                            <td>{moment(lab.date_of_birth).format('Do MMMM YYYY')}</td>
                                             <th>Gender:</th>
                                             <td>{lab.gender}</td>
                                             <th>Date:</th>

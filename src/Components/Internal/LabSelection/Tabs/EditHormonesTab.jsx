@@ -9,7 +9,7 @@ const HormonesTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/alpha-feto-protein')}
+                            onClick={() => history.push('/history/alpha-feto-protein/')}
                             variant="outlined">
                             Alpha Feto protein
                         </Button>
@@ -17,7 +17,7 @@ const HormonesTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/cortisol')}
+                            onClick={() => history.push('/history/cortisol/')}
                             variant="outlined">
                             cortisol
                         </Button>
@@ -27,7 +27,7 @@ const HormonesTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/estrogen')}
+                            onClick={() => history.push('/history/estrogen/')}
                             variant="outlined">
                             estrogen
                         </Button>
@@ -35,7 +35,7 @@ const HormonesTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/hormonal-assay')}
+                            onClick={() => history.push('/history/hormonal-assay/')}
                             variant="outlined">
                             hormonal assay
                         </Button>
@@ -45,7 +45,7 @@ const HormonesTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/psa')}
+                            onClick={() => history.push('/history/psa/')}
                             variant="outlined">
                             PSA
                         </Button>
@@ -53,7 +53,7 @@ const HormonesTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/pth')}
+                            onClick={() => history.push('/history/pth/')}
                             variant="outlined">
                             PTH
                         </Button>
@@ -63,7 +63,7 @@ const HormonesTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/reproductive-assay')}
+                            onClick={() => history.push('/history/reproductive-assay/')}
                             variant="outlined">
                             reproductive assay
                         </Button>
@@ -71,7 +71,7 @@ const HormonesTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/tft')}
+                            onClick={() => history.push('/history/tft/')}
                             variant="outlined">
                             TFT
                         </Button>
@@ -81,7 +81,7 @@ const HormonesTab = ({ history }) => {
                     <td colSpan="2">
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/troponin')}
+                            onClick={() => history.push('/history/troponin/')}
                             variant="outlined">
                             troponin
                         </Button>

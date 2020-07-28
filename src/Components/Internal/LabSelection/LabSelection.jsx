@@ -32,7 +32,7 @@ function LabSelection({ history, match }) {
     const [loading, setLoading]   = useState(true);
     const [message, setMessage]   = useState('');
     const [comError, setComError] = useState(false);
-    const [tabIndex, setTabIndex] = useState(2);
+    const [tabIndex, setTabIndex] = useState(0);
     
     React.useEffect(() => {
         document.title        = 'Lab Selection | Liberty Medical Labs';
@@ -41,7 +41,7 @@ function LabSelection({ history, match }) {
         
         Axios.post(getBaseURL()+'get_patient', { patient_id }, { signal: signal })
             .then(response => {
-                setPatient(response.data[0]);//console.log('response.data[0]: ', response.data[0])
+                setPatient(response.data[0]);
                 setLoading(false);
             })
             .catch(error => {

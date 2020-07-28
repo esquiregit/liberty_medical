@@ -221,7 +221,7 @@ ul.MuiList-root a.active .MuiButtonBase-root.MuiListItem-root.MuiListItem-gutter
 .MuiBreadcrumbs-li p {
     font-size: 18px;
     color: #fff;
-    font-style: italic;
+    /* font-style: italic; */
 }
 .MuiBreadcrumbs-separator {
     font-size: 18px;

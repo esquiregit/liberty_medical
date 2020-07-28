@@ -9,7 +9,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/ascitic-fluid')}
+                            onClick={() => history.push('/history/ascitic-fluid/')}
                             variant="outlined">
                             ascitic Fluid CS
                         </Button>
@@ -17,7 +17,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/aspirate-cs')}
+                            onClick={() => history.push('/history/aspirate-cs/')}
                             variant="outlined">
                             aspirate CS
                         </Button>
@@ -25,7 +25,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/blood-cs')}
+                            onClick={() => history.push('/history/blood-cs/')}
                             variant="outlined">
                             blood CS
                         </Button>
@@ -35,7 +35,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/ear-swab-cs')}
+                            onClick={() => history.push('/history/ear-swab-cs/')}
                             variant="outlined">
                             ear swab CS
                         </Button>
@@ -43,7 +43,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/endocervical-swab')}
+                            onClick={() => history.push('/history/endocervical-swab/')}
                             variant="outlined">
                             endocervical swab
                         </Button>
@@ -51,7 +51,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/eye-swab-cs')}
+                            onClick={() => history.push('/history/eye-swab-cs/')}
                             variant="outlined">
                             eye swab CS
                         </Button>
@@ -61,7 +61,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/hvs-cs')}
+                            onClick={() => history.push('/history/hvs-cs/')}
                             variant="outlined">
                             HVS CS
                         </Button>
@@ -69,7 +69,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/hvs-re')}
+                            onClick={() => history.push('/history/hvs-re/')}
                             variant="outlined">
                             HVS RE
                         </Button>
@@ -77,7 +77,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/pleural-fluid')}
+                            onClick={() => history.push('/history/pleural-fluid/')}
                             variant="outlined">
                             pleural fluid
                         </Button>
@@ -87,7 +87,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/pus-fluid')}
+                            onClick={() => history.push('/history/pus-fluid/')}
                             variant="outlined">
                             pus fluid
                         </Button>
@@ -95,7 +95,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/semen-cs')}
+                            onClick={() => history.push('/history/semen-cs/')}
                             variant="outlined">
                             semen CS
                         </Button>
@@ -103,7 +103,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/skin-snip')}
+                            onClick={() => history.push('/history/skin-snip/')}
                             variant="outlined">
                             skin snip
                         </Button>
@@ -113,7 +113,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/sputum-cs')}
+                            onClick={() => history.push('/history/sputum-cs/')}
                             variant="outlined">
                             sputum CS
                         </Button>
@@ -121,7 +121,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/sputum-afb')}
+                            onClick={() => history.push('/history/sputum-afb/')}
                             variant="outlined">
                             sputum AFB
                         </Button>
@@ -129,7 +129,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/stool-cs')}
+                            onClick={() => history.push('/history/stool-cs/')}
                             variant="outlined">
                             stool CS
                         </Button>
@@ -139,7 +139,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/stool-re')}
+                            onClick={() => history.push('/history/stool-re/')}
                             variant="outlined">
                             stool RE
                         </Button>
@@ -147,7 +147,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/throat-swab')}
+                            onClick={() => history.push('/history/throat-swab/')}
                             variant="outlined">
                             throat swab CS
                         </Button>
@@ -155,7 +155,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/urethral-cs')}
+                            onClick={() => history.push('/history/urethral-cs/')}
                             variant="outlined">
                             urethral CS
                         </Button>
@@ -165,7 +165,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/urine-cs')}
+                            onClick={() => history.push('/history/urine-cs/')}
                             variant="outlined">
                             urine CS
                         </Button>
@@ -173,7 +173,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/urine-re')}
+                            onClick={() => history.push('/history/urine-re/')}
                             variant="outlined">
                             urine RE
                         </Button>
@@ -181,7 +181,7 @@ const BacteriologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/wound-cs')}
+                            onClick={() => history.push('/history/wound-cs/')}
                             variant="outlined">
                             wound CS
                         </Button>

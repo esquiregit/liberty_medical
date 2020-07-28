@@ -37,7 +37,7 @@ function ManageHistories({ history }) {
                 className={clsx(classes.contentMedium, {
                     [classes.contentWide]: !visible,
                 })}>
-                <Breadcrumb page="Lab Selection" />
+                <Breadcrumb page="History" />
                 <Card variant="outlined" className="p-40">
                     <Tabs
                         variant="scrollable"

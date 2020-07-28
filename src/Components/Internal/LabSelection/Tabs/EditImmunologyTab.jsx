@@ -9,7 +9,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/antenatal-screening')}
+                            onClick={() => history.push('/history/antenatal-screening/')}
                             variant="outlined">
                             antenatal screening
                         </Button>
@@ -17,7 +17,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/cd4-count')}
+                            onClick={() => history.push('/history/cd4-count/')}
                             variant="outlined">
                             CD4 count
                         </Button>
@@ -27,7 +27,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/general-serology')}
+                            onClick={() => history.push('/history/general-serology/')}
                             variant="outlined">
                             general Serology
                         </Button>
@@ -35,7 +35,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/h-pylori-ag')}
+                            onClick={() => history.push('/history/h-pylori-ag/')}
                             variant="outlined">
                             h. pylori Ag.
                         </Button>
@@ -45,7 +45,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/h-pylori-ag-sob')}
+                            onClick={() => history.push('/history/h-pylori-ag-sob/')}
                             variant="outlined">
                             h. pylori Ag. SOB
                         </Button>
@@ -53,7 +53,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/h-pylori-ag-blood')}
+                            onClick={() => history.push('/history/h-pylori-ag-blood/')}
                             variant="outlined">
                             h. pylori Ag. Blood
                         </Button>
@@ -63,7 +63,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/hbv-viral-load')}
+                            onClick={() => history.push('/history/hbv-viral-load/')}
                             variant="outlined">
                             HBV viral load
                         </Button>
@@ -71,7 +71,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                     <Button
                             fullWidth
-                            onClick={() => history.push('/history/hiv-viral-load')}
+                            onClick={() => history.push('/history/hiv-viral-load/')}
                             variant="outlined">
                             HIV viral load
                         </Button>
@@ -81,7 +81,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/hepatitis-b-profile')}
+                            onClick={() => history.push('/history/hepatitis-b-profile/')}
                             variant="outlined">
                             hepatitis B Profile
                         </Button>
@@ -89,7 +89,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/hepatitis-markers')}
+                            onClick={() => history.push('/history/hepatitis-markers/')}
                             variant="outlined">
                             hepatitis Markers
                         </Button>
@@ -99,7 +99,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/mantoux')}
+                            onClick={() => history.push('/history/mantoux/')}
                             variant="outlined">
                             mantoux
                         </Button>
@@ -107,7 +107,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/pregnancy-test')}
+                            onClick={() => history.push('/history/pregnancy-test/')}
                             variant="outlined">
                             pregnancy Test
                         </Button>
@@ -117,7 +117,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/rheumatology')}
+                            onClick={() => history.push('/history/rheumatology/')}
                             variant="outlined">
                             rheumatology
                         </Button>
@@ -125,7 +125,7 @@ const ImmunologyTab = ({ history }) => {
                     <td>
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/semen-analysis')}
+                            onClick={() => history.push('/history/semen-analysis/')}
                             variant="outlined">
                             semen analysis
                         </Button>
@@ -135,7 +135,7 @@ const ImmunologyTab = ({ history }) => {
                     <td colSpan="2">
                         <Button
                             fullWidth
-                            onClick={() => history.push('/history/widal')}
+                            onClick={() => history.push('/history/widal/')}
                             variant="outlined">
                             widal
                         </Button>

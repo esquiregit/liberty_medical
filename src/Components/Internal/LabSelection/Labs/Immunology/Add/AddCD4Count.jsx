@@ -184,7 +184,7 @@ function AddCD4Count({ patient, closeModal }) {
                                                     id="t_wbc"
                                                     name="t_wbc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -216,7 +216,7 @@ function AddCD4Count({ patient, closeModal }) {
                                                     id="cd4_count"
                                                     name="cd4_count"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -248,7 +248,7 @@ function AddCD4Count({ patient, closeModal }) {
                                                     id="cd3"
                                                     name="cd3"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -280,7 +280,7 @@ function AddCD4Count({ patient, closeModal }) {
                                                     id="cd4_cd3"
                                                     name="cd4_cd3"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField

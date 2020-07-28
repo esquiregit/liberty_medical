@@ -167,12 +167,13 @@ const validationSchema = Yup.object().shape({
         .required('Required'),
 });
 
-function EditFBCChildren({ lab, closeModal }) {
+function EditFBCChildren({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const flagOptions = getFlagOptions();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         wbc : lab.wbc,
@@ -333,7 +334,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="wbc"
                                                     name="wbc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^9/L</td>
                                             <td>(2.5 - 8.5)</td>
@@ -365,7 +366,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="lym"
                                                     name="lym"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(20.0 - 60.0)</td>
@@ -397,7 +398,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="mid"
                                                     name="mid"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(1.0 - 15.0)</td>
@@ -429,7 +430,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="gran"
                                                     name="gran"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(50.0 - 70.0)</td>
@@ -461,7 +462,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="lym_one"
                                                     name="lym_one"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^9/L</td>
                                             <td>(1.0 - 4.1)</td>
@@ -493,7 +494,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="mid_two"
                                                     name="mid_two"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^9/L</td>
                                             <td>(0.1 - 1.8)</td>
@@ -525,7 +526,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="gran_three"
                                                     name="gran_three"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^9/L</td>
                                             <td>(2.0 - 7.8)</td>
@@ -557,7 +558,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="rbc"
                                                     name="rbc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^12/L</td>
                                             <td>(6.0 - 7.0)</td>
@@ -589,7 +590,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="hgb"
                                                     name="hgb"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>g/dL</td>
                                             <td>(17.0 - 20.0)</td>
@@ -621,7 +622,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="hct"
                                                     name="hct"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(36.0 - 48.0)</td>
@@ -653,7 +654,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="mcv"
                                                     name="mcv"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>fL</td>
                                             <td>(70.0 - 87.0)</td>
@@ -685,7 +686,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="mch"
                                                     name="mch"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>Pg</td>
                                             <td>(26.0 - 32.0)</td>
@@ -717,7 +718,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="mchc"
                                                     name="mchc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>g/dL</td>
                                             <td>(32.0 - 36.0)</td>
@@ -749,7 +750,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="rdw_cv"
                                                     name="rdw_cv"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(11.5 - 14.5)</td>
@@ -781,7 +782,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="rdw_sd"
                                                     name="rdw_sd"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>fL</td>
                                             <td>(37.0 - 54.0)</td>
@@ -813,7 +814,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="plt"
                                                     name="plt"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^9/L</td>
                                             <td>(150 - 400)</td>
@@ -845,7 +846,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="mpv"
                                                     name="mpv"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>fL</td>
                                             <td>(7.4 - 10.4)</td>
@@ -877,7 +878,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="pdw"
                                                     name="pdw"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>fL</td>
                                             <td>(10.0 - 14.0)</td>
@@ -909,7 +910,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="pct"
                                                     name="pct"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(0.10 - 0.28)</td>
@@ -977,7 +978,7 @@ function EditFBCChildren({ lab, closeModal }) {
                                                     id="esr"
                                                     name="esr"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td style={{border: '1px solid cyan', marginTop: -10, marginBottom: -10}}>mm fall/hr</td>
                                             <td style={{border: '1px solid cyan', marginTop: -10, marginBottom: -10}} colSpan="2" className="text-left">3.0 - 5.0 mm fall/hr</td>

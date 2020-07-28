@@ -31,11 +31,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditMantoux({ lab, closeModal }) {
+function EditMantoux({ lab, closeModal, closeExpandable }) {
     const staff   = useSelector(state => state.authReducer.staff);
     const classes = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         date_of_injection : lab.date_of_injection,
@@ -180,7 +181,7 @@ function EditMantoux({ lab, closeModal }) {
                                                     id="size_of_induration"
                                                     name="size_of_induration"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>

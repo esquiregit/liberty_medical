@@ -154,7 +154,7 @@ function AddPSA({ patient, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>&lt; 70 years<br />&gt; 70 years</td>
                                             <td>&lt; 4ng/mL<br />&lt; 6.5 ng/mL</td>

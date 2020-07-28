@@ -30,11 +30,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditCortisol({ lab, closeModal }) {
+function EditCortisol({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         cortisol_top : lab.cortisol_top,
@@ -68,9 +69,12 @@ function EditCortisol({ lab, closeModal }) {
         Axios.post(getBaseURL()+'edit_cortisol', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('cortisol'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 2000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);
@@ -155,7 +159,7 @@ function EditCortisol({ lab, closeModal }) {
                                                     id="cortisol_top"
                                                     name="cortisol_top"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>nmol/L</td>
                                             <td className="text-centre">am 123 - 626</td>
@@ -170,7 +174,7 @@ function EditCortisol({ lab, closeModal }) {
                                                     id="cortisol_bottom"
                                                     name="cortisol_bottom"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                             <td className="text-centre">pm 46.2 - 389</td>

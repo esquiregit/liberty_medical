@@ -50,11 +50,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditHepatitisMarkers({ lab, closeModal }) {
+function EditHepatitisMarkers({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         hep_a_igg_antibody : lab.hep_a_igg_antibody,

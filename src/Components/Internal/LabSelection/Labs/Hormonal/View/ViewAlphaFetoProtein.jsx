@@ -9,21 +9,21 @@ import { BlobProvider } from "@react-pdf/renderer";
 import { TableRow, TableCell, IconButton } from '@material-ui/core';
 import 'tippy.js/dist/tippy.css';
 
-function ViewLab({ length, lab, closeExpandable, permissions, staff_id }) {
+function ViewLab({ length, lab, closeExpandable, permissions }) {
     const filename        = lab.name+".pdf";
     const editTooltip     = "Update "+lab.first_name+"'s Lab Details";
     const downloadTooltip = "Download "+lab.first_name+"'s Lab Details";
 
-    const [showEditModal, setShowEditModal] = useState(false);
+    const [showModal, setShowEditModal] = useState(false);
 
-    const closeEditModal       = () => { setShowEditModal(false) };
+    const closeModal = () => { setShowEditModal(false) };
 
     return (
         <>
             <TableRow>
                 <TableCell colSpan={length + 1}>
                     <div className="detail-div">
-                        { showEditModal && <EditLab lab={lab} closeEditModal={closeEditModal} closeExpandable={closeExpandable} /> }
+                        { showModal && <EditLab lab={lab} closeModal={closeModal} closeExpandable={closeExpandable} /> }
                         <table id="detail-table">
                             <tbody>
                                 <tr>

@@ -187,7 +187,7 @@ function AddCSFBiochem({ patient, closeModal }) {
                                                     id="glucose"
                                                     name="glucose"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>nmol/L</td>
                                             <td>[2.5 - 4.0] nmol/L</td>
@@ -203,7 +203,7 @@ function AddCSFBiochem({ patient, closeModal }) {
                                                     id="protein"
                                                     name="protein"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>g/L</td>
                                             <td>[0.15 - 0.45]</td>

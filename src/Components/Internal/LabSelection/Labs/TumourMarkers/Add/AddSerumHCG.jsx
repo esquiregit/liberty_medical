@@ -156,7 +156,7 @@ function AddSerumHCG({ patient, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mIU/mL</td>
                                             <td>

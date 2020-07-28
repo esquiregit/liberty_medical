@@ -152,7 +152,7 @@ function AddSC3SC4({ patient, closeModal }) {
                                                     id="s_c3"
                                                     name="s_c3"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">mg/dl</td>
                                             <td width="18.67%">
@@ -171,7 +171,7 @@ function AddSC3SC4({ patient, closeModal }) {
                                                     id="s_c4"
                                                     name="s_c4"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>+ mg/dl</td>
                                             <td>

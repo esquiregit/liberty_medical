@@ -70,12 +70,13 @@ const validationSchema = Yup.object().shape({
         .required('Please Select Flag')
 });
 
-function EditProteinElectrophoresis({ lab, closeModal }) {
+function EditProteinElectrophoresis({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const flagOptions = getFlagOptions();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         total_protein : lab.total_protein,
@@ -208,7 +209,7 @@ function EditProteinElectrophoresis({ lab, closeModal }) {
                                                     id="total_protein"
                                                     name="total_protein"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -240,7 +241,7 @@ function EditProteinElectrophoresis({ lab, closeModal }) {
                                                     id="albumin"
                                                     name="albumin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -272,7 +273,7 @@ function EditProteinElectrophoresis({ lab, closeModal }) {
                                                     id="alpha_1_globulin"
                                                     name="alpha_1_globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -304,7 +305,7 @@ function EditProteinElectrophoresis({ lab, closeModal }) {
                                                     id="alpha_2_globulin"
                                                     name="alpha_2_globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -336,7 +337,7 @@ function EditProteinElectrophoresis({ lab, closeModal }) {
                                                     id="beta_1_globulin"
                                                     name="beta_1_globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -368,7 +369,7 @@ function EditProteinElectrophoresis({ lab, closeModal }) {
                                                     id="beta_2_globulin"
                                                     name="beta_2_globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -400,7 +401,7 @@ function EditProteinElectrophoresis({ lab, closeModal }) {
                                                     id="gamma_globulin"
                                                     name="gamma_globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField

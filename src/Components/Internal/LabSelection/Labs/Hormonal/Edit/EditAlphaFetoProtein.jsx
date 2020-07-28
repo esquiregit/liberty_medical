@@ -26,11 +26,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditAlphaFetoProtein({ lab, closeModal }) {
+function EditAlphaFetoProtein({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         results : lab.results,
@@ -64,9 +65,12 @@ function EditAlphaFetoProtein({ lab, closeModal }) {
         Axios.post(getBaseURL()+'edit_alpha_feto_protein', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('AlphaFetoProtein'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 2000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);
@@ -151,7 +155,7 @@ function EditAlphaFetoProtein({ lab, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/mL</td>
                                             <td className="text-centre">Adult<br />CHildren (&lt; 1 year)</td>

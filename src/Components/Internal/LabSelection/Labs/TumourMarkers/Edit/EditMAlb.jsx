@@ -26,11 +26,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditMAlb({ lab, closeModal }) {
+function EditMAlb({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         results : lab.results,
@@ -151,7 +152,7 @@ function EditMAlb({ lab, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ug/mL</td>
                                             <td className="text-centre">2.5 - 5000 ug/mL</td>

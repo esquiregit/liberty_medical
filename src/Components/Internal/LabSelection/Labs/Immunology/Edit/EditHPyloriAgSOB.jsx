@@ -29,11 +29,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditHPyloriAgSOB({ lab, closeModal }) {
+function EditHPyloriAgSOB({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         h_pylori_ag : lab.h_pylori_ag,

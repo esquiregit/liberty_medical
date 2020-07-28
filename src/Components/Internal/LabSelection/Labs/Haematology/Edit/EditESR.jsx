@@ -26,11 +26,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditESR({ lab, closeModal }) {
+function EditESR({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         results : lab.results,
@@ -151,7 +152,7 @@ function EditESR({ lab, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmfall/hr</td>
                                             <td>0.0 - 10.0 (Male)<br />0.0 - 15.0 (Female)</td>

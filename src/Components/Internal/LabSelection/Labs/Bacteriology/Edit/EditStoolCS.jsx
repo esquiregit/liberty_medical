@@ -275,7 +275,7 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditStoolCS({ lab, closeModal }) {
+function EditStoolCS({ lab, closeModal, closeExpandable }) {
     const staff               = useSelector(state => state.authReducer.staff);
     const classes             = styles();
     const cultureOptions      = getCultures();
@@ -283,6 +283,7 @@ function EditStoolCS({ lab, closeModal }) {
     const antibioticsOptions = getAntibiotics();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         culture : lab.culture,

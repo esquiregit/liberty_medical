@@ -151,7 +151,7 @@ function AddESR({ patient, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmfall/hr</td>
                                             <td>0.0 - 10.0 (Male)<br />0.0 - 15.0 (Female)</td>

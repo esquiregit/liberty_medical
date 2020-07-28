@@ -178,7 +178,7 @@ function AddHBVViralLoad({ patient, closeModal }) {
                                                     id="pcr_hbv_quantitative"
                                                     name="pcr_hbv_quantitative"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>

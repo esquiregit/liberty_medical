@@ -208,7 +208,7 @@ function AddProteinElectrophoresis({ patient, closeModal }) {
                                                     id="total_protein"
                                                     name="total_protein"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -240,7 +240,7 @@ function AddProteinElectrophoresis({ patient, closeModal }) {
                                                     id="albumin"
                                                     name="albumin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -272,7 +272,7 @@ function AddProteinElectrophoresis({ patient, closeModal }) {
                                                     id="alpha_1_globulin"
                                                     name="alpha_1_globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -304,7 +304,7 @@ function AddProteinElectrophoresis({ patient, closeModal }) {
                                                     id="alpha_2_globulin"
                                                     name="alpha_2_globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -336,7 +336,7 @@ function AddProteinElectrophoresis({ patient, closeModal }) {
                                                     id="beta_1_globulin"
                                                     name="beta_1_globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -368,7 +368,7 @@ function AddProteinElectrophoresis({ patient, closeModal }) {
                                                     id="beta_2_globulin"
                                                     name="beta_2_globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -400,7 +400,7 @@ function AddProteinElectrophoresis({ patient, closeModal }) {
                                                     id="gamma_globulin"
                                                     name="gamma_globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField

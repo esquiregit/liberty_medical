@@ -33,11 +33,12 @@ const validationSchema = Yup.object().shape({
         .required('Required')
 });
 
-function EditSpecials({ lab, closeModal }) {
+function EditSpecials({ lab, closeModal, closeExpandable }) {
     const staff   = useSelector(state => state.authReducer.staff);
     const classes = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         abo_grouping : lab.abo_grouping,

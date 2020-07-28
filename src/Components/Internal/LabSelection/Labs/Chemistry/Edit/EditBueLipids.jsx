@@ -97,12 +97,13 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditBueLipids({ lab, closeModal }) {
+function EditBueLipids({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const flagOptions = getFlagOptions();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         sodium : lab.sodium,
@@ -239,7 +240,7 @@ function EditBueLipids({ lab, closeModal }) {
                                                     id="sodium"
                                                     name="sodium"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">mmol/L</td>
                                             <td width="16.67%">
@@ -271,7 +272,7 @@ function EditBueLipids({ lab, closeModal }) {
                                                     id="potassium"
                                                     name="potassium"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>
@@ -303,7 +304,7 @@ function EditBueLipids({ lab, closeModal }) {
                                                     id="chloride"
                                                     name="chloride"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>
@@ -335,7 +336,7 @@ function EditBueLipids({ lab, closeModal }) {
                                                     id="urea"
                                                     name="urea"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>
@@ -367,7 +368,7 @@ function EditBueLipids({ lab, closeModal }) {
                                                     id="creatinine"
                                                     name="creatinine"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>umol/L</td>
                                             <td>
@@ -400,7 +401,7 @@ function EditBueLipids({ lab, closeModal }) {
                                                     id="egfr"
                                                     name="egfr"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                             <td></td>
@@ -450,7 +451,7 @@ function EditBueLipids({ lab, closeModal }) {
                                                     id="cholesterol_total"
                                                     name="cholesterol_total"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>(0.00 - 5.20)</td>
@@ -482,7 +483,7 @@ function EditBueLipids({ lab, closeModal }) {
                                                     id="triglycerides"
                                                     name="triglycerides"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>(0.00 - 2.30)</td>
@@ -514,7 +515,7 @@ function EditBueLipids({ lab, closeModal }) {
                                                     id="hdl"
                                                     name="hdl"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>(1.04 -2.10)</td>
@@ -546,7 +547,7 @@ function EditBueLipids({ lab, closeModal }) {
                                                     id="ldl"
                                                     name="ldl"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>(0.00 - 3.88)</td>
@@ -578,7 +579,7 @@ function EditBueLipids({ lab, closeModal }) {
                                                     id="coronary_risk"
                                                     name="coronary_risk"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>Ratio</td>
                                             <td>(0.00 - 4.00)</td>

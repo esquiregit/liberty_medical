@@ -155,7 +155,7 @@ function AddTroponin({ patient, closeModal }) {
                                                     id="troponin_i"
                                                     name="troponin_i"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/mL</td>
                                             <td className="text-centre">&lt; 0.8</td>
@@ -171,7 +171,7 @@ function AddTroponin({ patient, closeModal }) {
                                                     id="troponin_t"
                                                     name="troponin_t"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/mL</td>
                                             <td className="text-centre">&lt; 1.8</td>

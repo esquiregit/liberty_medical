@@ -380,7 +380,7 @@ function AddUrineCS({ patient, closeModal }) {
                                                     id="pus_cells_per_hps"
                                                     name="pus_cells_per_hps"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="20%"></td>
                                             <td width="21%"></td>
@@ -397,7 +397,7 @@ function AddUrineCS({ patient, closeModal }) {
                                                     id="rbcs_per_hpf"
                                                     name="rbcs_per_hpf"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                             <td></td>
@@ -414,7 +414,7 @@ function AddUrineCS({ patient, closeModal }) {
                                                     id="epitheleal_cells_per_hpf"
                                                     name="epitheleal_cells_per_hpf"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                             <td></td>
@@ -521,7 +521,7 @@ function AddUrineCS({ patient, closeModal }) {
                                                     id="viable_count"
                                                     name="viable_count"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>bact/ml</td>
                                         </tr>

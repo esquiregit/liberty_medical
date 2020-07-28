@@ -155,7 +155,7 @@ function AddFolateB12({ patient, closeModal }) {
                                                     id="folate"
                                                     name="folate"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>nmol/L</td>
                                             <td className="text-centre">2.76 - 20.00</td>
@@ -171,7 +171,7 @@ function AddFolateB12({ patient, closeModal }) {
                                                     id="vitamin_b_12"
                                                     name="vitamin_b_12"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                             <td className="text-centre">239 - 931</td>

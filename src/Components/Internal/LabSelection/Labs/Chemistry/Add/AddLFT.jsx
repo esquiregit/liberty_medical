@@ -243,7 +243,7 @@ function AddLFT({ patient, closeModal }) {
                                                     id="got_ast"
                                                     name="got_ast"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="%">
                                                 <FormikTextField
@@ -277,7 +277,7 @@ function AddLFT({ patient, closeModal }) {
                                                     id="gpt_alt"
                                                     name="gpt_alt"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -311,7 +311,7 @@ function AddLFT({ patient, closeModal }) {
                                                     id="alkaline_phos"
                                                     name="alkaline_phos"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -345,7 +345,7 @@ function AddLFT({ patient, closeModal }) {
                                                     id="ggt"
                                                     name="ggt"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -379,7 +379,7 @@ function AddLFT({ patient, closeModal }) {
                                                     id="bilirubin_total"
                                                     name="bilirubin_total"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -413,7 +413,7 @@ function AddLFT({ patient, closeModal }) {
                                                     id="bili_indirect"
                                                     name="bili_indirect"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -447,7 +447,7 @@ function AddLFT({ patient, closeModal }) {
                                                     id="bilirubin_direct"
                                                     name="bilirubin_direct"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -481,7 +481,7 @@ function AddLFT({ patient, closeModal }) {
                                                     id="protein_total"
                                                     name="protein_total"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -515,7 +515,7 @@ function AddLFT({ patient, closeModal }) {
                                                     id="albumin"
                                                     name="albumin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -549,7 +549,7 @@ function AddLFT({ patient, closeModal }) {
                                                     id="globulin"
                                                     name="globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField

@@ -180,7 +180,7 @@ function AddMantoux({ patient, closeModal }) {
                                                     id="size_of_induration"
                                                     name="size_of_induration"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>

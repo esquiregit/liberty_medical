@@ -213,7 +213,7 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditHVSCS({ lab, closeModal }) {
+function EditHVSCS({ lab, closeModal, closeExpandable }) {
     const staff               = useSelector(state => state.authReducer.staff);
     const classes             = styles();
     const gramStains          = getGramStains();
@@ -224,6 +224,7 @@ function EditHVSCS({ lab, closeModal }) {
     const antibioticsOptions  = getAntibiotics();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         gram_stain : lab.gram_stain,
@@ -380,7 +381,7 @@ function EditHVSCS({ lab, closeModal }) {
                                                     id="pus_cells_per_hps"
                                                     name="pus_cells_per_hps"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>
@@ -396,7 +397,7 @@ function EditHVSCS({ lab, closeModal }) {
                                                     id="rbcs_per_hpf"
                                                     name="rbcs_per_hpf"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>
@@ -412,7 +413,7 @@ function EditHVSCS({ lab, closeModal }) {
                                                     id="epitheleal_cells_per_hpf"
                                                     name="epitheleal_cells_per_hpf"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>

@@ -53,11 +53,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditClottingProfile({ lab, closeModal }) {
+function EditClottingProfile({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         fungal_element : lab.fungal_element,

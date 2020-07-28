@@ -34,11 +34,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditHBA1C({ lab, closeModal }) {
+function EditHBA1C({ lab, closeModal, closeExpandable }) {
     const staff   = useSelector(state => state.authReducer.staff);
     const classes = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         dcct : lab.dcct,
@@ -160,7 +161,7 @@ function EditHBA1C({ lab, closeModal }) {
                                                     id="dcct"
                                                     name="dcct"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">%</td>
                                             <td width="18.67%" colSpan="2">(4.5 - 7.0)</td>
@@ -176,7 +177,7 @@ function EditHBA1C({ lab, closeModal }) {
                                                     id="ifcc"
                                                     name="ifcc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>nmol/L</td>
                                             <td>&lt; 59 nmol/mol</td>
@@ -192,7 +193,7 @@ function EditHBA1C({ lab, closeModal }) {
                                                     id="average_blood_glucose"
                                                     name="average_blood_glucose"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>(3.4 - 6.4)</td>

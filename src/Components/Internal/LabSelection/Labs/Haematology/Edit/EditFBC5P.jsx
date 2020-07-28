@@ -209,12 +209,13 @@ const validationSchema = Yup.object().shape({
         .required('Required'),
 });
 
-function EditFBC5P({ lab, closeModal }) {
+function EditFBC5P({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const flagOptions = getFlagOptions();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         wbc : lab.wbc,
@@ -387,7 +388,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="wbc"
                                                     name="wbc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^9/L</td>
                                             <td>(2.50 - 8.50)</td>
@@ -419,7 +420,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="neu_hash"
                                                     name="neu_hash"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^9/L</td>
                                             <td>(2.00 - 7.00)</td>
@@ -451,7 +452,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="lym_hash"
                                                     name="lym_hash"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^9/L</td>
                                             <td>(1.00 - 3.10)</td>
@@ -483,7 +484,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="mon_hash"
                                                     name="mon_hash"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^9/L</td>
                                             <td></td>
@@ -515,7 +516,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="eos_hash"
                                                     name="eos_hash"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^9/L</td>
                                             <td>(0.04 - 0.40)</td>
@@ -547,7 +548,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="bas_hash"
                                                     name="bas_hash"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^9/L</td>
                                             <td>(0.02 - 0.10)</td>
@@ -579,7 +580,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="neu_percent"
                                                     name="neu_percent"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(25.0 - 75.0)</td>
@@ -611,7 +612,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="lym_percent"
                                                     name="lym_percent"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(20.0 - 60.0)</td>
@@ -643,7 +644,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="mon_percent"
                                                     name="mon_percent"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(13.0 - 18.0)</td>
@@ -675,7 +676,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="eos_percent"
                                                     name="eos_percent"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(2.0 - 10.0)</td>
@@ -707,7 +708,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="bas_percent"
                                                     name="bas_percent"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(0.0 - 1.0)</td>
@@ -739,7 +740,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="rbc"
                                                     name="rbc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^12/L</td>
                                             <td>(6.0 - 7.0)</td>
@@ -771,7 +772,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="hgb"
                                                     name="hgb"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>g/dL</td>
                                             <td>(17.0 - 20.0)</td>
@@ -803,7 +804,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="hct"
                                                     name="hct"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(36.0 - 48.0)</td>
@@ -835,7 +836,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="mcv"
                                                     name="mcv"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>fL</td>
                                             <td>(70.0 - 87.0)</td>
@@ -867,7 +868,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="mch"
                                                     name="mch"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>Pg</td>
                                             <td>(26.0 - 32.0)</td>
@@ -899,7 +900,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="mchc"
                                                     name="mchc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>g/dL</td>
                                             <td>(32.0 - 36.0)</td>
@@ -931,7 +932,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="rdw_cv"
                                                     name="rdw_cv"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(11.5 - 14.5)</td>
@@ -963,7 +964,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="rdw_sd"
                                                     name="rdw_sd"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>fL</td>
                                             <td>(37.0 - 54.0)</td>
@@ -995,7 +996,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="plt"
                                                     name="plt"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>X10^9/L</td>
                                             <td>(150 - 400)</td>
@@ -1027,7 +1028,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="mpv"
                                                     name="mpv"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>fL</td>
                                             <td>(7.4 - 10.4)</td>
@@ -1059,7 +1060,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="pdw"
                                                     name="pdw"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>fL</td>
                                             <td>(10.0 - 14.0)</td>
@@ -1091,7 +1092,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="pct"
                                                     name="pct"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(0.10 - 0.28)</td>
@@ -1123,7 +1124,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="p_lcc"
                                                     name="p_lcc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(0.10 - 0.28)</td>
@@ -1155,7 +1156,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="p_lcr"
                                                     name="p_lcr"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>(0.10 - 0.28)</td>
@@ -1223,7 +1224,7 @@ function EditFBC5P({ lab, closeModal }) {
                                                     id="esr"
                                                     name="esr"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td style={{border: '1px solid cyan', marginTop: -10, marginBottom: -10}}>mm fall/hr</td>
                                             <td style={{border: '1px solid cyan', marginTop: -10, marginBottom: -10}} colSpan="2" className="text-left">3.0 - 5.0 mm fall/hr</td>

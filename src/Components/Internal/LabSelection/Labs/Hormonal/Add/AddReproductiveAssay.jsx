@@ -178,7 +178,7 @@ function AddReproductiveAssay({ patient, closeModal }) {
                                                     id="lh"
                                                     name="lh"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -189,7 +189,7 @@ function AddReproductiveAssay({ patient, closeModal }) {
                                                     id="fsh"
                                                     name="fsh"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -200,7 +200,7 @@ function AddReproductiveAssay({ patient, closeModal }) {
                                                     id="prolactive"
                                                     name="prolactive"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -211,7 +211,7 @@ function AddReproductiveAssay({ patient, closeModal }) {
                                                     id="progesterone"
                                                     name="progesterone"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -222,7 +222,7 @@ function AddReproductiveAssay({ patient, closeModal }) {
                                                     id="oestrogen"
                                                     name="oestrogen"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -233,7 +233,7 @@ function AddReproductiveAssay({ patient, closeModal }) {
                                                     id="testosterone"
                                                     name="testosterone"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                         </tr>
                                     </tbody>

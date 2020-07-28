@@ -30,12 +30,13 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function Editserumlipase({ lab, closeModal }) {
+function Editserumlipase({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const flagOptions = getFlagOptions();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         s_lipase : lab.s_lipase,
@@ -157,7 +158,7 @@ function Editserumlipase({ lab, closeModal }) {
                                                     id="s_lipase"
                                                     name="s_lipase"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="16.67%">
                                                 <FormikTextField

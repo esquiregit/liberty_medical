@@ -147,7 +147,7 @@ function AddHormonalAssay({ patient, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/mL</td>
                                             <td className="text-centre">0.9 - 9.5</td>

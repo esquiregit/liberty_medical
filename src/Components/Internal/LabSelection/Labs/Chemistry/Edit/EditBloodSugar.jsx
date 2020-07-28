@@ -34,11 +34,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditBloodSugar({ lab, closeModal }) {
+function EditBloodSugar({ lab, closeModal, closeExpandable }) {
     const staff   = useSelector(state => state.authReducer.staff);
     const classes = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         fasting_blood_sugar : lab.fasting_blood_sugar,
@@ -160,7 +161,7 @@ function EditBloodSugar({ lab, closeModal }) {
                                                     id="fasting_blood_sugar"
                                                     name="fasting_blood_sugar"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">nmol/L</td>
                                             <td width="18.67%" colSpan="2">(3.4 - 6.4)</td>
@@ -176,7 +177,7 @@ function EditBloodSugar({ lab, closeModal }) {
                                                     id="random_blood_sugar"
                                                     name="random_blood_sugar"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>nmol/L</td>
                                             <td>(3.4 - 11.4)</td>
@@ -192,7 +193,7 @@ function EditBloodSugar({ lab, closeModal }) {
                                                     id="two_hpp_blood_sugar"
                                                     name="two_hpp_blood_sugar"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>&lt; 7.8</td>

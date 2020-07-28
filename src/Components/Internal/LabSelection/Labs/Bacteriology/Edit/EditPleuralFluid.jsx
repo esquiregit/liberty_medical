@@ -79,13 +79,14 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditPleuralFluid({ lab, closeModal }) {
+function EditPleuralFluid({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const appearances = getAppearances();
     const gramStains  = getGramStains();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         colour : lab.colour,
@@ -298,7 +299,7 @@ function EditPleuralFluid({ lab, closeModal }) {
                                                     id="ph"
                                                     name="ph"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>
@@ -313,7 +314,7 @@ function EditPleuralFluid({ lab, closeModal }) {
                                                     id="glucose"
                                                     name="glucose"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                         </tr>
@@ -328,7 +329,7 @@ function EditPleuralFluid({ lab, closeModal }) {
                                                     id="total_protein"
                                                     name="total_protein"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>g/L</td>
                                         </tr>
@@ -343,7 +344,7 @@ function EditPleuralFluid({ lab, closeModal }) {
                                                     id="pleural_fluid_albumin"
                                                     name="pleural_fluid_albumin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="20.33%">g/L</td>
                                         </tr>
@@ -358,7 +359,7 @@ function EditPleuralFluid({ lab, closeModal }) {
                                                     id="ldh"
                                                     name="ldh"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>U/L</td>
                                         </tr>

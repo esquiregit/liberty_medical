@@ -20,19 +20,15 @@ function ListAlphaFetoProtein({ history }) {
     const visible     = useSelector(state => state.sidebarReducer.visible);
     const permissions = useSelector(state => state.authReducer.permissions);
     
+    const [labs, setLabs]         = useState([]);
     const [loading, setLoading]   = useState(true);
     const [message, setMessage]   = useState('');
-    const [success, setSuccess]   = useState(false);
     const [comError, setComError] = useState(false);
-    const [labs, setlabs] = useState([]);
     
-    const closeExpandable        = message => {
+    const closeExpandable = () => {
         setLoading(true);
-        setMessage(message);
-        setSuccess(true);
         setTimeout(() => { setLoading(false); }, 2000);
     };    
-    
     React.useEffect(()    => {
         document.title        = 'labs | Liberty Medical Labs';
         const abortController = new AbortController();
@@ -42,7 +38,7 @@ function ListAlphaFetoProtein({ history }) {
             if(permissions && (permissions.includes("Can View Lab List") || permissions.includes("Can Edit Lab"))) {
                 Axios.post(getBaseURL()+'get_alpha_feto_protein', { role: staff.role_name, branch: staff.branch }, { signal: signal })
                     .then(response => {
-                        setlabs(response.data);
+                        setLabs(response.data);
                         setLoading(false);
                     })
                     .catch(error => {
@@ -147,7 +143,6 @@ function ListAlphaFetoProtein({ history }) {
     
     return (
         <>
-            { success  && <Toastrr message={message} type="success" /> }
             { comError && <Toastrr message={message} type="info"    /> }
             <Header staff={staff} />
             <Sidebar roleName={staff && staff.role_name} />

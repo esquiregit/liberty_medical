@@ -151,7 +151,7 @@ function AddCKMB({ patient, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/mL</td>
                                             <td className="text-centre">&lt; 7 ng/mL</td>

@@ -48,12 +48,13 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditUrineACR({ lab, closeModal }) {
+function EditUrineACR({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const flagOptions = getFlagOptions();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         urea_creatinine : lab.urea_creatinine,
@@ -181,7 +182,7 @@ function EditUrineACR({ lab, closeModal }) {
                                                     id="urea_creatinine"
                                                     name="urea_creatinine"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="16.67%">
                                                 <FormikTextField
@@ -213,7 +214,7 @@ function EditUrineACR({ lab, closeModal }) {
                                                     id="micro_albumin_urine"
                                                     name="micro_albumin_urine"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="16.67%">
                                                 <FormikTextField
@@ -245,7 +246,7 @@ function EditUrineACR({ lab, closeModal }) {
                                                     id="uacr"
                                                     name="uacr"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="16.67%">
                                                 <FormikTextField
@@ -287,7 +288,7 @@ function EditUrineACR({ lab, closeModal }) {
                                                     id="the_uacr"
                                                     name="the_uacr"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mg/g indicates</td>
                                             <td colSpan="2">

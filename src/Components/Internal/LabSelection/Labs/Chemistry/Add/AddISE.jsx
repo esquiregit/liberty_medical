@@ -177,7 +177,7 @@ function AddISE({ patient, closeModal }) {
                                                     id="sodium"
                                                     name="sodium"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">mmol/L</td>
                                             <td width="16.67%">
@@ -209,7 +209,7 @@ function AddISE({ patient, closeModal }) {
                                                     id="potassium"
                                                     name="potassium"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>
@@ -241,7 +241,7 @@ function AddISE({ patient, closeModal }) {
                                                     id="chloride"
                                                     name="chloride"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>
@@ -273,7 +273,7 @@ function AddISE({ patient, closeModal }) {
                                                     id="carbon_dioxide"
                                                     name="carbon_dioxide"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td></td>

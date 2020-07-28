@@ -155,7 +155,7 @@ function AddCortisol({ patient, closeModal }) {
                                                     id="cortisol_top"
                                                     name="cortisol_top"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>nmol/L</td>
                                             <td className="text-centre">am 123 - 626</td>
@@ -170,7 +170,7 @@ function AddCortisol({ patient, closeModal }) {
                                                     id="cortisol_bottom"
                                                     name="cortisol_bottom"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                             <td className="text-centre">pm 46.2 - 389</td>

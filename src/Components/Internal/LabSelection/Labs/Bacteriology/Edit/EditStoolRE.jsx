@@ -94,11 +94,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditStoolRE({ lab, closeModal }) {
+function EditStoolRE({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         row_one_one : lab.row_one_one,

@@ -204,7 +204,7 @@ function AddGeneralChemistry({ patient, closeModal }) {
                                                     id="amylase"
                                                     name="amylase"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>U/L</td>
                                             <td className="text-centre">(0 - 100)</td>
@@ -220,7 +220,7 @@ function AddGeneralChemistry({ patient, closeModal }) {
                                                     id="ldh"
                                                     name="ldh"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>U/L</td>
                                             <td className="text-centre">(0 - 480)</td>
@@ -236,7 +236,7 @@ function AddGeneralChemistry({ patient, closeModal }) {
                                                     id="creatine_kinase"
                                                     name="creatine_kinase"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>U/L</td>
                                             <td className="text-centre">(24 - 170)</td>
@@ -252,7 +252,7 @@ function AddGeneralChemistry({ patient, closeModal }) {
                                                     id="creatinine"
                                                     name="creatinine"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>umol/L</td>
                                             <td className="text-centre">(53.04 - 123.8)</td>
@@ -268,7 +268,7 @@ function AddGeneralChemistry({ patient, closeModal }) {
                                                     id="uric_acid"
                                                     name="uric_acid"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>umol/L</td>
                                             <td className="text-centre">(154 - 357)</td>
@@ -284,7 +284,7 @@ function AddGeneralChemistry({ patient, closeModal }) {
                                                     id="calcium"
                                                     name="calcium"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td className="text-centre">(2.12 - 2.60)</td>
@@ -300,7 +300,7 @@ function AddGeneralChemistry({ patient, closeModal }) {
                                                     id="phosphorus"
                                                     name="phosphorus"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td className="text-centre">(0.80 - 1.55)</td>
@@ -316,7 +316,7 @@ function AddGeneralChemistry({ patient, closeModal }) {
                                                     id="magnessium"
                                                     name="magnessium"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td className="text-centre"></td>
@@ -332,7 +332,7 @@ function AddGeneralChemistry({ patient, closeModal }) {
                                                     id="fbs_glucose"
                                                     name="fbs_glucose"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td className="text-centre">(3.4 - 6.4)</td>
@@ -348,7 +348,7 @@ function AddGeneralChemistry({ patient, closeModal }) {
                                                     id="globulin"
                                                     name="globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>g/dL</td>
                                             <td className="text-centre">(2.0 - 4.8)</td>
@@ -364,7 +364,7 @@ function AddGeneralChemistry({ patient, closeModal }) {
                                                     id="bili_indirect"
                                                     name="bili_indirect"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>umol/L</td>
                                             <td className="text-centre">(1.5 - 17.5)</td>
@@ -380,7 +380,7 @@ function AddGeneralChemistry({ patient, closeModal }) {
                                                     id="glyco_hbg"
                                                     name="glyco_hbg"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td className="text-centre">(4.5 - 7.0)</td>

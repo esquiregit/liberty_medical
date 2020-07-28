@@ -28,11 +28,12 @@ const validationSchema = Yup.object().shape({
         .required('Please Fill In Result')
 });
 
-function EditSC3SC4({ lab, closeModal }) {
+function EditSC3SC4({ lab, closeModal, closeExpandable }) {
     const staff   = useSelector(state => state.authReducer.staff);
     const classes = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         s_c3 : lab.s_c3,
@@ -152,7 +153,7 @@ function EditSC3SC4({ lab, closeModal }) {
                                                     id="s_c3"
                                                     name="s_c3"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">mg/dl</td>
                                             <td width="18.67%">
@@ -171,7 +172,7 @@ function EditSC3SC4({ lab, closeModal }) {
                                                     id="s_c4"
                                                     name="s_c4"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>+ mg/dl</td>
                                             <td>

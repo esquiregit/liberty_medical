@@ -37,13 +37,14 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditCSFBiochem({ lab, closeModal }) {
+function EditCSFBiochem({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const globulins   = getGlobulins();
     const appearances = getAppearances();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         appearance : lab.appearance,
@@ -187,7 +188,7 @@ function EditCSFBiochem({ lab, closeModal }) {
                                                     id="glucose"
                                                     name="glucose"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>nmol/L</td>
                                             <td>[2.5 - 4.0] nmol/L</td>
@@ -203,7 +204,7 @@ function EditCSFBiochem({ lab, closeModal }) {
                                                     id="protein"
                                                     name="protein"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>g/L</td>
                                             <td>[0.15 - 0.45]</td>

@@ -35,13 +35,14 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditSputumAFB({ lab, closeModal }) {
+function EditSputumAFB({ lab, closeModal, closeExpandable }) {
     const staff               = useSelector(state => state.authReducer.staff);
     const classes             = styles();
     const gramStains          = getGramStains();
     const znStains            = getZNStains();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         appearance : lab.appearance,

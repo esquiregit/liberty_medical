@@ -175,7 +175,7 @@ function AddCardiacEnzyme({ patient, closeModal }) {
                                                     id="ast"
                                                     name="ast"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">U/L</td>
                                             <td width="18.67%">(0 - 35)</td>
@@ -191,7 +191,7 @@ function AddCardiacEnzyme({ patient, closeModal }) {
                                                     id="alt"
                                                     name="alt"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">U/L</td>
                                             <td width="18.67%">(0 - 35)</td>
@@ -207,7 +207,7 @@ function AddCardiacEnzyme({ patient, closeModal }) {
                                                     id="creatinine_kinase"
                                                     name="creatinine_kinase"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>U/mL</td>
                                             <td>(50 - 170)</td>
@@ -223,7 +223,7 @@ function AddCardiacEnzyme({ patient, closeModal }) {
                                                     id="ck_mb"
                                                     name="ck_mb"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/mL</td>
                                             <td></td>
@@ -239,7 +239,7 @@ function AddCardiacEnzyme({ patient, closeModal }) {
                                                     id="ldh"
                                                     name="ldh"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>U/mL</td>
                                             <td>(0 - 480)</td>
@@ -255,7 +255,7 @@ function AddCardiacEnzyme({ patient, closeModal }) {
                                                     id="troponin"
                                                     name="troponin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/mL</td>
                                             <td>&lt; 8</td>

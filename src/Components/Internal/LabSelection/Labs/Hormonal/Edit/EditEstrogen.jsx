@@ -46,11 +46,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditEstrogen({ lab, closeModal }) {
+function EditEstrogen({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         follicular : lab.follicular,
@@ -175,7 +176,7 @@ function EditEstrogen({ lab, closeModal }) {
                                                     id="follicular"
                                                     name="follicular"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>pg/ML</td>
                                             <td className="text-centre">18 - 174</td>
@@ -191,7 +192,7 @@ function EditEstrogen({ lab, closeModal }) {
                                                     id="mid_cycle"
                                                     name="mid_cycle"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>pg/ML</td>
                                             <td className="text-centre">123 - 626</td>
@@ -207,7 +208,7 @@ function EditEstrogen({ lab, closeModal }) {
                                                     id="luteal"
                                                     name="luteal"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>pg/ML</td>
                                             <td className="text-centre">43 - 214</td>
@@ -223,7 +224,7 @@ function EditEstrogen({ lab, closeModal }) {
                                                     id="pm"
                                                     name="pm"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>pg/ML</td>
                                             <td className="text-centre">&lt; 58</td>
@@ -239,7 +240,7 @@ function EditEstrogen({ lab, closeModal }) {
                                                     id="amenorrhoea"
                                                     name="amenorrhoea"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>pg/ML</td>
                                             <td className="text-centre"></td>
@@ -255,7 +256,7 @@ function EditEstrogen({ lab, closeModal }) {
                                                     id="mem"
                                                     name="mem"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>pg/ML</td>
                                             <td className="text-centre">&lt; 62</td>

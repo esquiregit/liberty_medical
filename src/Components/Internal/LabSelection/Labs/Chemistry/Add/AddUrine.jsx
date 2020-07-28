@@ -172,7 +172,7 @@ function AddUrine({ patient, closeModal }) {
                                                     id="urine_vma"
                                                     name="urine_vma"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                         </tr>
                                         <tr>
@@ -186,7 +186,7 @@ function AddUrine({ patient, closeModal }) {
                                                     id="urine_calcium"
                                                     name="urine_calcium"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                         </tr>
                                         <tr>
@@ -200,7 +200,7 @@ function AddUrine({ patient, closeModal }) {
                                                     id="urine_uric_acid"
                                                     name="urine_uric_acid"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                         </tr>
                                         <tr>
@@ -214,7 +214,7 @@ function AddUrine({ patient, closeModal }) {
                                                     id="urine_creatinine"
                                                     name="urine_creatinine"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                         </tr>
                                         <tr>
@@ -228,7 +228,7 @@ function AddUrine({ patient, closeModal }) {
                                                     id="serum_creatinine"
                                                     name="serum_creatinine"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                         </tr>
                                         <tr>
@@ -242,7 +242,7 @@ function AddUrine({ patient, closeModal }) {
                                                     id="twenty_four_hour_urine_volume"
                                                     name="twenty_four_hour_urine_volume"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                         </tr>
                                         <tr>
@@ -256,7 +256,7 @@ function AddUrine({ patient, closeModal }) {
                                                     id="clearance"
                                                     name="clearance"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                         </tr>
                                         <tr>

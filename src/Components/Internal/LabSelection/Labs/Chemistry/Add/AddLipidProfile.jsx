@@ -191,7 +191,7 @@ function AddLipidProfile({ patient, closeModal }) {
                                                     id="cholesterol_total"
                                                     name="cholesterol_total"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>(0.00 - 5.20)</td>
@@ -223,7 +223,7 @@ function AddLipidProfile({ patient, closeModal }) {
                                                     id="triglycerides"
                                                     name="triglycerides"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>(0.00 - 2.30)</td>
@@ -255,7 +255,7 @@ function AddLipidProfile({ patient, closeModal }) {
                                                     id="hdl"
                                                     name="hdl"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>(1.04 -2.10)</td>
@@ -287,7 +287,7 @@ function AddLipidProfile({ patient, closeModal }) {
                                                     id="ldl"
                                                     name="ldl"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>(0.00 - 3.88)</td>
@@ -319,7 +319,7 @@ function AddLipidProfile({ patient, closeModal }) {
                                                     id="coronary_risk"
                                                     name="coronary_risk"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>Ratio</td>
                                             <td>(0.00 - 4.00)</td>

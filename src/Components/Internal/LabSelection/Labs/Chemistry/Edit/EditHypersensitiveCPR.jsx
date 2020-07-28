@@ -26,11 +26,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditHypersensitiveCPR({ lab, closeModal }) {
+function EditHypersensitiveCPR({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         results : '',
@@ -151,7 +152,7 @@ function EditHypersensitiveCPR({ lab, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mg/L</td>
                                             <td className="text-centre">

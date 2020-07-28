@@ -43,7 +43,7 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditHVSRE({ lab, closeModal }) {
+function EditHVSRE({ lab, closeModal, closeExpandable }) {
     const staff          = useSelector(state => state.authReducer.staff);
     const classes        = styles();
     const redBloodCells  = getTVaginalis();
@@ -52,6 +52,7 @@ function EditHVSRE({ lab, closeModal }) {
     const gnidOptions    = getTVaginalis();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         pus_cells_per_hps : lab.pus_cells_per_hps,
@@ -169,7 +170,7 @@ function EditHVSRE({ lab, closeModal }) {
                                                     id="pus_cells_per_hps"
                                                     name="pus_cells_per_hps"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>
@@ -185,7 +186,7 @@ function EditHVSRE({ lab, closeModal }) {
                                                     id="epitheleal_cells_per_hpf"
                                                     name="epitheleal_cells_per_hpf"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>

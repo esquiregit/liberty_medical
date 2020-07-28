@@ -151,7 +151,7 @@ function AddCA153({ patient, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>pg/Ml</td>
                                             <td className="text-centre">&lt; 35 IU/mL</td>

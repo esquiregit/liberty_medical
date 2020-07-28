@@ -51,12 +51,13 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditIronStudy({ lab, closeModal }) {
+function EditIronStudy({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const flagOptions = getFlagOptions();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         iron : lab.iron,
@@ -184,7 +185,7 @@ function EditIronStudy({ lab, closeModal }) {
                                                     id="iron"
                                                     name="iron"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">nmol/L</td>
                                             <td width="16.67%">
@@ -216,7 +217,7 @@ function EditIronStudy({ lab, closeModal }) {
                                                     id="tibc"
                                                     name="tibc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>umol/L</td>
                                             <td>
@@ -248,7 +249,7 @@ function EditIronStudy({ lab, closeModal }) {
                                                     id="transferrin_sat"
                                                     name="transferrin_sat"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>
@@ -280,7 +281,7 @@ function EditIronStudy({ lab, closeModal }) {
                                                     id="ferritin"
                                                     name="ferritin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/ml</td>
                                             <td>

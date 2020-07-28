@@ -30,11 +30,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditTroponin({ lab, closeModal }) {
+function EditTroponin({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         troponin_i : lab.troponin_i,
@@ -155,7 +156,7 @@ function EditTroponin({ lab, closeModal }) {
                                                     id="troponin_i"
                                                     name="troponin_i"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/mL</td>
                                             <td className="text-centre">&lt; 0.8</td>
@@ -171,7 +172,7 @@ function EditTroponin({ lab, closeModal }) {
                                                     id="troponin_t"
                                                     name="troponin_t"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/mL</td>
                                             <td className="text-centre">&lt; 1.8</td>

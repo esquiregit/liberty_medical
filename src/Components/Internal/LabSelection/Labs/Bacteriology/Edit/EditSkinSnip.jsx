@@ -281,7 +281,7 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditSkinSnip({ lab, closeModal }) {
+function EditSkinSnip({ lab, closeModal, closeExpandable }) {
     const staff               = useSelector(state => state.authReducer.staff);
     const classes             = styles();
     const cultureOptions      = getCultures();
@@ -289,6 +289,7 @@ function EditSkinSnip({ lab, closeModal }) {
     const antibioticsOptions = getAntibiotics();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         onchocerca_volvulus : lab.onchocerca_volvulus,

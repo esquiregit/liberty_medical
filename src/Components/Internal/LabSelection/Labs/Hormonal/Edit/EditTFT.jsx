@@ -44,12 +44,13 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditTFT({ lab, closeModal }) {
+function EditTFT({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const flagOptions = getFlagOptions();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         ft3 : lab.ft3,
@@ -175,7 +176,7 @@ function EditTFT({ lab, closeModal }) {
                                                     id="ft3"
                                                     name="ft3"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -207,7 +208,7 @@ function EditTFT({ lab, closeModal }) {
                                                     id="ft4"
                                                     name="ft4"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -239,7 +240,7 @@ function EditTFT({ lab, closeModal }) {
                                                     id="tsh"
                                                     name="tsh"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField

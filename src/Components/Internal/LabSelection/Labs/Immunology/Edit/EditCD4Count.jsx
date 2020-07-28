@@ -51,12 +51,13 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditCD4Count({ lab, closeModal }) {
+function EditCD4Count({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const flagOptions = getFlagOptions();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         t_wbc : lab.t_wbc,
@@ -184,7 +185,7 @@ function EditCD4Count({ lab, closeModal }) {
                                                     id="t_wbc"
                                                     name="t_wbc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -216,7 +217,7 @@ function EditCD4Count({ lab, closeModal }) {
                                                     id="cd4_count"
                                                     name="cd4_count"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -248,7 +249,7 @@ function EditCD4Count({ lab, closeModal }) {
                                                     id="cd3"
                                                     name="cd3"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -280,7 +281,7 @@ function EditCD4Count({ lab, closeModal }) {
                                                     id="cd4_cd3"
                                                     name="cd4_cd3"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField

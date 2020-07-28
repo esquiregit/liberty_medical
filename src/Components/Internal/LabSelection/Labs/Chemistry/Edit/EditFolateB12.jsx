@@ -30,11 +30,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditFolateB12({ lab, closeModal }) {
+function EditFolateB12({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         folate : lab.folate,
@@ -155,7 +156,7 @@ function EditFolateB12({ lab, closeModal }) {
                                                     id="folate"
                                                     name="folate"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>nmol/L</td>
                                             <td className="text-centre">2.76 - 20.00</td>
@@ -171,7 +172,7 @@ function EditFolateB12({ lab, closeModal }) {
                                                     id="vitamin_b_12"
                                                     name="vitamin_b_12"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                             <td className="text-centre">239 - 931</td>

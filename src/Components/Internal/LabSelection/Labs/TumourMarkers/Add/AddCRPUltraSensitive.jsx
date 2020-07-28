@@ -151,7 +151,7 @@ function AddCRPUltraSensitive({ patient, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ug/mL</td>
                                             <td className="text-centre">&lt; 1 ug/mL (Low Risk)<br />&lt; 1 - 3 ug/mL (Average Risk)<br />&gt; 3 ug/mL (High Risk)</td>

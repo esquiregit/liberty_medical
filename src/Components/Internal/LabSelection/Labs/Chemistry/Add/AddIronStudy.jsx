@@ -184,7 +184,7 @@ function AddIronStudy({ patient, closeModal }) {
                                                     id="iron"
                                                     name="iron"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">nmol/L</td>
                                             <td width="16.67%">
@@ -216,7 +216,7 @@ function AddIronStudy({ patient, closeModal }) {
                                                     id="tibc"
                                                     name="tibc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>umol/L</td>
                                             <td>
@@ -248,7 +248,7 @@ function AddIronStudy({ patient, closeModal }) {
                                                     id="transferrin_sat"
                                                     name="transferrin_sat"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>%</td>
                                             <td>
@@ -280,7 +280,7 @@ function AddIronStudy({ patient, closeModal }) {
                                                     id="ferritin"
                                                     name="ferritin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/ml</td>
                                             <td>

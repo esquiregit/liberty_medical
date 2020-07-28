@@ -175,7 +175,7 @@ function AddTFT({ patient, closeModal }) {
                                                     id="ft3"
                                                     name="ft3"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -207,7 +207,7 @@ function AddTFT({ patient, closeModal }) {
                                                     id="ft4"
                                                     name="ft4"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -239,7 +239,7 @@ function AddTFT({ patient, closeModal }) {
                                                     id="tsh"
                                                     name="tsh"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField

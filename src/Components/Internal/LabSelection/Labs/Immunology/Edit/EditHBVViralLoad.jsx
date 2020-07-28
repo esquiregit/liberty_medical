@@ -30,11 +30,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditHBVViralLoad({ lab, closeModal }) {
+function EditHBVViralLoad({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         hbv_dna : lab.hbv_dna,
@@ -178,7 +179,7 @@ function EditHBVViralLoad({ lab, closeModal }) {
                                                     id="pcr_hbv_quantitative"
                                                     name="pcr_hbv_quantitative"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>

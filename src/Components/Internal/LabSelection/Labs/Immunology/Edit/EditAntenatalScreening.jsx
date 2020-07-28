@@ -44,11 +44,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditAntenatalScreening({ lab, closeModal }) {
+function EditAntenatalScreening({ lab, closeModal, closeExpandable }) {
     const staff   = useSelector(state => state.authReducer.staff);
     const classes = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         blood_group : lab.blood_group,

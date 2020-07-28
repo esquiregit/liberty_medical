@@ -189,7 +189,7 @@ function AddCalciumProfile({ patient, closeModal }) {
                                                     id="s_calcium_total"
                                                     name="s_calcium_total"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">mmol/L</td>
                                             <td width="16.67%">
@@ -221,7 +221,7 @@ function AddCalciumProfile({ patient, closeModal }) {
                                                     id="s_ionized_calcium_calc"
                                                     name="s_ionized_calcium_calc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>
@@ -253,7 +253,7 @@ function AddCalciumProfile({ patient, closeModal }) {
                                                     id="s_albumin"
                                                     name="s_albumin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>g/L</td>
                                             <td>
@@ -285,7 +285,7 @@ function AddCalciumProfile({ patient, closeModal }) {
                                                     id="s_total_protein"
                                                     name="s_total_protein"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>g/L</td>
                                             <td>
@@ -322,7 +322,7 @@ function AddCalciumProfile({ patient, closeModal }) {
                                                     id="corrected_calcium_calc"
                                                     name="corrected_calcium_calc"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td colSpan="3">mmol/L</td>
                                         </tr>

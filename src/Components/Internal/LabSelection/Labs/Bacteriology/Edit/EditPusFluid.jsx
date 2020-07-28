@@ -287,7 +287,7 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditPusFluid({ lab, closeModal }) {
+function EditPusFluid({ lab, closeModal, closeExpandable }) {
     const staff               = useSelector(state => state.authReducer.staff);
     const classes             = styles();
     const gramStains          = getGramStains();
@@ -296,6 +296,7 @@ function EditPusFluid({ lab, closeModal }) {
     const antibioticsOptions  = getAntibiotics();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         colour: lab.colour,

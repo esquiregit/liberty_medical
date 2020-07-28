@@ -27,11 +27,12 @@ const styles = StyleSheet.create({
     two_column_left: {
         textAlign: 'left',
         fontSize: 12,
+        width: '50%'
     },
     two_column_right: {
         textAlign: 'right',
         fontSize: 12,
-        marginRight: 100,//78,
+        width: '50%'
     },
     info_column: {
         display: 'flex',
@@ -141,7 +142,7 @@ const styles = StyleSheet.create({
     },
 });
 
-function PDFAlphaFetoProtein({ lab }) {
+function PDFLab({ lab }) {
     return (
         <Document>
             <Page style={styles.page} size="A4" wrap>
@@ -198,4 +199,4 @@ function PDFAlphaFetoProtein({ lab }) {
     )
 }
 
-export default PDFAlphaFetoProtein;
+export default PDFLab;

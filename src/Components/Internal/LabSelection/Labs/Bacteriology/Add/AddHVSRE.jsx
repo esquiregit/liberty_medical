@@ -169,7 +169,7 @@ function AddHVSRE({ patient, closeModal }) {
                                                     id="pus_cells_per_hps"
                                                     name="pus_cells_per_hps"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>
@@ -185,7 +185,7 @@ function AddHVSRE({ patient, closeModal }) {
                                                     id="epitheleal_cells_per_hpf"
                                                     name="epitheleal_cells_per_hpf"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>

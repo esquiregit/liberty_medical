@@ -157,7 +157,7 @@ function Addserumlipase({ patient, closeModal }) {
                                                     id="s_lipase"
                                                     name="s_lipase"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="16.67%">
                                                 <FormikTextField

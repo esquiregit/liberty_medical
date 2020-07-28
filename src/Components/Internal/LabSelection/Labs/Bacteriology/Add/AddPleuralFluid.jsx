@@ -298,7 +298,7 @@ function AddPleuralFluid({ patient, closeModal }) {
                                                     id="ph"
                                                     name="ph"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>
@@ -313,7 +313,7 @@ function AddPleuralFluid({ patient, closeModal }) {
                                                     id="glucose"
                                                     name="glucose"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                         </tr>
@@ -328,7 +328,7 @@ function AddPleuralFluid({ patient, closeModal }) {
                                                     id="total_protein"
                                                     name="total_protein"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>g/L</td>
                                         </tr>
@@ -343,7 +343,7 @@ function AddPleuralFluid({ patient, closeModal }) {
                                                     id="pleural_fluid_albumin"
                                                     name="pleural_fluid_albumin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="20.33%">g/L</td>
                                         </tr>
@@ -358,7 +358,7 @@ function AddPleuralFluid({ patient, closeModal }) {
                                                     id="ldh"
                                                     name="ldh"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>U/L</td>
                                         </tr>

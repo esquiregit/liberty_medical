@@ -132,12 +132,13 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditBueLFT({ lab, closeModal }) {
+function EditBueLFT({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const flagOptions = getFlagOptions();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         sodium : lab.sodium,
@@ -284,7 +285,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="sodium"
                                                     name="sodium"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">mmol/L</td>
                                             <td width="16.67%">
@@ -316,7 +317,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="potassium"
                                                     name="potassium"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>
@@ -348,7 +349,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="chloride"
                                                     name="chloride"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>
@@ -380,7 +381,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="urea"
                                                     name="urea"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>
@@ -412,7 +413,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="creatinine"
                                                     name="creatinine"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>umol/L</td>
                                             <td>
@@ -445,7 +446,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="egfr"
                                                     name="egfr"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                             <td></td>
@@ -487,7 +488,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="got_ast"
                                                     name="got_ast"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="%">
                                                 <FormikTextField
@@ -521,7 +522,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="gpt_alt"
                                                     name="gpt_alt"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -555,7 +556,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="alkaline_phos"
                                                     name="alkaline_phos"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -589,7 +590,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="ggt"
                                                     name="ggt"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -623,7 +624,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="bilirubin_total"
                                                     name="bilirubin_total"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -657,7 +658,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="bili_indirect"
                                                     name="bili_indirect"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -691,7 +692,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="bilirubin_direct"
                                                     name="bilirubin_direct"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -725,7 +726,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="protein_total"
                                                     name="protein_total"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -759,7 +760,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="albumin"
                                                     name="albumin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -793,7 +794,7 @@ function EditBueLFT({ lab, closeModal }) {
                                                     id="globulin"
                                                     name="globulin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField

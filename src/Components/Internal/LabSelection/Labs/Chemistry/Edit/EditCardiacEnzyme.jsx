@@ -46,11 +46,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditCardiacEnzyme({ lab, closeModal }) {
+function EditCardiacEnzyme({ lab, closeModal, closeExpandable }) {
     const staff   = useSelector(state => state.authReducer.staff);
     const classes = styles();
     
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         ast : lab.ast,
@@ -175,7 +176,7 @@ function EditCardiacEnzyme({ lab, closeModal }) {
                                                     id="ast"
                                                     name="ast"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">U/L</td>
                                             <td width="18.67%">(0 - 35)</td>
@@ -191,7 +192,7 @@ function EditCardiacEnzyme({ lab, closeModal }) {
                                                     id="alt"
                                                     name="alt"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">U/L</td>
                                             <td width="18.67%">(0 - 35)</td>
@@ -207,7 +208,7 @@ function EditCardiacEnzyme({ lab, closeModal }) {
                                                     id="creatinine_kinase"
                                                     name="creatinine_kinase"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>U/mL</td>
                                             <td>(50 - 170)</td>
@@ -223,7 +224,7 @@ function EditCardiacEnzyme({ lab, closeModal }) {
                                                     id="ck_mb"
                                                     name="ck_mb"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/mL</td>
                                             <td></td>
@@ -239,7 +240,7 @@ function EditCardiacEnzyme({ lab, closeModal }) {
                                                     id="ldh"
                                                     name="ldh"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>U/mL</td>
                                             <td>(0 - 480)</td>
@@ -255,7 +256,7 @@ function EditCardiacEnzyme({ lab, closeModal }) {
                                                     id="troponin"
                                                     name="troponin"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ng/mL</td>
                                             <td>&lt; 8</td>

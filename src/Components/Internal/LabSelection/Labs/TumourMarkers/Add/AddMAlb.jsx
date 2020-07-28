@@ -151,7 +151,7 @@ function AddMAlb({ patient, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>ug/mL</td>
                                             <td className="text-centre">2.5 - 5000 ug/mL</td>

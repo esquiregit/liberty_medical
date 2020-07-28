@@ -46,7 +46,7 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditReproductiveAssay({ lab, closeModal }) {
+function EditReproductiveAssay({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
@@ -178,7 +178,7 @@ function EditReproductiveAssay({ lab, closeModal }) {
                                                     id="lh"
                                                     name="lh"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -189,7 +189,7 @@ function EditReproductiveAssay({ lab, closeModal }) {
                                                     id="fsh"
                                                     name="fsh"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -200,7 +200,7 @@ function EditReproductiveAssay({ lab, closeModal }) {
                                                     id="prolactive"
                                                     name="prolactive"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -211,7 +211,7 @@ function EditReproductiveAssay({ lab, closeModal }) {
                                                     id="progesterone"
                                                     name="progesterone"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -222,7 +222,7 @@ function EditReproductiveAssay({ lab, closeModal }) {
                                                     id="oestrogen"
                                                     name="oestrogen"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>
                                                 <FormikTextField
@@ -233,7 +233,7 @@ function EditReproductiveAssay({ lab, closeModal }) {
                                                     id="testosterone"
                                                     name="testosterone"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                         </tr>
                                     </tbody>

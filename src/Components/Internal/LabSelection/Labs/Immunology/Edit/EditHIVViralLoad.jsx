@@ -30,11 +30,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditHIVViralLoad({ lab, closeModal }) {
+function EditHIVViralLoad({ lab, closeModal, closeExpandable }) {
     const staff   = useSelector(state => state.authReducer.staff);
     const classes = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         hiv_dna : lab.hiv_dna,
@@ -178,7 +179,7 @@ function EditHIVViralLoad({ lab, closeModal }) {
                                                     id="pcr_hiv_quantitative"
                                                     name="pcr_hiv_quantitative"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                         </tr>

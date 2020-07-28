@@ -62,12 +62,13 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditBueCreatinineEgfr({ lab, closeModal }) {
+function EditBueCreatinineEgfr({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
     const flagOptions = getFlagOptions();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         sodium : lab.sodium,
@@ -189,7 +190,7 @@ function EditBueCreatinineEgfr({ lab, closeModal }) {
                                                     id="sodium"
                                                     name="sodium"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td width="11%">mmol/L</td>
                                             <td width="16.67%">
@@ -221,7 +222,7 @@ function EditBueCreatinineEgfr({ lab, closeModal }) {
                                                     id="potassium"
                                                     name="potassium"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>
@@ -253,7 +254,7 @@ function EditBueCreatinineEgfr({ lab, closeModal }) {
                                                     id="chloride"
                                                     name="chloride"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>
@@ -285,7 +286,7 @@ function EditBueCreatinineEgfr({ lab, closeModal }) {
                                                     id="urea"
                                                     name="urea"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>mmol/L</td>
                                             <td>
@@ -317,7 +318,7 @@ function EditBueCreatinineEgfr({ lab, closeModal }) {
                                                     id="creatinine"
                                                     name="creatinine"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>umol/L</td>
                                             <td>
@@ -355,7 +356,7 @@ function EditBueCreatinineEgfr({ lab, closeModal }) {
                                                     id="egfr"
                                                     name="egfr"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td></td>
                                             <td></td>

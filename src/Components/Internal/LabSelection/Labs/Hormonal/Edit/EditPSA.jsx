@@ -26,11 +26,12 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditPSA({ lab, closeModal }) {
+function EditPSA({ lab, closeModal, closeExpandable }) {
     const staff       = useSelector(state => state.authReducer.staff);
     const classes     = styles();
 
     const initialValues = {
+        id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
         results : lab.results,
@@ -154,7 +155,7 @@ function EditPSA({ lab, closeModal }) {
                                                     id="results"
                                                     name="results"
                                                     type="number"
-                                                    InputProps={{ inputProps: { min: 0, step: 0.5 } }} />
+                                                    InputProps={{ inputProps: { min: 0, step: 0.01 } }} />
                                             </td>
                                             <td>&lt; 70 years<br />&gt; 70 years</td>
                                             <td>&lt; 4ng/mL<br />&lt; 6.5 ng/mL</td>

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import AddPSA from '../Labs/Hormonal/AddPSA';
-import AddPTH from '../Labs/Hormonal/AddPTH';
-import AddTFT from '../Labs/Hormonal/AddTFT';
+import AddPSA from '../Labs/Hormonal/Add/AddPSA';
+import AddPTH from '../Labs/Hormonal/Add/AddPTH';
+import AddTFT from '../Labs/Hormonal/Add/AddTFT';
 import Button from '@material-ui/core/Button';
-import AddCortisol from '../Labs/Hormonal/AddCortisol';
-import AddEstrogen from '../Labs/Hormonal/AddEstrogen';
-import AddTroponin from '../Labs/Hormonal/AddTroponin';
-import AddHormonalAssay from '../Labs/Hormonal/AddHormonalAssay';
-import AddAlphaFetoProtein from '../Labs/Hormonal/AddAlphaFetoProtein';
-import AddReproductiveAssay from '../Labs/Hormonal/AddReproductiveAssay';
+import AddCortisol from '../Labs/Hormonal/Add/AddCortisol';
+import AddEstrogen from '../Labs/Hormonal/Add/AddEstrogen';
+import AddTroponin from '../Labs/Hormonal/Add/AddTroponin';
+import AddHormonalAssay from '../Labs/Hormonal/Add/AddHormonalAssay';
+import AddAlphaFetoProtein from '../Labs/Hormonal/Add/AddAlphaFetoProtein';
+import AddReproductiveAssay from '../Labs/Hormonal/Add/AddReproductiveAssay';
 
 const HormonesTab = ({ patient }) => {
     const [psa, setPSA] = useState(false);

@@ -71,7 +71,6 @@ function LabSelection({ history, match }) {
                     loading ? <Loader /> :
                     <Card variant="outlined" className="p-40">
                         <Tabs
-                            // variant="fullWidth"
                             variant="scrollable"
                             scrollButtons="on"
                             indicatorColor="primary"

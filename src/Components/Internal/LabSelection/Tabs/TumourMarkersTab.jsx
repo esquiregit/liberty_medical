@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
-import AddCA125 from '../Labs/TumourMarkers/AddCA125';
-import AddCA153 from '../Labs/TumourMarkers/AddCA153';
-import AddCEA from '../Labs/TumourMarkers/AddCEA';
-import AddCKMB from '../Labs/TumourMarkers/AddCKMB';
-import AddCRP from '../Labs/TumourMarkers/AddCRP';
-import AddMAlb from '../Labs/TumourMarkers/AddMAlb';
-import AddSerumHCG from '../Labs/TumourMarkers/AddSerumHCG';
-import AddCRPUltraSensitive from '../Labs/TumourMarkers/AddCRPUltraSensitive';
+import AddCA125 from '../Labs/TumourMarkers/Add/AddCA125';
+import AddCA153 from '../Labs/TumourMarkers/Add/AddCA153';
+import AddCEA from '../Labs/TumourMarkers/Add/AddCEA';
+import AddCKMB from '../Labs/TumourMarkers/Add/AddCKMB';
+import AddCRP from '../Labs/TumourMarkers/Add/AddCRP';
+import AddMAlb from '../Labs/TumourMarkers/Add/AddMAlb';
+import AddSerumHCG from '../Labs/TumourMarkers/Add/AddSerumHCG';
+import AddCRPUltraSensitive from '../Labs/TumourMarkers/Add/AddCRPUltraSensitive';
 
 const TumourMarkersTab = ({ patient }) => {
     const [cea, setCEA]           = useState(false);

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
-import AddBloodFilmComment from '../Labs/Haematology/AddBloodFilmComment';
-import AddClottingProfile from '../Labs/Haematology/AddClottingProfile';
-import AddDDimers from '../Labs/Haematology/AddDDimers';
-import AddESR from '../Labs/Haematology/AddESR';
-import AddFBC3P from '../Labs/Haematology/AddFBC3P';
-import AddFBC5P from '../Labs/Haematology/AddFBC5P';
-import AddFBCChildren from '../Labs/Haematology/AddFBCChildren';
-import AddNTCScreening from '../Labs/Haematology/AddNTCScreening';
-import AddSpecials from '../Labs/Haematology/AddSpecials';
+import AddBloodFilmComment from '../Labs/Haematology/Add/AddBloodFilmComment';
+import AddClottingProfile from '../Labs/Haematology/Add/AddClottingProfile';
+import AddDDimers from '../Labs/Haematology/Add/AddDDimers';
+import AddESR from '../Labs/Haematology/Add/AddESR';
+import AddFBC3P from '../Labs/Haematology/Add/AddFBC3P';
+import AddFBC5P from '../Labs/Haematology/Add/AddFBC5P';
+import AddFBCChildren from '../Labs/Haematology/Add/AddFBCChildren';
+import AddNTCScreening from '../Labs/Haematology/Add/AddNTCScreening';
+import AddSpecials from '../Labs/Haematology/Add/AddSpecials';
 
 const HaematologyTab = ({ patient }) => {
     const [esr, setESR]                           = useState(false);

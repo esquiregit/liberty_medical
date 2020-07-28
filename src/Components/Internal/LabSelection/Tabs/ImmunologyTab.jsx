@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
-import AddAntenatalScreening from '../Labs/Immunology/AddAntenatalScreening';
-import AddCD4Count from '../Labs/Immunology/AddCD4Count';
-import AddGeneralSerology from '../Labs/Immunology/AddGeneralSerology';
-import AddHBVViralLoad from '../Labs/Immunology/AddHBVViralLoad';
-import AddHepatitisBProfile from '../Labs/Immunology/AddHepatitisBProfile';
-import AddHepatitisMarkers from '../Labs/Immunology/AddHepatitisMarkers';
-import AddHIVViralLoad from '../Labs/Immunology/AddHIVViralLoad';
-import AddHPyloriAg from '../Labs/Immunology/AddHPyloriAg';
-import AddHPyloriAgBlood from '../Labs/Immunology/AddHPyloriAgBlood';
-import AddHPyloriAgSOB from '../Labs/Immunology/AddHPyloriAgSOB';
-import AddMantoux from '../Labs/Immunology/AddMantoux';
-import AddPregnancyTest from '../Labs/Immunology/AddPregnancyTest';
-import AddRheumatology from '../Labs/Immunology/AddRheumatology';
-import AddSemenAnalysis from '../Labs/Immunology/AddSemenAnalysis';
-import AddWidal from '../Labs/Immunology/AddWidal';
+import AddAntenatalScreening from '../Labs/Immunology/Add/AddAntenatalScreening';
+import AddCD4Count from '../Labs/Immunology/Add/AddCD4Count';
+import AddGeneralSerology from '../Labs/Immunology/Add/AddGeneralSerology';
+import AddHBVViralLoad from '../Labs/Immunology/Add/AddHBVViralLoad';
+import AddHepatitisBProfile from '../Labs/Immunology/Add/AddHepatitisBProfile';
+import AddHepatitisMarkers from '../Labs/Immunology/Add/AddHepatitisMarkers';
+import AddHIVViralLoad from '../Labs/Immunology/Add/AddHIVViralLoad';
+import AddHPyloriAg from '../Labs/Immunology/Add/AddHPyloriAg';
+import AddHPyloriAgBlood from '../Labs/Immunology/Add/AddHPyloriAgBlood';
+import AddHPyloriAgSOB from '../Labs/Immunology/Add/AddHPyloriAgSOB';
+import AddMantoux from '../Labs/Immunology/Add/AddMantoux';
+import AddPregnancyTest from '../Labs/Immunology/Add/AddPregnancyTest';
+import AddRheumatology from '../Labs/Immunology/Add/AddRheumatology';
+import AddSemenAnalysis from '../Labs/Immunology/Add/AddSemenAnalysis';
+import AddWidal from '../Labs/Immunology/Add/AddWidal';
 
 const ImmunologyTab = ({ patient }) => {
     const [antenatalScreening, setAntenatalScreening] = useState(false);

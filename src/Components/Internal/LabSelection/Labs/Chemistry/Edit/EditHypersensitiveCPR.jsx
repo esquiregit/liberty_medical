@@ -34,8 +34,8 @@ function EditHypersensitiveCPR({ lab, closeModal, closeExpandable }) {
         id         : lab.id,
         patient_id : lab.patient_id,
         patient    : lab.name,
-        results : '',
-        comments : '',
+        results : lab.results,
+        comments : lab.comments,
         entered_by : staff.staff_id,
     };
 
@@ -65,9 +65,12 @@ function EditHypersensitiveCPR({ lab, closeModal, closeExpandable }) {
         Axios.post(getBaseURL()+'edit_hypersensitive_cpr', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('HypersensitiveCPR'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);

@@ -90,9 +90,12 @@ function EditISE({ lab, closeModal, closeExpandable }) {
         Axios.post(getBaseURL()+'edit_ise', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('ISE'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);
@@ -200,7 +203,7 @@ function EditISE({ lab, closeModal, closeExpandable }) {
                                             <td width="18.67%" colSpan="2">(135- 150)</td>
                                         </tr>
                                         <tr>
-                                            <td>Potassium (Plasma/dcarbon_dioxide)</td>
+                                            <td>Potassium</td>
                                             <td>
                                                 <FormikTextField
                                                     variant="outlined"

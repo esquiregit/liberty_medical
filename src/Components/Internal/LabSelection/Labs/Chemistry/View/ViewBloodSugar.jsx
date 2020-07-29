@@ -45,7 +45,7 @@ function ViewLab({ length, lab, closeExpandable, permissions }) {
                                     <td>{lab.random_blood_sugar}</td>
                                 </tr>
                                 <tr>
-                                    <th>2HPP Blood Suagr: </th>
+                                    <th>2HPP Blood Sugar: </th>
                                     <td>{lab.two_hpp_blood_sugar}</td>
                                     <th>Comments: </th>
                                     <td>{lab.comments}</td>

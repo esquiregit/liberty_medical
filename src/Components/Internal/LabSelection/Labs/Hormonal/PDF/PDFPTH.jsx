@@ -135,7 +135,17 @@ const styles = StyleSheet.create({
     },
     table_column_two: {
         fontSize: 12,
-        flex: '1 1 65%',
+        flex: '1 1 35%',
+        color: '#012',
+    },
+    table_column_three: {
+        fontSize: 12,
+        flex: '1 1 30%',
+        color: '#012',
+    },
+    table_column_wide: {
+        fontSize: 12,
+        flex: '1 1 62%',
         color: '#012',
     },
 });
@@ -184,17 +194,15 @@ function PDFLab({ lab }) {
                         </View>
                         <View style={[styles.table_column, {borderTop: 'transparent', marginBottom: 5}]}>
                             <Text style={[styles.table_column_one, {color: '#333', fontSize: 14}]}>Test</Text>
-                            <Text style={[styles.table_column_two, {color: '#333', fontSize: 14}]}>Results</Text>
+                            <Text style={[styles.table_column_three, {color: '#333', fontSize: 14}]}>Results</Text>
+                            <Text style={[styles.table_column_three, {color: '#333', fontSize: 14}]}>Flag</Text>
                         </View>
                         <View style={[styles.table_column, {paddingTop: 8,paddingBottom: 8}]}>
                             <Text style={styles.table_column_one}>{"S-PTH"}</Text>
-                            <Text style={styles.table_column_two}>{lab.results}</Text>
+                            <Text style={styles.table_column_three}>{lab.results}</Text>
+                            <Text style={styles.table_column_three}>{lab.results_flag}</Text>
                         </View>
-                        <View style={[styles.table_column, {backgroundColor: '#eee',paddingTop: 8,paddingBottom: 8}]}>
-                            <Text style={styles.table_column_one}>{"Flag"}</Text>
-                            <Text style={styles.table_column_two}>{lab.results_flag}</Text>
-                        </View>
-                        <View style={[styles.table_column, {paddingTop: 8,paddingBottom: 8,borderTop: 'transparent'}]}>
+                        <View style={[styles.table_column, {backgroundColor: '#eee',paddingTop: 8,paddingBottom: 8,borderTop: 'transparent'}]}>
                             <Text style={styles.table_column_one}>{"Comments"}</Text>
                             <Text style={styles.table_column_two}>{lab.comments}</Text>
                         </View>

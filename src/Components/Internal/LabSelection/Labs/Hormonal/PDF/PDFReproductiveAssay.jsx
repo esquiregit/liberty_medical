@@ -157,7 +157,7 @@ function PDFLab({ lab }) {
                             <Text style={styles.addressParagraphLast}>Agyirigano Health Link Clinic, East Legon</Text>
                         </View>
                         <View style={styles.two_column}>
-                            <Text style={styles.two_column_left}>Alpha Feto Protein</Text>
+                            <Text style={styles.two_column_left}>Reproductive Assay</Text>
                             <Text style={styles.two_column_right}>{moment().format('dddd Do MMMM YYYY [at] HH:mm:ss')}</Text>
                         </View>
                         <View style={styles.info_two_column}>

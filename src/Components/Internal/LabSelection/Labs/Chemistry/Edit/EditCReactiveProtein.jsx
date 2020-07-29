@@ -73,10 +73,12 @@ function EditCReactiveProtein({ lab, closeModal, closeExpandable }) {
         Axios.post(getBaseURL()+'edit_c_reactive_protein', data, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('CReactiveProtein'); }, 1050);
-                    // setTimeout(() => { history.push('/history/blood-film-component'); }, 2050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);

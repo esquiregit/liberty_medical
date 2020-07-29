@@ -84,6 +84,7 @@ function EditGeneralChemistry({ lab, closeModal, closeExpandable }) {
         creatinine : lab.creatinine,
         creatine_kinase : lab.creatine_kinase,
         calcium : lab.calcium,
+        globulin : lab.globulin,
         phosphorus : lab.phosphorus,
         magnessium : lab.magnessium,
         fbs_glucose : lab.fbs_glucose,
@@ -118,9 +119,12 @@ function EditGeneralChemistry({ lab, closeModal, closeExpandable }) {
         Axios.post(getBaseURL()+'edit_general_chemistry', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('generalChemistry'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);

@@ -93,6 +93,7 @@ function EditProteinElectrophoresis({ lab, closeModal, closeExpandable }) {
         beta_2_globulin_flag : lab.beta_2_globulin_flag,
         gamma_globulin : lab.gamma_globulin,
         gamma_globulin_flag : lab.gamma_globulin_flag,
+        comments : lab.comments,
         entered_by : staff.staff_id,
     };
 
@@ -121,9 +122,12 @@ function EditProteinElectrophoresis({ lab, closeModal, closeExpandable }) {
         Axios.post(getBaseURL()+'edit_protein_electrophoresis', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('proteinElectrophoresis'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);

@@ -195,7 +195,7 @@ function ListBueLFT({ history }) {
                                 columns={columns}
                                 options={options} />
                             :
-                            <EmptyData error={comError} single="Bue + LFT Lab" plural="Bue + LFT Labs" />
+                            <EmptyData error={comError} single="Bue + Creatinine + LFT Lab" plural="Bue + Creatinine + LFT Labs" />
                 }
             </main>
             <Footer />

@@ -21,6 +21,7 @@
 			"last_name" => $lab->plast_name,
 			'name'     => $lab->pmiddle_name ? $lab->pfirst_name.' '.$lab->pmiddle_name.' '.$lab->plast_name : $lab->pfirst_name.' '.$lab->plast_name,
 			'staff'    => $lab->uother_name ? $lab->ufirst_name.' '.$lab->uother_name.' '.$lab->ulast_name : $lab->ufirst_name.' '.$lab->ulast_name,
+			"comments" => $lab->comments,
 			"ferritin" => $lab->ferritin,
 			"ferritin_flag" => $lab->ferritin_flag,
 			"iron" => $lab->iron,

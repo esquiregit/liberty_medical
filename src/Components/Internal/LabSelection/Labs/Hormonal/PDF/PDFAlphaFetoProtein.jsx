@@ -186,11 +186,11 @@ function PDFLab({ lab }) {
                             <Text style={[styles.table_column_one, {color: '#333', fontSize: 14}]}>Test</Text>
                             <Text style={[styles.table_column_two, {color: '#333', fontSize: 14}]}>Results</Text>
                         </View>
-                        <View style={[styles.table_column, {paddingTop: 5,paddingBottom: 5}]}>
+                        <View style={[styles.table_column, {paddingTop: 8,paddingBottom: 8}]}>
                             <Text style={styles.table_column_one}>{"Alpha Feto Protein (AFP)"}</Text>
                             <Text style={styles.table_column_two}>{lab.results}</Text>
                         </View>
-                        <View style={[styles.table_column, {backgroundColor: '#eee',paddingTop: 5,paddingBottom: 5,borderTop: 'transparent'}]}>
+                        <View style={[styles.table_column, {backgroundColor: '#eee',paddingTop: 8,paddingBottom: 8,borderTop: 'transparent'}]}>
                             <Text style={styles.table_column_one}>{"Comments"}</Text>
                             <Text style={styles.table_column_two}>{lab.comments}</Text>
                         </View>

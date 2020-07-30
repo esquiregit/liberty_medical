@@ -9,7 +9,7 @@ import { persistStore, persistReducer } from 'redux-persist';
 const persistConfig = {
     key: 'root',
     storage: storage,
-    blacklist: ['sidebarReducer', 'studentsReducer', 'teachersReducer'],
+    blacklist: ['sidebarReducer'],
     stateReconciler: autoMergeLevel2
 };
 const rReducer = persistReducer(persistConfig, rootReducer);

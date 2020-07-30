@@ -275,7 +275,7 @@ const validationSchema = Yup.object().shape({
         .string()
 });
 
-function EditBloodCS({ lab, closeModal, closeExpandable }) {
+function EditBloodCS({ lab, closeModal, closeExpandable }) {console.log('lab: ',lab)
     const staff               = useSelector(state => state.authReducer.staff);
     const classes             = styles();
     const cultureOptions      = getCultures();
@@ -289,6 +289,7 @@ function EditBloodCS({ lab, closeModal, closeExpandable }) {
         culture: lab.culture,
         bacteria_one: lab.bacteria_one,
         bacteria_two: lab.bacteria_two,
+        bacteria_three: lab.bacteria_three,
         antibiotics_one: lab.antibiotics_one,
         antibiotics_two: lab.antibiotics_two,
         antibiotics_three: lab.antibiotics_three,
@@ -306,7 +307,7 @@ function EditBloodCS({ lab, closeModal, closeExpandable }) {
         antibiotics_fifteen: lab.antibiotics_fifteen,
         antibiotics_sixteen: lab.antibiotics_sixteen,
         antibiotics_seventeen: lab.antibiotics_seventeen,
-        antibiotics_eightteen: lab.antibiotics_eightteen,
+        antibiotics_eighteen: lab.antibiotics_eighteen,
         antibiotics_nineteen: lab.antibiotics_nineteen,
         antibiotics_twenty: lab.antibiotics_twenty,
         antibiotics_twenty_one: lab.antibiotics_twenty_one,
@@ -330,7 +331,7 @@ function EditBloodCS({ lab, closeModal, closeExpandable }) {
         sensitivity_fifteen: lab.sensitivity_fifteen,
         sensitivity_sixteen: lab.sensitivity_sixteen,
         sensitivity_seventeen: lab.sensitivity_seventeen,
-        sensitivity_eightteen: lab.sensitivity_eightteen,
+        sensitivity_eighteen: lab.sensitivity_eighteen,
         sensitivity_nineteen: lab.sensitivity_nineteen,
         sensitivity_twenty: lab.sensitivity_twenty,
         sensitivity_twenty_one: lab.sensitivity_twenty_one,
@@ -366,9 +367,12 @@ function EditBloodCS({ lab, closeModal, closeExpandable }) {
         Axios.post(getBaseURL()+'edit_blood_cs', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('BloodCS'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);

@@ -279,12 +279,15 @@ function EditAspirateFluidCS({ lab, closeModal, closeExpandable }) {
         const abortController = new AbortController();
         const signal          = abortController.signal;
 
-        Axios.post(getBaseURL()+'edit_aspirate_fluid', values, { signal: signal })
+        Axios.post(getBaseURL()+'edit_aspirate', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('AspirateFluidCS'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);

@@ -67,10 +67,10 @@ function ViewLab({ length, lab, closeExpandable, permissions }) {
                                 <tr>
                                     <th>Bacteria: </th>
                                     <td>{lab.bacteria_one}</td>
-                                    <td>Antibiotics</td>
-                                    <td>Sensitivity</td>
-                                    <td>Antibiotics</td>
-                                    <td>Sensitivity</td>
+                                    <th className="text-left">Antibiotics</th>
+                                    <th className="text-left">Sensitivity</th>
+                                    <th className="text-left">Antibiotics</th>
+                                    <th className="text-left">Sensitivity</th>
                                 </tr>
                                 <tr>
                                     <th></th>
@@ -107,10 +107,10 @@ function ViewLab({ length, lab, closeExpandable, permissions }) {
                                 <tr>
                                     <th>Bacteria: </th>
                                     <td>{lab.bacteria_two}</td>
-                                    <td>Antibiotics</td>
-                                    <td>Sensitivity</td>
-                                    <td>Antibiotics</td>
-                                    <td>Sensitivity</td>
+                                    <th className="text-left">Antibiotics</th>
+                                    <th className="text-left">Sensitivity</th>
+                                    <th className="text-left">Antibiotics</th>
+                                    <th className="text-left">Sensitivity</th>
                                 </tr>
                                 <tr>
                                     <th></th>

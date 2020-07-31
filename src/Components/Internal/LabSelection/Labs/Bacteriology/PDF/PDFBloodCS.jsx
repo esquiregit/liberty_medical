@@ -188,7 +188,7 @@ function PDFLab({ lab }) {
                             <Text style={styles.addressParagraphLast}>Agyirigano Health Link Clinic, East Legon</Text>
                         </View>
                         <View style={styles.two_column}>
-                            <Text style={styles.two_column_left}>Aspirate CS</Text>
+                            <Text style={styles.two_column_left}>Blood CS</Text>
                             <Text style={styles.two_column_right}>{moment().format('dddd Do MMMM YYYY [at] HH:mm:ss')}</Text>
                         </View>
                         <View style={styles.info_two_column}>
@@ -214,8 +214,8 @@ function PDFLab({ lab }) {
                             <Text style={styles.info_two_column_right}>{lab.date_added}</Text>
                         </View>
                         <View style={[styles.table_column, {borderTop: '1px solid #444'}]}>
-                            <Text style={styles.two_column_one}>Culture</Text>
-                            <Text style={styles.two_column_two}>{lab.culture}</Text>
+                            <Text style={styles.table_column_six}>Culture</Text>
+                            <Text style={styles.table_column_six_wide}>{lab.culture}</Text>
                         </View>
                         <View style={[styles.table_column, {backgroundColor: '#eee'}]}>
                             <Text style={styles.table_column_six}>Bacteria</Text>

@@ -136,9 +136,12 @@ function EditPleuralFluid({ lab, closeModal, closeExpandable }) {
         Axios.post(getBaseURL()+'edit_pleural_fluid', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('PleuralFluid'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);
@@ -466,8 +469,8 @@ function EditPleuralFluid({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="omments"
-                                                    name="omments" />
+                                                    id="comments"
+                                                    name="comments" />
                                             </td>
                                         </tr>
                                     </tbody>

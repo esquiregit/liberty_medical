@@ -223,7 +223,7 @@ function PDFLab({ lab }) {
                         </View>
                         <View style={[styles.table_column, {backgroundColor: '#eee'}]}>
                             <Text style={styles.two_column_one}>Fungal Element</Text>
-                            <Text style={styles.two_column_two}>{lab.zn_stain}</Text>
+                            <Text style={styles.two_column_two}>{lab.fungal_element}</Text>
                         </View>
                         <View style={styles.table_column}>
                             <Text style={styles.two_column_one}>Culture</Text>

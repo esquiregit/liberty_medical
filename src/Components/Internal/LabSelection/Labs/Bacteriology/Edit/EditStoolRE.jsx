@@ -154,9 +154,12 @@ function EditStoolRE({ lab, closeModal, closeExpandable }) {
         Axios.post(getBaseURL()+'edit_stool_re', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('StoolRE'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);
@@ -644,6 +647,21 @@ function EditStoolRE({ lab, closeModal, closeExpandable }) {
                                                 </FormikTextField>
                                             </td>
                                             <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
+                                            <td className="text-left">Comments</td>
+                                            <td colSpan="2">
+                                                <FormikTextField
+                                                    multiline
+                                                    rows={3}
+                                                    size="small"
+                                                    variant="outlined"
+                                                    margin="normal"
+                                                    fullWidth
+                                                    id="comments"
+                                                    name="comments" />
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>

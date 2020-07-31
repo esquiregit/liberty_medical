@@ -293,6 +293,7 @@ function EditUrethralCS({ lab, closeModal, closeExpandable }) {
         culture : lab.culture,
         bacteria_one : lab.bacteria_one,
         bacteria_two : lab.bacteria_two,
+        bacteria_three : lab.bacteria_three,
         antibiotics_one : lab.antibiotics_one,
         antibiotics_two : lab.antibiotics_two,
         antibiotics_three : lab.antibiotics_three,
@@ -370,9 +371,12 @@ function EditUrethralCS({ lab, closeModal, closeExpandable }) {
         Axios.post(getBaseURL()+'edit_urethral_cs', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('urethralcs'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);

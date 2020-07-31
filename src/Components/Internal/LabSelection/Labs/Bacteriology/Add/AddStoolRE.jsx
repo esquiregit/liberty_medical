@@ -644,6 +644,21 @@ function AddStoolRE({ patient, closeModal }) {
                                             </td>
                                             <td></td>
                                         </tr>
+                                        <tr>
+                                            <th></th>
+                                            <td className="text-left">Comments</td>
+                                            <td colSpan="2">
+                                                <FormikTextField
+                                                    multiline
+                                                    rows={3}
+                                                    size="small"
+                                                    variant="outlined"
+                                                    margin="normal"
+                                                    fullWidth
+                                                    id="comments"
+                                                    name="comments" />
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </DialogContent>

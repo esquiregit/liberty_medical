@@ -217,8 +217,8 @@ function EditRole({ role, closeEditModal, closeExpandable }) {
     const resetForm       = () => {
         setValues([
             {
-                permissions : [],
-                role        : ''
+                role        : role.name, 
+                permissions : get_permission_for_role(role.permissions.split(', ')),
             }
         ]);
         setFormValid(false);

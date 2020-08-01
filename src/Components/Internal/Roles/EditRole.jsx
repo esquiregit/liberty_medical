@@ -36,7 +36,7 @@ function EditRole({ role, closeEditModal, closeExpandable }) {
             permissions : get_permission_for_role(role.permissions.split(', ')),
         }
     ]);
-    console.log(values[0].permissions);
+    
     const [open, setOpen]                   = useState(true);
     const [error, setError]                 = useState(false);
     const [message, setMessage]             = useState('');
@@ -85,7 +85,7 @@ function EditRole({ role, closeEditModal, closeExpandable }) {
             } else if(name === 'role') {
                 newArr[0]['role'] = value;
             }
-            console.log('newArr: ',newArr)
+            
             setValues(newArr);
             setFormValid(validateValues());
         }
@@ -316,7 +316,7 @@ function EditRole({ role, closeEditModal, closeExpandable }) {
                                     disableCloseOnSelect
                                     getOptionLabel={(option) => option.label}
                                     getOptionDisabled={(option) => option.disabled}
-                                    getOptionSelected={(option) => role.permissions.includes(option.label)}
+                                    getOptionSelected={(option, value) => option.label === value.label}
                                     renderOption={(option, { selected }) => option.disabled ?
                                     option.label
                                     : (

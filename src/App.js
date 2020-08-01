@@ -120,7 +120,7 @@ const ListSerumHCG = React.lazy(() => import('./Components/Internal/LabSelection
 function App() {
     return (
         <React.Suspense fallback={<div className="loading-div"><CircularProgress color="primary" /></div>}>
-            <BrowserRouter basename={'/'}>
+            <BrowserRouter basename={'/react/liberty/'}>
                 <Switch>
                     <Route path='/'                           component={ Login }              exact />
                     <Route path='/roles/'                     component={ ManageRoles }        exact />

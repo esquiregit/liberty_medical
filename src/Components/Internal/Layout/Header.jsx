@@ -96,7 +96,12 @@ const Header = (props) => {
                 dispatch(logOut());
                 setBackdrop(false);
                 history.push('/');
-            });
+            })
+            .catch(error => {
+                dispatch(logOut());
+                setBackdrop(false);
+                history.push('/');
+            });;
     }
 
     useEffect(()  => {

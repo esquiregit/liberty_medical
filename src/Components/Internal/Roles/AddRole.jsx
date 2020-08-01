@@ -71,16 +71,11 @@ function AddRole({ history, closeAddModal, closeExpandable }) {
         if(event) {
             const name  = event.target.name;
             const value = event.target.value;
-            const file  = event.target.files && event.target.files[0];
             
             let newArr  = [...values];
             if(newValue) {
                 newArr[0]['permissions'] = newValue;
                 setSelectAllPermissions(false);
-            } else if(name === 'subject') {
-                newArr[0]['subject'] = value;
-            } else if(name === 'attachment') {
-                newArr[0]['attachment'] = file;
             } else if(name === 'role') {
                 newArr[0]['role'] = value;
             }

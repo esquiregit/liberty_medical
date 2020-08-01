@@ -23,101 +23,101 @@ const validationSchema = Yup.object().shape({
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    wbc_info: Yup
+    wbc_flag: Yup
         .string()
         .required('Required'),
-    lym_info: Yup
+    lym_flag: Yup
         .string()
         .required('Required'),
     lym: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    mid_info: Yup
+    mid_flag: Yup
         .string()
         .required('Required'),
     mid: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    gran_info: Yup
+    gran_flag: Yup
         .string()
         .required('Required'),
     gran: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    lym_one_info: Yup
+    lym_one_flag: Yup
         .string()
         .required('Required'),
     lym_one: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    mid_two_info: Yup
+    mid_two_flag: Yup
         .string()
         .required('Required'),
     mid_two: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    gran_three_info: Yup
+    gran_three_flag: Yup
         .string()
         .required('Required'),
     gran_three: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    rbc_info: Yup
+    rbc_flag: Yup
         .string()
         .required('Required'),
     rbc: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    hgb_info: Yup
+    hgb_flag: Yup
         .string()
         .required('Required'),
     hgb: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    hct_info: Yup
+    hct_flag: Yup
         .string()
         .required('Required'),
     hct: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    mcv_info: Yup
+    mcv_flag: Yup
         .string()
         .required('Required'),
     mcv: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    mch_info: Yup
+    mch_flag: Yup
         .string()
         .required('Required'),
     mch: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    mchc_info: Yup
+    mchc_flag: Yup
         .string()
         .required('Required'),
     mchc: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    rdw_cv_info: Yup
+    rdw_cv_flag: Yup
         .string()
         .required('Required'),
     rdw_cv: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    rdw_sd_info: Yup
+    rdw_sd_flag: Yup
         .string()
         .required('Required'),
     rdw_sd: Yup
@@ -128,28 +128,28 @@ const validationSchema = Yup.object().shape({
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    plt_info: Yup
+    plt_flag: Yup
         .string()
         .required('Required'),
     mpv: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    mpv_info: Yup
+    mpv_flag: Yup
         .string()
         .required('Required'),
     pdw: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    pdw_info: Yup
+    pdw_flag: Yup
         .string()
         .required('Required'),
     pct: Yup
         .number()
         .min(0, 'Results Cannot Be Less Than 0')
         .required('Required'),
-    pct_info: Yup
+    pct_flag: Yup
         .string()
         .required('Required'),
     sickling_test: Yup
@@ -177,43 +177,43 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
         patient_id : lab.patient_id,
         patient    : lab.name,
         wbc : lab.wbc,
-        wbc_info : lab.wbc_info,
+        wbc_flag : lab.wbc_flag,
         lym : lab.lym,
-        lym_info : lab.lym_info,
+        lym_flag : lab.lym_flag,
         mid : lab.mid,
-        mid_info : lab.mid_info,
+        mid_flag : lab.mid_flag,
         gran : lab.gran,
-        gran_info : lab.gran_info,
+        gran_flag : lab.gran_flag,
         lym_one : lab.lym_one,
-        lym_one_info : lab.lym_one_info,
+        lym_one_flag : lab.lym_one_flag,
         mid_two : lab.mid_two,
-        mid_two_info : lab.mid_two_info,
+        mid_two_flag : lab.mid_two_flag,
         gran_three : lab.gran_three,
-        gran_three_info : lab.gran_three_info,
+        gran_three_flag : lab.gran_three_flag,
         rbc : lab.rbc,
-        rbc_info : lab.rbc_info,
+        rbc_flag : lab.rbc_flag,
         hgb : lab.hgb,
-        hgb_info : lab.hgb_info,
+        hgb_flag : lab.hgb_flag,
         hct : lab.hct,
-        hct_info : lab.hct_info,
+        hct_flag : lab.hct_flag,
         mcv : lab.mcv,
-        mcv_info : lab.mcv_info,
+        mcv_flag : lab.mcv_flag,
         mch : lab.mch,
-        mch_info : lab.mch_info,
+        mch_flag : lab.mch_flag,
         mchc : lab.mchc,
-        mchc_info : lab.mchc_info,
+        mchc_flag : lab.mchc_flag,
         rdw_cv : lab.rdw_cv,
-        rdw_cv_info : lab.rdw_cv_info,
+        rdw_cv_flag : lab.rdw_cv_flag,
         rdw_sd : lab.rdw_sd,
-        rdw_sd_info : lab.rdw_sd_info,
+        rdw_sd_flag : lab.rdw_sd_flag,
         plt : lab.plt,
-        plt_info : lab.plt_info,
+        plt_flag : lab.plt_flag,
         mpv : lab.mpv,
-        mpv_info : lab.mpv_info,
+        mpv_flag : lab.mpv_flag,
         pdw : lab.pdw,
-        pdw_info : lab.pdw_info,
+        pdw_flag : lab.pdw_flag,
         pct : lab.pct,
-        pct_info : lab.pct_info,
+        pct_flag : lab.pct_flag,
         sickling_test : lab.sickling_test,
         bf_mps : lab.bf_mps,
         esr : lab.esr,
@@ -246,9 +246,12 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
         Axios.post(getBaseURL()+'edit_fbc_children', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('fbcchildren'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);
@@ -345,8 +348,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="wbc_info"
-                                                    name="wbc_info">
+                                                    id="wbc_flag"
+                                                    name="wbc_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -377,8 +380,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="lym_info"
-                                                    name="lym_info">
+                                                    id="lym_flag"
+                                                    name="lym_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -409,8 +412,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="mid_info"
-                                                    name="mid_info">
+                                                    id="mid_flag"
+                                                    name="mid_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -441,8 +444,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="gran_info"
-                                                    name="gran_info">
+                                                    id="gran_flag"
+                                                    name="gran_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -473,8 +476,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="lym_one_info"
-                                                    name="lym_one_info">
+                                                    id="lym_one_flag"
+                                                    name="lym_one_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -505,8 +508,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="mid_two_info"
-                                                    name="mid_two_info">
+                                                    id="mid_two_flag"
+                                                    name="mid_two_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -537,8 +540,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="gran_three_info"
-                                                    name="gran_three_info">
+                                                    id="gran_three_flag"
+                                                    name="gran_three_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -569,8 +572,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="rbc_info"
-                                                    name="rbc_info">
+                                                    id="rbc_flag"
+                                                    name="rbc_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -601,8 +604,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="hgb_info"
-                                                    name="hgb_info">
+                                                    id="hgb_flag"
+                                                    name="hgb_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -633,8 +636,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="hct_info"
-                                                    name="hct_info">
+                                                    id="hct_flag"
+                                                    name="hct_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -665,8 +668,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="mcv_info"
-                                                    name="mcv_info">
+                                                    id="mcv_flag"
+                                                    name="mcv_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -697,8 +700,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="mch_info"
-                                                    name="mch_info">
+                                                    id="mch_flag"
+                                                    name="mch_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -729,8 +732,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="mchc_info"
-                                                    name="mchc_info">
+                                                    id="mchc_flag"
+                                                    name="mchc_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -761,8 +764,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="rdw_cv_info"
-                                                    name="rdw_cv_info">
+                                                    id="rdw_cv_flag"
+                                                    name="rdw_cv_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -793,8 +796,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="rdw_sd_info"
-                                                    name="rdw_sd_info">
+                                                    id="rdw_sd_flag"
+                                                    name="rdw_sd_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -825,8 +828,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="plt_info"
-                                                    name="plt_info">
+                                                    id="plt_flag"
+                                                    name="plt_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -857,8 +860,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="mpv_info"
-                                                    name="mpv_info">
+                                                    id="mpv_flag"
+                                                    name="mpv_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -889,8 +892,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="pdw_info"
-                                                    name="pdw_info">
+                                                    id="pdw_flag"
+                                                    name="pdw_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}
@@ -921,8 +924,8 @@ function EditFBCChildren({ lab, closeModal, closeExpandable }) {
                                                     variant="outlined"
                                                     margin="normal"
                                                     fullWidth
-                                                    id="pct_info"
-                                                    name="pct_info">
+                                                    id="pct_flag"
+                                                    name="pct_flag">
                                                     {flagOptions.map((flag, index) => (
                                                         <MenuItem key={index} value={flag.value}>
                                                             {flag.label}

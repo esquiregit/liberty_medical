@@ -100,9 +100,12 @@ function EditClottingProfile({ lab, closeModal, closeExpandable }) {
         Axios.post(getBaseURL()+'edit_clotting_profile', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
-                    setSuccess(true);
                     setMessage(response.data[0].message);
-                    setTimeout(() => { closeModal('ClottingProfile'); }, 1050);
+                    setSuccess(true);
+                    setTimeout(() => {
+                        setOpen(false);
+                        closeExpandable(response.data[0].message);
+                    }, 1000);
                 } else {
                     setError(true);
                     setMessage(response.data[0].message);

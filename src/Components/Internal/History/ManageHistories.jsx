@@ -23,7 +23,7 @@ function ManageHistories({ history }) {
     const classes = styles();
     const visible = useSelector(state => state.sidebarReducer.visible);
     
-    const [tabIndex, setTabIndex] = useState(2);
+    const [tabIndex, setTabIndex] = useState(0);
 
     const handleChange = (event, newValue) => {
         setTabIndex(newValue);

@@ -17,8 +17,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
 
 const initialValues = {
-    username : 'esquire',
-    password : 'qwertyui'
+    username : '',
+    password : ''
 }
 const validationSchema = Yup.object().shape({
     username: Yup

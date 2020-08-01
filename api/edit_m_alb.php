@@ -18,15 +18,15 @@
 		if($result) {
 			array_push($response, array(
 				"status"  => "Success",
-				"message" => "M-ALB Lab Added Successfully...."
+				"message" => "M-ALB Lab Updated Successfully...."
 			));
-			Audit_Trail::create_log($added_by, 'Added M-ALB Lab For '.$patient, $conn);
+			Audit_Trail::create_log($added_by, 'Updated M-ALB Lab For '.$patient, $conn);
 		} else {
 			array_push($response, array(
 				"status"  => "Failed",
-				"message" => "M-ALB Lab Could Not Be Added. Please Try Again...."
+				"message" => "M-ALB Lab Could Not Be Updated. Please Try Again...."
 			));
-			Audit_Trail::create_log($added_by, 'Tried To Add M-ALB Lab For '.$patient, $conn);
+			Audit_Trail::create_log($added_by, 'Tried To Update M-ALB Lab For '.$patient, $conn);
 		}
 	}
 

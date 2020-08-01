@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 15, 2020 at 01:08 AM
+-- Generation Time: Jul 31, 2020 at 10:41 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -47,7 +47,9 @@ INSERT INTO `alpha_feto_protein` (`id`, `invoice_id`, `patient_id`, `results`, `
 (5, 'INV-ALP-FP-811', 'LMLS-PAT-KB-0003', 0.00, '', 'LMLS-0001', '2020-03-05 12:40:50'),
 (6, 'INV-ALP-FP-552', 'LMLS-PAT-KB-0001', 0.00, '', 'LMLS-0001', '2020-03-05 12:41:20'),
 (7, 'INV-ALP-FP-563', 'LMLS-PAT-KB-0003', 1.00, 'Dsxd', 'LMLS-0001', '2020-03-05 15:40:51'),
-(8, 'INV-ALP-FP-844', 'LMLS-PAT-KB-0003', 10.00, 'Jhgfd', 'LMLS-0001', '2020-03-05 18:21:28');
+(8, 'INV-ALP-FP-844', 'LMLS-PAT-KB-0003', 10.00, 'Jhgfd', 'LMLS-0001', '2020-03-05 18:21:28'),
+(12, 'INV-ALP-FP-165', 'LMLS-PAT-AMA-0001', 11.00, 'Some Random Text', 'LMLS-0000', '2020-07-23 13:04:38'),
+(13, 'INV-ALP-FP-446', 'LMLS-PAT-AMA-0001', 1.00, 'Edit Alpha Feto Protein', 'LMLS-0000', '2020-07-23 13:05:41');
 
 -- --------------------------------------------------------
 
@@ -80,7 +82,10 @@ INSERT INTO `antenatal_screening` (`id`, `invoice_id`, `patient_id`, `blood_grou
 (5, 'INV-ANT-SCR-031', 'LMLS-PAT-KB-0003', '', '', '', '', '', '', '', 'Kljhgfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', 'LMLS-0001', '2020-03-06 10:11:10'),
 (6, 'INV-ANT-SCR-202', 'LMLS-PAT-KB-0003', '', 'Positive', '', '', '', '', 'Non-Reactive', 'Hjgh', 'LMLS-0001', '2020-03-06 10:13:01'),
 (7, 'INV-ANT-SCR-933', 'LMLS-PAT-KB-0003', 'Positive', '', '', '', '', '', '', 'Jkhjghfg', 'LMLS-0001', '2020-03-06 10:22:20'),
-(8, 'INV-ANT-SCR-824', 'LMLS-PAT-KB-0005', 'Positive', 'Negative', 'Positive', 'Positive', 'Negative', 'Positive', 'Reactive', 'Hjvjghcf', 'LMLS-KB-0001', '2020-05-27 12:50:01');
+(8, 'INV-ANT-SCR-824', 'LMLS-PAT-KB-0005', 'Positive', 'Negative', 'Positive', 'Positive', 'Negative', 'Positive', 'Reactive', 'Hjvjghcf', 'LMLS-KB-0001', '2020-05-27 12:50:01'),
+(9, 'INV-ANT-SCR-285', 'LMLS-PAT-AMA-0002', 'O', 'Positive', 'Negative', 'Positive', 'Positive', 'Positive', 'Non-reactive', 'Edit Antenatal Screening', 'LMLS-AMA-0002', '2020-07-26 17:00:19'),
+(10, 'INV-ANT-SCR-626', 'LMLS-PAT-AMA-0002', 'AB', 'Positive', 'Negative', 'Positive', NULL, 'Positive', 'Non-Reactive', 'Antenatal Screening', 'LMLS-AMA-0002', '2020-07-26 17:00:29'),
+(11, 'INV-ANT-SCR-677', 'LMLS-PAT-AMA-0002', 'AB', 'Positive', 'Negative', 'Positive', 'Negative', 'Positive', 'Non-Reactive', 'Antenatal Screening', 'LMLS-AMA-0002', '2020-07-26 17:01:51');
 
 -- --------------------------------------------------------
 
@@ -140,7 +145,8 @@ CREATE TABLE `ascitic_fluid_cs` (
 --
 
 INSERT INTO `ascitic_fluid_cs` (`id`, `invoice_id`, `patient_id`, `gram_stain`, `zn_stain`, `fungal_element`, `culture`, `bacteria_one`, `bacteria_two`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `comments`, `added_by`, `date_added`) VALUES
-(1, 'INV-ASC-FLUID-970', 'LMLS-PAT-KB-0002', 'No Organism Seen', 'AFB Present', 'No Fungal Element Seen', 'No Bacterial Growth', 'Acinetobacter SPP', 'Alpha Haem. Strept', 'Ampicillin', 'Amikacin', 'Amoxicillin', 'Amoxiclav', 'Amikacin', 'Amoxiclav', 'Ampicillin', 'Amoxicillin', 'Ampicillin', 'Amikacin', 'Amoxiclav', 'Cefepim', 'Amoxicillin', 'Amikacin', 'Aztrenem', 'Aztrenem', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'M,mnghfbgc', 'LMLS-0001', '2020-03-06 15:49:26');
+(1, 'INV-ASC-FLUID-970', 'LMLS-PAT-KB-0002', 'No Organism Seen', 'AFB Present', 'No Fungal Element Seen', 'No Bacterial Growth', 'Acinetobacter SPP', 'Alpha Haem. Strept', 'Ampicillin', 'Amikacin', 'Amoxicillin', 'Amoxiclav', 'Amikacin', 'Amoxiclav', 'Ampicillin', 'Amoxicillin', 'Ampicillin', 'Amikacin', 'Amoxiclav', 'Cefepim', 'Amoxicillin', 'Amikacin', 'Aztrenem', 'Aztrenem', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'M,mnghfbgc', 'LMLS-0001', '2020-03-06 15:49:26'),
+(2, 'INV-ASC-FLU-631', 'LMLS-PAT-AMA-0002', 'GNID Present', 'AFB Present', 'Fungal Element Present', 'Bacterial Colonisation', 'Citrobacter Diversus', 'Citrobacter Freundii', 'Cefpirom', 'Cefpirom', 'Ceftriaxone', 'Cefoxitin', 'Cephalothin', 'Erythromycin', 'Cefixim', 'Ciprofloxacin', 'Ciprofloxacin', 'Gentamicin', 'Cefotaxime', 'Ticarcillin', 'Cefepim', 'Amikacin', 'Cefpirom', 'Cefotaxime', 'R', 'R', 'S', 'S', 'S', 'R', 'R', 'S', 'R', 'R', 'S', 'R', 'R', 'S', 'S', 'S', '', 'LMLS-AMA-0002', '2020-07-25 20:28:26');
 
 -- --------------------------------------------------------
 
@@ -200,7 +206,8 @@ CREATE TABLE `aspirate_cs` (
 --
 
 INSERT INTO `aspirate_cs` (`id`, `invoice_id`, `patient_id`, `gram_stain`, `zn_stain`, `fungal_element`, `culture`, `bacteria_one`, `bacteria_two`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-ASP-CS-870', 'LMLS-PAT-KB-0002', 'No Organism Seen', 'No AFB Present', 'Fungal Element Present', 'No Bacterial Growth', 'Alcaligenes', '', '', '', '', '', '', '', '', '', 'Aztrenem', 'Ampicillin', 'Ampicillin', 'Ampicillin', '', 'Amoxiclav', 'Amikacin', 'Amikacin', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Lkljkhb', 'LMLS-0001', '2020-03-06 18:55:44');
+(3, 'INV-ASP-CS-870', 'LMLS-PAT-KB-0002', 'No Organism Seen', 'No AFB Present', 'Fungal Element Present', 'No Bacterial Growth', 'Alcaligenes', '', '', '', '', '', '', '', '', '', 'Aztrenem', 'Ampicillin', 'Ampicillin', 'Ampicillin', '', 'Amoxiclav', 'Amikacin', 'Amikacin', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Lkljkhb', 'LMLS-0001', '2020-03-06 18:55:44'),
+(4, 'INV-ASP-CS-031', 'LMLS-PAT-AMA-0002', 'GNID Present', 'AFB Present', 'Fungal Element Present', 'Heavily Mixed Growth, Please Repeat', 'Citrobacter Freundii', 'Candida SPP', 'Cloxacillin', 'Cloxacillin', 'Erythromycin', 'Erythromycin', 'Fosfomycin', 'Fosfomycin', 'Ceftazidime', 'Cefpirom', 'Chloramphenicol', 'Chloramphenicol', 'Ciprofloxacin', 'Ciprofloxacin', 'Cotrimoxazol', 'Cotrimoxazol', 'Flucloxacillin', 'Flucloxacillin', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'Aspirate Fluid C/s', 'LMLS-AMA-0002', '2020-07-25 20:34:48');
 
 -- --------------------------------------------------------
 
@@ -2332,7 +2339,1099 @@ INSERT INTO `audit_trail` (`id`, `staff_id`, `activity`, `date`) VALUES
 (3548, 'LMLS-0000', 'Unblocked Robert Nii Laryea Adjei Laryea', '2020-07-14 19:17:32'),
 (3549, 'LMLS-0000', 'Updated Charge \"17 Oh Progesterone\" From GHS 150.00 To GHS 150.00', '2020-07-14 21:16:04'),
 (3550, 'LMLS-0000', 'Updated Charge \"17 Oh Progesterone\" From GHS 150.00 To GHS 100.00', '2020-07-14 21:21:48'),
-(3551, 'LMLS-0000', 'Updated Charge \"17 Oh Progesterone\" From GHS 100.00 To GHS 120.00', '2020-07-14 21:57:42');
+(3551, 'LMLS-0000', 'Updated Charge \"17 Oh Progesterone\" From GHS 100.00 To GHS 120.00', '2020-07-14 21:57:42'),
+(3552, 'LMLS-0000', 'Tried To Add 17 Oh Progesterone To Charges But It Already Existed', '2020-07-15 01:32:48'),
+(3553, 'LMLS-0000', 'Tried To Add 17 Oh Progesterone To Charges But It Already Existed', '2020-07-15 01:34:03'),
+(3554, 'LMLS-0000', 'Tried To Add Trial Charges To Charges But It Already Existed', '2020-07-15 01:34:11'),
+(3555, 'LMLS-0000', 'Added Trial Charges To Charges', '2020-07-15 01:35:13'),
+(3556, 'LMLS-0001', 'Viewed Report From 01 January 2020 To 01 August 2020', '2020-07-15 01:46:39'),
+(3557, 'LMLS-0001', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 05:46:32'),
+(3558, 'LMLS-KB-0001', 'Logged In', '2020-07-15 05:48:53'),
+(3559, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 05:49:05'),
+(3560, 'LMLS-KB-0001', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 05:49:05'),
+(3561, 'LMLS-KB-0001', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 05:52:42'),
+(3562, 'LMLS-KB-0001', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 05:55:37'),
+(3563, 'LMLS-KB-0001', 'Viewed Report From 03 January 2020 To 16 July 2020', '2020-07-15 05:56:36'),
+(3564, 'LMLS-KB-0001', 'Viewed Report From 01 February 2020 To 16 July 2020', '2020-07-15 05:57:57'),
+(3565, 'LMLS-KB-0001', 'Viewed Report From 31 January 2020 To 16 July 2020', '2020-07-15 05:59:55'),
+(3566, 'LMLS-KB-0001', 'Viewed Report From 03 January 2020 To 16 July 2020', '2020-07-15 06:01:00'),
+(3567, 'LMLS-KB-0001', 'Viewed Report From 31 January 2020 To 16 July 2020', '2020-07-15 06:02:15'),
+(3568, 'LMLS-KB-0001', 'Viewed Report From 03 January 2020 To 16 July 2020', '2020-07-15 06:04:26'),
+(3569, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 06:06:36'),
+(3570, 'LMLS-KB-0001', 'Viewed Report From 31 August 2019 To 16 July 2020', '2020-07-15 06:06:36'),
+(3571, 'LMLS-KB-0001', 'Viewed Report From 03 January 2020 To 16 July 2020', '2020-07-15 06:09:24'),
+(3572, 'LMLS-KB-0001', 'Viewed Report From 31 January 2020 To 16 July 2020', '2020-07-15 06:12:05'),
+(3573, 'LMLS-KB-0001', 'Viewed Report From 31 January 2020 To 16 July 2020', '2020-07-15 06:13:18'),
+(3574, 'LMLS-KB-0001', 'Viewed Report From 29 November 2019 To 16 July 2020', '2020-07-15 06:14:30'),
+(3575, 'LMLS-KB-0001', 'Viewed Report From 03 January 2020 To 16 July 2020', '2020-07-15 06:20:29'),
+(3576, 'LMLS-KB-0001', 'Viewed Report From 03 January 2020 To 16 July 2020', '2020-07-15 06:20:32'),
+(3577, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 06:23:45'),
+(3578, 'LMLS-0000', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:23:57'),
+(3579, 'LMLS-0000', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:25:21'),
+(3580, 'LMLS-0000', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:26:21'),
+(3581, 'LMLS-0000', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:27:06'),
+(3582, 'LMLS-0000', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:27:10'),
+(3583, 'LMLS-0000', 'Viewed Report From 01 December 2019 To 16 July 2020', '2020-07-15 07:28:03'),
+(3584, 'LMLS-0000', 'Viewed Report From 01 December 2019 To 16 July 2020', '2020-07-15 07:38:50'),
+(3585, 'LMLS-0000', 'Viewed Report From 01 December 2019 To 16 July 2020', '2020-07-15 07:39:29'),
+(3586, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 07:40:19'),
+(3587, 'LMLS-0000', 'Viewed Report From 01 December 2019 To 16 July 2020', '2020-07-15 07:40:19'),
+(3588, 'LMLS-0000', 'Viewed Report From 01 December 2019 To 16 July 2020', '2020-07-15 07:42:13'),
+(3589, 'LMLS-0000', 'Viewed Report From 01 December 2019 To 16 July 2020', '2020-07-15 07:42:59'),
+(3590, 'LMLS-0000', 'Viewed Report From 01 December 2019 To 16 July 2020', '2020-07-15 07:44:09'),
+(3591, 'LMLS-0000', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:48:51'),
+(3592, 'LMLS-0000', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:49:31'),
+(3593, 'LMLS-0000', 'Viewed Report From 05 December 2019 To 16 July 2020', '2020-07-15 07:50:55'),
+(3594, 'LMLS-0000', 'Viewed Report From 01 July 2020 To 16 July 2020', '2020-07-15 07:51:37'),
+(3595, 'LMLS-0000', 'Viewed Report From 01 July 2020 To 16 July 2020', '2020-07-15 07:51:39'),
+(3596, 'LMLS-0000', 'Viewed Report From 01 July 2020 To 16 July 2020', '2020-07-15 07:51:41'),
+(3597, 'LMLS-0000', 'Viewed Report From 01 July 2020 To 16 July 2020', '2020-07-15 07:51:43'),
+(3598, 'LMLS-0000', 'Viewed Report From 01 July 2020 To 16 July 2020', '2020-07-15 07:51:45'),
+(3599, 'LMLS-0000', 'Viewed Report From 01 July 2020 To 16 July 2020', '2020-07-15 07:53:29'),
+(3600, 'LMLS-0000', 'Viewed Report From 01 July 2020 To 16 July 2020', '2020-07-15 07:53:33'),
+(3601, 'LMLS-0000', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:53:44'),
+(3602, 'LMLS-0000', 'Viewed Agyakwa Ntow Mireku\'s Report From 31 January 2020 To 16 July 2020', '2020-07-15 07:54:10'),
+(3603, 'LMLS-0000', 'Viewed Agyakwa Ntow Mireku\'s Report From 06 December 2019 To 16 July 2020', '2020-07-15 07:54:20'),
+(3604, 'LMLS-0000', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:54:34'),
+(3605, 'LMLS-0000', 'Viewed Michelle Ntow Adjei Laryea\'s Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:54:45'),
+(3606, 'LMLS-0000', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:56:35'),
+(3607, 'LMLS-0000', 'Viewed Michelle Ntow Adjei Laryea\'s Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:56:41'),
+(3608, 'LMLS-0000', 'Viewed Michelle Koduah\'s Report From 01 January 2020 To 16 July 2020', '2020-07-15 07:56:48'),
+(3609, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 07:57:28'),
+(3610, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 07:57:28'),
+(3611, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 08:03:46'),
+(3612, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 08:03:49'),
+(3613, 'LMLS-0000', 'Viewed Agyakwa Ntow Mireku\'s Report From 15 July 2020 To 16 July 2020', '2020-07-15 08:03:57'),
+(3614, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:17:55'),
+(3615, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:17:55'),
+(3616, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:18:00'),
+(3617, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:18:01'),
+(3618, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:18:02'),
+(3619, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:18:04'),
+(3620, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:18:38'),
+(3621, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:18:41'),
+(3622, 'LMLS-0000', 'Viewed Anot Her Patient\'s Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:18:46'),
+(3623, 'LMLS-0000', 'Viewed Bethany Serwaa Adjei\'s Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:18:51'),
+(3624, 'LMLS-0000', 'Viewed Report From 08 July 2020 To 16 July 2020', '2020-07-15 16:24:10'),
+(3625, 'LMLS-0000', 'Viewed Report From 01 May 2020 To 02 May 2020', '2020-07-15 16:25:50'),
+(3626, 'LMLS-0000', 'Viewed Report From 01 January 2020 To 02 May 2020', '2020-07-15 16:25:59'),
+(3627, 'LMLS-0000', 'Viewed Report From 01 January 2020 To 02 May 2020', '2020-07-15 16:30:26'),
+(3628, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:32:43'),
+(3629, 'LMLS-0000', 'Viewed Report From 29 April 2020 To 16 July 2020', '2020-07-15 16:33:29'),
+(3630, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:35:22'),
+(3631, 'LMLS-0000', 'Viewed Report From 28 March 2020 To 16 July 2020', '2020-07-15 16:35:22'),
+(3632, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:35:31'),
+(3633, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:35:35'),
+(3634, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:35:38'),
+(3635, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:36:25'),
+(3636, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:36:41'),
+(3637, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:37:38'),
+(3638, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:42:12'),
+(3639, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:55:44'),
+(3640, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:55:44'),
+(3641, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:56:08'),
+(3642, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 16:59:45'),
+(3643, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:03:50'),
+(3644, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:04:48'),
+(3645, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:05:00'),
+(3646, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:06:33'),
+(3647, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:08:42'),
+(3648, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:10:05'),
+(3649, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:10:42'),
+(3650, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:11:33'),
+(3651, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:13:13'),
+(3652, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:13:13'),
+(3653, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:14:25'),
+(3654, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:22:52'),
+(3655, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:24:14'),
+(3656, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:24:29'),
+(3657, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:30:31'),
+(3658, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:30:31'),
+(3659, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:30:59'),
+(3660, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:31:55'),
+(3661, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:33:36'),
+(3662, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:35:16'),
+(3663, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:35:45'),
+(3664, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:37:01'),
+(3665, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:37:31'),
+(3666, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:38:08'),
+(3667, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:41:23'),
+(3668, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:44:48'),
+(3669, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:45:35'),
+(3670, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:46:47'),
+(3671, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:47:53'),
+(3672, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:47:53'),
+(3673, 'LMLS-0001', 'Viewed Report From 01 January 2020 To 16 July 2020', '2020-07-15 17:53:59'),
+(3674, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:55:22'),
+(3675, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 17:55:22'),
+(3676, '', 'Logged Out', '2020-07-15 17:55:33'),
+(3677, 'LMLS-KB-0001', 'Logged Out', '2020-07-15 17:55:33'),
+(3678, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 18:03:15'),
+(3679, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 18:03:57'),
+(3680, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 18:11:21'),
+(3681, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 18:11:21'),
+(3682, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 18:40:07'),
+(3683, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 18:40:07'),
+(3684, 'LMLS-0000', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 18:43:26'),
+(3685, 'LMLS-0000', 'Viewed Agyakwa Ntow Mireku\'s Report From 15 July 2020 To 16 July 2020', '2020-07-15 18:44:33'),
+(3686, 'LMLS-0000', 'Viewed Maria Nortey\'s Report From 15 July 2020 To 16 July 2020', '2020-07-15 18:44:51'),
+(3687, 'LMLS-KB-0001', 'Logged In', '2020-07-15 18:58:31'),
+(3688, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 18:58:34'),
+(3689, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:00:32'),
+(3690, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:03:43'),
+(3691, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:04:54'),
+(3692, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:05:45'),
+(3693, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:05:52'),
+(3694, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:05:55'),
+(3695, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:05:56'),
+(3696, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:07:24'),
+(3697, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:08:28'),
+(3698, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:11:25'),
+(3699, '', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:13:53'),
+(3700, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:21:42'),
+(3701, 'LMLS-KB-0001', 'Viewed Agyakwa Ntow Mireku\'s Report From 15 July 2020 To 16 July 2020', '2020-07-15 19:21:57'),
+(3702, 'LMLS-0001', 'Viewed Maria Nortey\'s Report From 01 January 2020 To 16 July 2020', '2020-07-15 19:22:09'),
+(3703, 'LMLS-0001', 'Logged Out', '2020-07-15 19:22:15'),
+(3704, '', 'Logged Out', '2020-07-15 19:22:24'),
+(3705, 'LMLS-KB-0001', 'Logged Out', '2020-07-15 19:22:24'),
+(3706, 'LMLS-0000', 'Logged In', '2020-07-15 21:32:17'),
+(3707, 'LMLS-KB-0001', 'Logged In', '2020-07-15 22:02:15'),
+(3708, 'LMLS-KB-0001', 'Logged In', '2020-07-15 22:21:23'),
+(3709, 'LMLS-KB-0001', 'Logged In', '2020-07-15 22:21:33'),
+(3710, 'LMLS-KB-0001', 'Logged Out', '2020-07-15 22:21:57'),
+(3711, '', 'Logged Out', '2020-07-15 22:22:05'),
+(3712, 'LMLS-KB-0001', 'Logged Out', '2020-07-15 22:22:05'),
+(3713, 'LMLS-KB-0001', 'Viewed Report From 15 July 2020 To 16 July 2020', '2020-07-15 22:23:59'),
+(3714, '1', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 12:18:30'),
+(3715, '1', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 12:19:26'),
+(3716, '1', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 12:20:10'),
+(3717, '1', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 12:20:44'),
+(3718, '1', 'Tried To Create Role \"Front Desk\" But It Already Exists', '2020-07-16 12:20:56'),
+(3719, '1', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 12:21:06'),
+(3720, '1', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 12:21:34'),
+(3721, '1', 'Tried To Create Role \"Front Desk\" But It Already Exists', '2020-07-16 12:21:47'),
+(3722, '1', 'Tried To Create Role \"Lab Technician\" But It Already Exists', '2020-07-16 12:21:59'),
+(3723, '1', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 12:56:20'),
+(3724, '1', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 12:56:24'),
+(3725, '1', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 12:57:02'),
+(3726, '1', 'Created Role \"Administratorr\"', '2020-07-16 12:57:13'),
+(3727, 'LMLS-0000', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 13:00:30'),
+(3728, 'LMLS-0000', 'Created Role \"Administratorr\"', '2020-07-16 13:00:35'),
+(3729, 'LMLS-0000', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 13:13:12'),
+(3730, 'LMLS-0000', 'Created Role \"Administratorr\"', '2020-07-16 13:13:16'),
+(3731, 'LMLS-0000', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 13:31:20'),
+(3732, 'LMLS-0000', 'Tried To Create Role \"Administrator\" But It Already Exists', '2020-07-16 13:37:29'),
+(3733, 'LMLS-0000', 'Created Role \"Some Role\"', '2020-07-16 14:13:22'),
+(3734, 'LMLS-0000', 'Created Role \"Bvgg\"', '2020-07-16 21:39:15'),
+(3735, 'LMLS-0000', 'Created Role \"Bvgg\"', '2020-07-16 21:49:45'),
+(3736, 'LMLS-0000', 'Created Role \"Bvgg\"', '2020-07-16 21:50:51'),
+(3737, 'LMLS-0000', 'Tried To Update Role \"Lab Technician\" But It Already Exists', '2020-07-16 21:59:56'),
+(3738, 'LMLS-0000', 'Tried To Update Role \"Lab Technician\" But It Already Exists', '2020-07-16 22:00:36'),
+(3739, 'LMLS-0000', 'Updated Role \"Lab Technician\"', '2020-07-16 22:00:48'),
+(3740, 'LMLS-0000', 'Updated Role \"Lab Technician\"', '2020-07-16 22:01:02'),
+(3741, '', 'Logged Out', '2020-07-16 22:54:51'),
+(3742, 'LMLS-EL-0000', 'Logged Out', '2020-07-16 22:54:51'),
+(3743, 'LMLS-AMA-0001', 'Logged In', '2020-07-16 22:54:57'),
+(3744, 'LMLS-AMA-0001', 'Logged Out', '2020-07-16 22:57:40'),
+(3745, 'LMLS-AMA-0001', 'Logged In', '2020-07-16 22:57:47'),
+(3746, 'LMLS-AMA-0001', 'Logged Out', '2020-07-16 22:58:32'),
+(3747, 'LMLS-AMA-0001', 'Logged In', '2020-07-16 22:58:39'),
+(3748, 'LMLS-AMA-0001', 'Logged Out', '2020-07-16 23:00:06'),
+(3749, 'LMLS-AMA-0001', 'Logged In', '2020-07-16 23:00:11'),
+(3750, 'LMLS-AMA-0001', 'Logged Out', '2020-07-16 23:03:14'),
+(3751, 'LMLS-AMA-0001', 'Logged In', '2020-07-16 23:03:50'),
+(3752, 'LMLS-AMA-0001', 'Logged Out', '2020-07-16 23:04:06'),
+(3753, 'LMLS-AMA-0001', 'Logged In', '2020-07-16 23:04:37'),
+(3754, 'LMLS-AMA-0001', 'Logged Out', '2020-07-16 23:04:49'),
+(3755, 'LMLS-AMA-0001', 'Logged In', '2020-07-16 23:05:18'),
+(3756, 'LMLS-AMA-0001', 'Logged Out', '2020-07-16 23:05:54'),
+(3757, 'LMLS-AMA-0001', 'Logged In', '2020-07-16 23:05:59'),
+(3758, 'LMLS-KB-0001', 'Viewed Receipt For Anot Her Patient', '2020-07-17 13:40:51'),
+(3759, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 16:33:03'),
+(3760, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:33:34'),
+(3761, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:33:58');
+INSERT INTO `audit_trail` (`id`, `staff_id`, `activity`, `date`) VALUES
+(3762, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 16:35:06'),
+(3763, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:38:33'),
+(3764, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:39:14'),
+(3765, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:40:17'),
+(3766, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:40:58'),
+(3767, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:41:50'),
+(3768, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:42:39'),
+(3769, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:43:25'),
+(3770, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:43:48'),
+(3771, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:44:25'),
+(3772, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:45:08'),
+(3773, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:48:19'),
+(3774, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:48:58'),
+(3775, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:51:09'),
+(3776, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:52:04'),
+(3777, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:53:19'),
+(3778, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:54:23'),
+(3779, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:57:20'),
+(3780, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 16:57:47'),
+(3781, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 16:59:44'),
+(3782, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 16:59:48'),
+(3783, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:00:09'),
+(3784, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 17:00:54'),
+(3785, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:02:20'),
+(3786, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 17:03:05'),
+(3787, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:03:16'),
+(3788, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 17:03:38'),
+(3789, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 17:04:42'),
+(3790, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 17:06:01'),
+(3791, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 17:07:10'),
+(3792, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:09:48'),
+(3793, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:13:21'),
+(3794, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 17:20:37'),
+(3795, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:20:55'),
+(3796, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 17:22:36'),
+(3797, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:22:46'),
+(3798, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:23:32'),
+(3799, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:25:30'),
+(3800, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 17:26:10'),
+(3801, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:26:22'),
+(3802, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:36:52'),
+(3803, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:37:18'),
+(3804, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 17:39:07'),
+(3805, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 17:56:02'),
+(3806, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 17:58:26'),
+(3807, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 17:58:53'),
+(3808, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 18:00:16'),
+(3809, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:05:45'),
+(3810, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:06:42'),
+(3811, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:07:52'),
+(3812, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:08:37'),
+(3813, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:09:25'),
+(3814, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:10:16'),
+(3815, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:10:33'),
+(3816, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:12:20'),
+(3817, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:12:43'),
+(3818, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:13:22'),
+(3819, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:14:59'),
+(3820, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:15:29'),
+(3821, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:16:24'),
+(3822, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:17:02'),
+(3823, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:21:10'),
+(3824, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:23:08'),
+(3825, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:23:59'),
+(3826, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:25:26'),
+(3827, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:26:09'),
+(3828, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:26:35'),
+(3829, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:27:07'),
+(3830, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:27:35'),
+(3831, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:28:10'),
+(3832, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:28:34'),
+(3833, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:29:06'),
+(3834, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:29:47'),
+(3835, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 18:30:09'),
+(3836, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:30:14'),
+(3837, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 18:30:25'),
+(3838, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 18:30:30'),
+(3839, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:31:03'),
+(3840, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:31:28'),
+(3841, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:32:26'),
+(3842, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 18:35:27'),
+(3843, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 18:38:57'),
+(3844, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 18:41:28'),
+(3845, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 18:42:57'),
+(3846, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 18:43:46'),
+(3847, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 18:48:18'),
+(3848, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 18:49:21'),
+(3849, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 18:50:46'),
+(3850, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:54:30'),
+(3851, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 18:55:16'),
+(3852, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 18:56:08'),
+(3853, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 18:56:58'),
+(3854, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:57:00'),
+(3855, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:57:34'),
+(3856, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:57:57'),
+(3857, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:58:15'),
+(3858, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 18:59:02'),
+(3859, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 19:00:25'),
+(3860, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 19:04:46'),
+(3861, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 19:05:48'),
+(3862, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 19:07:00'),
+(3863, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 19:08:07'),
+(3864, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 19:08:59'),
+(3865, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 19:09:49'),
+(3866, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 19:10:15'),
+(3867, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:11:27'),
+(3868, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:12:28'),
+(3869, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:13:53'),
+(3870, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:15:09'),
+(3871, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:15:42'),
+(3872, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:16:47'),
+(3873, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:18:01'),
+(3874, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:18:37'),
+(3875, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:19:56'),
+(3876, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:21:12'),
+(3877, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:21:53'),
+(3878, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:28:05'),
+(3879, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:28:26'),
+(3880, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:28:28'),
+(3881, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-17 19:31:25'),
+(3882, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 19:32:09'),
+(3883, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 19:36:13'),
+(3884, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 19:49:10'),
+(3885, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 19:49:17'),
+(3886, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 19:49:25'),
+(3887, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 19:50:26'),
+(3888, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 19:50:34'),
+(3889, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 19:50:44'),
+(3890, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 19:50:53'),
+(3891, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 19:50:59'),
+(3892, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 19:51:03'),
+(3893, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 19:51:29'),
+(3894, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 19:51:39'),
+(3895, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 19:51:47'),
+(3896, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 19:52:45'),
+(3897, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-17 19:52:54'),
+(3898, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-17 19:53:02'),
+(3899, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 22:50:54'),
+(3900, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 23:35:31'),
+(3901, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 23:37:22'),
+(3902, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 23:38:00'),
+(3903, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-17 23:52:53'),
+(3904, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:03:08'),
+(3905, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:08:10'),
+(3906, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:08:52'),
+(3907, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:10:25'),
+(3908, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:11:01'),
+(3909, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:14:01'),
+(3910, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:14:50'),
+(3911, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:16:02'),
+(3912, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:16:53'),
+(3913, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:18:09'),
+(3914, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:19:27'),
+(3915, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:20:39'),
+(3916, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:21:49'),
+(3917, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:23:07'),
+(3918, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:24:17'),
+(3919, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:27:12'),
+(3920, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 00:28:25'),
+(3921, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:19:08'),
+(3922, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:19:42'),
+(3923, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:20:02'),
+(3924, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:20:34'),
+(3925, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:21:32'),
+(3926, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:24:25'),
+(3927, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:25:52'),
+(3928, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:40:32'),
+(3929, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:41:52'),
+(3930, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:43:06'),
+(3931, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:44:30'),
+(3932, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:45:47'),
+(3933, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:46:25'),
+(3934, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:57:14'),
+(3935, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:58:24'),
+(3936, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:59:02'),
+(3937, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 11:59:49'),
+(3938, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 12:06:56'),
+(3939, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 12:07:45'),
+(3940, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 12:09:11'),
+(3941, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 12:10:01'),
+(3942, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 12:10:42'),
+(3943, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 12:11:24'),
+(3944, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 12:12:00'),
+(3945, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 12:12:53'),
+(3946, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:04:15'),
+(3947, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:05:45'),
+(3948, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:07:18'),
+(3949, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:07:57'),
+(3950, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:12:11'),
+(3951, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:14:40'),
+(3952, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:15:40'),
+(3953, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:16:12'),
+(3954, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:17:06'),
+(3955, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:21:15'),
+(3956, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:22:18'),
+(3957, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:23:54'),
+(3958, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:24:51'),
+(3959, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:25:55'),
+(3960, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:27:41'),
+(3961, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:28:07'),
+(3962, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:28:44'),
+(3963, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:31:52'),
+(3964, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:32:45'),
+(3965, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:33:37'),
+(3966, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:34:00'),
+(3967, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:35:08'),
+(3968, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:42:14'),
+(3969, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 19:46:28'),
+(3970, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 21:27:00'),
+(3971, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 21:31:31'),
+(3972, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 21:32:01'),
+(3973, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 22:01:26'),
+(3974, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 22:31:07'),
+(3975, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 22:36:11'),
+(3976, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 22:43:44'),
+(3977, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 22:44:40'),
+(3978, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 22:45:06'),
+(3979, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 22:59:41'),
+(3980, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:00:50'),
+(3981, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:03:51'),
+(3982, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:04:24'),
+(3983, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-18 23:06:39'),
+(3984, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-18 23:06:48'),
+(3985, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:06:51'),
+(3986, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:10:18'),
+(3987, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:10:43'),
+(3988, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:11:07'),
+(3989, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:12:37'),
+(3990, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:12:53'),
+(3991, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:13:05'),
+(3992, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:15:58'),
+(3993, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:17:17'),
+(3994, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:17:59'),
+(3995, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:23:16'),
+(3996, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:24:32'),
+(3997, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:25:27'),
+(3998, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:28:11'),
+(3999, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:29:12'),
+(4000, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:35:58'),
+(4001, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:37:03'),
+(4002, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:38:05'),
+(4003, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:42:49'),
+(4004, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:46:34'),
+(4005, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:48:30'),
+(4006, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:49:53'),
+(4007, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-18 23:49:57'),
+(4008, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-18 23:50:21'),
+(4009, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 11:28:08'),
+(4010, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 11:30:10'),
+(4011, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 11:31:11'),
+(4012, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 11:32:16'),
+(4013, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 11:33:52'),
+(4014, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 15:54:38'),
+(4015, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 15:55:21'),
+(4016, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 15:55:52'),
+(4017, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 15:56:56'),
+(4018, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 15:57:30'),
+(4019, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 15:58:19'),
+(4020, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 15:59:06'),
+(4021, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 15:59:26'),
+(4022, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 16:00:44'),
+(4023, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 16:01:19'),
+(4024, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 16:02:42'),
+(4025, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 16:03:15'),
+(4026, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 16:04:11'),
+(4027, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 16:05:18'),
+(4028, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 16:08:19'),
+(4029, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-19 16:08:52'),
+(4030, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 16:09:32'),
+(4031, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 16:10:11'),
+(4032, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 16:41:12'),
+(4033, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 16:51:16'),
+(4034, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 16:54:37'),
+(4035, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:02:17'),
+(4036, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-19 17:03:24'),
+(4037, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:03:26'),
+(4038, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:06:54'),
+(4039, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:10:52'),
+(4040, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:12:57'),
+(4041, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:15:56'),
+(4042, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:18:36'),
+(4043, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:19:28'),
+(4044, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:20:23'),
+(4045, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:21:11'),
+(4046, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:24:15'),
+(4047, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:25:10'),
+(4048, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:26:35'),
+(4049, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 17:31:21'),
+(4050, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 21:29:28'),
+(4051, 'LMLS-KB-0001', 'Logged In', '2020-07-19 21:36:35'),
+(4052, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 21:51:44'),
+(4053, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 22:08:35'),
+(4054, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 23:06:15'),
+(4055, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 23:35:53'),
+(4056, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 23:38:56'),
+(4057, 'LMLS-0000', 'Updated Request For Derek Asomaning', '2020-07-19 23:42:45'),
+(4058, 'LMLS-0000', 'Updated Request For Derek Asomaning', '2020-07-19 23:44:11'),
+(4059, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 23:44:15'),
+(4060, 'LMLS-0000', 'Updated Request For Derek Asomaning', '2020-07-19 23:45:01'),
+(4061, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-19 23:45:05'),
+(4062, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 00:25:27'),
+(4063, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 00:26:06'),
+(4064, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 00:27:18'),
+(4065, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 00:28:38'),
+(4066, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 00:31:49'),
+(4067, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 00:35:22'),
+(4068, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 00:37:35'),
+(4069, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 00:38:13'),
+(4070, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 00:39:30'),
+(4071, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 00:40:55'),
+(4072, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 00:41:46'),
+(4073, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 00:43:21'),
+(4074, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 00:43:23'),
+(4075, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 00:43:51'),
+(4076, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 00:48:13'),
+(4077, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 00:49:14'),
+(4078, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-20 00:51:02'),
+(4079, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 00:51:13'),
+(4080, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 00:52:10'),
+(4081, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 00:55:23'),
+(4082, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 00:56:06'),
+(4083, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 00:58:22'),
+(4084, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 00:59:53'),
+(4085, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 01:01:40'),
+(4086, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 01:03:07'),
+(4087, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 06:16:15'),
+(4088, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 06:17:11'),
+(4089, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 06:17:51'),
+(4090, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 06:18:28'),
+(4091, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 06:19:20'),
+(4092, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 06:19:47'),
+(4093, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 06:20:07'),
+(4094, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 06:20:08'),
+(4095, 'LMLS-0000', 'Updated Patient \"Daniella Adwoa Owusua\"', '2020-07-20 06:59:49'),
+(4096, 'LMLS-0000', 'Added Patient \"Bismark Adjei Bediako\"', '2020-07-20 09:30:05'),
+(4097, 'LMLS-0000', 'Added Patient \"Bismark Adjei Bediako\"', '2020-07-20 10:04:44'),
+(4098, 'LMLS-0000', 'Added Patient \"Bismark Adjei Bediako\"', '2020-07-20 10:11:10'),
+(4099, 'LMLS-0000', 'Added Patient \"Bismark Adjei Bediako\"', '2020-07-20 10:20:39'),
+(4100, 'LMLS-0000', 'Logged In', '2020-07-20 10:24:13'),
+(4101, 'LMLS-0000', 'Added Patient \"Bismark Adjei Bediako\"', '2020-07-20 10:24:57'),
+(4102, 'LMLS-0000', 'Added Patient \"Bismark Adjei Bediako\"', '2020-07-20 10:26:22'),
+(4103, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 10:38:43'),
+(4104, '', 'Viewed Report From 20 July 2020 To 21 July 2020', '2020-07-20 12:02:51'),
+(4105, 'LMLS-AMA-0001', 'Viewed Report From 20 July 2020 To 21 July 2020', '2020-07-20 12:02:51'),
+(4106, 'LMLS-AMA-0001', 'Viewed Report From 20 July 2020 To 21 July 2020', '2020-07-20 12:04:45'),
+(4107, 'LMLS-AMA-0001', 'Viewed Agyakwa Ntow Mireku\'s Report From 20 July 2020 To 21 July 2020', '2020-07-20 12:04:55'),
+(4108, 'LMLS-AMA-0001', 'Viewed Maria Nortey\'s Report From 20 July 2020 To 21 July 2020', '2020-07-20 12:05:02'),
+(4109, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 15:22:34'),
+(4110, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 15:23:23'),
+(4111, 'LMLS-0000', 'Added Request For Bismark Adjei Bediako', '2020-07-20 15:45:03'),
+(4112, 'LMLS-0000', 'Added Request For Bismark Adjei Bediako', '2020-07-20 15:48:46'),
+(4113, 'LMLS-0000', 'Added Request For Bismark Adjei Bediako', '2020-07-20 15:50:02'),
+(4114, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 16:04:20'),
+(4115, 'LMLS-0000', 'Added Request For Bismark Adjei Bediako', '2020-07-20 16:05:53'),
+(4116, 'LMLS-0000', 'Added Request For Bismark Adjei Bediako', '2020-07-20 16:11:47'),
+(4117, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 16:14:08'),
+(4118, 'LMLS-0000', 'Added Request For Bismark Adjei Bediako', '2020-07-20 16:17:42'),
+(4119, 'LMLS-0000', 'Added Request For Bismark Adjei Bediako', '2020-07-20 16:19:41'),
+(4120, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 16:20:42'),
+(4121, 'LMLS-KB-0001', 'Made Payment Of GHS70 For Bismark Adjei Bediako\'s Request', '2020-07-20 16:29:36'),
+(4122, 'LMLS-KB-0001', 'Made Payment Of GHS5 For Bismark Adjei Bediako\'s Request', '2020-07-20 16:30:11'),
+(4123, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 16:31:36'),
+(4124, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 16:33:04'),
+(4125, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 16:34:10'),
+(4126, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 16:34:49'),
+(4127, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 16:35:46'),
+(4128, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 16:36:44'),
+(4129, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 16:38:19'),
+(4130, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 16:39:31'),
+(4131, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-20 16:54:34'),
+(4132, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-20 16:54:40'),
+(4133, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-20 16:54:46'),
+(4134, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-20 16:54:48'),
+(4135, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 16:55:01'),
+(4136, 'LMLS-0000', 'Viewed Receipt For Trial Ntow Adjei-laryea', '2020-07-20 17:05:58'),
+(4137, 'LMLS-0000', 'Viewed Receipt For Trial Ntow Adjei Laryea', '2020-07-20 17:06:03'),
+(4138, 'LMLS-0000', 'Viewed Receipt For Michelle Ntow Adjei Laryea', '2020-07-20 17:06:06'),
+(4139, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 17:06:11'),
+(4140, 'LMLS-0000', 'Viewed Receipt For Trial Ntow Adjei-laryea', '2020-07-20 17:08:10'),
+(4141, 'LMLS-0000', 'Viewed Receipt For Michelle Ntow Adjei Laryea', '2020-07-20 17:08:15'),
+(4142, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 17:08:19'),
+(4143, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 17:08:56'),
+(4144, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 17:09:03'),
+(4145, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 17:09:59'),
+(4146, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 17:10:17'),
+(4147, 'LMLS-KB-0001', 'Tried To Add Request For Bismark Adjei Bediako But Patient Had Pending Requests', '2020-07-20 17:15:25'),
+(4148, 'LMLS-KB-0001', 'Added Request For Bismark Adjei Bediako', '2020-07-20 17:15:47'),
+(4149, 'LMLS-0000', 'Viewed Receipt For Trial Ntow Adjei Laryea', '2020-07-20 17:22:48'),
+(4150, 'LMLS-0000', 'Viewed Receipt For Michelle Ntow Adjei Laryea', '2020-07-20 17:22:53'),
+(4151, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-20 17:22:56'),
+(4152, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 17:23:15'),
+(4153, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 17:23:26'),
+(4154, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 17:24:50'),
+(4155, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 17:25:02'),
+(4156, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-20 17:57:52'),
+(4157, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 17:58:00'),
+(4158, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 18:20:31'),
+(4159, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 18:20:47'),
+(4160, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 18:40:27'),
+(4161, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 18:42:41'),
+(4162, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 18:44:44'),
+(4163, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 18:54:50'),
+(4164, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 18:56:48'),
+(4165, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:02:05'),
+(4166, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:09:25'),
+(4167, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:10:16'),
+(4168, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:13:48'),
+(4169, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:15:20'),
+(4170, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:16:45'),
+(4171, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:17:43'),
+(4172, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:18:34'),
+(4173, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:19:44'),
+(4174, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:33:24'),
+(4175, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:36:05'),
+(4176, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:37:13'),
+(4177, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 19:40:27'),
+(4178, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 20:45:43'),
+(4179, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 20:47:11'),
+(4180, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 20:49:39'),
+(4181, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 20:57:04'),
+(4182, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 20:59:01'),
+(4183, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:05:01'),
+(4184, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:07:00'),
+(4185, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:08:04'),
+(4186, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:08:43'),
+(4187, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:09:24'),
+(4188, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:10:12'),
+(4189, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:10:39'),
+(4190, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:12:42'),
+(4191, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:13:07'),
+(4192, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:14:08'),
+(4193, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:16:27'),
+(4194, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:17:49'),
+(4195, '', 'Made Payment Of GHS For   \'s Request', '2020-07-20 21:20:50'),
+(4196, 'LMLS-0000', 'Made Payment Of GHS0.00 For Bismark Adjei Bediako\'s Request', '2020-07-20 21:25:14'),
+(4197, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:25:28'),
+(4198, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:26:45'),
+(4199, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:27:21'),
+(4200, 'LMLS-0000', 'Made Payment Of GHS 249 For Bismark Adjei Bediako\'s Request', '2020-07-20 21:28:18'),
+(4201, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:28:27'),
+(4202, 'LMLS-0000', 'Made Payment Of GHS 24 For Bismark Adjei Bediako\'s Request', '2020-07-20 21:31:02'),
+(4203, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:31:10'),
+(4204, 'LMLS-0000', 'Made Payment Of GHS 60 For Bismark Adjei Bediako\'s Request', '2020-07-20 21:35:55'),
+(4205, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:36:04'),
+(4206, 'LMLS-0000', 'Updated Request For Bismark Adjei Bediako', '2020-07-20 21:36:34'),
+(4207, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:36:42'),
+(4208, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 21:37:54'),
+(4209, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 21:41:01'),
+(4210, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 21:42:18'),
+(4211, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 21:42:59'),
+(4212, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 21:43:29'),
+(4213, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-20 21:43:41'),
+(4214, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:56:35'),
+(4215, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:57:41'),
+(4216, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:58:49'),
+(4217, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 21:59:25'),
+(4218, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 22:00:01'),
+(4219, 'LMLS-0000', 'Made Payment Of GHS 10 For Bismark Adjei Bediako\'s Request', '2020-07-20 22:00:11'),
+(4220, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 22:00:15'),
+(4221, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 22:01:53'),
+(4222, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-20 22:02:52'),
+(4223, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 13:33:27'),
+(4224, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 13:34:49'),
+(4225, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 13:35:54'),
+(4226, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 13:35:59'),
+(4227, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 13:36:35'),
+(4228, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 13:38:31'),
+(4229, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 13:39:03'),
+(4230, 'LMLS-0000', 'Logged In', '2020-07-21 13:49:56'),
+(4231, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 13:50:17'),
+(4232, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 14:00:31'),
+(4233, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 14:01:05'),
+(4234, '', 'Completed Request For Bismark Adjei Bediako', '2020-07-21 14:01:18'),
+(4235, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 14:02:43'),
+(4236, 'LMLS-0000', 'Completed Request For Bismark Adjei Bediako', '2020-07-21 14:02:52'),
+(4237, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 14:14:33'),
+(4238, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 14:15:24'),
+(4239, 'LMLS-0000', 'Completed Request For Bismark Adjei Bediako', '2020-07-21 14:15:53'),
+(4240, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 14:16:49'),
+(4241, 'LMLS-0000', 'Completed Request For Bismark Adjei Bediako', '2020-07-21 14:16:54'),
+(4242, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 14:17:38'),
+(4243, 'LMLS-0000', 'Completed Request For Bismark Adjei Bediako', '2020-07-21 14:17:47'),
+(4244, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 14:17:55'),
+(4245, 'LMLS-0000', 'Logged In', '2020-07-21 14:18:41'),
+(4246, 'LMLS-0000', 'Viewed Receipt For Bismark Adjei Bediako', '2020-07-21 14:18:50'),
+(4247, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-21 15:06:05'),
+(4248, 'LMLS-0000', 'Viewed Receipt For Agyakwa Ntow Mireku', '2020-07-21 15:06:11'),
+(4249, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-21 15:06:17'),
+(4250, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-21 15:06:23'),
+(4251, 'LMLS-0000', 'Viewed Receipt For Anot Her Patient', '2020-07-21 15:06:29'),
+(4252, 'LMLS-0000', 'Viewed Receipt For Trial Ntow Adjei Laryea', '2020-07-21 15:06:35'),
+(4253, 'LMLS-0000', 'Viewed Receipt For Michelle Ntow Adjei Laryea', '2020-07-21 15:06:42'),
+(4254, 'LMLS-0000', 'Viewed Receipt For Michelle Koduah', '2020-07-21 15:06:48'),
+(4255, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-21 15:07:05'),
+(4256, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-21 15:07:14'),
+(4257, 'LMLS-0000', 'Viewed Receipt For Maria Nortey', '2020-07-21 15:07:24'),
+(4258, 'LMLS-0000', 'Tried To Add Request For Maria Nortey But Patient Had Pending Requests', '2020-07-21 15:07:48'),
+(4259, 'LMLS-0000', 'Added Request For Daniella Adwoa Owusua', '2020-07-21 15:25:54'),
+(4260, 'LMLS-0000', 'Added Request For Daniella Adwoa Owusua', '2020-07-21 15:27:08'),
+(4261, 'LMLS-0000', 'Added Request For Daniella Adwoa Owusua', '2020-07-21 15:29:29'),
+(4262, 'LMLS-0000', 'Added Request For Daniella Adwoa Owusua', '2020-07-21 15:30:35'),
+(4263, 'LMLS-0000', 'Added Request For Steven Arkoh Sackey', '2020-07-21 15:33:27'),
+(4264, 'LMLS-0000', 'Added Request For Bethany Serwaa Adjei', '2020-07-21 15:34:25'),
+(4265, 'LMLS-0000', 'Added Request For Daniella Adwoa Owusua', '2020-07-21 15:36:29'),
+(4266, 'LMLS-0000', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-21 15:37:33'),
+(4267, 'LMLS-0000', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-21 15:38:26'),
+(4268, 'LMLS-0000', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-21 15:39:05'),
+(4269, 'LMLS-0000', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-21 15:39:51'),
+(4270, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-21 15:40:00'),
+(4271, 'LMLS-0000', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-21 15:41:10'),
+(4272, 'LMLS-0000', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-21 15:43:08'),
+(4273, 'LMLS-0000', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-21 15:44:41'),
+(4274, 'LMLS-0000', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-21 15:45:29'),
+(4275, 'LMLS-0000', 'Added Request For Steven Arkoh Sackey', '2020-07-21 15:55:59'),
+(4276, 'LMLS-0000', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-21 15:56:18'),
+(4277, 'LMLS-0000', 'Added Request For Bethany Serwaa Adjei', '2020-07-21 16:00:15'),
+(4278, 'LMLS-0000', 'Made Payment Of GHS 200 For Bethany Serwaa Adjei\'s Request', '2020-07-21 16:00:36'),
+(4279, 'LMLS-0000', 'Viewed Receipt For Bethany Serwaa Adjei', '2020-07-21 16:00:50'),
+(4280, 'LMLS-KB-0001', 'Logged In', '2020-07-21 17:28:13'),
+(4281, 'LMLS-0000', 'Viewed Receipt For Derek Asomaning', '2020-07-21 18:00:43'),
+(4282, 'LMLS-AMA-0001', 'Logged In', '2020-07-21 18:21:04'),
+(4283, '', 'Viewed Report From 21 July 2020 To 22 July 2020', '2020-07-21 18:22:48'),
+(4284, 'LMLS-AMA-0001', 'Viewed Report From 21 July 2020 To 22 July 2020', '2020-07-21 18:22:48'),
+(4285, '', 'Viewed Report From 21 July 2020 To 22 July 2020', '2020-07-21 18:23:34'),
+(4286, 'LMLS-0000', 'Viewed Report From 21 July 2020 To 22 July 2020', '2020-07-21 18:23:34'),
+(4287, 'LMLS-0000', 'Updated His Profile', '2020-07-21 19:18:01'),
+(4288, 'LMLS-0000', 'Tried To Log In But Failed Because They Provided Wrong Password', '2020-07-21 19:20:14'),
+(4289, 'LMLS-0000', 'Logged In', '2020-07-21 19:20:43'),
+(4290, 'LMLS-0000', 'Updated His Profile', '2020-07-21 19:33:11'),
+(4291, 'LMLS-0000', 'Logged In', '2020-07-21 19:34:47'),
+(4292, 'LMLS-0000', 'Updated His Profile', '2020-07-21 19:35:04'),
+(4293, 'LMLS-0000', 'Logged In', '2020-07-21 19:36:04'),
+(4294, 'LMLS-0000', 'Updated His Profile', '2020-07-21 19:36:15'),
+(4295, 'LMLS-0000', 'Logged In', '2020-07-21 19:37:43'),
+(4296, 'LMLS-0000', 'Updated His Profile', '2020-07-21 19:38:09'),
+(4297, 'LMLS-0000', 'Logged In', '2020-07-21 19:38:58'),
+(4298, 'LMLS-0000', 'Updated His Profile', '2020-07-21 19:39:33'),
+(4299, 'LMLS-0000', 'Updated His Profile', '2020-07-21 19:41:46'),
+(4300, 'LMLS-0000', 'Logged In', '2020-07-21 19:43:04'),
+(4301, 'LMLS-0000', 'Updated His Profile', '2020-07-21 19:43:16'),
+(4302, 'LMLS-0000', 'Logged In', '2020-07-21 22:12:53'),
+(4303, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:13:22'),
+(4304, 'LMLS-0000', 'Logged In', '2020-07-21 22:14:25'),
+(4305, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:16:16'),
+(4306, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:19:36'),
+(4307, 'LMLS-0000', 'Logged In', '2020-07-21 22:23:35'),
+(4308, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:23:46'),
+(4309, 'LMLS-0000', 'Logged In', '2020-07-21 22:27:29'),
+(4310, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:27:42'),
+(4311, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:27:50'),
+(4312, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:28:00'),
+(4313, '', 'Logged Out', '2020-07-21 22:32:47'),
+(4314, '', 'Logged Out', '2020-07-21 22:32:47'),
+(4315, 'LMLS-0000', 'Logged In', '2020-07-21 22:32:50'),
+(4316, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:33:17'),
+(4317, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:33:44'),
+(4318, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:35:08'),
+(4319, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:35:26'),
+(4320, 'LMLS-AMA-0001', 'Updated Her Profile', '2020-07-21 22:36:59'),
+(4321, '', 'Logged Out', '2020-07-21 22:37:35'),
+(4322, 'LMLS-AMA-0001', 'Logged Out', '2020-07-21 22:37:35'),
+(4323, 'LMLS-AMA-0001', 'Logged In', '2020-07-21 22:37:41'),
+(4324, 'LMLS-AMA-0001', 'Updated Her Profile', '2020-07-21 22:38:47'),
+(4325, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:39:35'),
+(4326, 'LMLS-0000', 'Logged Out', '2020-07-21 22:40:02'),
+(4327, 'LMLS-0000', 'Logged In', '2020-07-21 22:40:11'),
+(4328, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:40:30'),
+(4329, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:41:46'),
+(4330, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:41:53'),
+(4331, 'LMLS-AMA-0001', 'Updated Her Profile', '2020-07-21 22:42:20'),
+(4332, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:46:58'),
+(4333, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:47:01'),
+(4334, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:47:20'),
+(4335, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:47:25'),
+(4336, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:47:32'),
+(4337, 'LMLS-0000', 'Tried To Update His Profile But Username \"ekua\" Was Already Used', '2020-07-21 22:47:51'),
+(4338, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:48:03'),
+(4339, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:48:12'),
+(4340, 'LMLS-0000', 'Logged Out', '2020-07-21 22:48:19'),
+(4341, 'LMLS-0000', 'Tried To Log In But Failed Because They Provided Wrong Password', '2020-07-21 22:48:21'),
+(4342, 'LMLS-0000', 'Logged In', '2020-07-21 22:48:27'),
+(4343, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:48:57'),
+(4344, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:49:02'),
+(4345, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:49:13'),
+(4346, 'LMLS-0000', 'Logged Out', '2020-07-21 22:49:26'),
+(4347, 'LMLS-0000', 'Tried To Log In But Failed Because They Provided Wrong Password', '2020-07-21 22:49:28'),
+(4348, 'LMLS-0000', 'Tried To Log In But Failed Because They Provided Wrong Password', '2020-07-21 22:49:30'),
+(4349, 'LMLS-0000', 'Logged In', '2020-07-21 22:49:38'),
+(4350, '', 'Logged Out', '2020-07-21 22:49:42'),
+(4351, 'LMLS-0000', 'Logged Out', '2020-07-21 22:49:42'),
+(4352, 'LMLS-0000', 'Tried To Log In But Failed Because They Provided Wrong Password', '2020-07-21 22:49:48'),
+(4353, 'LMLS-0000', 'Logged In', '2020-07-21 22:49:57'),
+(4354, 'LMLS-0000', 'Updated His Profile', '2020-07-21 22:50:13'),
+(4355, 'LMLS-0000', 'Logged Out', '2020-07-21 22:50:17'),
+(4356, 'LMLS-0000', 'Logged In', '2020-07-21 22:50:19'),
+(4357, 'LMLS-KB-0001', 'Updated His Profile', '2020-07-21 22:51:57'),
+(4358, 'LMLS-KB-0001', 'Updated His Profile', '2020-07-21 22:52:05'),
+(4359, 'LMLS-KB-0001', 'Logged Out', '2020-07-21 22:54:52'),
+(4360, 'LMLS-KB-0001', 'Logged In', '2020-07-21 22:54:58'),
+(4361, 'LMLS-KB-0001', 'Logged Out', '2020-07-21 22:55:55'),
+(4362, 'LMLS-KB-0001', 'Logged In', '2020-07-21 22:56:01'),
+(4363, 'LMLS-KB-0001', 'Logged In', '2020-07-22 19:28:02'),
+(4364, 'LMLS-KB-0001', 'Logged Out', '2020-07-22 19:29:02'),
+(4365, 'LMLS-KB-0001', 'Logged In', '2020-07-22 19:29:09'),
+(4366, 'LMLS-0000', 'Logged In', '2020-07-23 08:41:37'),
+(4367, 'LMLS-0000', 'Logged In', '2020-07-23 08:43:16'),
+(4368, 'LMLS-0000', 'Logged In', '2020-07-23 08:43:18'),
+(4369, '', 'Logged Out', '2020-07-23 08:43:24'),
+(4370, 'LMLS-0000', 'Logged Out', '2020-07-23 08:43:24'),
+(4371, 'LMLS-AMA-0001', 'Logged In', '2020-07-23 08:43:30'),
+(4372, 'LMLS-KB-0001', 'Logged In', '2020-07-23 08:44:01'),
+(4373, 'LMLS-KB-0001', 'Logged In', '2020-07-23 08:44:09'),
+(4374, 'LMLS-AMA-0001', 'Logged Out', '2020-07-23 08:45:58'),
+(4375, 'LMLS-AMA-0001', 'Logged In', '2020-07-23 08:46:01'),
+(4376, '', 'Logged Out', '2020-07-23 08:52:07'),
+(4377, 'LMLS-0000', 'Logged Out', '2020-07-23 08:52:07'),
+(4378, 'LMLS-0000', 'Logged In', '2020-07-23 08:52:09'),
+(4379, 'LMLS-AMA-0001', 'Logged Out', '2020-07-23 08:53:28'),
+(4380, 'LMLS-AMA-0002', 'Tried To Log In But Failed Because Their Account Is Inactive', '2020-07-23 08:53:32'),
+(4381, 'LMLS-AMA-0002', 'Tried To Log In But Failed Because Their Account Is Inactive', '2020-07-23 08:53:38'),
+(4382, 'LMLS-AMA-0002', 'Logged In', '2020-07-23 08:53:56'),
+(4383, 'LMLS-0000', 'Logged Out', '2020-07-23 09:03:27'),
+(4384, 'LMLS-AMA-0001', 'Logged In', '2020-07-23 09:03:30'),
+(4385, 'LMLS-AMA-0001', 'Logged Out', '2020-07-23 09:06:06'),
+(4386, 'LMLS-0000', 'Logged In', '2020-07-23 09:06:08'),
+(4387, 'LMLS-0000', 'Logged In', '2020-07-23 10:09:51'),
+(4388, 'LMLS-KB-0001', 'Logged In', '2020-07-23 10:11:42'),
+(4389, 'LMLS-KB-0001', 'Logged In', '2020-07-23 10:13:30'),
+(4390, 'LMLS-AMA-0002', 'Logged In', '2020-07-23 10:13:46');
+INSERT INTO `audit_trail` (`id`, `staff_id`, `activity`, `date`) VALUES
+(4391, 'LMLS-0000', 'Added Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-23 12:42:41'),
+(4392, 'LMLS-0000', 'Added Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-23 12:43:43'),
+(4393, 'LMLS-0000', 'Added Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-23 13:02:17'),
+(4394, 'LMLS-0000', 'Added Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-23 13:04:38'),
+(4395, 'LMLS-0000', 'Added Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-23 13:05:41'),
+(4396, 'LMLS-0000', 'Added PSA Lab For Daniella Adwoa Owusua', '2020-07-23 13:16:23'),
+(4397, 'LMLS-0000', 'Added PSA Lab For Daniella Adwoa Owusua', '2020-07-23 13:16:38'),
+(4398, 'LMLS-0000', 'Added Cortisol Lab For Daniella Adwoa Owusua', '2020-07-23 13:33:53'),
+(4399, 'LMLS-0000', 'Added Estrogen Lab For Daniella Adwoa Owusua', '2020-07-23 15:01:51'),
+(4400, 'LMLS-0000', 'Added Hormonal Assay Lab For Daniella Adwoa Owusua', '2020-07-23 15:58:25'),
+(4401, 'LMLS-0000', 'Added PTH Lab For Daniella Adwoa Owusua', '2020-07-23 16:12:01'),
+(4402, 'LMLS-0000', 'Added Reproductive Assay Lab For ', '2020-07-23 21:27:38'),
+(4403, 'LMLS-0000', 'Added Reproductive Assay Lab For ', '2020-07-23 21:28:09'),
+(4404, 'LMLS-0000', 'Added Reproductive Assay Lab For Daniella Adwoa Owusua', '2020-07-23 21:29:34'),
+(4405, 'LMLS-0000', 'Added PTH Lab For ', '2020-07-23 21:33:55'),
+(4406, 'LMLS-0000', 'Added PTH Lab For ', '2020-07-23 21:34:05'),
+(4407, 'LMLS-0000', 'Added PTH Lab For ', '2020-07-23 21:35:21'),
+(4408, 'LMLS-0000', 'Added PTH Lab For Daniella Adwoa Owusua', '2020-07-23 21:35:59'),
+(4409, 'LMLS-0000', 'Added Estrogen Lab For Daniella Adwoa Owusua', '2020-07-23 21:36:26'),
+(4410, 'LMLS-0000', 'Added Hormonal Assay Lab For Daniella Adwoa Owusua', '2020-07-23 21:37:36'),
+(4411, 'LMLS-0000', 'Added Cortisol Lab For Daniella Adwoa Owusua', '2020-07-23 21:38:39'),
+(4412, 'LMLS-0000', 'Tried To Add TFT Lab For Daniella Adwoa Owusua', '2020-07-23 21:46:29'),
+(4413, 'LMLS-0000', 'Tried To Add TFT Lab For Daniella Adwoa Owusua', '2020-07-23 21:46:38'),
+(4414, 'LMLS-0000', 'Added TFT Lab For Daniella Adwoa Owusua', '2020-07-23 21:48:27'),
+(4415, 'LMLS-0000', 'Added Troponin Lab For Daniella Adwoa Owusua', '2020-07-23 21:53:20'),
+(4416, 'LMLS-0000', 'Added BUE Creatinine Lab For Daniella Adwoa Owusua', '2020-07-24 13:03:23'),
+(4417, 'LMLS-AMA-0002', 'Added Bue Creatinine eGFR Lab For Steven Arkoh Sackey', '2020-07-24 13:18:06'),
+(4418, 'LMLS-0000', 'Added Bue Creatinine eGFR Lab For Daniella Adwoa Owusua', '2020-07-24 14:01:46'),
+(4419, 'LMLS-0000', 'Added BUE LFT Lab For Daniella Adwoa Owusua', '2020-07-24 14:55:04'),
+(4420, 'LMLS-0000', 'Tried To Add BUE LFT Lab For Daniella Adwoa Owusua', '2020-07-24 17:29:52'),
+(4421, 'LMLS-0000', 'Added BUE Lipids Lab For Daniella Adwoa Owusua', '2020-07-24 17:31:36'),
+(4422, 'LMLS-0000', 'Added Blood Sugar Lab For Daniella Adwoa Owusua', '2020-07-24 20:45:54'),
+(4423, 'LMLS-0000', 'Added Blood Sugar Lab For Daniella Adwoa Owusua', '2020-07-24 20:47:15'),
+(4424, 'LMLS-0000', 'Added Blood Sugar Lab For Daniella Adwoa Owusua', '2020-07-24 20:48:07'),
+(4425, 'LMLS-0000', 'Added C-Reactive Protein Lab For Daniella Adwoa Owusua', '2020-07-24 21:06:57'),
+(4426, 'LMLS-0000', 'Added CSF Biochem Lab For Daniella Adwoa Owusua', '2020-07-24 21:29:42'),
+(4427, 'LMLS-0000', 'Added CSF Biochem Lab For Daniella Adwoa Owusua', '2020-07-24 21:29:52'),
+(4428, 'LMLS-0000', 'Added CSF Biochem Lab For Daniella Adwoa Owusua', '2020-07-24 21:32:32'),
+(4429, 'LMLS-0000', 'Added CSF Biochem Lab For Daniella Adwoa Owusua', '2020-07-24 22:48:00'),
+(4430, 'LMLS-0000', 'Added CSF Biochem Lab For Daniella Adwoa Owusua', '2020-07-24 22:48:27'),
+(4431, 'LMLS-0000', 'Added CSF Biochem Lab For Daniella Adwoa Owusua', '2020-07-24 22:49:35'),
+(4432, 'LMLS-0000', 'Added CSF Biochem Lab For Daniella Adwoa Owusua', '2020-07-24 22:50:24'),
+(4433, 'LMLS-0000', 'Added CSF Biochem Lab For Daniella Adwoa Owusua', '2020-07-24 22:53:01'),
+(4434, 'LMLS-0000', 'Added CSF Biochem Lab For Daniella Adwoa Owusua', '2020-07-24 23:49:05'),
+(4435, 'LMLS-0000', 'Added CSF Biochem Lab For Daniella Adwoa Owusua', '2020-07-24 23:51:06'),
+(4436, 'LMLS-0000', 'Tried To Add Calcium Profile Lab For Daniella Adwoa Owusua', '2020-07-25 00:05:39'),
+(4437, 'LMLS-0000', 'Tried To Add Calcium Profile Lab For Daniella Adwoa Owusua', '2020-07-25 00:05:47'),
+(4438, 'LMLS-0000', 'Added Calcium Profile Lab For Daniella Adwoa Owusua', '2020-07-25 00:07:59'),
+(4439, 'LMLS-0000', 'Tried To Add Calcium Profile Lab For Daniella Adwoa Owusua', '2020-07-25 00:30:29'),
+(4440, 'LMLS-0000', 'Tried To Add Calcium Profile Lab For Daniella Adwoa Owusua', '2020-07-25 00:30:36'),
+(4441, 'LMLS-0000', 'Added Cardiac Enzyme Lab For Daniella Adwoa Owusua', '2020-07-25 00:35:20'),
+(4442, 'LMLS-0000', 'Added Compact Chemistry Lab For Daniella Adwoa Owusua', '2020-07-25 05:25:37'),
+(4443, 'LMLS-0000', 'Added Folate/B12 Lab For Daniella Adwoa Owusua', '2020-07-25 05:31:44'),
+(4444, 'LMLS-0000', 'Added General Chemistry Lab For Daniella Adwoa Owusua', '2020-07-25 12:14:34'),
+(4445, 'LMLS-AMA-0002', 'Added HBA1C Lab For Steven Arkoh Sackey', '2020-07-25 12:22:53'),
+(4446, 'LMLS-AMA-0002', 'Added HBA1C Lab For Steven Arkoh Sackey', '2020-07-25 12:24:41'),
+(4447, 'LMLS-0000', 'Added Hypersensitive CPR Lab For ', '2020-07-25 12:35:47'),
+(4448, 'LMLS-0000', 'Added Hypersensitive CPR Lab For Daniella Adwoa Owusua', '2020-07-25 12:38:40'),
+(4449, 'LMLS-0000', 'Logged Out', '2020-07-25 12:39:03'),
+(4450, 'LMLS-AMA-0002', 'Logged In', '2020-07-25 12:39:08'),
+(4451, 'LMLS-AMA-0002', 'Logged Out', '2020-07-25 12:39:12'),
+(4452, 'LMLS-0000', 'Logged In', '2020-07-25 12:39:14'),
+(4453, 'LMLS-AMA-0002', 'Added ISE Lab For Steven Arkoh Sackey', '2020-07-25 12:52:34'),
+(4454, 'LMLS-AMA-0002', 'Added Iron Study Lab For Steven Arkoh Sackey', '2020-07-25 13:02:24'),
+(4455, 'LMLS-AMA-0002', 'Added LFT Lab For Steven Arkoh Sackey', '2020-07-25 13:09:48'),
+(4456, 'LMLS-AMA-0002', 'Added Lipid Profile Lab For Steven Arkoh Sackey', '2020-07-25 13:14:08'),
+(4457, 'LMLS-AMA-0002', 'Added Protein Electrophoresis Lab For Steven Arkoh Sackey', '2020-07-25 13:34:44'),
+(4458, 'LMLS-AMA-0002', 'Added S-C3, SC4 Lab For Steven Arkoh Sackey', '2020-07-25 13:40:27'),
+(4459, 'LMLS-AMA-0002', 'Added Serum Lipase Lab For Steven Arkoh Sackey', '2020-07-25 13:46:05'),
+(4460, 'LMLS-AMA-0002', 'Added Urine Lab For Steven Arkoh Sackey', '2020-07-25 13:59:13'),
+(4461, 'LMLS-AMA-0002', 'Tried To Add Serum Lipase Lab For Steven Arkoh Sackey', '2020-07-25 16:08:47'),
+(4462, 'LMLS-AMA-0002', 'Tried To Add Serum Lipase Lab For Steven Arkoh Sackey', '2020-07-25 16:08:55'),
+(4463, 'LMLS-AMA-0002', 'Added Urine ACR Lab For Steven Arkoh Sackey', '2020-07-25 16:09:41'),
+(4464, 'LMLS-AMA-0002', 'Added Ascitic Fluid C/S Lab For Steven Arkoh Sackey', '2020-07-25 20:28:26'),
+(4465, 'LMLS-AMA-0002', 'Added Aspirate C/S Lab For Steven Arkoh Sackey', '2020-07-25 20:34:48'),
+(4466, 'LMLS-AMA-0002', 'Added Blood C/S Lab For Steven Arkoh Sackey', '2020-07-25 20:54:00'),
+(4467, 'LMLS-AMA-0002', 'Added HVS R/E Lab For Steven Arkoh Sackey', '2020-07-25 21:40:24'),
+(4468, 'LMLS-AMA-0002', 'Added Pleural Fluid Lab For Steven Arkoh Sackey', '2020-07-25 23:46:15'),
+(4469, 'LMLS-AMA-0002', 'Added Sputum C/S Lab For Steven Arkoh Sackey', '2020-07-26 00:15:56'),
+(4470, 'LMLS-AMA-0002', 'Added Sputum AFB Lab For Steven Arkoh Sackey', '2020-07-26 00:21:30'),
+(4471, 'LMLS-AMA-0002', 'Added Stool R/E Lab For Steven Arkoh Sackey', '2020-07-26 00:56:09'),
+(4472, 'LMLS-AMA-0002', 'Added Urethral C/S Lab For Steven Arkoh Sackey', '2020-07-26 12:33:54'),
+(4473, 'LMLS-AMA-0002', 'Added Urine C/S Lab For Steven Arkoh Sackey', '2020-07-26 13:09:57'),
+(4474, 'LMLS-AMA-0002', 'Added Wound C/S Lab For Steven Arkoh Sackey', '2020-07-26 13:20:30'),
+(4475, 'LMLS-AMA-0002', 'Added Urine R/E Lab For Steven Arkoh Sackey', '2020-07-26 16:18:23'),
+(4476, 'LMLS-AMA-0002', 'Added Antenatal Screening Lab For Steven Arkoh Sackey', '2020-07-26 17:00:19'),
+(4477, 'LMLS-AMA-0002', 'Added Antenatal Screening Lab For Steven Arkoh Sackey', '2020-07-26 17:00:29'),
+(4478, 'LMLS-AMA-0002', 'Added Antenatal Screening Lab For Steven Arkoh Sackey', '2020-07-26 17:01:51'),
+(4479, 'LMLS-AMA-0002', 'Added CD4 Count Lab For Steven Arkoh Sackey', '2020-07-26 17:24:05'),
+(4480, 'LMLS-AMA-0002', 'Added H. Pylori Ag / SOB Lab For Steven Arkoh Sackey', '2020-07-26 17:42:52'),
+(4481, 'LMLS-AMA-0002', 'Added H. Pylori Ag Lab For Steven Arkoh Sackey', '2020-07-26 17:44:06'),
+(4482, 'LMLS-AMA-0002', 'Updated H. Pylori Ag. Blood Lab For Steven Arkoh Sackey', '2020-07-26 17:47:11'),
+(4483, 'LMLS-AMA-0002', 'Added HBV Viral Load Lab For Steven Arkoh Sackey', '2020-07-26 17:54:19'),
+(4484, 'LMLS-AMA-0002', 'Added HIV Viral Load Lab For Steven Arkoh Sackey', '2020-07-26 17:56:40'),
+(4485, 'LMLS-AMA-0002', 'Added Hepatitis B Profile Lab For Steven Arkoh Sackey', '2020-07-26 20:48:45'),
+(4486, 'LMLS-AMA-0002', 'Added Hepatitis Markers Lab For Steven Arkoh Sackey', '2020-07-26 21:08:21'),
+(4487, 'LMLS-AMA-0002', 'Added Mantoux Lab For Steven Arkoh Sackey', '2020-07-26 21:28:00'),
+(4488, 'LMLS-AMA-0002', 'Added Pregnancy Test Lab For Steven Arkoh Sackey', '2020-07-26 21:38:09'),
+(4489, 'LMLS-AMA-0002', 'Tried To Add Rheumatology Lab For Steven Arkoh Sackey', '2020-07-26 21:47:57'),
+(4490, 'LMLS-AMA-0002', 'Added Rheumatology Lab For Steven Arkoh Sackey', '2020-07-26 21:49:56'),
+(4491, 'LMLS-AMA-0002', 'Added Semen Analysis Lab For Steven Arkoh Sackey', '2020-07-26 22:14:50'),
+(4492, 'LMLS-AMA-0002', 'Added Widal Lab For Steven Arkoh Sackey', '2020-07-26 22:25:43'),
+(4493, 'LMLS-AMA-0002', 'Added Blood Film Comment Lab For Steven Arkoh Sackey', '2020-07-26 23:30:28'),
+(4494, 'LMLS-AMA-0002', 'Added Clotting Profile Lab For Steven Arkoh Sackey', '2020-07-26 23:41:53'),
+(4495, 'LMLS-AMA-0002', 'Added D-Dimers Lab For Steven Arkoh Sackey', '2020-07-26 23:45:36'),
+(4496, 'LMLS-AMA-0002', 'Added ESR Lab For Steven Arkoh Sackey', '2020-07-26 23:52:41'),
+(4497, 'LMLS-AMA-0002', 'Added NTC SCREENING Lab For Steven Arkoh Sackey', '2020-07-27 00:03:03'),
+(4498, 'LMLS-AMA-0002', 'Added SPECIALS Lab For Steven Arkoh Sackey', '2020-07-27 00:09:44'),
+(4499, 'LMLS-AMA-0002', 'Tried To Add SPECIALS Lab For Steven Arkoh Sackey', '2020-07-27 00:10:27'),
+(4500, 'LMLS-AMA-0002', 'Added SPECIALS Lab For Steven Arkoh Sackey', '2020-07-27 00:10:37'),
+(4501, 'LMLS-AMA-0002', 'Added CA 12.5 Lab For Steven Arkoh Sackey', '2020-07-27 00:15:28'),
+(4502, 'LMLS-AMA-0002', 'Added CA 15.3 Lab For Steven Arkoh Sackey', '2020-07-27 00:17:40'),
+(4503, 'LMLS-AMA-0002', 'Added CA 12.5 Lab For Steven Arkoh Sackey', '2020-07-27 00:19:49'),
+(4504, 'LMLS-AMA-0002', 'Added CKMB Lab For Steven Arkoh Sackey', '2020-07-27 00:21:46'),
+(4505, 'LMLS-AMA-0002', 'Added CEA Lab For Steven Arkoh Sackey', '2020-07-27 00:22:44'),
+(4506, 'LMLS-AMA-0002', 'Added CRP Lab For Steven Arkoh Sackey', '2020-07-27 00:24:28'),
+(4507, 'LMLS-AMA-0002', 'Added CRP Ultra Sensitive Lab For Steven Arkoh Sackey', '2020-07-27 00:30:13'),
+(4508, 'LMLS-AMA-0002', 'Added M-ALB Lab For Steven Arkoh Sackey', '2020-07-27 00:34:09'),
+(4509, 'LMLS-AMA-0002', 'Added B-HCG Serum Lab For Steven Arkoh Sackey', '2020-07-27 00:57:10'),
+(4510, 'LMLS-AMA-0002', 'Added FBC 3P Lab For Steven Arkoh Sackey', '2020-07-27 14:24:34'),
+(4511, 'LMLS-AMA-0002', 'Added FBC 5P Lab For Steven Arkoh Sackey', '2020-07-27 14:51:24'),
+(4512, 'LMLS-KB-0001', 'Logged In', '2020-07-27 20:48:43'),
+(4513, 'LMLS-AMA-0002', 'Logged In', '2020-07-27 20:57:21'),
+(4514, 'LMLS-0000', 'Logged In', '2020-07-27 20:57:25'),
+(4515, 'LMLS-0001', 'Logged In', '2020-07-28 18:40:10'),
+(4516, 'LMLS-0000', 'Viewed Receipt For Bethany Serwaa Adjei', '2020-07-28 21:23:50'),
+(4517, 'LMLS-0000', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-28 21:23:57'),
+(4518, 'LMLS-0000', 'Viewed Receipt For Steven Arkoh Sackey', '2020-07-28 21:23:59'),
+(4519, 'LMLS-0000', 'Viewed Receipt For Bethany Serwaa Adjei', '2020-07-28 21:24:04'),
+(4520, 'LMLS-0000', 'Viewed Receipt For Bethany Serwaa Adjei', '2020-07-28 21:24:46'),
+(4521, 'LMLS-AMA-0002', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-28 21:25:03'),
+(4522, 'LMLS-AMA-0002', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-28 21:31:26'),
+(4523, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:19:11'),
+(4524, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:19:18'),
+(4525, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:21:24'),
+(4526, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:25:19'),
+(4527, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:33:14'),
+(4528, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:34:05'),
+(4529, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:34:16'),
+(4530, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:35:04'),
+(4531, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:35:14'),
+(4532, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:36:03'),
+(4533, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:37:49'),
+(4534, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:40:08'),
+(4535, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:41:38'),
+(4536, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:43:15'),
+(4537, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:43:25'),
+(4538, 'LMLS-0000', 'Updated Patient \"Bismarkk Adjei Bediako\"', '2020-07-28 22:44:59'),
+(4539, 'LMLS-0000', 'Updated Patient \"Bismark Adjei Bediako\"', '2020-07-28 22:45:11'),
+(4540, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:48:46'),
+(4541, 'LMLS-AMA-0002', 'Updated Alpha Feto Protein Lab For Daniella Adwoa Owusua', '2020-07-28 22:49:01'),
+(4542, 'LMLS-AMA-0002', 'Viewed Receipt For Daniella Adwoa Owusua', '2020-07-28 22:52:09'),
+(4543, 'LMLS-AMA-0002', 'Updated Cortisol Lab For Daniella Adwoa Owusua', '2020-07-28 23:24:54'),
+(4544, 'LMLS-AMA-0002', 'Updated Cortisol Lab For Daniella Adwoa Owusua', '2020-07-28 23:26:17'),
+(4545, 'LMLS-AMA-0002', 'Updated Hormonal Assay Lab For Trial Ntow Adjei Laryea', '2020-07-28 23:54:34'),
+(4546, 'LMLS-AMA-0002', 'Updated Hormonal Assay Lab For Trial Ntow Adjei Laryea', '2020-07-28 23:57:03'),
+(4547, 'LMLS-AMA-0002', 'Updated PSA Lab For Daniella Adwoa Owusua', '2020-07-29 00:25:41'),
+(4548, 'LMLS-AMA-0002', 'Updated Estrogen Lab For Daniella Adwoa Owusua', '2020-07-29 00:26:14'),
+(4549, 'LMLS-AMA-0002', 'Updated Estrogen Lab For Daniella Adwoa Owusua', '2020-07-29 00:26:41'),
+(4550, 'LMLS-AMA-0002', 'Updated Estrogen Lab For Daniella Adwoa Owusua', '2020-07-29 00:27:25'),
+(4551, 'LMLS-AMA-0002', 'Updated Cortisol Lab For Maria Nortey', '2020-07-29 00:27:54'),
+(4552, 'LMLS-AMA-0002', 'Updated PSA Lab For Maria Nortey', '2020-07-29 00:28:26'),
+(4553, 'LMLS-AMA-0002', 'Updated PTH Lab For Maria Nortey', '2020-07-29 00:36:13'),
+(4554, 'LMLS-AMA-0002', 'Updated PTH Lab For Maria Nortey', '2020-07-29 00:36:27'),
+(4555, 'LMLS-AMA-0002', 'Updated His Profile', '2020-07-29 10:22:40'),
+(4556, 'LMLS-AMA-0002', 'Updated His Profile', '2020-07-29 10:22:49'),
+(4557, 'LMLS-AMA-0002', 'Updated BUE Creatinine Lab For Daniella Adwoa Owusua', '2020-07-29 15:38:59'),
+(4558, 'LMLS-AMA-0002', 'Updated Bue Creatinine eGFR Lab For Daniella Adwoa Owusua', '2020-07-29 15:47:53'),
+(4559, 'LMLS-AMA-0002', 'Updated BUE Lipids Lab For Michelle Ntow Adjei Laryea', '2020-07-29 16:25:51'),
+(4560, 'LMLS-AMA-0002', 'Updated BUE Lipids Lab For Daniella Adwoa Owusua', '2020-07-29 16:26:54'),
+(4561, 'LMLS-AMA-0002', 'Added BUE LFT Lab For Michelle Ntow Adjei Laryea', '2020-07-29 16:27:38'),
+(4562, 'LMLS-AMA-0002', 'Updated CSF Biochem Lab For Michelle Ntow Adjei Laryea', '2020-07-29 16:51:37'),
+(4563, 'LMLS-AMA-0002', 'Updated Calcium Profile Lab For Michelle Ntow Adjei Laryea', '2020-07-29 17:05:05'),
+(4564, 'LMLS-AMA-0002', 'Updated Cardiac Enzyme Lab For Michelle Ntow Adjei Laryea', '2020-07-29 17:18:29'),
+(4565, 'LMLS-AMA-0002', 'Updated Compact Chemistry Lab For Daniella Adwoa Owusua', '2020-07-29 17:33:50'),
+(4566, 'LMLS-AMA-0002', 'Updated Folate/B12 Lab For Daniella Adwoa Owusua', '2020-07-29 17:40:35'),
+(4567, 'LMLS-AMA-0002', 'Updated General Chemistry Lab For Michelle Ntow Adjei Laryea', '2020-07-29 17:55:49'),
+(4568, 'LMLS-AMA-0002', 'Updated General Chemistry Lab For Daniella Adwoa Owusua', '2020-07-29 17:56:49'),
+(4569, 'LMLS-AMA-0002', 'Updated General Chemistry Lab For Daniella Adwoa Owusua', '2020-07-29 17:57:46'),
+(4570, 'LMLS-AMA-0002', 'Updated General Chemistry Lab For Daniella Adwoa Owusua', '2020-07-29 17:57:59'),
+(4571, 'LMLS-AMA-0002', 'Updated General Chemistry Lab For Daniella Adwoa Owusua', '2020-07-29 17:58:51'),
+(4572, 'LMLS-AMA-0002', 'Updated General Chemistry Lab For Daniella Adwoa Owusua', '2020-07-29 17:59:03'),
+(4573, 'LMLS-AMA-0002', 'Updated General Chemistry Lab For Daniella Adwoa Owusua', '2020-07-29 17:59:18'),
+(4574, 'LMLS-AMA-0002', 'Updated HBA1C Lab For Steven Arkoh Sackey', '2020-07-29 18:07:59'),
+(4575, 'LMLS-AMA-0002', 'Updated Hypersensitive CPR Lab For Michelle Ntow Adjei Laryea', '2020-07-29 18:13:29'),
+(4576, 'LMLS-AMA-0002', 'Updated ISE Lab For Steven Arkoh Sackey', '2020-07-29 18:19:39'),
+(4577, 'LMLS-AMA-0002', 'Updated ISE Lab For Michelle Ntow Adjei Laryea', '2020-07-29 18:20:46'),
+(4578, 'LMLS-AMA-0002', 'Updated Iron Study Lab For Steven Arkoh Sackey', '2020-07-29 18:35:12'),
+(4579, 'LMLS-AMA-0002', 'Updated Iron Study Lab For Michelle Ntow Adjei Laryea', '2020-07-29 18:35:28'),
+(4580, 'LMLS-0001', 'Logged In', '2020-07-29 20:00:41'),
+(4581, 'LMLS-AMA-0002', 'Logged In', '2020-07-29 20:00:50'),
+(4582, 'LMLS-AMA-0002', 'Updated LFT Lab For Steven Arkoh Sackey', '2020-07-29 20:58:11'),
+(4583, 'LMLS-AMA-0002', 'Updated Lipid Profile Lab For Steven Arkoh Sackey', '2020-07-29 21:05:09'),
+(4584, 'LMLS-AMA-0002', 'Updated Lipid Profile Lab For Michelle Ntow Adjei Laryea', '2020-07-29 21:05:29'),
+(4585, 'LMLS-AMA-0002', 'Updated Protein Electrophoresis Lab For Steven Arkoh Sackey', '2020-07-29 21:19:01'),
+(4586, 'LMLS-AMA-0002', 'Updated Protein Electrophoresis Lab For Steven Arkoh Sackey', '2020-07-29 21:19:11'),
+(4587, 'LMLS-AMA-0002', 'Updated Protein Electrophoresis Lab For Steven Arkoh Sackey', '2020-07-29 21:20:39'),
+(4588, 'LMLS-AMA-0002', 'Updated Protein Electrophoresis Lab For Michelle Ntow Adjei Laryea', '2020-07-29 21:22:11'),
+(4589, 'LMLS-AMA-0002', 'Updated S-C3, SC4 Lab For Michelle Ntow Adjei Laryea', '2020-07-29 21:28:54'),
+(4590, 'LMLS-AMA-0002', 'Updated Serum Lipase Lab For Michelle Ntow Adjei Laryea', '2020-07-29 21:33:53'),
+(4591, 'LMLS-AMA-0002', 'Updated Urine Lab For Steven Arkoh Sackey', '2020-07-29 21:45:42'),
+(4592, 'LMLS-AMA-0002', 'Updated Urine ACR Lab For Steven Arkoh Sackey', '2020-07-29 21:54:53'),
+(4593, 'LMLS-AMA-0002', 'Logged In', '2020-07-30 09:32:19'),
+(4594, 'LMLS-AMA-0002', 'Logged In', '2020-07-30 09:32:54'),
+(4595, 'LMLS-AMA-0002', 'Logged Out', '2020-07-30 09:33:07'),
+(4596, 'LMLS-0000', 'Logged In', '2020-07-30 09:33:12'),
+(4597, 'LMLS-0001', 'Logged In', '2020-07-30 09:33:23'),
+(4598, 'LMLS-AMA-0002', 'Updated His Profile', '2020-07-30 11:15:38'),
+(4599, 'LMLS-AMA-0002', 'Updated His Profile', '2020-07-30 12:06:00'),
+(4600, 'LMLS-AMA-0002', 'Updated Aspirate C/S Lab For Steven Arkoh Sackey', '2020-07-30 12:37:52'),
+(4601, 'LMLS-AMA-0002', 'Updated Aspirate C/S Lab For Steven Arkoh Sackey', '2020-07-30 12:38:21'),
+(4602, 'LMLS-AMA-0002', 'Updated Aspirate C/S Lab For Steven Arkoh Sackey', '2020-07-30 12:43:49'),
+(4603, 'LMLS-AMA-0002', 'Updated Blood C/S Lab For Steven Arkoh Sackey', '2020-07-30 13:39:24'),
+(4604, 'LMLS-AMA-0002', 'Updated Blood C/S Lab For Steven Arkoh Sackey', '2020-07-30 13:40:41'),
+(4605, 'LMLS-AMA-0002', 'Updated Blood C/S Lab For Maria Nortey', '2020-07-30 13:55:45'),
+(4606, 'LMLS-AMA-0002', 'Updated Blood C/S Lab For Steven Arkoh Sackey', '2020-07-30 13:56:10'),
+(4607, 'LMLS-AMA-0002', 'Updated Blood C/S Lab For Maria Nortey', '2020-07-30 15:54:40'),
+(4608, 'LMLS-AMA-0002', 'Updated Ear Swab C/S Lab For Maria Nortey', '2020-07-30 15:57:01'),
+(4609, 'LMLS-AMA-0002', 'Updated Eye Swab C/S Lab For Maria Nortey', '2020-07-30 15:58:58'),
+(4610, 'LMLS-AMA-0002', 'Updated Endocervical Swab C/S Lab For Maria Nortey', '2020-07-30 21:05:21'),
+(4611, 'LMLS-AMA-0002', 'Updated HVS C/S Lab For Maria Nortey', '2020-07-30 21:07:25'),
+(4612, 'LMLS-AMA-0002', 'Updated HVS R/E Lab For Steven Arkoh Sackey', '2020-07-30 21:28:20'),
+(4613, 'LMLS-AMA-0002', 'Updated Pleural Fluid Lab For Maria Nortey', '2020-07-30 22:32:27'),
+(4614, 'LMLS-AMA-0002', 'Updated Pleural Fluid Lab For Maria Nortey', '2020-07-30 22:37:01'),
+(4615, 'LMLS-0001', 'Logged In', '2020-07-30 22:40:17'),
+(4616, 'LMLS-AMA-0002', 'Updated Pus Fluid Lab For Maria Nortey', '2020-07-30 23:03:01'),
+(4617, 'LMLS-AMA-0002', 'Updated Semen C/S Lab For Maria Nortey', '2020-07-30 23:07:46'),
+(4618, 'LMLS-AMA-0002', 'Updated Semen C/S Lab For Steven Arkoh Sackey', '2020-07-30 23:09:44'),
+(4619, 'LMLS-AMA-0002', 'Updated Semen C/S Lab For Maria Nortey', '2020-07-30 23:09:58'),
+(4620, 'LMLS-AMA-0002', 'Updated Semen C/S Lab For Maria Nortey', '2020-07-30 23:12:07'),
+(4621, 'LMLS-AMA-0002', 'Updated Skin Snip Lab For Maria Nortey', '2020-07-30 23:25:07'),
+(4622, 'LMLS-AMA-0002', 'Updated Sputum C/S Lab For Steven Arkoh Sackey', '2020-07-30 23:37:51'),
+(4623, 'LMLS-AMA-0002', 'Updated Sputum AFB Lab For Steven Arkoh Sackey', '2020-07-31 12:07:28'),
+(4624, 'LMLS-AMA-0002', 'Updated Stool C/S Lab For Michelle Ntow Adjei Laryea', '2020-07-31 12:12:06'),
+(4625, 'LMLS-AMA-0002', 'Updated Stool R/E Lab For Steven Arkoh Sackey', '2020-07-31 15:11:39'),
+(4626, 'LMLS-AMA-0002', 'Updated Stool R/E Lab For Steven Arkoh Sackey', '2020-07-31 15:11:46'),
+(4627, 'LMLS-0000', 'Added Stool R/E Lab For Bismark Adjei Bediako', '2020-07-31 15:15:47'),
+(4628, 'LMLS-AMA-0002', 'Updated Stool R/E Lab For Bismark Adjei Bediako', '2020-07-31 15:18:09'),
+(4629, 'LMLS-AMA-0002', 'Updated Stool R/E Lab For Bismark Adjei Bediako', '2020-07-31 15:19:21'),
+(4630, 'LMLS-AMA-0002', 'Added Throat Swab C/S Lab For Michelle Ntow Adjei Laryea', '2020-07-31 15:29:33'),
+(4631, 'LMLS-AMA-0002', 'Added Throat Swab C/S Lab For Michelle Ntow Adjei Laryea', '2020-07-31 15:29:51'),
+(4632, 'LMLS-AMA-0002', 'Updated Urethral C/S Lab For Michelle Ntow Adjei Laryea', '2020-07-31 15:37:14'),
+(4633, 'LMLS-AMA-0002', 'Updated Urethral C/S Lab For Michelle Ntow Adjei Laryea', '2020-07-31 15:39:15'),
+(4634, 'LMLS-AMA-0002', 'Updated Wound C/S Lab For Steven Arkoh Sackey', '2020-07-31 16:10:47'),
+(4635, 'LMLS-AMA-0002', 'Logged In', '2020-07-31 19:08:01'),
+(4636, 'LMLS-0001', 'Logged In', '2020-07-31 19:08:57'),
+(4637, 'LMLS-0001', 'Logged In', '2020-07-31 19:09:26'),
+(4638, 'LMLS-0000', 'Logged In', '2020-07-31 19:10:46'),
+(4639, 'LMLS-AMA-0002', 'Updated Antenatal Screening Lab For Steven Arkoh Sackey', '2020-07-31 19:23:03'),
+(4640, 'LMLS-AMA-0002', 'Updated Antenatal Screening Lab For Steven Arkoh Sackey', '2020-07-31 19:25:08'),
+(4641, 'LMLS-AMA-0002', 'Updated Antenatal Screening Lab For Steven Arkoh Sackey', '2020-07-31 19:25:20');
 
 -- --------------------------------------------------------
 
@@ -2406,7 +3505,8 @@ CREATE TABLE `blood_cs` (
 --
 
 INSERT INTO `blood_cs` (`id`, `invoice_id`, `patient_id`, `culture`, `bacteria_one`, `bacteria_two`, `bacteria_three`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `antibiotics_seventeen`, `antibiotics_eighteen`, `antibiotics_nineteen`, `antibiotics_twenty`, `antibiotics_twenty_one`, `antibiotics_twenty_two`, `antibiotics_twenty_three`, `antibiotics_twenty_four`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `sensitivity_seventeen`, `sensitivity_eighteen`, `sensitivity_nineteen`, `sensitivity_twenty`, `sensitivity_twenty_one`, `sensitivity_twenty_two`, `sensitivity_twenty_three`, `sensitivity_twenty_four`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-BLOOD-CS-360', 'LMLS-PAT-KB-0002', 'No Bacterial Growth', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'Some Comment Here', 'LMLS-0001', '2020-03-06 21:06:46');
+(2, 'INV-BLOOD-CS-360', 'LMLS-PAT-KB-0002', 'Heavily Mixed Growth, Please Repeat', 'Brucella SPP', 'Cryptococcus Cells', 'C. Perfringes', 'Ceftazidime', 'Ceftazidime', 'Cefuroxime', 'Cefuroxime', 'Chloramphenicol', 'Cephalothin', 'Ciprofloxacin', 'Cloxacillin', 'Flucloxacillin', 'Flucloxacillin', 'Gentamicin', 'Gentamicin', 'Cefotaxime', 'Cefixim', 'Cefoxitin', 'Cefoxitin', 'Cefuroxime', 'Cefuroxime', 'Chloramphenicol', 'Chloramphenicol', 'Ciprofloxacin', 'Cloxacillin', 'Cotrimoxazol', 'Erythromycin', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'Sample Comment', 'LMLS-0001', '2020-03-06 21:06:46'),
+(3, 'INV-BLD-CS-381', 'LMLS-PAT-AMA-0002', 'No Bacterial Growth', 'Brucella SPP', 'E. Coli', 'C. Diphtheriae', 'Ceftazidime', 'Ceftazidime', 'Cefuroxime', 'Cefuroxime', 'Chloramphenicol', 'Cephalothin', 'Cloxacillin', 'Cloxacillin', 'Flucloxacillin', 'Flucloxacillin', 'Cefepim', 'Cefepim', 'Cefotaxime', 'Cefotaxime', 'Cefpirom', 'Cefpirom', 'Ceftriaxone', 'Ceftriaxone', 'Cephalothin', 'Cefuroxime', 'Cloxacillin', 'Cloxacillin', 'Cotrimoxazol', 'Cotrimoxazol', 'S', 'S', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'S', 'S', 'R', 'S', 'R', 'S', 'R', 'R', 'S', 'S', 'S', 'R', 'R', 'Blood C/s', 'LMLS-AMA-0002', '2020-07-25 20:54:00');
 
 -- --------------------------------------------------------
 
@@ -2425,6 +3525,13 @@ CREATE TABLE `blood_film_comment` (
   `added_by` varchar(25) NOT NULL,
   `date_added` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `blood_film_comment`
+--
+
+INSERT INTO `blood_film_comment` (`id`, `invoice_id`, `patient_id`, `rbc`, `wbc`, `platelets`, `comments`, `added_by`, `date_added`) VALUES
+(3, 'INV-BFC-140', 'LMLS-PAT-AMA-0002', 'Rbc', 'Wbc', 'Platelets', 'Blood Film Comment', 'LMLS-AMA-0002', '2020-07-26 23:30:28');
 
 -- --------------------------------------------------------
 
@@ -2449,7 +3556,10 @@ CREATE TABLE `blood_sugar` (
 --
 
 INSERT INTO `blood_sugar` (`id`, `invoice_id`, `patient_id`, `fasting_blood_sugar`, `random_blood_sugar`, `two_hpp_blood_sugar`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-BLD-SUGAR-410', 'LMLS-PAT-KB-0001', 1.00, 2.00, 3.00, 'Jkhjgfdsas', 'LMLS-0001', '2020-03-08 00:11:50');
+(3, 'INV-BLD-SUGAR-410', 'LMLS-PAT-KB-0001', 1.00, 2.00, 3.00, 'Jkhjgfdsas', 'LMLS-0001', '2020-03-08 00:11:50'),
+(4, 'INV-BLD-SUGAR-131', 'LMLS-PAT-AMA-0001', 0.50, 0.50, 0.50, 'Add Blood Sugar', 'LMLS-0000', '2020-07-24 20:45:54'),
+(5, 'INV-BLD-SUGAR-442', 'LMLS-PAT-AMA-0001', 1.00, 1.00, 1.00, 'Add Blood Sugar 2', 'LMLS-0000', '2020-07-24 20:47:15'),
+(6, 'INV-BLD-SUGAR-653', 'LMLS-PAT-AMA-0001', 2.00, 2.00, 2.00, 'Add Blood Sugar 3', 'LMLS-0000', '2020-07-24 20:48:07');
 
 -- --------------------------------------------------------
 
@@ -2483,7 +3593,8 @@ CREATE TABLE `bue_creatinine` (
 
 INSERT INTO `bue_creatinine` (`id`, `invoice_id`, `patient_id`, `sodium`, `sodium_flag`, `potassium`, `potassium_flag`, `chloride`, `chloride_flag`, `urea`, `urea_flag`, `creatinine`, `creatinine_flag`, `egfr`, `comments`, `added_by`, `date_added`) VALUES
 (4, 'INV-BUE-CREAT-490', 'LMLS-PAT-KB-0001', 2.00, '', 3.00, '', 4.00, '', 5.00, '', 6.00, '', 7.00, '', 'LMLS-0001', '2020-03-07 21:31:20'),
-(5, 'INV-BUE-CRT-231', 'LMLS-PAT-KB-0003', 1.00, 'Low', 2.00, 'High', 0.00, '', 0.00, '', 0.00, '', 0.00, 'This Is A Sample Comment', 'LMLS-0001', '2020-03-18 10:28:51');
+(5, 'INV-BUE-CRT-231', 'LMLS-PAT-KB-0003', 1.00, 'Low', 2.00, 'High', 0.00, '', 0.00, '', 0.00, '', 0.00, 'This Is A Sample Comment', 'LMLS-0001', '2020-03-18 10:28:51'),
+(6, 'INV-BUE-CRT-422', 'LMLS-PAT-AMA-0001', 0.50, 'High', 0.00, 'High', 0.50, 'High', 1.00, 'High', 0.50, 'High', 1.00, 'Add Bue Creatinine', 'LMLS-0000', '2020-07-24 13:03:23');
 
 -- --------------------------------------------------------
 
@@ -2516,7 +3627,9 @@ CREATE TABLE `bue_creatinine_egfr` (
 --
 
 INSERT INTO `bue_creatinine_egfr` (`id`, `invoice_id`, `patient_id`, `sodium`, `sodium_flag`, `potassium`, `potassium_flag`, `chloride`, `chloride_flag`, `urea`, `urea_flag`, `creatinine`, `creatinine_flag`, `egfr`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-BUE-CRT-EGFR-420', 'LMLS-PAT-KB-0001', 7.00, 'Low', 0.00, 'High', 0.00, 'Low', 0.00, 'Low', 0.00, 'Low', 0.00, '', 'LMLS-0001', '2020-03-07 21:47:44');
+(3, 'INV-BUE-CRT-EGFR-420', 'LMLS-PAT-KB-0001', 7.00, 'Low', 0.00, 'High', 0.00, 'Low', 0.00, 'Low', 0.00, 'Low', 0.00, '', 'LMLS-0001', '2020-03-07 21:47:44'),
+(4, 'INV-BUE-CRT-EGFR-781', 'LMLS-PAT-AMA-0002', 0.50, 'High', 0.50, 'High', 0.50, 'High', 0.50, 'High', 0.50, 'High', 1.00, 'Add Bue + Creatinine + Egfr', 'LMLS-AMA-0002', '2020-07-24 13:18:06'),
+(5, 'INV-BUE-CRT-EGFR-532', 'LMLS-PAT-AMA-0001', 0.50, 'Low', 0.50, 'Low', 0.50, 'Low', 0.50, 'Low', 0.50, 'Low', 0.50, 'Add Bue + Creatinine + Egfr', 'LMLS-0000', '2020-07-24 14:01:46');
 
 -- --------------------------------------------------------
 
@@ -2569,7 +3682,8 @@ CREATE TABLE `bue_creatinine_lft` (
 --
 
 INSERT INTO `bue_creatinine_lft` (`id`, `invoice_id`, `patient_id`, `sodium`, `sodium_flag`, `potassium`, `potassium_flag`, `chloride`, `chloride_flag`, `urea`, `urea_flag`, `creatinine`, `creatinine_flag`, `egfr`, `got_ast`, `got_ast_flag`, `gpt_alt`, `gpt_alt_flag`, `alkaline_phos`, `alkaline_phos_flag`, `ggt`, `ggt_flag`, `bilirubin_total`, `bilirubin_total_flag`, `bili_indirect`, `bili_indirect_flag`, `bilirubin_direct`, `bilirubin_direct_flag`, `protein_total`, `protein_total_flag`, `albumin`, `albumin_flag`, `globulin`, `globulin_flag`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-BUE-LFT-440', 'LMLS-PAT-KB-0001', 1.00, '', 2.00, '', 3.00, '', 4.00, '', 5.00, '', 6.00, 7.00, 'High', 8.00, 'Low', 9.00, 'Low', 10.00, 'High', 11.00, 'High', 12.00, 'Low', 13.00, 'High', 14.00, 'Low', 15.00, 'High', 16.00, 'High', '', 'LMLS-0001', '2020-03-07 22:15:16');
+(3, 'INV-BUE-LFT-440', 'LMLS-PAT-KB-0001', 1.00, 'High', 2.00, 'Low', 3.00, 'High', 4.00, 'Low', 5.00, 'High', 6.00, 7.00, 'High', 8.00, 'Low', 9.00, 'Low', 10.00, 'High', 11.00, 'High', 12.00, 'Low', 13.00, 'High', 14.00, 'Low', 15.00, 'High', 16.00, 'High', 'Some Comment Here', 'LMLS-0001', '2020-03-07 22:15:16'),
+(4, 'INV-BUE-LFT-821', 'LMLS-PAT-AMA-0001', 1.00, 'High', 1.00, 'High', 1.00, 'High', 1.00, 'High', 1.00, 'High', 1.00, 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 'Add Bue + Lft', 'LMLS-0000', '2020-07-24 14:55:04');
 
 -- --------------------------------------------------------
 
@@ -2612,7 +3726,8 @@ CREATE TABLE `bue_creatinine_lipids` (
 --
 
 INSERT INTO `bue_creatinine_lipids` (`id`, `invoice_id`, `patient_id`, `sodium`, `sodium_flag`, `potassium`, `potassium_flag`, `chloride`, `chloride_flag`, `urea`, `urea_flag`, `creatinine`, `creatinine_flag`, `egfr`, `cholesterol_total`, `cholesterol_total_flag`, `triglycerides`, `triglycerides_flag`, `hdl`, `hdl_flag`, `ldl`, `ldl_flag`, `coronary_risk`, `coronary_risk_flag`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-BUE-LPD-980', 'LMLS-PAT-KB-0001', 1.00, 'High', 2.00, 'High', 3.00, 'High', 4.00, 'High', 5.00, 'High', 6.00, 7.00, 'Low', 8.00, 'High', 9.00, 'Low', 10.00, 'High', 11.00, 'Low', 'M, ,dnc', 'LMLS-0001', '2020-03-07 23:55:18');
+(3, 'INV-BUE-LPD-980', 'LMLS-PAT-KB-0001', 1.00, 'High', 2.00, 'High', 3.00, 'High', 4.00, 'High', 5.00, 'High', 6.00, 7.00, 'High', 8.00, 'High', 9.00, 'High', 10.00, 'High', 11.00, 'High', 'M, ,dnc', 'LMLS-0001', '2020-03-07 23:55:18'),
+(4, 'INV-BUE-LPD-181', 'LMLS-PAT-AMA-0001', 0.50, 'Low', 0.50, 'Low', 0.50, 'Low', 0.50, 'Low', 0.50, 'Low', 0.50, 1.00, 'Low', 1.00, 'Low', 1.00, 'Low', 1.00, 'Low', 1.00, 'Low', 'Add Bue + Lipids', 'LMLS-0000', '2020-07-24 17:31:36');
 
 -- --------------------------------------------------------
 
@@ -2643,7 +3758,8 @@ CREATE TABLE `calcium_profile` (
 --
 
 INSERT INTO `calcium_profile` (`id`, `invoice_id`, `patient_id`, `s_calcium_total`, `s_calcium_total_flag`, `s_ionized_calcium_calc`, `s_ionized_calcium_calc_flag`, `s_albumin`, `s_albumin_flag`, `s_total_protein`, `s_total_protein_flag`, `corrected_calcium_calc`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-CALC-PRF-850', 'LMLS-PAT-KB-0001', 6.00, 'High', 7.00, 'High', 8.00, 'Low', 9.00, 'Low', 10.00, '.kljkhjghfg', 'LMLS-0001', '2020-03-08 00:59:38');
+(3, 'INV-CALC-PRF-850', 'LMLS-PAT-KB-0001', 6.00, 'High', 7.00, 'High', 8.00, 'High', 9.00, 'High', 10.00, '.kljkhjghfg', 'LMLS-0001', '2020-03-08 00:59:38'),
+(4, 'INV-CALC-PRF-151', 'LMLS-PAT-AMA-0001', 1.00, 'High', 2.00, 'High', 3.00, 'Low', 4.00, 'Low', 5.00, 'Add Calcium Profile', 'LMLS-0000', '2020-07-25 00:07:59');
 
 -- --------------------------------------------------------
 
@@ -2671,7 +3787,8 @@ CREATE TABLE `cardiac_enzyme` (
 --
 
 INSERT INTO `cardiac_enzyme` (`id`, `invoice_id`, `patient_id`, `ast`, `alt`, `creatinine_kinase`, `ck_mb`, `ldh`, `troponin`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-CARD-ENZ-230', 'LMLS-PAT-KB-0001', 1.10, 2.10, 3.10, 4.10, 5.10, 6.10, 'Sdfghjkl', 'LMLS-0001', '2020-03-08 01:20:46');
+(3, 'INV-CARD-ENZ-230', 'LMLS-PAT-KB-0001', 1.10, 2.10, 3.10, 4.10, 5.10, 6.10, 'Sdfghjkl Sdfghjkl Sdfghjkl Sdfghjkl', 'LMLS-0001', '2020-03-08 01:20:46'),
+(4, 'INV-CARD-ENZ-891', 'LMLS-PAT-AMA-0001', 1.00, 2.00, 3.00, 4.00, 5.00, 6.00, 'Add Cardiac Enzyme', 'LMLS-0000', '2020-07-25 00:35:20');
 
 -- --------------------------------------------------------
 
@@ -2694,7 +3811,8 @@ CREATE TABLE `ca_one_five_three` (
 --
 
 INSERT INTO `ca_one_five_three` (`id`, `invoice_id`, `patient_id`, `results`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-CA-125-430', 'LMLS-PAT-KB-0002', 2.50, 'Kjkhgfd', 'LMLS-0001', '2020-03-09 10:14:34');
+(2, 'INV-CA-125-430', 'LMLS-PAT-KB-0002', 2.50, 'Kjkhgfd', 'LMLS-0001', '2020-03-09 10:14:34'),
+(3, 'INV-CA-153-981', 'LMLS-PAT-AMA-0002', 65.00, 'Ca 15.3', 'LMLS-AMA-0002', '2020-07-27 00:17:40');
 
 -- --------------------------------------------------------
 
@@ -2717,7 +3835,9 @@ CREATE TABLE `ca_one_two_five` (
 --
 
 INSERT INTO `ca_one_two_five` (`id`, `invoice_id`, `patient_id`, `results`, `comments`, `added_by`, `date_added`) VALUES
-(4, 'INV-CA-153-761', 'LMLS-PAT-KB-0002', 3.10, 'Lkjhgf', 'LMLS-0001', '2020-03-09 10:15:04');
+(4, 'INV-CA-153-761', 'LMLS-PAT-KB-0002', 3.10, 'Lkjhgf', 'LMLS-0001', '2020-03-09 10:15:04'),
+(5, 'INV-CA-125-711', 'LMLS-PAT-AMA-0002', 66.00, 'Ca 12.5', 'LMLS-AMA-0002', '2020-07-27 00:15:28'),
+(6, 'INV-CA-125-192', 'LMLS-PAT-AMA-0002', 76.00, 'Cea', 'LMLS-AMA-0002', '2020-07-27 00:19:49');
 
 -- --------------------------------------------------------
 
@@ -2748,7 +3868,8 @@ CREATE TABLE `cd4_count` (
 
 INSERT INTO `cd4_count` (`id`, `invoice_id`, `patient_id`, `t_wbc`, `t_wbc_flag`, `cd4_count`, `cd4_count_flag`, `cd3`, `cd3_flag`, `cd4_cd3`, `cd4_cd3_flag`, `comments`, `added_by`, `date_added`) VALUES
 (3, 'INV-CD4-CNT-560', 'LMLS-PAT-KB-0001', 1.00, 'Low', 2.00, 'Low', 3.00, 'High', 4.00, 'High', 'Lkljkhbn', 'LMLS-0001', '2020-03-08 14:23:43'),
-(4, 'INV-CD4-CNT-231', 'LMLS-PAT-KB-0003', 2.80, 'High', 410.90, 'High', 0.00, '', 0.00, '', '', 'LMLS-0001', '2020-03-18 10:20:46');
+(4, 'INV-CD4-CNT-231', 'LMLS-PAT-KB-0003', 2.80, 'High', 410.90, 'High', 0.00, '', 0.00, '', '', 'LMLS-0001', '2020-03-18 10:20:46'),
+(5, 'INV-CD4-CNT-232', 'LMLS-PAT-AMA-0002', 0.50, 'High', 0.50, 'High', 0.50, 'Low', 0.50, 'Low', 'Cd4 Count', 'LMLS-AMA-0002', '2020-07-26 17:24:05');
 
 -- --------------------------------------------------------
 
@@ -2771,7 +3892,8 @@ CREATE TABLE `cea` (
 --
 
 INSERT INTO `cea` (`id`, `invoice_id`, `patient_id`, `results`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-CEA-730', 'LMLS-PAT-KB-0002', 32.00, 'Fghjm,', 'LMLS-0001', '2020-03-09 11:22:14');
+(2, 'INV-CEA-730', 'LMLS-PAT-KB-0002', 32.00, 'Fghjm,', 'LMLS-0001', '2020-03-09 11:22:14'),
+(3, 'INV-CEA-151', 'LMLS-PAT-AMA-0002', 676.00, 'Cea', 'LMLS-AMA-0002', '2020-07-27 00:22:44');
 
 -- --------------------------------------------------------
 
@@ -2792,177 +3914,178 @@ CREATE TABLE `charges` (
 --
 
 INSERT INTO `charges` (`id`, `type`, `amount`, `date_added`, `added_by`) VALUES
-(1, 'Amylase', 60.00, '2020-03-15 22:02:43', 'LMLS-0001'),
-(2, 'Albumin', 30.00, '2020-03-15 22:03:07', 'LMLS-0001'),
-(3, 'B2 Microalbumin', 130.00, '2020-03-15 22:04:05', 'LMLS-0001'),
-(4, 'Bence Jones Protein', 60.00, '2020-03-15 22:04:39', 'LMLS-0001'),
-(5, 'Bue Creatinine', 60.00, '2020-03-15 22:05:27', 'LMLS-0001'),
-(6, 'Cardiac Enzymes', 180.00, '2020-03-15 22:06:49', 'LMLS-0001'),
-(7, 'Ck', 45.00, '2020-03-15 22:07:17', 'LMLS-0001'),
-(8, 'Ck-mb', 45.00, '2020-03-15 22:08:01', 'LMLS-0001'),
-(9, 'Creatinine Clearance', 80.00, '2020-03-15 22:08:34', 'LMLS-0001'),
-(10, 'Csf Biochem', 60.00, '2020-03-15 22:09:14', 'LMLS-0001'),
-(11, 'Direct Bilirubin', 35.00, '2020-03-15 22:09:36', 'LMLS-0001'),
-(12, 'Faecal Reducing Substance', 30.00, '2020-03-15 22:10:11', 'LMLS-0001'),
-(13, 'Fasting Lipids', 60.00, '2020-03-15 22:10:39', 'LMLS-0001'),
-(14, 'Fasting Random Blood Glucose', 25.00, '2020-03-15 22:13:04', 'LMLS-0001'),
-(15, 'Ferritin', 80.00, '2020-03-15 22:13:51', 'LMLS-0001'),
-(16, 'Folate Serum', 120.00, '2020-03-15 22:14:11', 'LMLS-0001'),
-(17, 'Free Light Chains', 300.00, '2020-03-15 22:15:01', 'LMLS-0001'),
-(18, 'Hba1c', 60.00, '2020-03-15 22:15:30', 'LMLS-0001'),
-(19, 'Immunoglobulin', 210.00, '2020-03-15 22:17:08', 'LMLS-0001'),
-(20, 'Iron + Transferrin', 120.00, '2020-03-15 22:18:05', 'LMLS-0001'),
-(21, 'Lactate', 100.00, '2020-03-15 22:18:59', 'LMLS-0001'),
-(22, 'Ldh', 50.00, '2020-03-15 22:19:22', 'LMLS-0001'),
-(23, 'Lft', 60.00, '2020-03-15 22:19:50', 'LMLS-0001'),
-(24, 'Lipase', 60.00, '2020-03-15 22:21:31', 'LMLS-0001'),
-(25, 'Magnessium', 40.00, '2020-03-15 22:22:13', 'LMLS-0001'),
-(26, 'Phosphate', 40.00, '2020-03-15 22:22:31', 'LMLS-0001'),
-(27, 'Pleural Ascitic Synovial Fluid', 150.00, '2020-03-15 22:23:26', 'LMLS-0001'),
-(28, 'Protein Electrophoresis', 180.00, '2020-03-15 22:23:55', 'LMLS-0001'),
-(29, 'Serum Calcium Corrected', 70.00, '2020-03-15 22:24:57', 'LMLS-0001'),
-(30, 'Serum Calcium Ionised', 70.00, '2020-03-15 22:25:15', 'LMLS-0001'),
-(31, 'Serum Iron', 60.00, '2020-03-15 22:25:37', 'LMLS-0001'),
-(32, 'Total Protein', 30.00, '2020-03-15 22:26:07', 'LMLS-0001'),
-(33, 'Total Bilirubin', 35.00, '2020-03-15 22:26:33', 'LMLS-0001'),
-(34, 'Transferrin', 70.00, '2020-03-15 22:27:10', 'LMLS-0001'),
-(35, 'Troponin I', 100.00, '2020-03-15 22:27:35', 'LMLS-0001'),
-(36, 'Troponin T', 120.00, '2020-03-15 22:27:49', 'LMLS-0001'),
-(37, '24hr Ogtt', 120.00, '2020-03-15 22:30:51', 'LMLS-0001'),
-(38, '24hr Post Prandial Glucose', 60.00, '2020-03-15 22:31:49', 'LMLS-0001'),
-(39, '24hr Urine Protein', 120.00, '2020-03-15 22:32:16', 'LMLS-0001'),
-(40, '24hr Vma', 830.00, '2020-03-15 22:32:41', 'LMLS-0001'),
-(41, 'U - Micro Albumin Creatinine Ratio', 120.00, '2020-03-15 22:34:25', 'LMLS-0001'),
-(42, 'Uric Acid', 40.00, '2020-03-15 22:35:04', 'LMLS-0001'),
-(43, 'Urine Reducing Substance', 30.00, '2020-03-15 22:35:29', 'LMLS-0001'),
-(44, 'Vitamin B12', 150.00, '2020-03-15 22:35:49', 'LMLS-0001'),
-(45, 'Bf For Mps', 20.00, '2020-03-15 22:36:37', 'LMLS-0001'),
-(46, 'Blood Group + Rh Antigen', 25.00, '2020-03-15 22:37:24', 'LMLS-0001'),
-(47, 'Direct Anti Human Globulin', 50.00, '2020-03-15 22:37:48', 'LMLS-0001'),
-(48, 'Esr', 30.00, '2020-03-15 22:38:13', 'LMLS-0001'),
-(49, 'Fbc + Blood Film Comment', 70.00, '2020-03-15 22:38:38', 'LMLS-0001'),
-(50, 'Full Blood Count (fbc)', 40.00, '2020-03-15 22:39:07', 'LMLS-0001'),
-(51, 'G6pd Qualitative', 30.00, '2020-03-15 22:40:04', 'LMLS-0001'),
-(52, 'Hb Electrophoresis', 45.00, '2020-03-15 22:40:31', 'LMLS-0001'),
-(53, 'Indirect Anti Human Globulin', 40.00, '2020-03-15 22:40:56', 'LMLS-0001'),
-(54, 'Mononucleosis Spot - Paul Bunnel', 50.00, '2020-03-15 22:41:41', 'LMLS-0001'),
-(55, 'Reticulocytes Count', 40.00, '2020-03-15 22:42:05', 'LMLS-0001'),
-(56, 'Sickling Test', 25.00, '2020-03-15 22:42:24', 'LMLS-0001'),
-(57, 'Trophozoites Count', 30.00, '2020-03-15 22:43:04', 'LMLS-0001'),
-(58, 'Anti Ccp', 170.00, '2020-03-15 22:43:55', 'LMLS-0001'),
-(59, 'Anti Thrombin Iii Functional', 140.00, '2020-03-15 22:44:44', 'LMLS-0001'),
-(60, 'Bleeding Time', 30.00, '2020-03-15 22:45:14', 'LMLS-0001'),
-(61, 'Clotting Profile', 70.00, '2020-03-15 22:45:33', 'LMLS-0001'),
-(62, 'Clotting Time', 25.00, '2020-03-15 22:45:52', 'LMLS-0001'),
-(63, 'D - Dimer', 80.00, '2020-03-15 22:46:17', 'LMLS-0001'),
-(64, 'Factor 8', 150.00, '2020-03-15 22:46:39', 'LMLS-0001'),
-(65, 'Factor 9', 150.00, '2020-03-15 22:46:51', 'LMLS-0001'),
-(66, 'Fibrinogen', 130.00, '2020-03-15 22:47:20', 'LMLS-0001'),
-(67, 'Protein C', 150.00, '2020-03-15 22:47:56', 'LMLS-0001'),
-(68, 'Protein S', 190.00, '2020-03-15 22:48:07', 'LMLS-0001'),
-(69, 'Prothrombin Time (pt) - Inr', 30.00, '2020-03-15 22:49:07', 'LMLS-0001'),
-(70, 'Thromboplastin Time (aptt)', 40.00, '2020-03-15 22:49:45', 'LMLS-0001'),
-(71, 'Von Willibrands Factor', 400.00, '2020-03-15 22:50:03', 'LMLS-0001'),
-(72, 'Blood C/s', 70.00, '2020-03-16 09:16:33', 'LMLS-0001'),
-(73, 'Cervical Swab For C/s', 60.00, '2020-03-16 09:17:05', 'LMLS-0001'),
-(74, 'Corneal Scrapping For C/s', 60.00, '2020-03-16 09:18:10', 'LMLS-0001'),
-(75, 'Csf Bacteriology', 65.00, '2020-03-16 09:18:44', 'LMLS-0001'),
-(76, 'Ear Swab For C/s', 60.00, '2020-03-16 09:19:59', 'LMLS-0001'),
-(77, 'Eye Swab For C/s', 60.00, '2020-03-16 09:20:25', 'LMLS-0001'),
-(78, 'Endocervical Swab For C/s', 60.00, '2020-03-16 09:21:22', 'LMLS-0001'),
-(79, 'H. Pylori Antibodies', 80.00, '2020-03-16 09:24:17', 'LMLS-0001'),
-(80, 'H. Pylori Antigen', 80.00, '2020-03-16 09:24:26', 'LMLS-0001'),
-(81, 'Hvs C/s', 60.00, '2020-03-16 09:28:38', 'LMLS-0001'),
-(82, 'Hvs R/e', 30.00, '2020-03-16 09:29:17', 'LMLS-0001'),
-(83, 'Semen C/s', 80.00, '2020-03-16 09:29:47', 'LMLS-0001'),
-(84, 'Skin Scraping For Culture', 60.00, '2020-03-16 09:30:49', 'LMLS-0001'),
-(85, 'Skin Scraping For Fungal Elements', 40.00, '2020-03-16 09:31:05', 'LMLS-0001'),
-(86, 'Stool C/s', 60.00, '2020-03-16 09:31:43', 'LMLS-0001'),
-(87, 'Stool For Rota And Adnoviruses', 120.00, '2020-03-16 09:32:11', 'LMLS-0001'),
-(88, 'Stool Occult Blood Test', 40.00, '2020-03-16 09:32:35', 'LMLS-0001'),
-(89, 'Stool R/e', 20.00, '2020-03-16 09:44:55', 'LMLS-0001'),
-(90, 'Sputum For Afb', 40.00, '2020-03-16 09:45:30', 'LMLS-0001'),
-(91, 'Sputum For C/s', 60.00, '2020-03-16 09:45:46', 'LMLS-0001'),
-(92, 'Throat Swab For C/s', 60.00, '2020-03-16 09:46:17', 'LMLS-0001'),
-(93, 'Urethral Swab For C/s', 60.00, '2020-03-16 09:47:02', 'LMLS-0001'),
-(94, 'Urethral Swab For Gram Stain', 40.00, '2020-03-16 09:47:12', 'LMLS-0001'),
-(95, 'Urine C/s', 60.00, '2020-03-16 09:47:40', 'LMLS-0001'),
-(96, 'Urine R/e', 25.00, '2020-03-16 09:47:50', 'LMLS-0001'),
-(97, 'Widal Test', 35.00, '2020-03-16 09:48:19', 'LMLS-0001'),
-(98, 'Wound Swab For C/s', 60.00, '2020-03-16 09:49:23', 'LMLS-0001'),
-(99, 'Anti Streptolysin O', 54.00, '2020-03-16 09:50:34', 'LMLS-0001'),
-(100, 'Bilhazia Antibody (igg And Igm)', 180.00, '2020-03-16 09:51:23', 'LMLS-0001'),
-(101, 'Bilhazia Antigen Urine Serum', 100.00, '2020-03-16 09:51:49', 'LMLS-0001'),
-(102, 'Chlamydia Abs', 125.00, '2020-03-16 09:52:42', 'LMLS-0001'),
-(103, 'Cmv - Iga And Igm', 200.00, '2020-03-16 09:53:19', 'LMLS-0001'),
-(104, 'Gonorrhoea Ab', 50.00, '2020-03-16 09:53:41', 'LMLS-0001'),
-(105, 'Hepatitis A', 80.00, '2020-03-16 09:54:07', 'LMLS-0001'),
-(106, 'Hepatitis B Profile', 170.00, '2020-03-16 09:54:27', 'LMLS-0001'),
-(107, 'Hepatitis B Screen', 40.00, '2020-03-16 09:54:46', 'LMLS-0001'),
-(108, 'Hepatitis B Viral Load', 500.00, '2020-03-16 09:55:08', 'LMLS-0001'),
-(109, 'Hepatitis C Screen', 40.00, '2020-03-16 09:55:33', 'LMLS-0001'),
-(110, 'Hepatitis C Viral Load', 620.00, '2020-03-16 09:56:01', 'LMLS-0001'),
-(111, 'Hiv Viral Load', 550.00, '2020-03-16 09:56:42', 'LMLS-0001'),
-(112, 'Retro Screen', 35.00, '2020-03-16 09:57:08', 'LMLS-0001'),
-(113, 'Retro Screen Confirmation', 70.00, '2020-03-16 09:57:38', 'LMLS-0001'),
-(114, 'Rubella Igg And Igm', 200.00, '2020-03-16 09:58:08', 'LMLS-0001'),
-(115, 'Syphilis Profile Vdrl T. Pallidium Igg And Igm', 120.00, '2020-03-16 09:59:00', 'LMLS-0001'),
-(116, 'T. Pallidium Latex', 45.00, '2020-03-16 09:59:41', 'LMLS-0001'),
-(117, 'T. Pallidium Antibody', 60.00, '2020-03-16 09:59:54', 'LMLS-0001'),
-(118, 'Toxo - Igg And Igm', 150.00, '2020-03-16 10:00:19', 'LMLS-0001'),
-(119, 'Vdrl', 40.00, '2020-03-16 10:00:49', 'LMLS-0001'),
-(120, 'Thyroid Function Test', 180.00, '2020-03-16 10:01:41', 'LMLS-0001'),
-(121, 'Tsh', 60.00, '2020-03-16 10:02:08', 'LMLS-0001'),
-(122, 'Ft3', 60.00, '2020-03-16 10:02:28', 'LMLS-0001'),
-(123, 'Ft4', 60.00, '2020-03-16 10:02:45', 'LMLS-0001'),
-(124, 'Thyroglobin Antibody', 190.00, '2020-03-16 10:03:06', 'LMLS-0001'),
-(125, 'Thyroid Auto Antibodies', 170.00, '2020-03-16 10:03:29', 'LMLS-0001'),
-(126, 'Tsh Releasing Receptors Antibody', 200.00, '2020-03-16 10:05:00', 'LMLS-0001'),
-(127, '24hr Urine Cortisol', 420.00, '2020-03-16 10:10:23', 'LMLS-0001'),
-(128, 'Acetylcholine Receptor Antibody', 345.00, '2020-03-16 10:12:57', 'LMLS-0001'),
-(129, 'Aldenocortitropic Hormone (acth)', 130.00, '2020-03-16 10:19:21', 'LMLS-0000'),
-(130, 'Aldosterone', 90.00, '2020-03-16 10:20:01', 'LMLS-0000'),
-(131, 'Angiotensin Converting Enzymes (ace)', 70.00, '2020-03-16 10:20:38', 'LMLS-0000'),
-(132, 'Antimulerian Hormone', 300.00, '2020-03-16 10:21:30', 'LMLS-0000'),
-(133, 'Cortisol (blood)', 80.00, '2020-03-16 10:21:50', 'LMLS-0000'),
-(134, 'Dheas', 90.00, '2020-03-16 10:22:09', 'LMLS-0000'),
-(135, 'Estrogen', 65.00, '2020-03-16 10:22:36', 'LMLS-0000'),
-(136, 'Estrol - E3', 75.00, '2020-03-16 10:23:12', 'LMLS-0000'),
-(137, 'Female Fertility Hormonal Assay', 390.00, '2020-03-16 10:23:36', 'LMLS-0000'),
-(138, 'Male Fertility Hormonal Assay', 325.00, '2020-03-16 10:24:00', 'LMLS-0000'),
-(139, 'Free Testosterone', 150.00, '2020-03-16 10:24:28', 'LMLS-0000'),
-(140, 'Fsh', 65.00, '2020-03-16 10:24:50', 'LMLS-0000'),
-(141, 'Growth Hormone (fasting/random)', 90.00, '2020-03-16 10:25:46', 'LMLS-0000'),
-(142, 'Lh', 65.00, '2020-03-16 10:26:48', 'LMLS-0000'),
-(143, 'Oestradiol', 65.00, '2020-03-16 10:27:22', 'LMLS-0000'),
-(144, 'Parathyroid Hormone (pth)', 120.00, '2020-03-16 10:27:45', 'LMLS-0000'),
-(145, 'Progesterone', 65.00, '2020-03-16 10:28:27', 'LMLS-0000'),
-(146, 'Prolactin', 65.00, '2020-03-16 10:28:45', 'LMLS-0000'),
-(147, 'Semen Analysis', 70.00, '2020-03-16 10:29:10', 'LMLS-0000'),
-(148, 'Semen Antibodies', 120.00, '2020-03-16 10:29:51', 'LMLS-0000'),
-(149, 'Sex Hormone Binding Globulin', 100.00, '2020-03-16 10:31:35', 'LMLS-0000'),
-(150, 'Testosterone', 65.00, '2020-03-16 10:32:12', 'LMLS-0000'),
-(151, 'Afp', 80.00, '2020-03-16 10:32:37', 'LMLS-0000'),
-(152, 'Ca - 125', 80.00, '2020-03-16 10:33:24', 'LMLS-0000'),
-(153, 'Ca - 15.3', 120.00, '2020-03-16 10:33:47', 'LMLS-0000'),
-(154, 'Ca - 19.9', 120.00, '2020-03-16 10:34:00', 'LMLS-0000'),
-(155, 'Cea', 80.00, '2020-03-16 10:34:54', 'LMLS-0000'),
-(156, 'Crp', 60.00, '2020-03-16 10:36:24', 'LMLS-0000'),
-(157, 'Psa', 65.00, '2020-03-16 10:37:00', 'LMLS-0000'),
-(158, 'Total Bhcg - Blood Qualitative', 100.00, '2020-03-16 10:37:25', 'LMLS-0000'),
-(159, '17 Oh Progesterone', 120.00, '2020-03-16 10:42:22', 'LMLS-0000'),
-(160, 'Bicarbonate', 40.00, '2020-03-16 20:49:02', 'LMLS-0000'),
-(161, 'Obstetric Scan', 40.00, '2020-06-11 22:20:20', 'LMLS-0001'),
-(162, 'Pelvic Scan Gynaecology', 50.00, '2020-06-11 22:20:36', 'LMLS-0001'),
-(163, 'Pelvic Scan Urology', 60.00, '2020-06-11 22:20:50', 'LMLS-0001'),
-(164, 'Abdominal Scan', 80.00, '2020-06-11 22:21:26', 'LMLS-0001'),
-(165, 'Abdomino Pelvic Scan', 100.00, '2020-06-11 22:22:46', 'LMLS-0001'),
-(166, 'Prostate Scan', 60.00, '2020-06-11 22:23:04', 'LMLS-0001'),
-(167, 'Thyroid Scan Anterior Neck Swelling', 80.00, '2020-06-11 22:23:26', 'LMLS-0001'),
-(168, 'Breast Scan', 80.00, '2020-06-11 22:23:40', 'LMLS-0001'),
-(169, 'Scrotal Scan', 80.00, '2020-06-11 22:24:09', 'LMLS-0001'),
-(170, 'Superficial Swellings', 80.00, '2020-06-11 22:24:22', 'LMLS-0001'),
-(171, 'Other Small Parts', 80.00, '2020-06-11 22:24:36', 'LMLS-0001');
+(1, 'Amylase', 60.00, '2020-03-15 22:02:43', 'LMLS-KB-0001'),
+(2, 'Albumin', 30.00, '2020-03-15 22:03:07', 'LMLS-KB-0001'),
+(3, 'B2 Microalbumin', 130.00, '2020-03-15 22:04:05', 'LMLS-KB-0001'),
+(4, 'Bence Jones Protein', 60.00, '2020-03-15 22:04:39', 'LMLS-KB-0001'),
+(5, 'Bue Creatinine', 60.00, '2020-03-15 22:05:27', 'LMLS-KB-0001'),
+(6, 'Cardiac Enzymes', 180.00, '2020-03-15 22:06:49', 'LMLS-KB-0001'),
+(7, 'Ck', 45.00, '2020-03-15 22:07:17', 'LMLS-KB-0001'),
+(8, 'Ck-mb', 45.00, '2020-03-15 22:08:01', 'LMLS-KB-0001'),
+(9, 'Creatinine Clearance', 80.00, '2020-03-15 22:08:34', 'LMLS-KB-0001'),
+(10, 'Csf Biochem', 60.00, '2020-03-15 22:09:14', 'LMLS-KB-0001'),
+(11, 'Direct Bilirubin', 35.00, '2020-03-15 22:09:36', 'LMLS-KB-0001'),
+(12, 'Faecal Reducing Substance', 30.00, '2020-03-15 22:10:11', 'LMLS-KB-0001'),
+(13, 'Fasting Lipids', 60.00, '2020-03-15 22:10:39', 'LMLS-KB-0001'),
+(14, 'Fasting Random Blood Glucose', 25.00, '2020-03-15 22:13:04', 'LMLS-KB-0001'),
+(15, 'Ferritin', 80.00, '2020-03-15 22:13:51', 'LMLS-KB-0001'),
+(16, 'Folate Serum', 120.00, '2020-03-15 22:14:11', 'LMLS-KB-0001'),
+(17, 'Free Light Chains', 300.00, '2020-03-15 22:15:01', 'LMLS-KB-0001'),
+(18, 'Hba1c', 60.00, '2020-03-15 22:15:30', 'LMLS-KB-0001'),
+(19, 'Immunoglobulin', 210.00, '2020-03-15 22:17:08', 'LMLS-KB-0001'),
+(20, 'Iron + Transferrin', 120.00, '2020-03-15 22:18:05', 'LMLS-KB-0001'),
+(21, 'Lactate', 100.00, '2020-03-15 22:18:59', 'LMLS-KB-0001'),
+(22, 'Ldh', 50.00, '2020-03-15 22:19:22', 'LMLS-KB-0001'),
+(23, 'Lft', 60.00, '2020-03-15 22:19:50', 'LMLS-KB-0001'),
+(24, 'Lipase', 60.00, '2020-03-15 22:21:31', 'LMLS-KB-0001'),
+(25, 'Magnessium', 40.00, '2020-03-15 22:22:13', 'LMLS-KB-0001'),
+(26, 'Phosphate', 40.00, '2020-03-15 22:22:31', 'LMLS-KB-0001'),
+(27, 'Pleural Ascitic Synovial Fluid', 150.00, '2020-03-15 22:23:26', 'LMLS-KB-0001'),
+(28, 'Protein Electrophoresis', 180.00, '2020-03-15 22:23:55', 'LMLS-KB-0001'),
+(29, 'Serum Calcium Corrected', 70.00, '2020-03-15 22:24:57', 'LMLS-KB-0001'),
+(30, 'Serum Calcium Ionised', 70.00, '2020-03-15 22:25:15', 'LMLS-KB-0001'),
+(31, 'Serum Iron', 60.00, '2020-03-15 22:25:37', 'LMLS-KB-0001'),
+(32, 'Total Protein', 30.00, '2020-03-15 22:26:07', 'LMLS-KB-0001'),
+(33, 'Total Bilirubin', 35.00, '2020-03-15 22:26:33', 'LMLS-KB-0001'),
+(34, 'Transferrin', 70.00, '2020-03-15 22:27:10', 'LMLS-KB-0001'),
+(35, 'Troponin I', 100.00, '2020-03-15 22:27:35', 'LMLS-KB-0001'),
+(36, 'Troponin T', 120.00, '2020-03-15 22:27:49', 'LMLS-KB-0001'),
+(37, '24hr Ogtt', 120.00, '2020-03-15 22:30:51', 'LMLS-KB-0001'),
+(38, '24hr Post Prandial Glucose', 60.00, '2020-03-15 22:31:49', 'LMLS-KB-0001'),
+(39, '24hr Urine Protein', 120.00, '2020-03-15 22:32:16', 'LMLS-KB-0001'),
+(40, '24hr Vma', 830.00, '2020-03-15 22:32:41', 'LMLS-KB-0001'),
+(41, 'U - Micro Albumin Creatinine Ratio', 120.00, '2020-03-15 22:34:25', 'LMLS-KB-0001'),
+(42, 'Uric Acid', 40.00, '2020-03-15 22:35:04', 'LMLS-KB-0001'),
+(43, 'Urine Reducing Substance', 30.00, '2020-03-15 22:35:29', 'LMLS-KB-0001'),
+(44, 'Vitamin B12', 150.00, '2020-03-15 22:35:49', 'LMLS-KB-0001'),
+(45, 'Bf For Mps', 20.00, '2020-03-15 22:36:37', 'LMLS-KB-0001'),
+(46, 'Blood Group + Rh Antigen', 25.00, '2020-03-15 22:37:24', 'LMLS-KB-0001'),
+(47, 'Direct Anti Human Globulin', 50.00, '2020-03-15 22:37:48', 'LMLS-KB-0001'),
+(48, 'Esr', 30.00, '2020-03-15 22:38:13', 'LMLS-KB-0001'),
+(49, 'Fbc + Blood Film Comment', 70.00, '2020-03-15 22:38:38', 'LMLS-KB-0001'),
+(50, 'Full Blood Count (fbc)', 40.00, '2020-03-15 22:39:07', 'LMLS-KB-0001'),
+(51, 'G6pd Qualitative', 30.00, '2020-03-15 22:40:04', 'LMLS-KB-0001'),
+(52, 'Hb Electrophoresis', 45.00, '2020-03-15 22:40:31', 'LMLS-KB-0001'),
+(53, 'Indirect Anti Human Globulin', 40.00, '2020-03-15 22:40:56', 'LMLS-KB-0001'),
+(54, 'Mononucleosis Spot - Paul Bunnel', 50.00, '2020-03-15 22:41:41', 'LMLS-KB-0001'),
+(55, 'Reticulocytes Count', 40.00, '2020-03-15 22:42:05', 'LMLS-KB-0001'),
+(56, 'Sickling Test', 25.00, '2020-03-15 22:42:24', 'LMLS-KB-0001'),
+(57, 'Trophozoites Count', 30.00, '2020-03-15 22:43:04', 'LMLS-KB-0001'),
+(58, 'Anti Ccp', 170.00, '2020-03-15 22:43:55', 'LMLS-KB-0001'),
+(59, 'Anti Thrombin Iii Functional', 140.00, '2020-03-15 22:44:44', 'LMLS-KB-0001'),
+(60, 'Bleeding Time', 30.00, '2020-03-15 22:45:14', 'LMLS-KB-0001'),
+(61, 'Clotting Profile', 70.00, '2020-03-15 22:45:33', 'LMLS-KB-0001'),
+(62, 'Clotting Time', 25.00, '2020-03-15 22:45:52', 'LMLS-KB-0001'),
+(63, 'D - Dimer', 80.00, '2020-03-15 22:46:17', 'LMLS-KB-0001'),
+(64, 'Factor 8', 150.00, '2020-03-15 22:46:39', 'LMLS-KB-0001'),
+(65, 'Factor 9', 150.00, '2020-03-15 22:46:51', 'LMLS-KB-0001'),
+(66, 'Fibrinogen', 130.00, '2020-03-15 22:47:20', 'LMLS-KB-0001'),
+(67, 'Protein C', 150.00, '2020-03-15 22:47:56', 'LMLS-KB-0001'),
+(68, 'Protein S', 190.00, '2020-03-15 22:48:07', 'LMLS-KB-0001'),
+(69, 'Prothrombin Time (pt) - Inr', 30.00, '2020-03-15 22:49:07', 'LMLS-KB-0001'),
+(70, 'Thromboplastin Time (aptt)', 40.00, '2020-03-15 22:49:45', 'LMLS-KB-0001'),
+(71, 'Von Willibrands Factor', 400.00, '2020-03-15 22:50:03', 'LMLS-KB-0001'),
+(72, 'Blood C/s', 70.00, '2020-03-16 09:16:33', 'LMLS-KB-0001'),
+(73, 'Cervical Swab For C/s', 60.00, '2020-03-16 09:17:05', 'LMLS-KB-0001'),
+(74, 'Corneal Scrapping For C/s', 60.00, '2020-03-16 09:18:10', 'LMLS-KB-0001'),
+(75, 'Csf Bacteriology', 65.00, '2020-03-16 09:18:44', 'LMLS-KB-0001'),
+(76, 'Ear Swab For C/s', 60.00, '2020-03-16 09:19:59', 'LMLS-KB-0001'),
+(77, 'Eye Swab For C/s', 60.00, '2020-03-16 09:20:25', 'LMLS-KB-0001'),
+(78, 'Endocervical Swab For C/s', 60.00, '2020-03-16 09:21:22', 'LMLS-KB-0001'),
+(79, 'H. Pylori Antibodies', 80.00, '2020-03-16 09:24:17', 'LMLS-KB-0001'),
+(80, 'H. Pylori Antigen', 80.00, '2020-03-16 09:24:26', 'LMLS-KB-0001'),
+(81, 'Hvs C/s', 60.00, '2020-03-16 09:28:38', 'LMLS-KB-0001'),
+(82, 'Hvs R/e', 30.00, '2020-03-16 09:29:17', 'LMLS-KB-0001'),
+(83, 'Semen C/s', 80.00, '2020-03-16 09:29:47', 'LMLS-KB-0001'),
+(84, 'Skin Scraping For Culture', 60.00, '2020-03-16 09:30:49', 'LMLS-KB-0001'),
+(85, 'Skin Scraping For Fungal Elements', 40.00, '2020-03-16 09:31:05', 'LMLS-KB-0001'),
+(86, 'Stool C/s', 60.00, '2020-03-16 09:31:43', 'LMLS-KB-0001'),
+(87, 'Stool For Rota And Adnoviruses', 120.00, '2020-03-16 09:32:11', 'LMLS-KB-0001'),
+(88, 'Stool Occult Blood Test', 40.00, '2020-03-16 09:32:35', 'LMLS-KB-0001'),
+(89, 'Stool R/e', 20.00, '2020-03-16 09:44:55', 'LMLS-KB-0001'),
+(90, 'Sputum For Afb', 40.00, '2020-03-16 09:45:30', 'LMLS-KB-0001'),
+(91, 'Sputum For C/s', 60.00, '2020-03-16 09:45:46', 'LMLS-KB-0001'),
+(92, 'Throat Swab For C/s', 60.00, '2020-03-16 09:46:17', 'LMLS-KB-0001'),
+(93, 'Urethral Swab For C/s', 60.00, '2020-03-16 09:47:02', 'LMLS-KB-0001'),
+(94, 'Urethral Swab For Gram Stain', 40.00, '2020-03-16 09:47:12', 'LMLS-KB-0001'),
+(95, 'Urine C/s', 60.00, '2020-03-16 09:47:40', 'LMLS-KB-0001'),
+(96, 'Urine R/e', 25.00, '2020-03-16 09:47:50', 'LMLS-KB-0001'),
+(97, 'Widal Test', 35.00, '2020-03-16 09:48:19', 'LMLS-KB-0001'),
+(98, 'Wound Swab For C/s', 60.00, '2020-03-16 09:49:23', 'LMLS-KB-0001'),
+(99, 'Anti Streptolysin O', 54.00, '2020-03-16 09:50:34', 'LMLS-KB-0001'),
+(100, 'Bilhazia Antibody (igg And Igm)', 180.00, '2020-03-16 09:51:23', 'LMLS-KB-0001'),
+(101, 'Bilhazia Antigen Urine Serum', 100.00, '2020-03-16 09:51:49', 'LMLS-KB-0001'),
+(102, 'Chlamydia Abs', 125.00, '2020-03-16 09:52:42', 'LMLS-KB-0001'),
+(103, 'Cmv - Iga And Igm', 200.00, '2020-03-16 09:53:19', 'LMLS-KB-0001'),
+(104, 'Gonorrhoea Ab', 50.00, '2020-03-16 09:53:41', 'LMLS-KB-0001'),
+(105, 'Hepatitis A', 80.00, '2020-03-16 09:54:07', 'LMLS-KB-0001'),
+(106, 'Hepatitis B Profile', 170.00, '2020-03-16 09:54:27', 'LMLS-KB-0001'),
+(107, 'Hepatitis B Screen', 40.00, '2020-03-16 09:54:46', 'LMLS-KB-0001'),
+(108, 'Hepatitis B Viral Load', 500.00, '2020-03-16 09:55:08', 'LMLS-KB-0001'),
+(109, 'Hepatitis C Screen', 40.00, '2020-03-16 09:55:33', 'LMLS-KB-0001'),
+(110, 'Hepatitis C Viral Load', 620.00, '2020-03-16 09:56:01', 'LMLS-KB-0001'),
+(111, 'Hiv Viral Load', 550.00, '2020-03-16 09:56:42', 'LMLS-KB-0001'),
+(112, 'Retro Screen', 35.00, '2020-03-16 09:57:08', 'LMLS-KB-0001'),
+(113, 'Retro Screen Confirmation', 70.00, '2020-03-16 09:57:38', 'LMLS-KB-0001'),
+(114, 'Rubella Igg And Igm', 200.00, '2020-03-16 09:58:08', 'LMLS-KB-0001'),
+(115, 'Syphilis Profile Vdrl T. Pallidium Igg And Igm', 120.00, '2020-03-16 09:59:00', 'LMLS-KB-0001'),
+(116, 'T. Pallidium Latex', 45.00, '2020-03-16 09:59:41', 'LMLS-KB-0001'),
+(117, 'T. Pallidium Antibody', 60.00, '2020-03-16 09:59:54', 'LMLS-KB-0001'),
+(118, 'Toxo - Igg And Igm', 150.00, '2020-03-16 10:00:19', 'LMLS-KB-0001'),
+(119, 'Vdrl', 40.00, '2020-03-16 10:00:49', 'LMLS-KB-0001'),
+(120, 'Thyroid Function Test', 180.00, '2020-03-16 10:01:41', 'LMLS-KB-0001'),
+(121, 'Tsh', 60.00, '2020-03-16 10:02:08', 'LMLS-KB-0001'),
+(122, 'Ft3', 60.00, '2020-03-16 10:02:28', 'LMLS-KB-0001'),
+(123, 'Ft4', 60.00, '2020-03-16 10:02:45', 'LMLS-KB-0001'),
+(124, 'Thyroglobin Antibody', 190.00, '2020-03-16 10:03:06', 'LMLS-KB-0001'),
+(125, 'Thyroid Auto Antibodies', 170.00, '2020-03-16 10:03:29', 'LMLS-KB-0001'),
+(126, 'Tsh Releasing Receptors Antibody', 200.00, '2020-03-16 10:05:00', 'LMLS-KB-0001'),
+(127, '24hr Urine Cortisol', 420.00, '2020-03-16 10:10:23', 'LMLS-KB-0001'),
+(128, 'Acetylcholine Receptor Antibody', 345.00, '2020-03-16 10:12:57', 'LMLS-KB-0001'),
+(129, 'Aldenocortitropic Hormone (acth)', 130.00, '2020-03-16 10:19:21', 'LMLS-KB-0001'),
+(130, 'Aldosterone', 90.00, '2020-03-16 10:20:01', 'LMLS-KB-0001'),
+(131, 'Angiotensin Converting Enzymes (ace)', 70.00, '2020-03-16 10:20:38', 'LMLS-KB-0001'),
+(132, 'Antimulerian Hormone', 300.00, '2020-03-16 10:21:30', 'LMLS-KB-0001'),
+(133, 'Cortisol (blood)', 80.00, '2020-03-16 10:21:50', 'LMLS-KB-0001'),
+(134, 'Dheas', 90.00, '2020-03-16 10:22:09', 'LMLS-KB-0001'),
+(135, 'Estrogen', 65.00, '2020-03-16 10:22:36', 'LMLS-KB-0001'),
+(136, 'Estrol - E3', 75.00, '2020-03-16 10:23:12', 'LMLS-KB-0001'),
+(137, 'Female Fertility Hormonal Assay', 390.00, '2020-03-16 10:23:36', 'LMLS-KB-0001'),
+(138, 'Male Fertility Hormonal Assay', 325.00, '2020-03-16 10:24:00', 'LMLS-KB-0001'),
+(139, 'Free Testosterone', 150.00, '2020-03-16 10:24:28', 'LMLS-KB-0001'),
+(140, 'Fsh', 65.00, '2020-03-16 10:24:50', 'LMLS-KB-0001'),
+(141, 'Growth Hormone (fasting/random)', 90.00, '2020-03-16 10:25:46', 'LMLS-KB-0001'),
+(142, 'Lh', 65.00, '2020-03-16 10:26:48', 'LMLS-KB-0001'),
+(143, 'Oestradiol', 65.00, '2020-03-16 10:27:22', 'LMLS-KB-0001'),
+(144, 'Parathyroid Hormone (pth)', 120.00, '2020-03-16 10:27:45', 'LMLS-KB-0001'),
+(145, 'Progesterone', 65.00, '2020-03-16 10:28:27', 'LMLS-KB-0001'),
+(146, 'Prolactin', 65.00, '2020-03-16 10:28:45', 'LMLS-KB-0001'),
+(147, 'Semen Analysis', 70.00, '2020-03-16 10:29:10', 'LMLS-KB-0001'),
+(148, 'Semen Antibodies', 120.00, '2020-03-16 10:29:51', 'LMLS-KB-0001'),
+(149, 'Sex Hormone Binding Globulin', 100.00, '2020-03-16 10:31:35', 'LMLS-KB-0001'),
+(150, 'Testosterone', 65.00, '2020-03-16 10:32:12', 'LMLS-KB-0001'),
+(151, 'Afp', 80.00, '2020-03-16 10:32:37', 'LMLS-KB-0001'),
+(152, 'Ca - 12.5', 80.00, '2020-03-16 10:33:24', 'LMLS-KB-0001'),
+(153, 'Ca - 15.3', 120.00, '2020-03-16 10:33:47', 'LMLS-KB-0001'),
+(154, 'Ca - 19.9', 120.00, '2020-03-16 10:34:00', 'LMLS-KB-0001'),
+(155, 'Cea', 80.00, '2020-03-16 10:34:54', 'LMLS-KB-0001'),
+(156, 'Crp', 60.00, '2020-03-16 10:36:24', 'LMLS-KB-0001'),
+(157, 'Psa', 65.00, '2020-03-16 10:37:00', 'LMLS-KB-0001'),
+(158, 'Total Bhcg - Blood Qualitative', 100.00, '2020-03-16 10:37:25', 'LMLS-KB-0001'),
+(159, '17 Oh Progesterone', 120.00, '2020-03-16 10:42:22', 'LMLS-KB-0001'),
+(160, 'Bicarbonate', 40.00, '2020-03-16 20:49:02', 'LMLS-KB-0001'),
+(161, 'Obstetric Scan', 40.00, '2020-06-11 22:20:20', 'LMLS-KB-0001'),
+(162, 'Pelvic Scan Gynaecology', 50.00, '2020-06-11 22:20:36', 'LMLS-KB-0001'),
+(163, 'Pelvic Scan Urology', 60.00, '2020-06-11 22:20:50', 'LMLS-KB-0001'),
+(164, 'Abdominal Scan', 80.00, '2020-06-11 22:21:26', 'LMLS-KB-0001'),
+(165, 'Abdomino Pelvic Scan', 100.00, '2020-06-11 22:22:46', 'LMLS-KB-0001'),
+(166, 'Prostate Scan', 60.00, '2020-06-11 22:23:04', 'LMLS-KB-0001'),
+(167, 'Thyroid Scan Anterior Neck Swelling', 80.00, '2020-06-11 22:23:26', 'LMLS-KB-0001'),
+(168, 'Breast Scan', 80.00, '2020-06-11 22:23:40', 'LMLS-KB-0001'),
+(169, 'Scrotal Scan', 80.00, '2020-06-11 22:24:09', 'LMLS-KB-0001'),
+(170, 'Superficial Swellings', 80.00, '2020-06-11 22:24:22', 'LMLS-KB-0001'),
+(171, 'Other Small Parts', 80.00, '2020-06-11 22:24:36', 'LMLS-KB-0001'),
+(173, 'Trial Charges', 1000.00, '2020-07-15 01:35:13', 'LMLS-KB-0001');
 
 -- --------------------------------------------------------
 
@@ -2985,7 +4108,8 @@ CREATE TABLE `ckmb` (
 --
 
 INSERT INTO `ckmb` (`id`, `invoice_id`, `patient_id`, `results`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-CKMB-500', 'LMLS-PAT-KB-0002', 4.00, 'Kjhgfd', 'LMLS-0001', '2020-03-09 11:24:00');
+(2, 'INV-CKMB-500', 'LMLS-PAT-KB-0002', 4.00, 'Kjhgfd', 'LMLS-0001', '2020-03-09 11:24:00'),
+(3, 'INV-CKMB-301', 'LMLS-PAT-AMA-0002', 76.00, 'Ckmb', 'LMLS-AMA-0002', '2020-07-27 00:21:46');
 
 -- --------------------------------------------------------
 
@@ -3010,6 +4134,13 @@ CREATE TABLE `clotting_profile` (
   `added_by` varchar(25) NOT NULL,
   `date_added` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `clotting_profile`
+--
+
+INSERT INTO `clotting_profile` (`id`, `invoice_id`, `patient_id`, `bt`, `pt_inr`, `aptt`, `control_time`, `normal_plasma`, `ratio`, `inr`, `factor_viii_assay`, `factor_ix_activity`, `comments`, `added_by`, `date_added`) VALUES
+(3, 'INV-CLOT-PRF-730', 'LMLS-PAT-AMA-0002', 1.00, 4.00, 2.00, 5.00, 3.00, 6.00, 7.00, 8.00, 9.00, 'Clotting Profile', 'LMLS-AMA-0002', '2020-07-26 23:41:53');
 
 -- --------------------------------------------------------
 
@@ -3075,7 +4206,8 @@ CREATE TABLE `compact_chemistry` (
 --
 
 INSERT INTO `compact_chemistry` (`id`, `invoice_id`, `patient_id`, `sodium`, `sodium_flag`, `potassium`, `potassium_flag`, `chloride`, `chloride_flag`, `urea`, `urea_flag`, `creatinine`, `creatinine_flag`, `got_ast`, `got_ast_flag`, `gpt_alt`, `gpt_alt_flag`, `alkaline_phos`, `alkaline_phos_flag`, `ggt`, `ggt_flag`, `bilirubin_total`, `bilirubin_total_flag`, `bili_indirect`, `bili_indirect_flag`, `bilirubin_direct`, `bilirubin_direct_flag`, `protein_total`, `protein_total_flag`, `albumin`, `albumin_flag`, `globulin`, `globulin_flag`, `cholesterol_total`, `cholesterol_total_flag`, `triglycerides`, `triglycerides_flag`, `hdl`, `hdl_flag`, `ldl`, `ldl_flag`, `coronary_risk`, `coronary_risk_flag`, `uric_acid`, `uric_acid_flag`, `fbs`, `fbs_flag`, `comments`, `added_by`, `date_added`) VALUES
-(4, 'INV-COMP-CHE-370', 'LMLS-PAT-KB-0001', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 1.00, 'Low', 2.00, 'Low', 3.00, 'High', 4.00, 'High', 5.00, 'High', 1.00, 'Low', 1.10, 'High', '', 'LMLS-0001', '2020-03-08 01:51:04');
+(4, 'INV-COMP-CHE-370', 'LMLS-PAT-KB-0001', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 0.00, '', 1.00, 'Low', 2.00, 'Low', 3.00, 'High', 4.00, 'High', 5.00, 'High', 1.00, 'Low', 1.10, 'High', '', 'LMLS-0001', '2020-03-08 01:51:04'),
+(5, 'INV-COMP-CHE-581', 'LMLS-PAT-AMA-0001', 1.00, 'High', 1.00, 'High', 1.00, 'High', 1.00, 'High', 1.00, 'High', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 2.00, 'Low', 3.00, 'High', 3.00, 'High', 3.00, 'High', 3.00, 'High', 3.00, 'High', 4.00, 'High', 4.00, 'High', 'Add Compact Chemistry', 'LMLS-0000', '2020-07-25 05:25:37');
 
 -- --------------------------------------------------------
 
@@ -3099,7 +4231,9 @@ CREATE TABLE `cortisol` (
 --
 
 INSERT INTO `cortisol` (`id`, `invoice_id`, `patient_id`, `cortisol_top`, `cortisol_bottom`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-CRTL-230', 'LMLS-PAT-KB-0002', 1.30, 1.20, 'Hjgfd', 'LMLS-0001', '2020-03-09 12:14:23');
+(3, 'INV-CRTL-230', 'LMLS-PAT-KB-0002', 2.00, 3.00, 'Hjgfd', 'LMLS-0001', '2020-03-09 12:14:23'),
+(4, 'INV-CRTL-431', 'LMLS-PAT-AMA-0001', 100.00, 0.50, 'Cortisol', 'LMLS-0000', '2020-07-23 13:33:53'),
+(5, 'INV-CRTL-042', 'LMLS-PAT-AMA-0001', 1.00, 2.00, 'Add Cortisol', 'LMLS-0000', '2020-07-23 21:38:39');
 
 -- --------------------------------------------------------
 
@@ -3122,7 +4256,8 @@ CREATE TABLE `crp` (
 --
 
 INSERT INTO `crp` (`id`, `invoice_id`, `patient_id`, `results`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-CRP-480', 'LMLS-PAT-KB-0002', 9.50, '.kljkhjghvbcv', 'LMLS-0001', '2020-03-09 11:34:54');
+(3, 'INV-CRP-480', 'LMLS-PAT-KB-0002', 9.50, '.kljkhjghvbcv', 'LMLS-0001', '2020-03-09 11:34:54'),
+(4, 'INV-CRP-341', 'LMLS-PAT-AMA-0002', 654.00, 'Crp', 'LMLS-AMA-0002', '2020-07-27 00:24:28');
 
 -- --------------------------------------------------------
 
@@ -3145,7 +4280,8 @@ CREATE TABLE `crp_ultra_sensitive` (
 --
 
 INSERT INTO `crp_ultra_sensitive` (`id`, `invoice_id`, `patient_id`, `results`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-CRP-ULT-SEN-150', 'LMLS-PAT-KB-0002', 6.40, 'Hjgf', 'LMLS-0001', '2020-03-09 11:36:13');
+(2, 'INV-CRP-ULT-SEN-150', 'LMLS-PAT-KB-0002', 6.40, 'Hjgf', 'LMLS-0001', '2020-03-09 11:36:13'),
+(3, 'INV-CRP-ULT-SEN-461', 'LMLS-PAT-AMA-0002', 556.00, 'Crp Ultra Sensitive (hs Crp)', 'LMLS-AMA-0002', '2020-07-27 00:30:13');
 
 -- --------------------------------------------------------
 
@@ -3171,8 +4307,10 @@ CREATE TABLE `csf_biochem` (
 --
 
 INSERT INTO `csf_biochem` (`id`, `invoice_id`, `patient_id`, `appearance`, `glucose`, `protein`, `globulin`, `comments`, `added_by`, `date_added`) VALUES
-(4, 'INV-CSF-BIO-920', 'LMLS-PAT-KB-0001', 'Blood Stain', 0.00, 0.00, 'Negative', '', 'LMLS-0001', '2020-03-08 00:40:43'),
-(5, 'INV-CSF-BIO-921', 'LMLS-PAT-KB-0001', 'Bloody', 5.00, 10.00, 'Present(+2)', 'Jkhgfd', 'LMLS-0001', '2020-03-08 00:45:36');
+(4, 'INV-CSF-BIO-920', 'LMLS-PAT-KB-0001', 'Blood Stain', 0.00, 0.00, 'Negative', 'Commentssssssss Commentssssssss Commentssssssss', 'LMLS-0001', '2020-03-08 00:40:43'),
+(5, 'INV-CSF-BIO-921', 'LMLS-PAT-KB-0001', 'Bloody', 5.00, 10.00, 'Present(+2)', 'Jkhgfd', 'LMLS-0001', '2020-03-08 00:45:36'),
+(14, 'INV-CSF-BIO-8310', 'LMLS-PAT-AMA-0001', 'Blood Stain,', 0.50, 0.50, 'Negative,', 'Add Csf Biochem', 'LMLS-0000', '2020-07-24 23:49:05'),
+(15, 'INV-CSF-BIO-673', 'LMLS-PAT-AMA-0001', 'Blood Stain', 1.00, 2.00, 'Present(+2)', 'Add Csf Biochem', 'LMLS-0000', '2020-07-24 23:51:06');
 
 -- --------------------------------------------------------
 
@@ -3195,7 +4333,8 @@ CREATE TABLE `c_reactive_protein` (
 --
 
 INSERT INTO `c_reactive_protein` (`id`, `invoice_id`, `patient_id`, `results`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-C-REAC-PRO-730', 'LMLS-PAT-KB-0001', 1.00, 'Jhjghgfdds', 'LMLS-0001', '2020-03-08 00:20:55');
+(3, 'INV-C-REAC-PRO-730', 'LMLS-PAT-KB-0001', 1.00, 'Jhjghgfdds', 'LMLS-0001', '2020-03-08 00:20:55'),
+(4, 'INV-C-REAC-PRO-561', 'LMLS-PAT-AMA-0001', 10.00, 'Add C-reactive Protein', 'LMLS-0000', '2020-07-24 21:06:57');
 
 -- --------------------------------------------------------
 
@@ -3212,6 +4351,13 @@ CREATE TABLE `d_dimers` (
   `added_by` varchar(25) NOT NULL,
   `date_added` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `d_dimers`
+--
+
+INSERT INTO `d_dimers` (`id`, `invoice_id`, `patient_id`, `results`, `comments`, `added_by`, `date_added`) VALUES
+(3, 'INV-D-DMS-080', 'LMLS-PAT-AMA-0002', 9.00, 'D - Dimers', 'LMLS-AMA-0002', '2020-07-26 23:45:36');
 
 -- --------------------------------------------------------
 
@@ -3285,7 +4431,7 @@ CREATE TABLE `ear_swab_cs` (
 --
 
 INSERT INTO `ear_swab_cs` (`id`, `invoice_id`, `patient_id`, `culture`, `bacteria_one`, `bacteria_two`, `bacteria_three`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `antibiotics_seventeen`, `antibiotics_eighteen`, `antibiotics_nineteen`, `antibiotics_twenty`, `antibiotics_twenty_one`, `antibiotics_twenty_two`, `antibiotics_twenty_three`, `antibiotics_twenty_four`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `sensitivity_seventeen`, `sensitivity_eighteen`, `sensitivity_nineteen`, `sensitivity_twenty`, `sensitivity_twenty_one`, `sensitivity_twenty_two`, `sensitivity_twenty_three`, `sensitivity_twenty_four`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-EAR-SCS-540', 'LMLS-PAT-KB-0002', 'Heavily Mixed Growth, Please Repeat', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'Sample Comment', 'LMLS-0001', '2020-03-06 21:58:15');
+(2, 'INV-EAR-SCS-540', 'LMLS-PAT-KB-0002', 'Heavily Mixed Growth, Please Repeat', 'Beta Haem. STrept', 'E. Coli', 'Citrobacter Freundii', 'Ceftazidime', 'Ceftazidime', 'Ceftriaxone', 'Cefuroxime', 'Chloramphenicol', 'Cephalothin', 'Cloxacillin', 'Cloxacillin', 'Flucloxacillin', 'Flucloxacillin', 'Cefotaxime', 'Cefoxitin', 'Cefpirom', 'Cefpirom', 'Ceftriaxone', 'Ceftriaxone', 'Chloramphenicol', 'Ciprofloxacin', 'Cotrimoxazol', 'Cotrimoxazol', 'Flucloxacillin', 'Flucloxacillin', 'Fosfomycin', 'Fosfomycin', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'Sample Comment', 'LMLS-0001', '2020-03-06 21:58:15');
 
 -- --------------------------------------------------------
 
@@ -3348,7 +4494,7 @@ CREATE TABLE `endocervical_swab_cs` (
 --
 
 INSERT INTO `endocervical_swab_cs` (`id`, `invoice_id`, `patient_id`, `pus_cells_per_hps`, `rbcs_per_hpf`, `epitheleal_cells_per_hpf`, `t_vaginalis`, `yeast_like_cells`, `gram_stain`, `culture`, `bacteria_one`, `bacteria_two`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-ENDO-SCS-560', 'LMLS-PAT-KB-0002', 1.00, 2.00, 3.00, 'Not Seen', 'Present(+)', 'No GNID Seen', 'No Significant Growth', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'Vgjhuytygh', 'LMLS-0001', '2020-03-06 22:35:43');
+(2, 'INV-ENDO-SCS-560', 'LMLS-PAT-KB-0002', 1.00, 2.00, 3.00, 'Not Seen', 'Present(+)', 'No GNID Seen', 'No Significant Growth', 'Alcaligenes', 'Campylobacter SPP', 'Amoxicillin', 'Amoxicillin', 'Cefepim', 'Cefepim', 'Cefotaxime', 'Cefotaxime', 'Cefpirom', 'Cefpirom', 'Cephalothin', 'Cefuroxime', 'Ciprofloxacin', 'Chloramphenicol', 'Cloxacillin', 'Cloxacillin', 'Pefloxacin', 'Erythromycin', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'Vgjhuytygh', 'LMLS-0001', '2020-03-06 22:35:43');
 
 -- --------------------------------------------------------
 
@@ -3365,6 +4511,13 @@ CREATE TABLE `esr` (
   `added_by` varchar(25) NOT NULL,
   `date_added` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `esr`
+--
+
+INSERT INTO `esr` (`id`, `invoice_id`, `patient_id`, `results`, `comments`, `added_by`, `date_added`) VALUES
+(3, 'INV-ESR-900', 'LMLS-PAT-AMA-0002', 100.00, 'Esr', 'LMLS-AMA-0002', '2020-07-26 23:52:41');
 
 -- --------------------------------------------------------
 
@@ -3392,9 +4545,11 @@ CREATE TABLE `estrogen` (
 --
 
 INSERT INTO `estrogen` (`id`, `invoice_id`, `patient_id`, `follicular`, `mid_cycle`, `luteal`, `pm`, `amenorrhoea`, `mem`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-ESTROGEN-200', 'LMLS-PAT-KB-0003', 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, '', 'LMLS-0001', '2020-03-05 12:31:10'),
-(4, 'INV-ESTROGEN-401', 'LMLS-PAT-KB-0003', 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, '', 'LMLS-0001', '2020-03-05 12:31:47'),
-(5, 'INV-EST-662', 'LMLS-PAT-KB-0002', 1.00, 2.00, 3.00, 4.00, 5.00, 6.00, 'L;kujyutyfgd', 'LMLS-0001', '2020-03-09 13:37:54');
+(3, 'INV-ESTROGEN-200', 'LMLS-PAT-KB-0003', 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, '', 'LMLS-KB-0001', '2020-03-05 12:31:10'),
+(4, 'INV-ESTROGEN-401', 'LMLS-PAT-KB-0003', 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, '', 'LMLS-KB-0001', '2020-03-05 12:31:47'),
+(5, 'INV-EST-662', 'LMLS-PAT-KB-0002', 1.00, 2.00, 3.00, 4.00, 5.00, 6.00, 'L;kujyutyfgd', 'LMLS-KB-0001', '2020-03-09 13:37:54'),
+(6, 'INV-EST-043', 'LMLS-PAT-AMA-0001', 0.50, 0.50, 0.50, 0.50, 0.50, 0.50, 'Random', 'LMLS-0000', '2020-07-23 15:01:51'),
+(7, 'INV-EST-594', 'LMLS-PAT-AMA-0001', 1.00, 2.00, 3.00, 4.00, 5.00, 6.00, 'Add Estrogen', 'LMLS-0000', '2020-07-23 21:36:26');
 
 -- --------------------------------------------------------
 
@@ -3469,7 +4624,7 @@ CREATE TABLE `eye_swab_cs` (
 
 INSERT INTO `eye_swab_cs` (`id`, `invoice_id`, `patient_id`, `culture`, `bacteria_one`, `bacteria_two`, `bacteria_three`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `antibiotics_seventeen`, `antibiotics_eighteen`, `antibiotics_nineteen`, `antibiotics_twenty`, `antibiotics_twenty_one`, `antibiotics_twenty_two`, `antibiotics_twenty_three`, `antibiotics_twenty_four`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `sensitivity_seventeen`, `sensitivity_eighteen`, `sensitivity_nineteen`, `sensitivity_twenty`, `sensitivity_twenty_one`, `sensitivity_twenty_two`, `sensitivity_twenty_three`, `sensitivity_twenty_four`, `comments`, `added_by`, `date_added`) VALUES
 (2, 'INV-EYE-SCS-100', 'LMLS-PAT-KB-0002', 'No Bacterial Growth', 'Acinetobacter SPP', '', '', 'Amikacin', '', '', '', 'Amikacin', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Amikacin', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Kjhgfd', 'LMLS-0001', '2020-03-06 22:10:42'),
-(3, 'INV-EYE-SCS-721', 'LMLS-PAT-KB-0002', 'No Significant Growth', 'Acinetobacter SPP', '', '', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Ampicillin', 'Amikacin', 'Amikacin', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'LMLS-0001', '2020-03-06 22:12:59');
+(3, 'INV-EYE-SCS-721', 'LMLS-PAT-KB-0002', 'No Significant Growth', 'Acinetobacter SPP', 'Aspergillus', 'Citrobacter Diversus', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Ampicillin', 'Amikacin', 'Amikacin', 'Cefixim', 'Cefixim', 'Cefotaxime', 'Cefoxitin', 'Cefpirom', 'Cefpirom', 'Ceftriaxone', 'Ceftriaxone', 'Ciprofloxacin', 'Ciprofloxacin', 'Cotrimoxazol', 'Cotrimoxazol', 'Flucloxacillin', 'Flucloxacillin', 'Gentamicin', 'Fosfomycin', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'R', 'S', 'R', 'R', 'R', 'S', 'R', 'S', 'Edit \neye Swab C/s', 'LMLS-0001', '2020-03-06 22:12:59');
 
 -- --------------------------------------------------------
 
@@ -3526,6 +4681,13 @@ CREATE TABLE `fbc_3p` (
   `added_by` varchar(25) NOT NULL,
   `date_added` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `fbc_3p`
+--
+
+INSERT INTO `fbc_3p` (`id`, `invoice_id`, `patient_id`, `wbc`, `wbc_info`, `lym`, `lym_info`, `mid`, `mid_info`, `gran`, `gran_info`, `lym_one`, `lym_one_info`, `mid_two`, `mid_two_info`, `gran_three`, `gran_three_info`, `rbc`, `rbc_info`, `hgb`, `hgb_info`, `hct`, `hct_info`, `mcv`, `mcv_info`, `mch`, `mch_info`, `mchc`, `mchc_info`, `rdw_cv`, `rdw_cv_info`, `rdw_sd`, `rdw_sd_info`, `plt`, `plt_info`, `mpv`, `mpv_info`, `pdw`, `pdw_info`, `pct`, `pct_info`, `sickling_test`, `bf_mps`, `esr`, `blood_film_comment`, `added_by`, `date_added`) VALUES
+(3, 'INV-FBC-3P-000', 'LMLS-PAT-AMA-0002', 1.00, 'High', 2.00, 'Low', 3.00, 'High', 4.00, 'Low', 5.00, 'High', 6.00, 'Low', 7.00, 'High', 8.00, 'Low', 9.00, 'High', 10.00, 'Low', 11.00, 'High', 12.00, 'Low', 13.00, 'High', 14.00, 'Low', 15.00, 'High', 16.00, 'Low', 17.00, 'High', 18.00, 'Low', 19.00, 'High', 'Positive', 'No MPS Seen', 20.00, 'Full Blood Count 3p', 'LMLS-AMA-0002', '2020-07-27 14:24:34');
 
 -- --------------------------------------------------------
 
@@ -3600,7 +4762,8 @@ CREATE TABLE `fbc_5p` (
 --
 
 INSERT INTO `fbc_5p` (`id`, `invoice_id`, `patient_id`, `wbc`, `wbc_flag`, `neu_hash`, `neu_hash_flag`, `lym_hash`, `lym_hash_flag`, `mon_hash`, `mon_hash_flag`, `eos_hash`, `eos_hash_flag`, `bas_hash`, `bas_hash_flag`, `neu_percent`, `neu_percent_flag`, `lym_percent`, `lym_percent_flag`, `mon_percent`, `mon_percent_flag`, `eos_percent`, `eos_percent_flag`, `bas_percent`, `bas_percent_flag`, `rbc`, `rbc_flag`, `hgb`, `hgb_flag`, `hct`, `hct_flag`, `mcv`, `mcv_flag`, `mch`, `mch_flag`, `mchc`, `mchc_flag`, `rdw_cv`, `rdw_cv_flag`, `rdw_sd`, `rdw_sd_flag`, `plt`, `plt_flag`, `mpv`, `mpv_flag`, `pdw`, `pdw_flag`, `pct`, `pct_flag`, `p_lcc`, `p_lcc_flag`, `p_lcr`, `p_lcr_flag`, `sickling_test`, `bf_mps`, `esr`, `blood_film_comment`, `added_by`, `date_added`) VALUES
-(3, 'INV-FBC-5P-720', 'LMLS-PAT-KB-0003', 1.00, '', 2.00, '', 3.00, '', 4.00, '', 5.00, '', 6.00, '', 7.00, '', 8.00, '', 9.00, '', 10.00, '', 11.00, '', 12.00, '', 13.00, '', 14.00, '', 15.00, '', 16.00, '', 17.00, '', 18.00, '', 19.00, '', 20.00, '', 21.00, '', 22.00, '', 23.00, '', 24.00, '', 25.00, '', 'Negative', 'MPS Seen', 26.00, 'Kljhgf', 'LMLS-0001', '2020-03-08 22:47:44');
+(3, 'INV-FBC-5P-720', 'LMLS-PAT-KB-0003', 1.00, '', 2.00, '', 3.00, '', 4.00, '', 5.00, '', 6.00, '', 7.00, '', 8.00, '', 9.00, '', 10.00, '', 11.00, '', 12.00, '', 13.00, '', 14.00, '', 15.00, '', 16.00, '', 17.00, '', 18.00, '', 19.00, '', 20.00, '', 21.00, '', 22.00, '', 23.00, '', 24.00, '', 25.00, '', 'Negative', 'MPS Seen', 26.00, 'Kljhgf', 'LMLS-0001', '2020-03-08 22:47:44'),
+(4, 'INV-FBC-5P-811', 'LMLS-PAT-AMA-0002', 1.00, 'High', 2.00, 'Low', 3.00, 'High', 4.00, 'Low', 5.00, 'High', 6.00, 'Low', 7.00, 'High', 8.00, 'Low', 9.00, 'High', 10.00, 'Low', 11.00, 'High', 12.00, 'Low', 13.00, 'High', 14.00, 'Low', 15.00, 'High', 16.00, 'Low', 17.00, 'High', 18.00, 'Low', 19.00, 'High', 20.00, 'Low', 21.00, 'High', 22.00, 'Low', 23.00, 'High', 24.00, 'Low', 25.00, 'High', 'Positive', 'MPS Seen', 26.00, 'Full Blood Count 5p', 'LMLS-AMA-0002', '2020-07-27 14:51:24');
 
 -- --------------------------------------------------------
 
@@ -3687,7 +4850,8 @@ CREATE TABLE `folate_b12` (
 --
 
 INSERT INTO `folate_b12` (`id`, `invoice_id`, `patient_id`, `folate`, `vitamin_b_12`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-FOL-B12-090', 'LMLS-PAT-KB-0001', 1.00, 1.00, ';llikujyhgf', 'LMLS-0001', '2020-03-08 01:59:57');
+(3, 'INV-FOL-B12-090', 'LMLS-PAT-KB-0001', 1.00, 1.00, ';llikujyhgf', 'LMLS-0001', '2020-03-08 01:59:57'),
+(4, 'INV-FOL-B12-881', 'LMLS-PAT-AMA-0001', 1.00, 2.00, 'Add Folate B12', 'LMLS-0000', '2020-07-25 05:31:44');
 
 -- --------------------------------------------------------
 
@@ -3721,7 +4885,8 @@ CREATE TABLE `general_chemistry` (
 --
 
 INSERT INTO `general_chemistry` (`id`, `invoice_id`, `patient_id`, `amylase`, `creatinine`, `ldh`, `uric_acid`, `creatine_kinase`, `calcium`, `phosphorus`, `magnessium`, `fbs_glucose`, `globulin`, `bili_indirect`, `glyco_hbg`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-GEN-CHEM-510', 'LMLS-PAT-KB-0001', 10.00, 7.00, 9.00, 6.00, 8.00, 5.00, 11.00, 12.00, 4.00, 3.00, 2.00, 1.00, 'M,jhkjghf', 'LMLS-0001', '2020-03-08 02:19:32');
+(3, 'INV-GEN-CHEM-510', 'LMLS-PAT-KB-0001', 7.00, 10.00, 8.00, 11.00, 9.00, 12.00, 13.00, 14.00, 15.00, 16.00, 17.00, 18.00, 'M,jhkjghf', 'LMLS-0001', '2020-03-08 02:19:32'),
+(4, 'INV-GEN-CHEM-111', 'LMLS-PAT-AMA-0001', 1.00, 4.00, 2.00, 5.00, 3.00, 6.00, 7.00, 8.00, 9.00, 10.00, 11.00, 12.00, 'Add General Chemistry', 'LMLS-0000', '2020-07-25 12:14:34');
 
 -- --------------------------------------------------------
 
@@ -3746,7 +4911,9 @@ CREATE TABLE `hba1c` (
 --
 
 INSERT INTO `hba1c` (`id`, `invoice_id`, `patient_id`, `dcct`, `ifcc`, `average_blood_glucose`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-HBA1C-220', 'LMLS-PAT-KB-0001', 3.00, 2.00, 1.00, 'Kjkhgf', 'LMLS-0001', '2020-03-08 02:27:10');
+(3, 'INV-HBA1C-220', 'LMLS-PAT-KB-0001', 3.00, 2.00, 1.00, 'Kjkhgf', 'LMLS-0001', '2020-03-08 02:27:10'),
+(4, 'INV-HBA1C-271', 'LMLS-PAT-AMA-0002', 1.00, 2.00, 3.00, 'Add Comment Here', 'LMLS-AMA-0002', '2020-07-25 12:22:53'),
+(5, 'INV-HBA1C-562', 'LMLS-PAT-AMA-0002', 2.00, 3.00, 4.00, 'Test', 'LMLS-AMA-0002', '2020-07-25 12:24:41');
 
 -- --------------------------------------------------------
 
@@ -3770,7 +4937,8 @@ CREATE TABLE `hbv_viral_load` (
 --
 
 INSERT INTO `hbv_viral_load` (`id`, `invoice_id`, `patient_id`, `hbv_dna`, `pcr_hbv_quantitative`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-HBV-VL-320', 'LMLS-PAT-KB-0001', 'Target Detected', 1, 'Hjgfc', 'LMLS-0001', '2020-03-08 15:35:46');
+(3, 'INV-HBV-VL-320', 'LMLS-PAT-KB-0001', 'Target Detected', 1, 'Hjgfc', 'LMLS-0001', '2020-03-08 15:35:46'),
+(4, 'INV-HBV-VL-691', 'LMLS-PAT-AMA-0002', 'Positive', 9, 'Hbv Viral Load', 'LMLS-AMA-0002', '2020-07-26 17:54:19');
 
 -- --------------------------------------------------------
 
@@ -3797,7 +4965,8 @@ CREATE TABLE `hepatitis_b_profile` (
 --
 
 INSERT INTO `hepatitis_b_profile` (`id`, `invoice_id`, `patient_id`, `hbsag`, `hbsab`, `hbeag`, `hbeab`, `hbcab`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-HEP-B-PRF-390', 'LMLS-PAT-KB-0001', 'Negative', 'Negative', 'Negative', 'Positive', 'Positive', '.kljkhjghfgc', 'LMLS-0001', '2020-03-08 15:44:57');
+(3, 'INV-HEP-B-PRF-390', 'LMLS-PAT-KB-0001', 'Negative', 'Negative', 'Negative', 'Positive', 'Positive', '.kljkhjghfgc', 'LMLS-0001', '2020-03-08 15:44:57'),
+(4, 'INV-HEP-B-PRF-051', 'LMLS-PAT-AMA-0002', 'Positive', 'Negative', 'Positive', 'Negative', 'Positive', 'Hepatitis B Profile', 'LMLS-AMA-0002', '2020-07-26 20:48:45');
 
 -- --------------------------------------------------------
 
@@ -3828,7 +4997,8 @@ CREATE TABLE `hepatitis_markers` (
 --
 
 INSERT INTO `hepatitis_markers` (`id`, `invoice_id`, `patient_id`, `hep_a_igg_antibody`, `hep_b_core_igm_antibody`, `hep_a_igm_antibody`, `hep_be_antigen`, `hep_bs_antigen`, `hep_be_antibody`, `hep_bs_antibody`, `hep_c_screen`, `hep_b_core_igg_antibody`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-HEP-MARK-510', 'LMLS-PAT-KB-0001', 'Negative', 'Positive', 'Negative', 'Positive', 'Positive', 'Negative', 'Positive', 'Negative', 'Positive', 'Lkljhgfgbcv', 'LMLS-0001', '2020-03-08 16:06:52');
+(3, 'INV-HEP-MARK-510', 'LMLS-PAT-KB-0001', 'Negative', 'Positive', 'Negative', 'Positive', 'Positive', 'Negative', 'Positive', 'Negative', 'Positive', 'Lkljhgfgbcv', 'LMLS-0001', '2020-03-08 16:06:52'),
+(4, 'INV-HEP-MARK-281', 'LMLS-PAT-AMA-0002', 'Negative', 'Positive', 'Positive', 'Negative', 'Negative', 'Positive', 'Positive', 'Negative', 'Negative', 'Hepatitis Markers', 'LMLS-AMA-0002', '2020-07-26 21:08:21');
 
 -- --------------------------------------------------------
 
@@ -3852,7 +5022,8 @@ CREATE TABLE `hiv_viral_load` (
 --
 
 INSERT INTO `hiv_viral_load` (`id`, `invoice_id`, `patient_id`, `hiv_dna`, `pcr_hiv_quantitative`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-HIV-VL-040', 'LMLS-PAT-KB-0001', 'Target Not Detected', 1, 'Klkjhgf', 'LMLS-0001', '2020-03-08 15:35:54');
+(3, 'INV-HIV-VL-040', 'LMLS-PAT-KB-0001', 'Target Not Detected', 1, 'Klkjhgf', 'LMLS-0001', '2020-03-08 15:35:54'),
+(4, 'INV-HIV-VL-011', 'LMLS-PAT-AMA-0002', 'Negative', 8, 'Hiv Viral Load', 'LMLS-AMA-0002', '2020-07-26 17:56:40');
 
 -- --------------------------------------------------------
 
@@ -3874,7 +5045,9 @@ CREATE TABLE `hormonal_assay` (
 --
 
 INSERT INTO `hormonal_assay` (`id`, `invoice_id`, `patient_id`, `results`, `added_by`, `date_added`) VALUES
-(3, 'INV-HORM-ASS-930', 'LMLS-PAT-KB-0004', 4567.00, 'LMLS-0001', '2020-03-09 13:42:23');
+(3, 'INV-HORM-ASS-930', 'LMLS-PAT-KB-0004', 47.00, 'LMLS-0001', '2020-03-09 13:42:23'),
+(4, 'INV-HORM-ASS-901', 'LMLS-PAT-AMA-0001', 9.00, 'LMLS-0000', '2020-07-23 15:58:25'),
+(5, 'INV-HORM-ASS-152', 'LMLS-PAT-AMA-0001', 65.00, 'LMLS-0000', '2020-07-23 21:37:36');
 
 -- --------------------------------------------------------
 
@@ -3937,7 +5110,7 @@ CREATE TABLE `hvs_cs` (
 --
 
 INSERT INTO `hvs_cs` (`id`, `invoice_id`, `patient_id`, `pus_cells_per_hps`, `rbcs_per_hpf`, `epitheleal_cells_per_hpf`, `t_vaginalis`, `yeast_like_cells`, `gram_stain`, `culture`, `bacteria_one`, `bacteria_two`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-HVS-CS-020', 'LMLS-PAT-KB-0002', 4.00, 5.00, 6.00, 'Present', 'Present', 'Gram -ve Bacilli Seen', 'No Significant Growth', 'Alcaligenes', 'Alcaligenes', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Nbdkbjx', 'LMLS-0001', '2020-03-06 23:08:38');
+(2, 'INV-HVS-CS-020', 'LMLS-PAT-KB-0002', 4.00, 5.00, 6.00, 'Present', 'Present', 'Gram -ve Bacilli Seen', 'No Significant Growth', 'Alcaligenes', 'Alcaligenes', 'Ceftriaxone', 'Cefuroxime', 'Cephalothin', 'Cephalothin', 'Ciprofloxacin', 'Ciprofloxacin', 'Cotrimoxazol', 'Cotrimoxazol', 'Ceftriaxone', 'Ceftazidime', 'Cephalothin', 'Cefuroxime', 'Ciprofloxacin', 'Ciprofloxacin', 'Cloxacillin', 'Cloxacillin', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'Nbdkbjx', 'LMLS-0001', '2020-03-06 23:08:38');
 
 -- --------------------------------------------------------
 
@@ -3965,7 +5138,8 @@ CREATE TABLE `hvs_re` (
 --
 
 INSERT INTO `hvs_re` (`id`, `invoice_id`, `patient_id`, `pus_cells_per_hps`, `epitheleal_cells_per_hpf`, `red_blood_cells`, `yeast_like_cells`, `t_vaginalis`, `gnid`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-HVS-RE-870', 'LMLS-PAT-KB-0002', 7.50, 8.50, 'Not Seen', 'Present(+)', 'Present(2+)', 'Present(3+)', 'Jkhgfd', 'LMLS-0001', '2020-03-06 23:26:53');
+(3, 'INV-HVS-RE-870', 'LMLS-PAT-KB-0002', 7.50, 8.50, 'Not Seen', 'Present(+)', 'Present(+2)', 'Present(+3)', 'Jkhgfd', 'LMLS-0001', '2020-03-06 23:26:53'),
+(4, 'INV-HVS-RE-391', 'LMLS-PAT-AMA-0002', 9.00, 10.09, 'Nil', 'Not Seen', 'Not Seen', 'Present(+)', 'Hvs R/e', 'LMLS-AMA-0002', '2020-07-25 21:40:24');
 
 -- --------------------------------------------------------
 
@@ -3988,7 +5162,9 @@ CREATE TABLE `hypersensitive_cpr` (
 --
 
 INSERT INTO `hypersensitive_cpr` (`id`, `invoice_id`, `patient_id`, `results`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-HYP-CPR-350', 'LMLS-PAT-KB-0001', 43.00, 'Vbnm,.kljhgfvc', 'LMLS-0001', '2020-03-08 02:38:05');
+(3, 'INV-HYP-CPR-350', 'LMLS-PAT-KB-0001', 3.00, 'Vbnm,.kljhgfvc', 'LMLS-0001', '2020-03-08 02:38:05'),
+(4, 'INV-HYP-CPR-321', 'LMLS-PAT-AMA-0001', 1.00, 'Hypersensitive Cpr', 'LMLS-0000', '2020-07-25 12:35:47'),
+(5, 'INV-HYP-CPR-002', 'LMLS-PAT-AMA-0001', 0.50, 'Hypersensitive Cpr', 'LMLS-0000', '2020-07-25 12:38:40');
 
 -- --------------------------------------------------------
 
@@ -4011,7 +5187,8 @@ CREATE TABLE `h_pylori_ag` (
 --
 
 INSERT INTO `h_pylori_ag` (`id`, `invoice_id`, `patient_id`, `h_pylori_ag`, `comments`, `added_by`, `date_added`) VALUES
-(4, 'INV-H-PAG-680', 'LMLS-PAT-KB-0001', 'Negative', 'Asdfg', 'LMLS-0001', '2020-03-08 15:03:51');
+(4, 'INV-H-PAG-680', 'LMLS-PAT-KB-0001', 'Negative', 'Asdfg', 'LMLS-0001', '2020-03-08 15:03:51'),
+(5, 'INV-H-PAG-421', 'LMLS-PAT-AMA-0002', 'Positive', 'H. Pylori Ag.', 'LMLS-AMA-0002', '2020-07-26 17:44:06');
 
 -- --------------------------------------------------------
 
@@ -4034,7 +5211,8 @@ CREATE TABLE `h_pylori_ag_blood` (
 --
 
 INSERT INTO `h_pylori_ag_blood` (`id`, `invoice_id`, `patient_id`, `h_pylori_ag`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-H-PAGB-670', 'LMLS-PAT-KB-0001', 'Negative', 'Kljhgvc', 'LMLS-0001', '2020-03-08 15:18:59');
+(3, 'INV-H-PAGB-670', 'LMLS-PAT-KB-0001', 'Negative', 'Kljhgvc', 'LMLS-0001', '2020-03-08 15:18:59'),
+(4, 'INV-H-PAGB-141', 'LMLS-PAT-AMA-0002', 'Negative', 'H. Pylori Ag. Blood', 'LMLS-AMA-0002', '2020-07-26 17:47:11');
 
 -- --------------------------------------------------------
 
@@ -4058,7 +5236,8 @@ CREATE TABLE `h_pylori_ag_sob` (
 --
 
 INSERT INTO `h_pylori_ag_sob` (`id`, `invoice_id`, `patient_id`, `h_pylori_ag`, `stool_occult_blood`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-H-PAG-SOB-570', 'LMLS-PAT-KB-0001', 'Negative', 'Negative', 'Asdfg', 'LMLS-0001', '2020-03-08 15:16:09');
+(3, 'INV-H-PAG-SOB-570', 'LMLS-PAT-KB-0001', 'Negative', 'Negative', 'Asdfg', 'LMLS-0001', '2020-03-08 15:16:09'),
+(4, 'INV-H-PAG-SOB-511', 'LMLS-PAT-AMA-0002', 'Positive', 'Positive', 'H. Pylori Ag. / Sob', 'LMLS-AMA-0002', '2020-07-26 17:42:52');
 
 -- --------------------------------------------------------
 
@@ -4088,7 +5267,8 @@ CREATE TABLE `iron_study` (
 --
 
 INSERT INTO `iron_study` (`id`, `invoice_id`, `patient_id`, `iron`, `iron_flag`, `tibc`, `tibc_flag`, `transferrin_sat`, `transferrin_sat_flag`, `ferritin`, `ferritin_flag`, `comments`, `added_by`, `date_added`) VALUES
-(4, 'INV-IRN-STD-760', 'LMLS-PAT-KB-0001', 1.00, 'High', 2.00, 'Low', 3.00, 'High', 4.00, 'Low', 'L;ljkhjyghf', 'LMLS-0001', '2020-03-08 02:56:34');
+(4, 'INV-IRN-STD-760', 'LMLS-PAT-KB-0001', 1.00, 'Low', 2.00, 'Low', 3.00, 'Low', 4.00, 'Low', 'L;ljkhjyghf', 'LMLS-0001', '2020-03-08 02:56:34'),
+(5, 'INV-IRN-STD-871', 'LMLS-PAT-AMA-0002', 1.00, 'High', 2.00, 'High', 3.00, 'High', 4.00, 'High', 'Iron Study', 'LMLS-AMA-0002', '2020-07-25 13:02:24');
 
 -- --------------------------------------------------------
 
@@ -4116,7 +5296,8 @@ CREATE TABLE `ise` (
 --
 
 INSERT INTO `ise` (`id`, `invoice_id`, `patient_id`, `sodium`, `sodium_flag`, `potassium`, `potassium_flag`, `chloride`, `chloride_flag`, `carbon_dioxide`, `added_by`, `date_added`) VALUES
-(3, 'INV-ISE-180', 'LMLS-PAT-KB-0001', 1.00, 'Low', 2.00, 'High', 3.00, 'Low', 4.00, 'LMLS-0001', '2020-03-08 02:45:34');
+(3, 'INV-ISE-180', 'LMLS-PAT-KB-0001', 1.00, 'Low', 2.00, 'Low', 3.00, 'Low', 4.00, 'LMLS-0001', '2020-03-08 02:45:34'),
+(4, 'INV-ISE-281', 'LMLS-PAT-AMA-0002', 1.00, 'High', 2.00, 'High', 3.00, 'High', 4.00, 'LMLS-AMA-0002', '2020-07-25 12:52:34');
 
 -- --------------------------------------------------------
 
@@ -4158,7 +5339,8 @@ CREATE TABLE `lft` (
 --
 
 INSERT INTO `lft` (`id`, `invoice_id`, `patient_id`, `got_ast`, `got_ast_flag`, `gpt_alt`, `gpt_alt_flag`, `alkaline_phos`, `alkaline_phos_flag`, `ggt`, `ggt_flag`, `bilirubin_total`, `bilirubin_total_flag`, `bili_indirect`, `bili_indirect_flag`, `bilirubin_direct`, `bilirubin_direct_flag`, `protein_total`, `protein_total_flag`, `albumin`, `albumin_flag`, `globulin`, `globulin_flag`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-lft-300', 'LMLS-PAT-KB-0001', 1.00, 'Low', 2.00, 'Low', 3.00, 'Low', 4.00, 'Low', 5.00, 'Low', 6.00, 'High', 7.00, 'High', 8.00, 'High', 9.00, 'High', 10.00, 'High', 'Lkjhgfd', 'LMLS-0001', '2020-03-08 03:02:07');
+(3, 'INV-lft-300', 'LMLS-PAT-KB-0001', 1.00, 'Low', 2.00, 'Low', 3.00, 'Low', 4.00, 'Low', 5.00, 'Low', 6.00, 'High', 7.00, 'High', 8.00, 'High', 9.00, 'High', 10.00, 'High', 'Lkjhgfd', 'LMLS-0001', '2020-03-08 03:02:07'),
+(4, 'INV-LFT-891', 'LMLS-PAT-AMA-0002', 1.00, 'High', 2.00, 'High', 3.00, 'High', 4.00, 'High', 5.00, 'High', 6.00, 'High', 7.00, 'High', 8.00, 'High', 9.00, 'High', 10.00, 'High', 'Add Lft', 'LMLS-AMA-0002', '2020-07-25 13:09:48');
 
 -- --------------------------------------------------------
 
@@ -4189,7 +5371,8 @@ CREATE TABLE `lipid_profile` (
 --
 
 INSERT INTO `lipid_profile` (`id`, `invoice_id`, `patient_id`, `cholesterol_total`, `cholesterol_total_flag`, `triglycerides`, `triglycerides_flag`, `hdl`, `hdl_flag`, `ldl`, `ldl_flag`, `coronary_risk`, `coronary_risk_flag`, `added_by`, `date_added`) VALUES
-(3, 'INV-LPD-PRF-950', 'LMLS-PAT-KB-0001', 1.00, 'Low', 2.00, 'Low', 3.00, 'Low', 4.00, 'High', 5.00, 'High', 'LMLS-0001', '2020-03-08 03:07:30');
+(3, 'INV-LPD-PRF-950', 'LMLS-PAT-KB-0001', 1.00, 'High', 2.00, 'High', 3.00, 'High', 4.00, 'High', 5.00, 'High', 'LMLS-0001', '2020-03-08 03:07:30'),
+(4, 'INV-LPD-PRF-511', 'LMLS-PAT-AMA-0002', 1.00, 'Low', 2.00, 'Low', 3.00, 'Low', 4.00, 'Low', 5.00, 'Low', 'LMLS-AMA-0002', '2020-07-25 13:14:08');
 
 -- --------------------------------------------------------
 
@@ -4215,7 +5398,8 @@ CREATE TABLE `mantoux` (
 
 INSERT INTO `mantoux` (`id`, `invoice_id`, `patient_id`, `date_of_injection`, `date_of_reading`, `size_of_induration`, `comments`, `added_by`, `date_added`) VALUES
 (3, 'INV-MAN-230', 'LMLS-PAT-KB-0001', '2020-03-01', '2020-03-01', 1.00, 'Kjkhjghfg', 'LMLS-0001', '2020-03-08 16:24:26'),
-(4, 'INV-MAN-791', 'LMLS-PAT-KB-0001', NULL, NULL, 2.00, 'J,hghvbc', 'LMLS-0001', '2020-03-08 16:27:11');
+(4, 'INV-MAN-791', 'LMLS-PAT-KB-0001', NULL, NULL, 2.00, 'J,hghvbc', 'LMLS-0001', '2020-03-08 16:27:11'),
+(5, 'INV-MAN-912', 'LMLS-PAT-AMA-0002', '2020-07-26', '2020-07-26', 76.00, 'Mantoux', 'LMLS-AMA-0002', '2020-07-26 21:28:00');
 
 -- --------------------------------------------------------
 
@@ -4238,7 +5422,8 @@ CREATE TABLE `m_alb` (
 --
 
 INSERT INTO `m_alb` (`id`, `invoice_id`, `patient_id`, `results`, `comments`, `added_by`, `date_added`) VALUES
-(4, 'INV-M-ALB-510', 'LMLS-PAT-KB-0002', 5.30, 'Kljhgf', 'LMLS-0001', '2020-03-09 11:47:40');
+(4, 'INV-M-ALB-510', 'LMLS-PAT-KB-0002', 5.30, 'Kljhgf', 'LMLS-0001', '2020-03-09 11:47:40'),
+(5, 'INV-M-ALB-191', 'LMLS-PAT-AMA-0002', 766.00, 'M-alb', 'LMLS-AMA-0002', '2020-07-27 00:34:09');
 
 -- --------------------------------------------------------
 
@@ -4264,7 +5449,8 @@ CREATE TABLE `ntc_screening` (
 --
 
 INSERT INTO `ntc_screening` (`id`, `invoice_id`, `patient_id`, `hb`, `hct`, `hepb`, `sickling`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-NTC-SCR-880', 'LMLS-PAT-KB-0003', 1.00, 2.00, 3.00, 'Negative', 'Kjkhgf', 'LMLS-0001', '2020-03-08 22:06:35');
+(3, 'INV-NTC-SCR-880', 'LMLS-PAT-KB-0003', 1.00, 2.00, 3.00, 'Negative', 'Kjkhgf', 'LMLS-0001', '2020-03-08 22:06:35'),
+(4, 'INV-NTC-SCR-341', 'LMLS-PAT-AMA-0002', 1.00, 2.00, 3.00, 'Positive', 'Ntc Screening', 'LMLS-AMA-0002', '2020-07-27 00:03:03');
 
 -- --------------------------------------------------------
 
@@ -4297,21 +5483,21 @@ CREATE TABLE `patients` (
 --
 
 INSERT INTO `patients` (`id`, `patient_id`, `title`, `first_name`, `middle_name`, `last_name`, `date_of_birth`, `gender`, `email_address`, `home_phone`, `mobile_phone`, `work_phone`, `next_of_kin_name`, `next_of_kin_number`, `branch`, `date_added`, `entered_by`) VALUES
-(15, 'LMLS-PAT-AMA-0001', 'Mrs', 'Daniella', 'Adwoa', 'Owusua', '1980-12-31', 'Female', 'kofi@esquire.comm', '0201234567', '0201234567', '0201234567', 'Mark Adjei', '0231212121', 'Amasaman', '2020-01-17 18:14:21', 'LMLS-0000'),
-(26, 'LMLS-PAT-AMA-0002', 'Mr', 'Steven', 'Arkoh', 'Sackey', '1970-01-02', 'Male', 'steph@sackey.com.gh', '0302123321', '0201234567', '', 'Patricia', '0231212123', 'Amasaman', '2020-01-18 19:44:12', 'LMLS-0000'),
-(27, 'LMLS-PAT-KB-0003', 'Mr', 'Agyakwa', 'Ntow', 'Mireku', '1978-12-31', 'Male', 'thed@aryee.com.gh', '0302123321', '0201234567', '', 'Peter Mensah', '0241234567', 'Korle Bu', '2020-01-18 20:09:38', 'LMLS-0000'),
-(41, 'LMLS-PAT-KB-0001', 'Mrs', 'Michelle', 'Ntow', 'Adjei Laryea', '1992-01-13', 'Female', 'trial@admin.comm', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'Korle Bu', '2020-03-04 10:43:48', 'LMLS-0001'),
-(42, 'LMLS-PAT-KB-0002', 'Ms', 'Maria', '', 'Nortey', '1985-02-26', 'Female', 'maria@nortey.com', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'Korle Bu', '2020-03-04 17:17:41', 'LMLS-0001'),
-(44, 'LMLS-PAT-KAS-0001', 'Mr', 'Derek', '', 'Asomaning', '1981-06-25', 'Male', 'derek@asomaning.com', '0302123321', '0201234567', '', 'Akosua Mensah', '0231212121', 'Kasoa', '2020-03-14 20:43:03', 'LMLS-0001'),
-(45, 'LMLS-PAT-EL-0001', 'Mrs', 'Bethany', 'Serwaa', 'Adjei', '2020-01-09', 'Female', 'beth@adjei.com', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'East Legon', '2020-03-14 20:50:06', 'LMLS-0001'),
-(46, 'LMLS-PAT-EL-0002', 'Mr', 'Mark', 'Nisah', 'Anthony', '2020-01-06', 'Transgender', 'mark@anthony.com.gh', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'East Legon', '2020-03-14 20:54:19', 'LMLS-0001'),
-(47, 'LMLS-PAT-KB-0005', 'Mrs', 'Robert', '', 'Adjei Laryea', '2020-01-01', 'Female', 'rob@laryea.com', '0301234567', '0241234567', '', 'Mary Owusu', '0241234567', 'East Legon', '2020-03-18 10:16:50', 'LMLS-0001'),
-(48, 'LMLS-PAT-KB-0004', 'Mr', 'Trial', 'Ntow', 'Adjei Laryea', '2020-05-10', 'Male', 'trial@admin.commm', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'Korle Bu', '2020-05-19 19:16:23', 'LMLS-0001'),
-(49, 'LMLS-PAT-KB-0005', 'Prof.', 'Robert', 'Ntow', 'Adjei Laryea', '2020-05-01', 'Male', 'trial@admin.com', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'Korle Bu', '2020-05-27 12:43:01', 'LMLS-KB-0001'),
+(15, 'LMLS-PAT-AMA-0001', 'Dr.', 'Daniella', 'Adwoa', 'Owusua', '1980-12-31', 'Female', 'kofi@esquire.comm', '0201234567', '0201234567', '0201234567', 'Mark Adjei', '0231212121', 'Amasaman', '2020-01-17 18:14:21', 'LMLS-KB-0001'),
+(26, 'LMLS-PAT-AMA-0002', 'Mr.', 'Steven', 'Arkoh', 'Sackey', '1970-01-02', 'Male', 'steph@sackey.com.gh', '0302123321', '0201234567', '', 'Patricia', '0231212123', 'Amasaman', '2020-01-18 19:44:12', 'LMLS-KB-0001'),
+(27, 'LMLS-PAT-KB-0003', 'Mr.', 'Agyakwa', 'Ntow', 'Mireku', '1978-12-31', 'Male', 'thed@aryee.com.gh', '0302123321', '0201234567', '', 'Peter Mensah', '0241234567', 'Korle Bu', '2020-01-18 20:09:38', 'LMLS-KB-0001'),
+(41, 'LMLS-PAT-KB-0001', 'Mrs.', 'Michelle', 'Ntow', 'Adjei Laryea', '1992-01-13', 'Female', 'trial@admin.comm', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'Korle Bu', '2020-03-04 10:43:48', 'LMLS-KB-0001'),
+(42, 'LMLS-PAT-KB-0002', 'Ms.', 'Maria', '', 'Nortey', '1985-02-26', 'Female', 'maria@nortey.com', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'Korle Bu', '2020-03-04 17:17:41', 'LMLS-KB-0001'),
+(44, 'LMLS-PAT-KAS-0001', 'Mr.', 'Derek', '', 'Asomaning', '1981-06-25', 'Male', 'derek@asomaning.com', '0302123321', '0201234567', '', 'Akosua Mensah', '0231212121', 'Kasoa', '2020-03-14 20:43:03', 'LMLS-KB-0001'),
+(45, 'LMLS-PAT-EL-0001', 'Mrs.', 'Bethany', 'Serwaa', 'Adjei', '2020-01-09', 'Female', 'beth@adjei.com', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'East Legon', '2020-03-14 20:50:06', 'LMLS-KB-0001'),
+(46, 'LMLS-PAT-EL-0002', 'Mr.', 'Mark', 'Nisah', 'Anthony', '2020-01-06', 'Transgender', 'mark@anthony.com.gh', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'East Legon', '2020-03-14 20:54:19', 'LMLS-KB-0001'),
+(47, 'LMLS-PAT-KB-0005', 'Mrs.', 'Robert', '', 'Adjei Laryea', '2020-01-01', 'Female', 'rob@laryea.com', '0301234567', '0241234567', '', 'Mary Owusu', '0241234567', 'East Legon', '2020-03-18 10:16:50', 'LMLS-KB-0001'),
+(48, 'LMLS-PAT-KB-0004', 'Mr.', 'Trial', 'Ntow', 'Adjei Laryea', '2020-05-10', 'Male', 'trial@admin.commm', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'Korle Bu', '2020-05-19 19:16:23', 'LMLS-KB-0001'),
+(49, 'LMLS-PAT-KB-0005', 'Prof.', 'Robert', 'Ntow', 'Adjei Laryea', '2020-05-01', 'Male', 'trial@admin.com', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'Korle Bu', '2020-05-27 12:43:01', 'LMLS-0001'),
 (50, 'LMLS-PAT-KB-0006', 'Mr.', 'Trial', 'Ntow', 'Adjei-laryea', '2020-05-01', 'Male', 'tria2l@admin.comm', '0302123321', '0201234567', '', 'Akosua Dwamena', '0231212121', 'Korle Bu', '2020-05-27 12:45:37', 'LMLS-KB-0001'),
 (52, 'LMLS-PAT-KB-0007', 'Ms.', 'Michelle', '', 'Koduah', '2020-05-27', 'Female', 'michelle@koduah.com.gh', '0302123321', '0201234567', '', 'Peter Mensah', '0231212121', 'Korle Bu', '2020-05-27 13:47:48', 'LMLS-KB-0001'),
-(58, 'FMDS-PAT-KB-0008', 'Prof', 'Anot', 'Her', 'Patient', '2020-04-29', 'Male', '', '0302123321', '0201234567', '0301234321', 'Peter Mensah', '0231212121', 'Korle Bu', '2020-05-27 23:02:43', 'LMLS-0001'),
-(69, 'LMLS-PAT-KB-0009', 'Mr.', 'Bismark', 'Adjei', 'Bediako', '2020-06-30', 'Male', 'bismark@bediako.com.gh', '0302123321', '0201234567', '0236666666', 'Akosua Dwamena', '0231212121', 'Korle Bu', '2020-07-13 18:09:29', 'LMLS-KB-0000');
+(58, 'FMDS-PAT-KB-0008', 'Prof.', 'Anot', 'Her', 'Patient', '2020-04-29', 'Male', '', '0302123321', '0201234567', '0301234321', 'Peter Mensah', '0231212121', 'Korle Bu', '2020-05-27 23:02:43', 'LMLS-KB-0001'),
+(78, 'LMLS-PAT-KB-0009', 'Mr.', 'Bismark', 'Adjei', 'Bediako', '2020-06-29', 'Male', 'bismark@bediako.com.gh', '0302123321', '0201234567', '', 'Akosua Dwamena', '0231212121', 'Korle Bu', '2020-07-20 10:26:22', 'LMLS-0000');
 
 -- --------------------------------------------------------
 
@@ -4351,7 +5537,8 @@ CREATE TABLE `pleural_fluid` (
 --
 
 INSERT INTO `pleural_fluid` (`id`, `invoice_id`, `patient_id`, `colour`, `appearance`, `appearance_dropdown`, `gram_stain`, `acid_fast_bacilli`, `ph`, `glucose`, `total_protein`, `pleural_fluid_albumin`, `ldh`, `total_wbc_one`, `total_wbc_two`, `lymphocytes_one`, `lymphocytes_two`, `monocytes_one`, `monocytes_two`, `granulocytes_one`, `granulocytes_two`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-PLEU-FLU-420', 'LMLS-PAT-KB-0002', 'Jbkqwbwhb', 'Hbshb', 'Blood Stain', 'No Organism Seen', ',mdcbjk', 1.00, 2.00, 3.00, 4.00, 5.00, '', '', '', '', '', '', '', '', '', 'LMLS-0001', '2020-03-07 13:35:27');
+(2, 'INV-PLEU-FLU-420', 'LMLS-PAT-KB-0002', 'Jbkqwbwhb', 'Hbshb', 'Blood Stain', 'No Organism Seen', ',mdcbjk', 1.00, 2.00, 3.00, 4.00, 5.00, ',nbdhvbhj', 'Vgvcgv', 'Gvghvchgv', 'Ghvghvcgh', 'Cghc', 'Ghcgh', 'Chgc', 'Gcgh', 'Edit Die(print_r($labs));', 'LMLS-0001', '2020-03-07 13:35:27'),
+(3, 'INV-PLEU-FLU-971', 'LMLS-PAT-AMA-0002', 'Red', 'Something', 'Bloody', 'Gram +ve Bacilli Seen', 'Something', 0.50, 0.50, 0.50, 0.50, 0.50, 'Something', 'Something', 'Something', 'Something', 'Something', 'Something', 'Something', 'Something', '', 'LMLS-AMA-0002', '2020-07-25 23:46:15');
 
 -- --------------------------------------------------------
 
@@ -4375,7 +5562,8 @@ CREATE TABLE `pregnancy_test` (
 --
 
 INSERT INTO `pregnancy_test` (`id`, `invoice_id`, `patient_id`, `specimen`, `results`, `comments`, `added_by`, `date_added`) VALUES
-(4, 'INV-PREG-TEST-010', 'LMLS-PAT-KB-0001', 'Urine', 'Negative', 'Not Pregnant, Sorry', 'LMLS-0001', '2020-03-08 16:37:18');
+(4, 'INV-PREG-TEST-010', 'LMLS-PAT-KB-0001', 'Urine', 'Negative', 'Not Pregnant, Sorry', 'LMLS-0001', '2020-03-08 16:37:18'),
+(5, 'INV-PREG-TEST-501', 'LMLS-PAT-AMA-0002', 'A', 'Positive', 'Pregnancy Test', 'LMLS-AMA-0002', '2020-07-26 21:38:09');
 
 -- --------------------------------------------------------
 
@@ -4411,7 +5599,8 @@ CREATE TABLE `protein_electrophoresis` (
 --
 
 INSERT INTO `protein_electrophoresis` (`id`, `invoice_id`, `patient_id`, `total_protein`, `total_protein_flag`, `albumin`, `albumin_flag`, `alpha_1_globulin`, `alpha_1_globulin_flag`, `alpha_2_globulin`, `alpha_2_globulin_flag`, `beta_1_globulin`, `beta_1_globulin_flag`, `beta_2_globulin`, `beta_2_globulin_flag`, `gamma_globulin`, `gamma_globulin_flag`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-PROT-ELEC-970', 'LMLS-PAT-KB-0001', 1.00, 'Low', 2.00, 'Low', 3.00, 'Low', 4.00, 'Low', 5.00, 'High', 6.00, 'High', 7.00, 'High', '', 'LMLS-0001', '2020-03-08 13:14:14');
+(3, 'INV-PROT-ELEC-970', 'LMLS-PAT-KB-0001', 1.00, 'Low', 2.00, 'Low', 3.00, 'Low', 4.00, 'Low', 5.00, 'High', 6.00, 'High', 7.00, 'High', 'Protein Electrophoresis Edit', 'LMLS-0001', '2020-03-08 13:14:14'),
+(4, 'INV-PROT-ELEC-361', 'LMLS-PAT-AMA-0002', 1.00, 'High', 2.00, 'High', 3.00, 'High', 4.00, 'High', 5.00, 'High', 6.00, 'High', 7.00, 'High', 'Protein Electrophoresis', 'LMLS-AMA-0002', '2020-07-25 13:34:44');
 
 -- --------------------------------------------------------
 
@@ -4434,7 +5623,9 @@ CREATE TABLE `psa` (
 --
 
 INSERT INTO `psa` (`id`, `invoice_id`, `patient_id`, `results`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-PSA-710', 'LMLS-PAT-KB-0002', 1.20, ',jkhjgh', 'LMLS-0001', '2020-03-09 13:05:13');
+(3, 'INV-PSA-710', 'LMLS-PAT-KB-0002', 1000.00, ',jkhjgh', 'LMLS-0001', '2020-03-09 13:05:13'),
+(4, 'INV-PSA-321', 'LMLS-PAT-AMA-0001', 11.00, 'Patient_id: Patient.patient_id,', 'LMLS-0000', '2020-07-23 13:16:23'),
+(5, 'INV-PSA-502', 'LMLS-PAT-AMA-0001', 34.00, 'Patient_id: Patient.patient_id,patient_id: Patient.patient_id,', 'LMLS-0000', '2020-07-23 13:16:38');
 
 -- --------------------------------------------------------
 
@@ -4458,7 +5649,12 @@ CREATE TABLE `pth` (
 --
 
 INSERT INTO `pth` (`id`, `invoice_id`, `patient_id`, `results`, `results_flag`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-PTH-850', 'LMLS-PAT-KB-0002', 1.00, 'High', 'Kljyhgfd', 'LMLS-0001', '2020-03-09 13:05:07');
+(3, 'INV-PTH-850', 'LMLS-PAT-KB-0002', 123.00, 'High', 'Kljyhgfd', 'LMLS-0001', '2020-03-09 13:05:07'),
+(4, 'INV-PTH-751', 'LMLS-PAT-AMA-0001', 0.50, 'High', '', 'LMLS-0000', '2020-07-23 16:12:01'),
+(5, 'INV-PTH-572', 'LMLS-PAT-AMA-0001', 1.50, 'Low', '', 'LMLS-0000', '2020-07-23 21:33:55'),
+(6, 'INV-PTH-133', 'LMLS-PAT-AMA-0001', 1.50, 'Low', '', 'LMLS-0000', '2020-07-23 21:34:05'),
+(7, 'INV-PTH-254', 'LMLS-PAT-AMA-0001', 1.50, 'Low', '', 'LMLS-0000', '2020-07-23 21:35:21'),
+(8, 'INV-PTH-355', 'LMLS-PAT-AMA-0001', 2.00, 'Low', 'Add Pth', 'LMLS-0000', '2020-07-23 21:35:59');
 
 -- --------------------------------------------------------
 
@@ -4536,7 +5732,7 @@ CREATE TABLE `pus_fluid` (
 --
 
 INSERT INTO `pus_fluid` (`id`, `invoice_id`, `patient_id`, `colour`, `appearance`, `gram_stain`, `acid_fast_bacilli`, `culture`, `bacteria_one`, `bacteria_two`, `bacteria_three`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `antibiotics_seventeen`, `antibiotics_eighteen`, `antibiotics_nineteen`, `antibiotics_twenty`, `antibiotics_twenty_one`, `antibiotics_twenty_two`, `antibiotics_twenty_three`, `antibiotics_twenty_four`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `sensitivity_seventeen`, `sensitivity_eighteen`, `sensitivity_nineteen`, `sensitivity_twenty`, `sensitivity_twenty_one`, `sensitivity_twenty_two`, `sensitivity_twenty_three`, `sensitivity_twenty_four`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-PUS-FLU-450', 'LMLS-PAT-KB-0002', 'Clear', 'Blood Stain', 'No Organism Seen', 'Acid', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'Commmmmmm', 'LMLS-0001', '2020-03-07 14:01:08');
+(2, 'INV-PUS-FLU-450', 'LMLS-PAT-KB-0002', 'Clear', 'Blood Stain', 'No Organism Seen', 'Acid', 'Strept/ (Other than group A)', 'Coliform', 'Candida SPP', 'C. Diphtheriae', 'Cotrimoxazol', 'Cotrimoxazol', 'Flucloxacillin', 'Fosfomycin', 'Cefpirom', 'Cefpirom', 'Ceftazidime', 'Ceftriaxone', 'Chloramphenicol', 'Chloramphenicol', 'Cloxacillin', 'Cloxacillin', 'Erythromycin', 'Erythromycin', 'Fosfomycin', 'Fosfomycin', 'Ceftriaxone', 'Ceftriaxone', 'Cephalothin', 'Cefuroxime', 'Chloramphenicol', 'Chloramphenicol', 'Cloxacillin', 'Cloxacillin', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'Commmmmmm', 'LMLS-0001', '2020-03-07 14:01:08');
 
 -- --------------------------------------------------------
 
@@ -4564,7 +5760,8 @@ CREATE TABLE `reproductive_assay` (
 --
 
 INSERT INTO `reproductive_assay` (`id`, `invoice_id`, `patient_id`, `lh`, `fsh`, `prolactive`, `progesterone`, `oestrogen`, `testosterone`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-REPR-ASS-600', 'LMLS-PAT-KB-0002', 1.10, 1.20, 1.30, 1.40, 1.50, 1.60, 'Jkyuttrersd', 'LMLS-0001', '2020-03-09 12:47:45');
+(3, 'INV-REPR-ASS-600', 'LMLS-PAT-KB-0002', 1.10, 1.20, 1.30, 1.40, 1.50, 1.60, 'Jkyuttrersd', 'LMLS-0001', '2020-03-09 12:47:45'),
+(6, 'INV-REPR-ASS-621', 'LMLS-PAT-AMA-0001', 0.50, 0.50, 0.50, 0.50, 0.50, 0.50, 'Add Reproductive Assay', 'LMLS-0000', '2020-07-23 21:29:34');
 
 -- --------------------------------------------------------
 
@@ -4596,16 +5793,20 @@ CREATE TABLE `requests` (
 --
 
 INSERT INTO `requests` (`id`, `request_id`, `patient_id`, `requests`, `date_added`, `added_by`, `status`, `date_done`, `done_by`, `discount`, `total_cost`, `discounted_cost`, `amount_paid`, `payment_status`, `payment_type`, `branch`) VALUES
-(44, 'REQ-KB-9441', 'LMLS-PAT-KB-0003', 'Faecal Reducing Substance, Fasting Lipids', '2020-03-16 22:23:29', 'LMLS-0001', 'Completed', '2020-03-16 22:33:15', 'LMLS-0000', 0, 90.00, 90.00, 90.00, 'Paid', 'Cash', 'Korle Bu'),
-(45, 'REQ-KB-5472', 'LMLS-PAT-KB-0001', 'Lactate, Ldh, Lft, Lipase, Transferrin', '2020-03-16 22:23:41', 'LMLS-0000', 'Completed', '2020-03-16 22:34:53', 'LMLS-0000', 0, 340.00, 340.00, 455.00, 'Paid', 'Cash', 'Korle Bu'),
-(50, 'REQ-KB-1375', 'LMLS-PAT-KB-0002', 'Ck, Direct Bilirubin, Faecal Reducing Substance, Fasting Lipids', '2020-03-19 13:13:24', 'LMLS-0001', 'Completed', '2020-05-27 21:46:24', 'LMLS-0001', 15, 170.00, 144.50, 144.50, 'Paid', 'Cash (GHS 100), Bank (GHS 40), Mobile Money (GHS 4.5)', 'Korle Bu'),
-(53, 'REQ-KAS-7755', 'LMLS-PAT-KAS-0001', 'Ck, Ck-mb, Creatinine Clearance, Csf Biochem', '2020-03-19 13:27:40', 'LMLS-0000', 'Pending', NULL, NULL, 0, 230.00, 230.00, 0.00, 'Pending', NULL, 'Kasoa'),
+(44, 'REQ-KB-9441', 'LMLS-PAT-KB-0003', 'Faecal Reducing Substance, Fasting Lipids', '2020-03-16 22:23:29', 'LMLS-KB-0001', 'Completed', '2020-03-16 22:33:15', 'LMLS-KB-0000', 0, 90.00, 90.00, 90.00, 'Paid', 'Cash', 'Korle Bu'),
+(45, 'REQ-KB-5472', 'LMLS-PAT-KB-0001', 'Lactate, Ldh, Lft, Lipase, Transferrin', '2020-03-16 22:23:41', 'LMLS-KB-0001', 'Completed', '2020-03-16 22:34:53', 'LMLS-KB-0000', 0, 340.00, 340.00, 455.00, 'Paid', 'Cash', 'Korle Bu'),
+(50, 'REQ-KB-1375', 'LMLS-PAT-KB-0002', 'Ck, Direct Bilirubin, Faecal Reducing Substance, Fasting Lipids', '2020-03-19 13:13:24', 'LMLS-KB-0001', 'Completed', '2020-05-27 21:46:24', 'LMLS-0001', 15, 170.00, 144.50, 144.50, 'Paid', 'Cash (GHS 100), Bank (GHS 40), Mobile Money (GHS 4.5)', 'Korle Bu'),
+(53, 'REQ-KAS-7755', 'LMLS-PAT-KAS-0001', 'Ck-mb, Direct Bilirubin, Csf Biochem, Creatinine Clearance, Faecal Reducing Substance', '2020-03-19 13:27:40', 'LMLS-KB-0001', 'Pending', NULL, NULL, 0, 250.00, 250.00, 0.00, 'Pending', NULL, 'Kasoa'),
 (55, 'REQ-KB-6157', 'LMLS-PAT-KB-0006', '24hr Ogtt, 24hr Post Prandial Glucose, 24hr Urine Protein', '2020-05-27 12:45:57', 'LMLS-KB-0001', 'Completed', '2020-05-27 12:48:03', 'LMLS-KB-0001', 10, 300.00, 270.00, 270.00, 'Paid', 'Mobile Money', 'Korle Bu'),
 (56, 'REQ-KB-9658', 'LMLS-PAT-KB-0007', '24hr Ogtt, 24hr Post Prandial Glucose, 24hr Urine Protein, 24hr Vma', '2020-05-27 13:49:18', 'LMLS-KB-0001', 'Pending', NULL, NULL, 0, 1130.00, 1130.00, 130.00, 'Pending', 'Cash', 'Korle Bu'),
-(62, 'REQ-KB-7949', 'FMDS-PAT-KB-0008', 'Faecal Reducing Substance, Serum Iron, Transferrin, Uric Acid', '2020-05-27 23:02:55', 'LMLS-0001', 'Completed', '2020-05-27 23:04:04', 'LMLS-0001', 10, 200.00, 180.00, 180.00, 'Paid', 'Cash (GHS 100), Bank (GHS 70), Mobile Money (GHS 10)', 'Korle Bu'),
-(63, 'REQ-KB-5248', 'FMDS-PAT-KB-0008', 'Abdominal Scan, Abdomino Pelvic Scan, Breast Scan, Obstetric Scan, Pelvic Scan Gynaecology, Pelvic Scan Urology, Prostate Scan, Scrotal Scan', '2020-06-11 22:28:54', 'LMLS-0001', 'Completed', '2020-06-11 22:29:41', 'LMLS-0001', 10, 550.00, 495.00, 500.00, 'Paid', 'Cash (GHS 500)', 'Korle Bu'),
-(64, 'REQ-KB-6789', 'LMLS-PAT-KB-0004', 'Abdominal Scan, Obstetric Scan, Other Small Parts, Pelvic Scan Urology, Prostate Scan, Superficial Swellings, Thyroid Scan Anterior Neck Swelling', '2020-06-11 22:29:57', 'LMLS-0001', 'Completed', '2020-06-11 22:36:20', 'LMLS-0001', 0, 480.00, 480.00, 100.00, 'Paid', 'Cash (GHS 100)', 'Korle Bu'),
-(65, 'REQ-KB-007810', 'LMLS-PAT-KB-0002', 'Breast Scan, Obstetric Scan, Pelvic Scan Gynaecology, Pelvic Scan Urology, Thyroid Scan Anterior Neck Swelling', '2020-06-11 22:36:35', 'LMLS-0001', 'Pending', NULL, NULL, 0, 310.00, 310.00, 50.00, 'Paid', 'Cash (GHS 50)', 'Korle Bu');
+(62, 'REQ-KB-7949', 'FMDS-PAT-KB-0008', 'Faecal Reducing Substance, Serum Iron, Transferrin, Uric Acid', '2020-05-27 23:02:55', 'LMLS-KB-0001', 'Completed', '2020-05-27 23:04:04', 'LMLS-0001', 10, 200.00, 180.00, 180.00, 'Paid', 'Cash (GHS 100), Bank (GHS 70), Mobile Money (GHS 10)', 'Korle Bu'),
+(63, 'REQ-KB-5248', 'FMDS-PAT-KB-0008', 'Abdominal Scan, Abdomino Pelvic Scan, Breast Scan, Obstetric Scan, Pelvic Scan Gynaecology, Pelvic Scan Urology, Prostate Scan, Scrotal Scan', '2020-06-11 22:28:54', 'LMLS-KB-0001', 'Completed', '2020-06-11 22:29:41', 'LMLS-0001', 10, 550.00, 495.00, 500.00, 'Paid', 'Cash (GHS 500)', 'Korle Bu'),
+(64, 'REQ-KB-6789', 'LMLS-PAT-KB-0004', 'Abdominal Scan, Obstetric Scan, Other Small Parts, Pelvic Scan Urology, Prostate Scan, Superficial Swellings, Thyroid Scan Anterior Neck Swelling', '2020-06-11 22:29:57', 'LMLS-KB-0001', 'Completed', '2020-06-11 22:36:20', 'LMLS-0001', 0, 480.00, 480.00, 100.00, 'Paid', 'Cash (GHS 100)', 'Korle Bu'),
+(65, 'REQ-KB-007810', 'LMLS-PAT-KB-0002', 'Breast Scan, Obstetric Scan, Pelvic Scan Gynaecology, Pelvic Scan Urology, Thyroid Scan Anterior Neck Swelling', '2020-06-11 22:36:35', 'LMLS-KB-0001', 'Pending', NULL, NULL, 0, 310.00, 310.00, 50.00, 'Paid', 'Cash (GHS 50)', 'Korle Bu'),
+(73, 'REQ-KB-56111', 'LMLS-PAT-KB-0009', 'Vitamin B12, Ck-mb, Lft, Uric Acid, Magnessium, Csf Biochem, Lactate', '2020-07-20 17:15:47', 'LMLS-KB-0001', 'Completed', '2020-07-21 14:17:47', 'LMLS-0000', 10, 495.00, 445.50, 445.50, 'Paid', 'Bank, Cash, Mobile Money', 'Korle Bu'),
+(80, 'REQ-KB-004712', 'LMLS-PAT-AMA-0001', 'Ck-mb, Csf Biochem, Creatinine Clearance', '2020-07-21 15:36:29', 'LMLS-0000', 'Pending', NULL, NULL, 0, 185.00, 185.00, 0.00, 'Pending', '', 'Korle Bu'),
+(81, 'REQ-KB-40113', 'LMLS-PAT-AMA-0002', 'Ck-mb, Ldh, Magnessium, Creatinine Clearance', '2020-07-21 15:55:59', 'LMLS-0000', 'Pending', NULL, NULL, 0, 215.00, 215.00, 0.00, 'Pending', '', 'Korle Bu'),
+(82, 'REQ-KB-65814', 'LMLS-PAT-EL-0001', 'Transferrin, Serum Iron, Serum Calcium Ionised, Total Protein, Total Bilirubin', '2020-07-21 16:00:15', 'LMLS-0000', 'Pending', NULL, NULL, 15, 265.00, 225.25, 200.00, 'Pending', 'Cash', 'Korle Bu');
 
 -- --------------------------------------------------------
 
@@ -4621,7 +5822,7 @@ CREATE TABLE `rheumatology` (
   `ana_qualitative` varchar(10) DEFAULT NULL,
   `ana_quantitative` varchar(10) DEFAULT NULL,
   `ds_dna` varchar(10) DEFAULT NULL,
-  `rheumatoid_factor` varchar(10) DEFAULT NULL,
+  `rheumatoid_factor` varchar(20) DEFAULT NULL,
   `comments` text DEFAULT NULL,
   `added_by` varchar(25) NOT NULL,
   `date_added` datetime NOT NULL DEFAULT current_timestamp()
@@ -4632,7 +5833,8 @@ CREATE TABLE `rheumatology` (
 --
 
 INSERT INTO `rheumatology` (`id`, `invoice_id`, `patient_id`, `le_cells`, `ana_qualitative`, `ana_quantitative`, `ds_dna`, `rheumatoid_factor`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-RHEU-370', 'LMLS-PAT-KB-0001', 'Not Seen', 'Negative', 'Positive', 'Negative', 'Positive', 'Jhjgffc', 'LMLS-0001', '2020-03-08 16:58:22');
+(3, 'INV-RHEU-370', 'LMLS-PAT-KB-0001', 'Not Seen', 'Negative', 'Positive', 'Negative', 'Positive', 'Jhjgffc', 'LMLS-0001', '2020-03-08 16:58:22'),
+(4, 'INV-RHEU-861', 'LMLS-PAT-AMA-0002', 'Not Seen', 'Positive', 'Negative', 'Positive', 'Non-reactive', 'Rheumatology', 'LMLS-AMA-0002', '2020-07-26 21:49:56');
 
 -- --------------------------------------------------------
 
@@ -4653,9 +5855,9 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `permissions`, `added_by`, `status`) VALUES
-(1, 'Administrator', 'Can View Charges List,Can Create Charge,Can Edit Charge,Can View Lab List,Can Create Lab,Can Edit Lab,Can View Lab,Can Pay Lab,Can View Patients List,Can Create Patient,Can Edit Patient,Can View Patient,Can Create Reports,Can View Staff List,Can Create Staff,Can Edit Staff,Can View Staff,Can Block Staff,Can Unblock Staff', 'LMLS-0001', 'Active'),
-(2, 'Front Desk', 'Can View Charges List, Can Create Charge, Can Edit Charge, Can View Lab List, Can View Lab, Can Pay Lab, Can View Patients List, Can Create Patient, Can Edit Patient, Can View Patient, Can Create Reports', 'LMLS-0001', 'Active'),
-(3, 'Lab Technician', 'Can View Lab List, Can Create Lab, Can Edit Lab, Can View Lab, Can View Patients List, Can View Patient, Can Create Reports', 'LMLS-0001', 'Active');
+(1, 'Administrator', 'Can View Charges List, Can Create Charge, Can Edit Charge, Can View Lab List, Can Create Lab, Can Edit Lab, Can View Lab, Can Pay Lab, Can View Patients List, Can Create Patient, Can Edit Patient, Can View Patient, Can Create Reports, Can View Staff List, Can Create Staff, Can Edit Staff, Can View Staff, Can Block Staff, Can Unblock Staff', 'LMLS-KB-0001', 'Active'),
+(2, 'Front Desk', 'Can View Charges List, Can Create Charge, Can Edit Charge, Can View Lab List, Can View Lab, Can Pay Lab, Can View Patients List, Can Create Patient, Can Edit Patient, Can View Patient, Can Create Reports', 'LMLS-KB-0001', 'Active'),
+(3, 'Lab Technician', 'Can View Lab List, Can Create Lab, Can Edit Lab, Can View Lab, Can View Patients List, Can View Patient, Can Create Reports', 'LMLS-KB-0001', 'Active');
 
 -- --------------------------------------------------------
 
@@ -4678,7 +5880,8 @@ CREATE TABLE `sc3_sc4` (
 --
 
 INSERT INTO `sc3_sc4` (`id`, `invoice_id`, `patient_id`, `s_c3`, `s_c4`, `added_by`, `date_added`) VALUES
-(3, 'INV-SC3-SC4-700', 'LMLS-PAT-KB-0001', 1.00, 1.70, 'LMLS-0001', '2020-03-08 13:29:27');
+(3, 'INV-SC3-SC4-700', 'LMLS-PAT-KB-0001', 1.00, 2.00, 'LMLS-0001', '2020-03-08 13:29:27'),
+(4, 'INV-SC3-SC4-721', 'LMLS-PAT-AMA-0002', 0.50, 1.00, 'LMLS-AMA-0002', '2020-07-25 13:40:27');
 
 -- --------------------------------------------------------
 
@@ -4715,7 +5918,8 @@ CREATE TABLE `semen_analysis` (
 --
 
 INSERT INTO `semen_analysis` (`id`, `invoice_id`, `patient_id`, `volume`, `motility`, `unknown_one`, `unknown_two`, `consistency`, `agglutination`, `ph`, `colour`, `count`, `viability`, `morphology`, `testicular_cells`, `pus_cells`, `epithelial`, `red_blood_cells`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-SEM-ANAL-890', 'LMLS-PAT-KB-0001', 1.00, 2.00, 3.00, 4.00, 'Normal', '5', '5.0', 'Blood Stain', 6.00, 7.00, 'Kjhmggh', 8.00, 9.00, 10.00, 11.00, ',.jmhngf', 'LMLS-0001', '2020-03-08 17:20:13');
+(2, 'INV-SEM-ANAL-890', 'LMLS-PAT-KB-0001', 1.00, 2.00, 3.00, 4.00, 'Normal', '5', '5.0', 'Blood Stain', 6.00, 7.00, 'Kjhmggh', 8.00, 9.00, 10.00, 11.00, ',.jmhngf', 'LMLS-0001', '2020-03-08 17:20:13'),
+(3, 'INV-SEM-ANL-821', 'LMLS-PAT-AMA-0002', 1.00, 2.00, 3.00, 4.00, 'Normal', '5', '6.0', 'Blood Stain', 7.00, 8.00, 'Morphology', 9.00, 10.00, 11.00, 12.00, 'Semen Analysis', 'LMLS-AMA-0002', '2020-07-26 22:14:50');
 
 -- --------------------------------------------------------
 
@@ -4789,7 +5993,7 @@ CREATE TABLE `semen_cs` (
 --
 
 INSERT INTO `semen_cs` (`id`, `invoice_id`, `patient_id`, `culture`, `bacteria_one`, `bacteria_two`, `bacteria_three`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `antibiotics_seventeen`, `antibiotics_eighteen`, `antibiotics_nineteen`, `antibiotics_twenty`, `antibiotics_twenty_one`, `antibiotics_twenty_two`, `antibiotics_twenty_three`, `antibiotics_twenty_four`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `sensitivity_seventeen`, `sensitivity_eighteen`, `sensitivity_nineteen`, `sensitivity_twenty`, `sensitivity_twenty_one`, `sensitivity_twenty_two`, `sensitivity_twenty_three`, `sensitivity_twenty_four`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-SEM-CS-490', 'LMLS-PAT-KB-0002', 'No Bacterial Growth', 'Acinetobacter SPP', 'Acinetobacter SPP', 'Acinetobacter SPP', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'S', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'LMLS-0001', '2020-03-07 15:33:57');
+(2, 'INV-SEM-CS-490', 'LMLS-PAT-KB-0002', 'Heavily Mixed Growth, Please Repeat', 'Brucella SPP', 'Cryptococcus Cells', 'C. Perfringes', 'Ceftazidime', 'Ceftazidime', 'Cefuroxime', 'Cefuroxime', 'Chloramphenicol', 'Cephalothin', 'Ciprofloxacin', 'Cloxacillin', 'Flucloxacillin', 'Flucloxacillin', 'Gentamicin', 'Gentamicin', 'Cefotaxime', 'Cefixim', 'Cefoxitin', 'Cefoxitin', 'Cefuroxime', 'Cefuroxime', 'Chloramphenicol', 'Chloramphenicol', 'Ciprofloxacin', 'Cloxacillin', 'Cotrimoxazol', 'Erythromycin', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'R', 'R', 'R', 'R', 'Sosme Comment', 'LMLS-0001', '2020-03-07 15:33:57');
 
 -- --------------------------------------------------------
 
@@ -4813,7 +6017,8 @@ CREATE TABLE `serum_hcg_b` (
 --
 
 INSERT INTO `serum_hcg_b` (`id`, `invoice_id`, `patient_id`, `results`, `ranges`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-SRM-HCG-B-840', 'LMLS-PAT-KB-0002', 1.20, 'Negative', ',jmhgf', 'LMLS-0001', '2020-03-09 11:57:04');
+(3, 'INV-SRM-HCG-B-840', 'LMLS-PAT-KB-0002', 1.20, 'Negative', ',jmhgf', 'LMLS-0001', '2020-03-09 11:57:04'),
+(4, 'INV-SRM-HCG-B-951', 'LMLS-PAT-AMA-0002', 8.00, 'Positive', 'B-hcg Serum', 'LMLS-AMA-0002', '2020-07-27 00:57:10');
 
 -- --------------------------------------------------------
 
@@ -4837,7 +6042,8 @@ CREATE TABLE `serum_lipase` (
 --
 
 INSERT INTO `serum_lipase` (`id`, `invoice_id`, `patient_id`, `s_lipase`, `s_lipase_flag`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-SRM-LIPASE-670', 'LMLS-PAT-KB-0001', 1.00, 'High', 'Mjhgf', 'LMLS-0001', '2020-03-08 13:36:50');
+(3, 'INV-SRM-LIPASE-670', 'LMLS-PAT-KB-0001', 1.00, 'High', 'Serum Lipase Edit', 'LMLS-0001', '2020-03-08 13:36:50'),
+(4, 'INV-SRM-LIPASE-421', 'LMLS-PAT-AMA-0002', 67.00, 'Low', 'Serum Lipase', 'LMLS-AMA-0002', '2020-07-25 13:46:05');
 
 -- --------------------------------------------------------
 
@@ -4913,7 +6119,7 @@ CREATE TABLE `skin_snip` (
 --
 
 INSERT INTO `skin_snip` (`id`, `invoice_id`, `patient_id`, `onchocerca_volvulus`, `m_streptocerca`, `culture`, `bacteria_one`, `bacteria_two`, `bacteria_three`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `antibiotics_seventeen`, `antibiotics_eighteen`, `antibiotics_nineteen`, `antibiotics_twenty`, `antibiotics_twenty_one`, `antibiotics_twenty_two`, `antibiotics_twenty_three`, `antibiotics_twenty_four`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `sensitivity_seventeen`, `sensitivity_eighteen`, `sensitivity_nineteen`, `sensitivity_twenty`, `sensitivity_twenty_one`, `sensitivity_twenty_two`, `sensitivity_twenty_three`, `sensitivity_twenty_four`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-SKIN-SNIP-960', 'LMLS-PAT-KB-0002', 'Bkdbgh', 'Hvfhvj', 'No Bacterial Growth', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'LMLS-0001', '2020-03-07 15:43:31');
+(2, 'INV-SKIN-SNIP-960', 'LMLS-PAT-KB-0002', 'Bkdbgh', 'Hvfhvj', 'No Bacterial Growth', 'C. Perfringes', 'Enterobacter SPP', 'C. Diphtheriae', 'Cefuroxime', 'Ceftriaxone', 'Chloramphenicol', 'Chloramphenicol', 'Cloxacillin', 'Cloxacillin', 'Erythromycin', 'Erythromycin', 'Cefuroxime', 'Cefuroxime', 'Ciprofloxacin', 'Ciprofloxacin', 'Cotrimoxazol', 'Cloxacillin', 'Erythromycin', 'Flucloxacillin', 'Ceftriaxone', 'Ceftriaxone', 'Cephalothin', 'Cephalothin', 'Ciprofloxacin', 'Chloramphenicol', 'Cotrimoxazol', 'Cotrimoxazol', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'S', 'Edit Skin Snip', 'LMLS-0001', '2020-03-07 15:43:31');
 
 -- --------------------------------------------------------
 
@@ -4938,7 +6144,9 @@ CREATE TABLE `specials` (
 --
 
 INSERT INTO `specials` (`id`, `invoice_id`, `patient_id`, `abo_grouping`, `g6pd`, `sickling`, `hgb_genotype`, `added_by`, `date_added`) VALUES
-(3, 'INV-SPE-030', 'LMLS-PAT-KB-0003', 'A Positive', 'Normal', 'Positive', 'AA', 'LMLS-0001', '2020-03-08 21:57:27');
+(3, 'INV-SPE-030', 'LMLS-PAT-KB-0003', 'A Positive', 'Normal', 'Positive', 'AA', 'LMLS-0001', '2020-03-08 21:57:27'),
+(4, 'INV-SPE-251', 'LMLS-PAT-AMA-0002', 'A Positive', 'Normal', 'Positive', 'AA', 'LMLS-AMA-0002', '2020-07-27 00:09:44'),
+(5, 'INV-SPE-322', 'LMLS-PAT-AMA-0002', 'AB Positive', 'Partial Defect', 'Negative', 'AF', 'LMLS-AMA-0002', '2020-07-27 00:10:37');
 
 -- --------------------------------------------------------
 
@@ -4999,7 +6207,8 @@ CREATE TABLE `sputum` (
 --
 
 INSERT INTO `sputum` (`id`, `invoice_id`, `patient_id`, `appearance`, `gram_stain`, `pus_cells`, `zn_stain`, `culture`, `bacteria_one`, `bacteria_two`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-SPU-CS-410', 'LMLS-PAT-KB-0001', '', '', '', '', 'No Bacterial Growth', 'Acinetobacter SPP', 'Acinetobacter SPP', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'L/.kl,jkhgbfgcv', 'LMLS-0001', '2020-03-07 16:11:09');
+(2, 'INV-SPU-CS-410', 'LMLS-PAT-KB-0001', '', '', '', '', 'No Bacterial Growth', 'Acinetobacter SPP', 'Acinetobacter SPP', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'L/.kl,jkhgbfgcv', 'LMLS-0001', '2020-03-07 16:11:09'),
+(3, 'INV-SPU-CS-551', 'LMLS-PAT-AMA-0002', 'Blood Stain', 'GNID Present', 'No Pus Cells Seen', 'AFB Present', 'Strept/ (Other than group A)', 'Coliform', 'Coliform', 'Cefoxitin', 'Cefoxitin', 'Ceftazidime', 'Ceftazidime', 'Cefuroxime', 'Cefuroxime', 'Chloramphenicol', 'Chloramphenicol', 'Erythromycin', 'Erythromycin', 'Fosfomycin', 'Fosfomycin', 'Chloramphenicol', 'Chloramphenicol', 'Cloxacillin', 'Cloxacillin', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'Edit \nsputum C/s', 'LMLS-AMA-0002', '2020-07-26 00:15:56');
 
 -- --------------------------------------------------------
 
@@ -5025,7 +6234,8 @@ CREATE TABLE `sputum_afb` (
 --
 
 INSERT INTO `sputum_afb` (`id`, `invoice_id`, `patient_id`, `appearance`, `gram_stain`, `zn_stain`, `pus_cells`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-SPU-AFB-350', 'LMLS-PAT-KB-0001', 'Blood Stained', 'No Organism Seen', 'AFB Present', 'Present(+)', 'Kjkhjgfcv', 'LMLS-0001', '2020-03-07 16:22:54');
+(2, 'INV-SPU-AFB-350', 'LMLS-PAT-KB-0001', 'Blood Stained', 'No Organism Seen', 'AFB Present', 'Present(+)', 'Kjkhjgfcv', 'LMLS-0001', '2020-03-07 16:22:54'),
+(3, 'INV-SPU-AFB-801', 'LMLS-PAT-AMA-0002', 'Blood Stain', 'GNID Present', 'No AFB Present', 'No Pus Cells Seen', 'Sputum Afb', 'LMLS-AMA-0002', '2020-07-26 00:21:30');
 
 -- --------------------------------------------------------
 
@@ -5099,7 +6309,7 @@ CREATE TABLE `stool_cs` (
 --
 
 INSERT INTO `stool_cs` (`id`, `invoice_id`, `patient_id`, `culture`, `bacteria_one`, `bacteria_two`, `bacteria_three`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `antibiotics_seventeen`, `antibiotics_eighteen`, `antibiotics_nineteen`, `antibiotics_twenty`, `antibiotics_twenty_one`, `antibiotics_twenty_two`, `antibiotics_twenty_three`, `antibiotics_twenty_four`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `sensitivity_seventeen`, `sensitivity_eighteen`, `sensitivity_nineteen`, `sensitivity_twenty`, `sensitivity_twenty_one`, `sensitivity_twenty_two`, `sensitivity_twenty_three`, `sensitivity_twenty_four`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-STL-CS-620', 'LMLS-PAT-KB-0001', 'No Bacterial Growth', 'Acinetobacter SPP', 'Acinetobacter SPP', 'Acinetobacter SPP', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'LMLS-0001', '2020-03-07 16:30:03');
+(2, 'INV-STL-CS-620', 'LMLS-PAT-KB-0001', 'No Bacterial Growth', 'Acinetobacter SPP', 'Acinetobacter SPP', 'Acinetobacter SPP', 'Ceftazidime', 'Ceftazidime', 'Ceftriaxone', 'Ceftriaxone', 'Chloramphenicol', 'Chloramphenicol', 'Ciprofloxacin', 'Ciprofloxacin', 'Fosfomycin', 'Flucloxacillin', 'Cefoxitin', 'Cefoxitin', 'Cefpirom', 'Ceftazidime', 'Ceftriaxone', 'Ceftriaxone', 'Chloramphenicol', 'Ciprofloxacin', 'Cotrimoxazol', 'Cotrimoxazol', 'Flucloxacillin', 'Flucloxacillin', 'Gentamicin', 'Gentamicin', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'S', 'R', 'S', 'R', 'S', 'R', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'Edit Stool Cs', 'LMLS-0001', '2020-03-07 16:30:03');
 
 -- --------------------------------------------------------
 
@@ -5144,7 +6354,9 @@ CREATE TABLE `stool_re` (
 --
 
 INSERT INTO `stool_re` (`id`, `invoice_id`, `patient_id`, `row_one_one`, `ova_one`, `ova_two`, `row_three_one`, `row_three_two`, `row_four_one`, `row_four_two`, `larvae_one`, `larvae_two`, `cyst_one`, `cyst_two`, `row_seven_one`, `row_seven_two`, `row_eight_one`, `row_eight_two`, `vegetative_form_one`, `vegetative_form_two`, `row_ten_one`, `row_ten_two`, `row_eleven_one`, `row_eleven_two`, `red_blood_cells`, `white_blood_cells`, `comments`, `added_by`, `date_added`) VALUES
-(4, 'INV-STL-RE-670', 'LMLS-PAT-KB-0001', 'Formed Specimen', 'Not Seen', 'Not Seen', '', '', '', '', 'Not Seen', '', 'Endolimax Nana', '', '', '', '', '', '', '', '', '', '', '', 'Not Seen', 'Present(+)', '', 'LMLS-0001', '2020-03-07 17:08:00');
+(4, 'INV-STL-RE-670', 'LMLS-PAT-KB-0001', 'Formed Specimen', 'Not Seen', 'Not Seen', '', '', '', '', 'Not Seen', '', 'Endolimax Nana', '', '', '', '', '', '', '', '', '', '', '', 'Not Seen', 'Present(+)', '', 'LMLS-0001', '2020-03-07 17:08:00'),
+(5, 'INV-STL-RE-611', 'LMLS-PAT-AMA-0002', 'Watery Specimen', 'Not Seen', 'Not Seen', 'Ascaris Lumbricoides Present', 'Not Seen', 'Diphyllobothrium Latum Present', 'Not Seen', 'Not Seen', 'Not Seen', 'Entamoeba Coli', 'Not Seen', 'Endolimax Nana', 'Not Seen', 'Entamoeba Coli', 'Not Seen', 'Yeast-Like Cells Present(+)', 'Present()', 'Intestinal Flagellates Present', 'Not Seen', 'Intestinal Flagellates Present', 'Not Seen', 'Not Seen', 'Present()', '', 'LMLS-AMA-0002', '2020-07-26 00:56:09'),
+(6, 'INV-STL-RE-322', 'LMLS-PAT-KB-0009', 'Blood Stained Specimen', 'Not Seen', 'Not Seen', 'Ascaris Lumbricoides Present', 'Not Seen', 'Clonorchis Sinesis Present', 'Not Seen', 'Not Seen', 'Present(+)', 'Endolimax Nana', 'Not Seen', 'Endolimax Nana', 'Not Seen', 'Entamoeba Coli', 'Not Seen', 'Yeast-Like Cells Present(+)', 'Present()', 'Intestinal Flagellates Present', 'Not Seen', 'Entamoeba Histolytica Present', 'Not Seen', 'Not Seen', 'Present(+3)', 'Edit Stool R/e', 'LMLS-0000', '2020-07-31 15:15:47');
 
 -- --------------------------------------------------------
 
@@ -5172,7 +6384,8 @@ CREATE TABLE `tft` (
 --
 
 INSERT INTO `tft` (`id`, `invoice_id`, `patient_id`, `ft3`, `ft3_flag`, `ft4`, `ft4_flag`, `tsh`, `tsh_flag`, `comments`, `added_by`, `date_added`) VALUES
-(5, 'INV-TFT-180', 'LMLS-PAT-KB-0002', 8.90, 'High', 1.10, 'Low', 1.30, 'High', 'Jhgfd', 'LMLS-0001', '2020-03-09 12:31:43');
+(5, 'INV-TFT-180', 'LMLS-PAT-KB-0002', 8.90, 'High', 1.10, 'Low', 1.30, 'High', 'Jhgfd', 'LMLS-0001', '2020-03-09 12:31:43'),
+(6, 'INV-TFT-591', 'LMLS-PAT-AMA-0001', 0.50, 'High', 1.00, 'Low', 1.50, 'High', 'Add Tft', 'LMLS-0000', '2020-07-23 21:48:27');
 
 -- --------------------------------------------------------
 
@@ -5246,7 +6459,7 @@ CREATE TABLE `throat_swab_cs` (
 --
 
 INSERT INTO `throat_swab_cs` (`id`, `invoice_id`, `patient_id`, `culture`, `bacteria_one`, `bacteria_two`, `bacteria_three`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `antibiotics_seventeen`, `antibiotics_eighteen`, `antibiotics_nineteen`, `antibiotics_twenty`, `antibiotics_twenty_one`, `antibiotics_twenty_two`, `antibiotics_twenty_three`, `antibiotics_twenty_four`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `sensitivity_seventeen`, `sensitivity_eighteen`, `sensitivity_nineteen`, `sensitivity_twenty`, `sensitivity_twenty_one`, `sensitivity_twenty_two`, `sensitivity_twenty_three`, `sensitivity_twenty_four`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-THR-SWB-CS-230', 'LMLS-PAT-KB-0001', 'No Bacterial Growth', 'Acinetobacter SPP', '', '', 'Amikacin', '', '', '', 'Amikacin', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', '', 'LMLS-0001', '2020-03-07 17:17:00');
+(2, 'INV-THR-SWB-CS-230', 'LMLS-PAT-KB-0001', 'No Bacterial Growth', 'Acinetobacter SPP', 'E. Coli', 'Cryptococcus Cells', 'Amikacin', 'Cefpirom', 'Cefuroxime', 'Cefuroxime', 'Amikacin', 'Chloramphenicol', 'Cloxacillin', 'Cloxacillin', 'Fosfomycin', 'Flucloxacillin', 'Cefuroxime', 'Ceftriaxone', 'Chloramphenicol', 'Cephalothin', 'Cloxacillin', 'Ciprofloxacin', 'Flucloxacillin', 'Erythromycin', 'Cephalothin', 'Cephalothin', 'Ciprofloxacin', 'Ciprofloxacin', 'Cloxacillin', 'Cotrimoxazol', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', 'Edit Throat Swab Cs', 'LMLS-0001', '2020-03-07 17:17:00');
 
 -- --------------------------------------------------------
 
@@ -5270,7 +6483,8 @@ CREATE TABLE `troponin` (
 --
 
 INSERT INTO `troponin` (`id`, `invoice_id`, `patient_id`, `troponin_i`, `troponin_t`, `comments`, `added_by`, `date_added`) VALUES
-(4, 'INV-TRO-990', 'LMLS-PAT-KB-0002', 1.00, 6.00, 'Kjhgfr', 'LMLS-0001', '2020-03-09 12:19:52');
+(4, 'INV-TRO-990', 'LMLS-PAT-KB-0002', 1.00, 6.00, 'Kjhgfr', 'LMLS-0001', '2020-03-09 12:19:52'),
+(5, 'INV-TRO-281', 'LMLS-PAT-AMA-0001', 0.50, 2.00, 'Add Troponin', 'LMLS-0000', '2020-07-23 21:53:20');
 
 -- --------------------------------------------------------
 
@@ -5345,7 +6559,8 @@ CREATE TABLE `urethral_cs` (
 --
 
 INSERT INTO `urethral_cs` (`id`, `invoice_id`, `patient_id`, `gram_stain`, `culture`, `bacteria_one`, `bacteria_two`, `bacteria_three`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `antibiotics_seventeen`, `antibiotics_eighteen`, `antibiotics_nineteen`, `antibiotics_twenty`, `antibiotics_twenty_one`, `antibiotics_twenty_two`, `antibiotics_twenty_three`, `antibiotics_twenty_four`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `sensitivity_seventeen`, `sensitivity_eighteen`, `sensitivity_nineteen`, `sensitivity_twenty`, `sensitivity_twenty_one`, `sensitivity_twenty_two`, `sensitivity_twenty_three`, `sensitivity_twenty_four`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-URE-CS-960', 'LMLS-PAT-KB-0001', 'No Organism Seen', 'No Bacterial Growth', 'Acinetobacter SPP', 'Acinetobacter SPP', 'Acinetobacter SPP', 'Amikacin', '', '', '', 'Amikacin', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'LMLS-0001', '2020-03-07 17:31:11');
+(2, 'INV-URE-CS-960', 'LMLS-PAT-KB-0001', 'No Organism Seen', 'No Bacterial Growth', 'Acinetobacter SPP', 'Acinetobacter SPP', 'Citrobacter Freundii', 'Amikacin', 'Cefpirom', 'Ceftriaxone', 'Cefuroxime', 'Amikacin', 'Cephalothin', 'Ciprofloxacin', 'Ciprofloxacin', 'Flucloxacillin', 'Flucloxacillin', 'Cefoxitin', 'Cefpirom', 'Ceftriaxone', 'Ceftazidime', 'Cefuroxime', 'Cefuroxime', 'Ciprofloxacin', 'Cloxacillin', 'Erythromycin', 'Cotrimoxazol', 'Flucloxacillin', 'Flucloxacillin', 'Cloxacillin', 'Cloxacillin', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'R', 'S', 'S', 'Edit Urethral Cs', 'LMLS-0001', '2020-03-07 17:31:11'),
+(3, 'INV-URE-CS-741', 'LMLS-PAT-AMA-0002', 'GNID Present', 'No Bacterial Growth', 'Brucella SPP', 'E. Coli', 'Brucella SPP', 'Ceftazidime', 'Ceftazidime', 'Cefuroxime', 'Cefuroxime', 'Chloramphenicol', 'Chloramphenicol', 'Cloxacillin', 'Cloxacillin', 'Flucloxacillin', 'Flucloxacillin', 'Aztrenem', 'Amoxicillin', 'Cefepim', 'Cefepim', 'Cefotaxime', 'Cefotaxime', 'Ceftazidime', 'Ceftriaxone', 'Cephalothin', 'Cephalothin', 'Ciprofloxacin', 'Chloramphenicol', 'Cloxacillin', 'Cloxacillin', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'R', 'Urethral C/s', 'LMLS-AMA-0002', '2020-07-26 12:33:54');
 
 -- --------------------------------------------------------
 
@@ -5374,7 +6589,8 @@ CREATE TABLE `urine` (
 --
 
 INSERT INTO `urine` (`id`, `invoice_id`, `patient_id`, `urine_vma`, `urine_calcium`, `urine_uric_acid`, `urine_creatinine`, `serum_creatinine`, `twenty_four_hour_urine_volume`, `clearance`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-URN-910', 'LMLS-PAT-KB-0001', 1.00, 2.00, 3.00, 4.00, 5.00, 6.00, 7.00, 'Ljkhjghfgdfx', 'LMLS-0001', '2020-03-08 13:48:39');
+(3, 'INV-URN-910', 'LMLS-PAT-KB-0001', 1.00, 2.00, 3.00, 4.00, 5.00, 6.00, 7.00, 'Ljkhjghfgdfx', 'LMLS-0001', '2020-03-08 13:48:39'),
+(4, 'INV-URN-461', 'LMLS-PAT-AMA-0002', 1.00, 2.00, 3.00, 4.00, 5.00, 6.00, 7.00, 'Add Urine Edit', 'LMLS-AMA-0002', '2020-07-25 13:59:13');
 
 -- --------------------------------------------------------
 
@@ -5404,7 +6620,8 @@ CREATE TABLE `urine_acr` (
 --
 
 INSERT INTO `urine_acr` (`id`, `invoice_id`, `patient_id`, `urea_creatinine`, `urea_creatinine_flag`, `micro_albumin_urine`, `micro_albumin_urine_flag`, `uacr`, `uacr_flag`, `the_uacr`, `mg_g_indicates`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-URN-ACR-260', 'LMLS-PAT-KB-0001', 1.00, 'Low', 2.00, 'High', 3.00, 'Low', 69.00, 'MICRO ALBUMINURIA', 'Mhbhjcd', 'LMLS-0001', '2020-03-08 14:04:53');
+(3, 'INV-URN-ACR-260', 'LMLS-PAT-KB-0001', 1.00, 'Low', 2.00, 'High', 3.00, 'Low', 69.00, 'MICRO ALBUMINURIA', 'Mhbhjcd', 'LMLS-0001', '2020-03-08 14:04:53'),
+(4, 'INV-URN-ACR-461', 'LMLS-PAT-AMA-0002', 0.50, 'High', 1.00, 'High', 0.50, 'High', 765.00, 'CLINICAL ALBUMINURIA', 'Urine Albumin Creatinine Ratio', 'LMLS-AMA-0002', '2020-07-25 16:09:41');
 
 -- --------------------------------------------------------
 
@@ -5469,7 +6686,8 @@ CREATE TABLE `urine_cs` (
 --
 
 INSERT INTO `urine_cs` (`id`, `invoice_id`, `patient_id`, `pus_cells_per_hps`, `rbcs_per_hpf`, `epitheleal_cells_per_hpf`, `crystals`, `cast`, `gram_reaction`, `yeast_like_cells`, `culture`, `viable_count`, `bacteria_one`, `bacteria_two`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-URN-CS-900', 'LMLS-PAT-KB-0001', 1.00, 2.00, 3.00, 'Cruljkhgf', 'Dvbn', 'Gram +ve Cocci Seen', 'Not Seen', 'No Bacterial Growth', 4.00, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Comment', 'LMLS-0001', '2020-03-07 19:55:22');
+(2, 'INV-URN-CS-900', 'LMLS-PAT-KB-0001', 1.00, 2.00, 3.00, 'Cruljkhgf', 'Dvbn', 'Gram +ve Cocci Seen', 'Not Seen', 'No Bacterial Growth', 4.00, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Comment', 'LMLS-0001', '2020-03-07 19:55:22'),
+(3, 'INV-URN-CS-801', 'LMLS-PAT-AMA-0002', 0.50, 0.50, 0.50, 'Hhh', 'Mjjj', 'Gram +ve Bacilli Seen', 'Nil', 'No Bacterial Growth', 1.00, 'Citrobacter Diversus', 'Enterobacter SPP', 'Ciprofloxacin', 'Ciprofloxacin', 'Cloxacillin', 'Cloxacillin', 'Cotrimoxazol', 'Cloxacillin', 'Erythromycin', 'Cotrimoxazol', 'Ceftazidime', 'Ceftazidime', 'Cefuroxime', 'Ceftriaxone', 'Cephalothin', 'Cephalothin', 'Cloxacillin', 'Ciprofloxacin', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', '', 'LMLS-AMA-0002', '2020-07-26 13:09:57');
 
 -- --------------------------------------------------------
 
@@ -5517,7 +6735,8 @@ CREATE TABLE `urine_re` (
 --
 
 INSERT INTO `urine_re` (`id`, `invoice_id`, `patient_id`, `appearance`, `colour`, `ph`, `specific_gravity`, `protein`, `leucocytes`, `glucose`, `urobilinogen`, `blood`, `ketones`, `bilirubin`, `nitrites`, `bile_pigment`, `bile_salt`, `urobilin`, `pus_cells_per_hps`, `yeast_like_cells`, `epitheleal_cells_per_hpf`, `s_haematobium`, `rbcs_per_hpf`, `bacteria`, `spermatozoa`, `crystals`, `unknown_one`, `cast`, `unknown_two`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-URN-RE-950', 'LMLS-PAT-KB-0001', 'Blood Stain', 'Amber', '5.0', '1.0000', '', '', '', '', '', '', '', '', '', '', '', 0.00, '', 0.00, '', 0.00, '', 'Negative', 'Present(+)', 'Negative', 'Present(+)', 'Negative', '', 'LMLS-0001', '2020-03-07 20:46:41');
+(2, 'INV-URN-RE-950', 'LMLS-PAT-KB-0001', 'Blood Stain', 'Amber', '5.0', '1.0000', '', '', '', '', '', '', '', '', '', '', '', 0.00, '', 0.00, '', 0.00, '', 'Negative', 'Present(+)', 'Negative', 'Present(+)', 'Negative', '', 'LMLS-0001', '2020-03-07 20:46:41'),
+(3, 'INV-URN-RE-571', 'LMLS-PAT-AMA-0002', 'Blood Stain', 'Amber', '5.5', '1.0000', 'Negative', 'Negative', 'Negative', 'Increased (+)', 'Negative', 'Negative', 'Negative', 'Negative', 'Negative', 'Present', 'Negative', 6.00, 'Nil', 0.50, 'Nil', 9.00, 'Acinetobacter SPP', 'Negative', 'Calcium Oxalate', 'Negative', 'Cellular Cast(+)', 'Negative', 'Urine R/e', 'LMLS-AMA-0002', '2020-07-26 16:18:23');
 
 -- --------------------------------------------------------
 
@@ -5551,13 +6770,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `staff_id`, `first_name`, `last_name`, `other_name`, `gender`, `email_address`, `phone_number`, `phone_number_two`, `username`, `password`, `role`, `branch`, `status`, `logged_in_before`, `log_in_token`, `created_at`, `reset_code`) VALUES
-(1, 'LMLS-0000', 'Kofi', 'Amponsah', 'Esquire', 'Male', 'kofi@esquire.com', '0233322112', '', 'esquire', '$2y$11$fOBwFU8wc9OUscyYD4kYKO3GvLmMYMZXn.6G0JbznEXl4SvkbZ69y', '1', 'Korle Bu', 'Active', 1, '$2y$11$MismXkX66wl5y07Lm2qJterobf0ZuBZFYNgrNFuP.PepXOvh.buZ.', '2019-11-02 18:12:30', 'hygtfrdesw'),
+(1, 'LMLS-0000', 'Kofi', 'Amponsah', 'Esquire', 'Male', 'kofi@esquire.com', '0233322112', '', 'esquire', '$2y$11$B4S35LxfS/8jq55AqgTCX.FOZMJCbBeIRuoXU1EnHbNtSMAF8ECzy', '1', 'Korle Bu', 'Active', 1, '$2y$11$J1tQDEI23aOzcHRPp4mwFeiLOysZr45FFRhh3.3FHTbGCkHWGF4QK', '2019-11-02 18:12:30', 'hygtfrdesw'),
 (38, 'LMLS-KB-0003', 'Thed', 'Aryee', 'Nii', 'Male', 'thed@aryee.com.gh', '0233322112', '', 'thed', '$2y$11$iCitCGG6yRgEQCBmOiv1uek2y0wyASBUMqspR.DBhPESZXYzBclai', '3', 'Korle Bu', 'Active', 1, '$2y$11$SRBgaYk3CqtKptW1RE/4xu9X/s2VwuT3bRsf5dBnszCzNQYRmeafC', '2019-12-16 16:56:33', 'RK0L281iD8Z'),
-(42, 'LMLS-AMA-0001', 'Rita', 'Yamoah', 'Ekua', 'Female', 'ekua@yamoah.com', '0233322112', '0231234567', 'ekua', '$2y$11$BRXR0Cp4wcJQ1ovLINrElO1y1i8ioeEpJbw2S5X.eljU8.BbWn6sq', '2', 'Amasaman', 'Active', 1, '$2y$11$sHhdpBCBSWqWWpfIIdjOAu1MyYGlyqgLE79svXNqWQ/K70Fmhh99a', '2019-12-22 15:26:22', 'LNC5368esRz'),
-(44, 'LMLS-KB-0001', 'Robert', 'Adjei Laryea', 'Nii Laryea', 'Male', 'rob@laryea.com', '0551212120', '', 'robert', '$2y$11$yVs58VVHQbpY9aAUg//FCORbrXrclRQlm3mngYuPLefmUJz6BOm/y', '1', 'Korle Bu', 'Active', 1, '$2y$11$6xg1YFA03jFRQblEqxgl.OeSXuuGF.ow17854APq1l9OElexQEhla', '2019-12-22 16:56:23', 'k4NK459x1nF'),
+(42, 'LMLS-AMA-0001', 'Rita', 'Yamoah', 'Akua', 'Female', 'ekua@yamoah.com', '0233322112', '0231234567', 'ekua', '$2y$11$BRXR0Cp4wcJQ1ovLINrElO1y1i8ioeEpJbw2S5X.eljU8.BbWn6sq', '2', 'Amasaman', 'Active', 1, '$2y$11$jyV8elpzXkdXCNwd.OUKWeGoaxk.c/RDKBCKA4d5hRIjp.R4EJcOu', '2019-12-22 15:26:22', 'LNC5368esRz'),
+(44, 'LMLS-0001', 'Robert', 'Adjei Laryea', 'Nii Laryea', 'Male', 'rob@laryea.com', '0551212120', '', 'robert', '$2y$11$yVs58VVHQbpY9aAUg//FCORbrXrclRQlm3mngYuPLefmUJz6BOm/y', '1', 'Korle Bu', 'Active', 1, '$2y$11$3fFPI0y2Gqsxibi98Lac2eI9hlpXxwKG3PLuSJFHFBM14mcD4F1s.', '2019-12-22 16:56:23', 'k4NK459x1nF'),
 (48, 'LMLS-AMA-0004', 'Trial', 'Staff', '', 'Female', 'trial@admin.com', '0231122334', '', 'trial', '$2y$11$GjuM7eAYhnL9cX.NQsnkO.k.CavUq9QpF182VLTZgBXMgq4eKPqy6', '3', 'Amasaman', 'Active', 0, '$2y$11$1XKyWd65kdbFHwUmcb2yXOe8bcT859zGznokMrMlWVFZZKBI2ZHy6', '2020-02-06 22:18:34', 'BSQq554EMd0'),
 (49, 'LMLS-KB-0002', 'Mercy', 'Last', 'Ama', 'Female', 'mercy@kbth.gov.gh', '0501212212', '', 'mercy', '$2y$11$aNRIVY6grhOIGdClvhUa8uI0KiVmiNuDBvbcQNajUw2FyWgAAOXzW', '2', 'Korle Bu', 'Active', 0, '$2y$11$vrPhuSp1jOK9mZKCWX44GOzTPzmD.UbCa957Fll/E/Lx5hp1tpOSm', '2020-03-04 16:10:23', 'c0j6624IoAl'),
-(50, 'LMLS-AMA-0002', 'Moses', 'Tetteh', 'Narh', 'Male', 'moses@tetteh.com', '0231122334', '', 'moses', '$2y$11$wnBon4gA2ZdASQzRdToBCOil8ROFjzXTL6UVUYTfPA1Qqvs5xWbD2', '3', 'Amasaman', 'Inactive', 1, '$2y$11$aP8bHkpORPmDyOCPnoJEOurCM6NmP71Jru/.S8s6tjpkQc9bxaRTS', '2020-03-04 16:11:13', 'npGJ712o2Sj'),
+(50, 'LMLS-AMA-0002', 'Moses', 'Tetteh', 'Narh', 'Male', 'moses@tetteh.com', '0231122334', '', 'moses', '$2y$11$wnBon4gA2ZdASQzRdToBCOil8ROFjzXTL6UVUYTfPA1Qqvs5xWbD2', '3', 'Amasaman', 'Active', 1, '$2y$11$HVNiKEoTQndE2OK1coO0xe8dwEOIM4Iw8rkhDizigxYdFTciIFfCC', '2020-03-04 16:11:13', 'npGJ712o2Sj'),
 (76, 'LMLS-EL-0000', 'Bismark', 'Bediako', 'Adjei', 'Male', 'bismark@bediako.com.gh', '0231122334', '', 'babediako', '$2y$11$diOdiJTVDEK.Rnw37uOKrefBsOzpgCrTGgK0.EB/lVrk2y9mmhCCW', '3', 'East Legon', 'Active', 0, '$2y$11$UnpVEf2T7rMNsvvsVwIwb.sQ3vGbDTYUkeRVSCa3IVyNYy.YOro4C', '2020-07-14 16:12:39', 'EMu1w02YAcZI');
 
 -- --------------------------------------------------------
@@ -5588,7 +6807,8 @@ CREATE TABLE `widal` (
 --
 
 INSERT INTO `widal` (`id`, `invoice_id`, `patient_id`, `typhi_to`, `typhi_th`, `paratyphi_a_to`, `paratyphi_a_th`, `paratyphi_b_to`, `paratyphi_b_th`, `paratyphi_c_to`, `paratyphi_c_th`, `comments`, `added_by`, `date_added`) VALUES
-(3, 'INV-WDL-790', 'LMLS-PAT-KB-0001', '1/20', '1/40', '1/40', '1/20', '1/20', '1/20', 'Less Than 1/20', 'Less Than 1/20', '', 'LMLS-0001', '2020-03-08 17:42:31');
+(3, 'INV-WDL-790', 'LMLS-PAT-KB-0001', '1/20', '1/40', '1/40', '1/20', '1/20', '1/20', 'Less Than 1/20', 'Less Than 1/20', '', 'LMLS-0001', '2020-03-08 17:42:31'),
+(4, 'INV-WDL-051', 'LMLS-PAT-AMA-0002', '<1/20', '<1/20', '1/20', '1/20', '1/40', '1/40', '1/60', '1/60', 'Widal', 'LMLS-AMA-0002', '2020-07-26 22:25:43');
 
 -- --------------------------------------------------------
 
@@ -5649,7 +6869,8 @@ CREATE TABLE `wound_cs` (
 --
 
 INSERT INTO `wound_cs` (`id`, `invoice_id`, `patient_id`, `gram_stain`, `zn_stain`, `pus_cells`, `fungal_element`, `culture`, `bacteria_one`, `bacteria_two`, `antibiotics_one`, `antibiotics_two`, `antibiotics_three`, `antibiotics_four`, `antibiotics_five`, `antibiotics_six`, `antibiotics_seven`, `antibiotics_eight`, `antibiotics_nine`, `antibiotics_ten`, `antibiotics_eleven`, `antibiotics_twelve`, `antibiotics_thirteen`, `antibiotics_fourteen`, `antibiotics_fifteen`, `antibiotics_sixteen`, `sensitivity_one`, `sensitivity_two`, `sensitivity_three`, `sensitivity_four`, `sensitivity_five`, `sensitivity_six`, `sensitivity_seven`, `sensitivity_eight`, `sensitivity_nine`, `sensitivity_ten`, `sensitivity_eleven`, `sensitivity_twelve`, `sensitivity_thirteen`, `sensitivity_fourteen`, `sensitivity_fifteen`, `sensitivity_sixteen`, `comments`, `added_by`, `date_added`) VALUES
-(2, 'INV-WND-CS-880', 'LMLS-PAT-KB-0001', 'No Organism Seen', 'AFB Present', 'Present(+)', 'No Fungal Element Seen', 'No Bacterial Growth', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', '', '', '', '', '', '', '', '', '', 'LMLS-0001', '2020-03-07 17:58:56');
+(2, 'INV-WND-CS-880', 'LMLS-PAT-KB-0001', 'No Organism Seen', 'AFB Present', 'Present(+)', 'No Fungal Element Seen', 'No Bacterial Growth', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'R', 'R', 'R', 'R', 'S', 'S', 'S', 'S', '', '', '', '', '', '', '', '', '', 'LMLS-0001', '2020-03-07 17:58:56'),
+(3, 'INV-WND-CS-851', 'LMLS-PAT-AMA-0002', 'GNID Present', 'AFB Present', 'No Pus Cells Seen', 'Fungal Element Present', 'No Bacterial Growth', 'Acinetobacter SPP', 'Acinetobacter SPP', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'Amikacin', 'S', 'R', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'R', 'S', 'R', 'S', 'S', 'S', 'S', 'Edit Wound C/s', 'LMLS-AMA-0002', '2020-07-26 13:20:30');
 
 --
 -- Indexes for dumped tables
@@ -6203,169 +7424,169 @@ ALTER TABLE `wound_cs`
 -- AUTO_INCREMENT for table `alpha_feto_protein`
 --
 ALTER TABLE `alpha_feto_protein`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `antenatal_screening`
 --
 ALTER TABLE `antenatal_screening`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `ascitic_fluid_cs`
 --
 ALTER TABLE `ascitic_fluid_cs`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `aspirate_cs`
 --
 ALTER TABLE `aspirate_cs`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `audit_trail`
 --
 ALTER TABLE `audit_trail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3552;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4642;
 
 --
 -- AUTO_INCREMENT for table `blood_cs`
 --
 ALTER TABLE `blood_cs`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `blood_film_comment`
 --
 ALTER TABLE `blood_film_comment`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `blood_sugar`
 --
 ALTER TABLE `blood_sugar`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `bue_creatinine`
 --
 ALTER TABLE `bue_creatinine`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `bue_creatinine_egfr`
 --
 ALTER TABLE `bue_creatinine_egfr`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `bue_creatinine_lft`
 --
 ALTER TABLE `bue_creatinine_lft`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `bue_creatinine_lipids`
 --
 ALTER TABLE `bue_creatinine_lipids`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `calcium_profile`
 --
 ALTER TABLE `calcium_profile`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `cardiac_enzyme`
 --
 ALTER TABLE `cardiac_enzyme`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `ca_one_five_three`
 --
 ALTER TABLE `ca_one_five_three`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `ca_one_two_five`
 --
 ALTER TABLE `ca_one_two_five`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `cd4_count`
 --
 ALTER TABLE `cd4_count`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cea`
 --
 ALTER TABLE `cea`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `charges`
 --
 ALTER TABLE `charges`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=174;
 
 --
 -- AUTO_INCREMENT for table `ckmb`
 --
 ALTER TABLE `ckmb`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `clotting_profile`
 --
 ALTER TABLE `clotting_profile`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `compact_chemistry`
 --
 ALTER TABLE `compact_chemistry`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cortisol`
 --
 ALTER TABLE `cortisol`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `crp`
 --
 ALTER TABLE `crp`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `crp_ultra_sensitive`
 --
 ALTER TABLE `crp_ultra_sensitive`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `csf_biochem`
 --
 ALTER TABLE `csf_biochem`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `c_reactive_protein`
 --
 ALTER TABLE `c_reactive_protein`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `d_dimers`
 --
 ALTER TABLE `d_dimers`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `ear_swab_cs`
@@ -6383,13 +7604,13 @@ ALTER TABLE `endocervical_swab_cs`
 -- AUTO_INCREMENT for table `esr`
 --
 ALTER TABLE `esr`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `estrogen`
 --
 ALTER TABLE `estrogen`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `eye_swab_cs`
@@ -6401,13 +7622,13 @@ ALTER TABLE `eye_swab_cs`
 -- AUTO_INCREMENT for table `fbc_3p`
 --
 ALTER TABLE `fbc_3p`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `fbc_5p`
 --
 ALTER TABLE `fbc_5p`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `fbc_children`
@@ -6419,49 +7640,49 @@ ALTER TABLE `fbc_children`
 -- AUTO_INCREMENT for table `folate_b12`
 --
 ALTER TABLE `folate_b12`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `general_chemistry`
 --
 ALTER TABLE `general_chemistry`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `hba1c`
 --
 ALTER TABLE `hba1c`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `hbv_viral_load`
 --
 ALTER TABLE `hbv_viral_load`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `hepatitis_b_profile`
 --
 ALTER TABLE `hepatitis_b_profile`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `hepatitis_markers`
 --
 ALTER TABLE `hepatitis_markers`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `hiv_viral_load`
 --
 ALTER TABLE `hiv_viral_load`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `hormonal_assay`
 --
 ALTER TABLE `hormonal_assay`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `hvs_cs`
@@ -6473,109 +7694,109 @@ ALTER TABLE `hvs_cs`
 -- AUTO_INCREMENT for table `hvs_re`
 --
 ALTER TABLE `hvs_re`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `hypersensitive_cpr`
 --
 ALTER TABLE `hypersensitive_cpr`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `h_pylori_ag`
 --
 ALTER TABLE `h_pylori_ag`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `h_pylori_ag_blood`
 --
 ALTER TABLE `h_pylori_ag_blood`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `h_pylori_ag_sob`
 --
 ALTER TABLE `h_pylori_ag_sob`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `iron_study`
 --
 ALTER TABLE `iron_study`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ise`
 --
 ALTER TABLE `ise`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `lft`
 --
 ALTER TABLE `lft`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `lipid_profile`
 --
 ALTER TABLE `lipid_profile`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `mantoux`
 --
 ALTER TABLE `mantoux`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `m_alb`
 --
 ALTER TABLE `m_alb`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ntc_screening`
 --
 ALTER TABLE `ntc_screening`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `patients`
 --
 ALTER TABLE `patients`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT for table `pleural_fluid`
 --
 ALTER TABLE `pleural_fluid`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pregnancy_test`
 --
 ALTER TABLE `pregnancy_test`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `protein_electrophoresis`
 --
 ALTER TABLE `protein_electrophoresis`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `psa`
 --
 ALTER TABLE `psa`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pth`
 --
 ALTER TABLE `pth`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `pus_fluid`
@@ -6587,37 +7808,37 @@ ALTER TABLE `pus_fluid`
 -- AUTO_INCREMENT for table `reproductive_assay`
 --
 ALTER TABLE `reproductive_assay`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `requests`
 --
 ALTER TABLE `requests`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT for table `rheumatology`
 --
 ALTER TABLE `rheumatology`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `sc3_sc4`
 --
 ALTER TABLE `sc3_sc4`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `semen_analysis`
 --
 ALTER TABLE `semen_analysis`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `semen_cs`
@@ -6629,13 +7850,13 @@ ALTER TABLE `semen_cs`
 -- AUTO_INCREMENT for table `serum_hcg_b`
 --
 ALTER TABLE `serum_hcg_b`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `serum_lipase`
 --
 ALTER TABLE `serum_lipase`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `skin_snip`
@@ -6647,19 +7868,19 @@ ALTER TABLE `skin_snip`
 -- AUTO_INCREMENT for table `specials`
 --
 ALTER TABLE `specials`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `sputum`
 --
 ALTER TABLE `sputum`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `sputum_afb`
 --
 ALTER TABLE `sputum_afb`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `stool_cs`
@@ -6671,13 +7892,13 @@ ALTER TABLE `stool_cs`
 -- AUTO_INCREMENT for table `stool_re`
 --
 ALTER TABLE `stool_re`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tft`
 --
 ALTER TABLE `tft`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `throat_swab_cs`
@@ -6689,37 +7910,37 @@ ALTER TABLE `throat_swab_cs`
 -- AUTO_INCREMENT for table `troponin`
 --
 ALTER TABLE `troponin`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `urethral_cs`
 --
 ALTER TABLE `urethral_cs`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `urine`
 --
 ALTER TABLE `urine`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `urine_acr`
 --
 ALTER TABLE `urine_acr`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `urine_cs`
 --
 ALTER TABLE `urine_cs`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `urine_re`
 --
 ALTER TABLE `urine_re`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -6731,13 +7952,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `widal`
 --
 ALTER TABLE `widal`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `wound_cs`
 --
 ALTER TABLE `wound_cs`
-  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(14) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

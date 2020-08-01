@@ -22,8 +22,8 @@
 			'name'     => $lab->pmiddle_name ? $lab->pfirst_name.' '.$lab->pmiddle_name.' '.$lab->plast_name : $lab->pfirst_name.' '.$lab->plast_name,
 			'staff'    => $lab->uother_name ? $lab->ufirst_name.' '.$lab->uother_name.' '.$lab->ulast_name : $lab->ufirst_name.' '.$lab->ulast_name,
 			"comments" => $lab->comments,
-			"date_of_injection" => date_format(date_create($lab->date_of_injection), 'd F Y \a\t H:i:s'),
-			"date_of_reading" => date_format(date_create($lab->date_of_reading), 'd F Y \a\t H:i:s'),
+			"date_of_injection" => date_format(date_create($lab->date_of_injection), 'd F Y'),
+			"date_of_reading" => date_format(date_create($lab->date_of_reading), 'd F Y'),
 			"size_of_induration" => $lab->size_of_induration,
 		));
 	}

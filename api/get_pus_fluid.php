@@ -21,6 +21,7 @@
 			"last_name" => $lab->plast_name,
 			'name'     => $lab->pmiddle_name ? $lab->pfirst_name.' '.$lab->pmiddle_name.' '.$lab->plast_name : $lab->pfirst_name.' '.$lab->plast_name,
 			'staff'    => $lab->uother_name ? $lab->ufirst_name.' '.$lab->uother_name.' '.$lab->ulast_name : $lab->ufirst_name.' '.$lab->ulast_name,
+			"acid_fast_bacilli" => $lab->acid_fast_bacilli,
 			"antibiotics_one" => $lab->antibiotics_one,
 			"antibiotics_two" => $lab->antibiotics_two,
 			"antibiotics_three" => $lab->antibiotics_three,

@@ -59,8 +59,8 @@ function ListCalciumProfile({ history }) {
     let rowsPerPage = [];
     const columns   = [
         {
-            label: "Patient ID",
-            name: "patient_id",
+            label: "Invoice",
+            name: "invoice_id",
             options: {
                 filter: true,
             }

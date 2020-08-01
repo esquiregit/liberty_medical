@@ -19,7 +19,7 @@
 
             try{
                 $query = $conn->prepare('INSERT INTO antenatal_screening(invoice_id, patient_id, blood_group, rhd, antibody_screening, hbsag, vdrl, hep_c, retro_screen, comments, added_by) VALUES(:invoice_id, :patient_id, :blood_group, :rhd, :antibody_screening, :hbsag, :vdrl, :hep_c, :retro_screen, :comments, :added_by)');
-                $query->execute([':invoice_id' => $invoice_id, ':patient_id' => $patient_id, ':blood_group' => $blood_group, ':rhd' => $rhd, ':antibody_screening' => $antibody_screening, ':hbsag' => $hbsag, ':vdrl' => $vdrl, ':hep_c' => $hep_c, ':retro_screen' => $retro_screen, ':comments' => $comments, ':added_by' => $added_by]);
+                $query->execute([':invoice_id' => $invoice_id, ':patient_id' => $patient_id, ':blood_group' => strtoupper($blood_group), ':rhd' => $rhd, ':antibody_screening' => $antibody_screening, ':hbsag' => $hbsag, ':vdrl' => $vdrl, ':hep_c' => $hep_c, ':retro_screen' => $retro_screen, ':comments' => $comments, ':added_by' => $added_by]);
 
                 return true;
             }catch(PDOException $ex){
@@ -59,7 +59,7 @@
 
             try{
                 $query = $conn->prepare('UPDATE antenatal_screening SET patient_id = :patient_id, blood_group = :blood_group, rhd = :rhd, antibody_screening = :antibody_screening, hbsag = :hbsag, vdrl = :vdrl, hep_c = :hep_c, retro_screen = :retro_screen, comments = :comments WHERE id = :id AND patient_id = :patient_id');
-                $query->execute([':blood_group' => $blood_group, ':rhd' => $rhd, ':antibody_screening' => $antibody_screening, ':hbsag' => $hbsag, ':vdrl' => $vdrl, ':hep_c' => $hep_c, ':retro_screen' => $retro_screen, ':comments' => $comments, ':patient_id' => $patient_id, ':id' => $id]);
+                $query->execute([':blood_group' => strtoupper($blood_group), ':rhd' => $rhd, ':antibody_screening' => $antibody_screening, ':hbsag' => $hbsag, ':vdrl' => $vdrl, ':hep_c' => $hep_c, ':retro_screen' => $retro_screen, ':comments' => $comments, ':patient_id' => $patient_id, ':id' => $id]);
 
                 return true;
             }catch(PDOException $ex){

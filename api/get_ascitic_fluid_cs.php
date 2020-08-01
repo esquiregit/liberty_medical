@@ -42,7 +42,6 @@
 			"comments" => $lab->comments,
 			"culture" => $lab->culture,
 			"fungal_element" => $lab->fungal_element,
-			"fungal_element" => $lab->fungal_element,
 			"gram_stain" => $lab->gram_stain,
 			"sensitivity_one" => $lab->sensitivity_one,
 			"sensitivity_two" => $lab->sensitivity_two,

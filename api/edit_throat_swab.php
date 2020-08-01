@@ -69,15 +69,15 @@
 		if($result) {
 			array_push($response, array(
 				"status"  => "Success",
-				"message" => "Throat Swab C/S Lab Added Successfully...."
+				"message" => "Throat Swab C/S Lab Updated Successfully...."
 			));
-			Audit_Trail::create_log($added_by, 'Added Throat Swab C/S Lab For '.$patient, $conn);
+			Audit_Trail::create_log($added_by, 'Updated Throat Swab C/S Lab For '.$patient, $conn);
 		} else {
 			array_push($response, array(
 				"status"  => "Failed",
-				"message" => "Throat Swab C/S Lab Could Not Be Added. Please Try Again...."
+				"message" => "Throat Swab C/S Lab Could Not Be Updated. Please Try Again...."
 			));
-			Audit_Trail::create_log($added_by, 'Tried To Add Throat Swab C/S Lab For '.$patient, $conn);
+			Audit_Trail::create_log($added_by, 'Tried To Update Throat Swab C/S Lab For '.$patient, $conn);
 		}
 	}
 

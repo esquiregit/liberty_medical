@@ -44,6 +44,7 @@
 			"vegetative_form_one" => $lab->vegetative_form_one,
 			"vegetative_form_two" => $lab->vegetative_form_two,
 			"white_blood_cells" => $lab->white_blood_cells,
+			"comments" => $lab->comments,
 		));
 	}
 

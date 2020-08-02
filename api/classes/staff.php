@@ -44,6 +44,27 @@
         }
 
         // fetch a user record
+        public static function get_staff_by_email($email_address, $conn){
+            try{
+                $query = $conn->prepare('SELECT * FROM users WHERE email_address = :email_address');
+                $query->execute([':email_address' => $email_address]);
+
+                return $query->fetch(PDO::FETCH_OBJ);
+            }catch(PDOException $ex){}
+        }
+
+        static function verify_password_change($staff_id, $reset_code, $conn) {
+            try {
+                $query = $conn->prepare('SELECT * FROM users WHERE staff_id = :staff_id AND reset_code = :reset_code');
+                $query->execute([':staff_id' => $staff_id, ':reset_code' => $reset_code]);
+
+                return $query->fetchAll(PDO::FETCH_OBJ);
+            } catch(PDOException $ex) {
+                return false;
+            }
+        }
+
+        // fetch a user record
         public static function read_staff_roles($staff_id, $conn){
             $new_array  = array();
             try{
@@ -132,6 +153,19 @@
                 $query = $conn->prepare('UPDATE users SET first_name = :first_name, other_name = :other_name, last_name = :last_name, gender = :gender, email_address = :email_address, phone_number = :phone_number, phone_number_two = :phone_number_two, role = :role WHERE id = :id AND staff_id = :staff_id');
                 $query->execute([':first_name' => $first_name, ':other_name' => $other_name, ':last_name' => $last_name, ':gender' => $gender, ':email_address' => $email_address, ':phone_number' => $phone_number, ':phone_number_two' => $phone_number_two, ':role' => $role, ':id' => $id, ':staff_id' => $staff_id]);
 
+                return true;
+            }catch(PDOException $ex){
+                return false;
+            }
+        }
+
+        public static function change_password($staff_id, $password, $reset_code, $conn){
+            $password = Methods::password_hash($password);
+            
+            try{
+                $query  = $conn->prepare('UPDATE users SET password = :password WHERE staff_id = :staff_id AND reset_code = :reset_code');
+                $query->execute([':password' => $password, ':staff_id' => $staff_id, ':reset_code' => $reset_code]);
+                
                 return true;
             }catch(PDOException $ex){
                 return false;

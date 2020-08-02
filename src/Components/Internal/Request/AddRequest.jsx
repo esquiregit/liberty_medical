@@ -135,7 +135,7 @@ function AddRequest({ patient, closeAddRequestModal, closeExpandable, staff_id }
                 onClose={handleClose}
                 scroll='paper'
                 fullWidth={true}
-                maxWidth='lg'
+                maxWidth='xl'
                 TransitionComponent={Transition}
                 disableBackdropClick={true}
                 disableEscapeKeyDown={true}

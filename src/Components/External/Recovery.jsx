@@ -45,7 +45,7 @@ const Recovery    = () => {
         setWarning(false);
         setComError(false);
 
-        Axios.post(getBaseURL()+'password_recovery', { email_address: values.email_address }, { signal: signal })
+        Axios.post(getBaseURL()+'password_recovery', values, { signal: signal })
             .then(response => {
                 if(response.data[0].status.toLowerCase() === 'success') {
                     setSuccess(true);
@@ -77,7 +77,7 @@ const Recovery    = () => {
             { comError && <Toastrr message={message} type="info"    /> }
             <Backdrop className={classes.backdrop} open={open}>
                 <CircularProgress color="inherit" />
-                <span className='ml-15'>Sending Reset Link....</span>
+                <span className='ml-15'>Sending Reset Link. Please Wait....</span>
             </Backdrop>
 
             <Formik

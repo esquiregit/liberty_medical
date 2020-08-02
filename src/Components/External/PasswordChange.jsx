@@ -31,7 +31,7 @@ const validationSchema = Yup.object().shape({
 });
 
 const PasswordChange = ({ match, history }) => {
-    const id         = match.params.id;
+    const staff_id   = match.params.id;
     const code       = match.params.code;
     const classes    = styles();
 
@@ -48,7 +48,7 @@ const PasswordChange = ({ match, history }) => {
         const signal          = abortController.signal;
 
         const data = {
-            i : id,
+            i : staff_id,
             c : code,
         };
 
@@ -69,7 +69,7 @@ const PasswordChange = ({ match, history }) => {
             });
 
         return () => abortController.abort();
-    }, [code, history, id]);
+    }, [code, history, staff_id]);
 
     const onSubmit = (values, { resetForm }) => {
         setOpen(true);
@@ -77,10 +77,10 @@ const PasswordChange = ({ match, history }) => {
         const signal          = abortController.signal;
 
         const data = {
-            id   : id,
-            code : code,
-            p    : md5(values.password),
-            cp   : md5(values.confirm_password),
+            i  : staff_id,
+            c  : code,
+            p  : md5(values.password),
+            cp : md5(values.confirm_password),
         };
         
         setError(false);
@@ -115,7 +115,7 @@ const PasswordChange = ({ match, history }) => {
             { success  && <Toastrr message={message} type="success" /> }
             { comError && <Toastrr message={message} type="info"    /> }
             <Backdrop className={classes.backdrop} open={open}>
-                <CircularProgress color="inherit" /> <span className='ml-15'>Changing Password....</span>
+                <CircularProgress color="inherit" /> <span className='ml-15'>Changing Password. Please Wait....</span>
             </Backdrop>
             {
                 loading ? <Loader /> :
